@@ -1,14 +1,3 @@
-// 드롭다운 메뉴 부분
-const button = () => {
-  const burger = document.querySelector(".burger");
-  burger.addEventListener("click", () => {
-    burger.classList.toggle("toggle");
-  });
-};
-
-button();
-
-
 // 파일 첨부 부분
 function readImage(input) {
   if (input.files && input.files[0]) {
@@ -28,9 +17,6 @@ const inputImage = document.querySelector("#input-image");
 inputImage.addEventListener("change", (e) => {
   readImage(e.target);
 });
-function onClickUpload() {
-  inputImage.click();
-}
 
 
 // 콤마 부분
