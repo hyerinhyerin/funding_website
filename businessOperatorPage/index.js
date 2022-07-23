@@ -18,6 +18,24 @@ inputImage.addEventListener("change", (e) => {
   readImage(e.target);
 });
 
+function detailReadImage(input) {
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+
+    reader.onload = (e) => {
+      const previewImage = document.querySelector("#detail-image");
+      previewImage.src = e.target.result;
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+const detailImage = document.querySelector("#detail-image-input");
+
+detailImage.addEventListener("change", (e) => {
+  detailReadImage(e.target);
+});
 
 // 콤마 부분
 function inputNumberFormat(obj) {
@@ -26,10 +44,10 @@ function inputNumberFormat(obj) {
 
 function comma(str) {
   str = String(str);
-  return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+  return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, "$1,");
 }
 
 function uncomma(str) {
   str = String(str);
-  return str.replace(/[^\d]+/g, '');
+  return str.replace(/[^\d]+/g, "");
 }

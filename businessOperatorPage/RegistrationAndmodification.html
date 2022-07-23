@@ -97,6 +97,37 @@
           <input type="text" id="goal-money-input" onkeyup="inputNumberFormat(this)" />
           <label>원</label>
         </div>
+        <div class="product-container">
+          <label>상품명</label>
+          <hr>
+          <label for="product-name">이름</label>
+          <input id="product-name" type="text">
+          <button id="product-plus">+</button>
+          <button id="product-minus">-</button>
+        </div>
+        <div class="product-count-price-container">
+          <label for="product-count">수량</label>
+          <input id="product-count" type="text">
+          <label for="product-price" id="product-price-label">금액</label>
+          <input id="product-price" type="text">
+        </div>
+        <div class="product-checkbox-container">
+          <input type="checkbox" name="earlyBirdCheck" id="ealry-bird-box">
+          <label for="early-bird">얼리버드</label>
+          <input type="checkbox" name="generalSale" id="general-sale">
+          <label for="general-sale">일반판매</label>
+          <hr id="hr-margin">
+        </div>
+        <div class="detail-image-container">
+          <input type="file" id="detail-image-input">
+          <label for="detail-image-input" id="detail-image-label">첨부하기</label>
+          <img src="./img/상세이미지.png" alt="상세이미지입니다." id="detail-image">
+          <hr>
+        </div>
+        <div class="register-modify-container">
+          <button id="register-button">등록요청하기</button>
+          <button id="modify-button">수정요청하기</button>
+        </div>
       </form>
     </div>
   </body>
