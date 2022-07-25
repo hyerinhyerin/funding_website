@@ -49,12 +49,12 @@ input[type="text"] {
   padding: 3px;
   padding-left: 30px;
   padding-right: 20px;
-  width: 0px;
+  /* width: 0px; */
   position: absolute;
   right: 15px;
-  background: none;
+  /* background: none; */
   z-index: 3;
-  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  /* transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000); */
   cursor: pointer;
 }
 
