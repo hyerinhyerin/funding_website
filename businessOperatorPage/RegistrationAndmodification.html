@@ -60,29 +60,30 @@
     </div>
 
     <!--header logo 부분 끝 body form 부분 시작-->
-    <h1>사업자 등록/수정</h1>
-    <hr>
+    <h1>상품 등록/수정</h1>
+    <hr />
     <div class="form-container">
       <form>
         <div class="image-container">
+          <label id="product-label">상품이미지</label>
           <img
             id="preview-image"
             src="./img/대표이미지.jpg"
             alt="대표이미지입니다."
           />
           <label class="input-file-button" for="input-image">업로드</label>
-          <input type="file" id="input-image" style="display:none" />
+          <input type="file" id="input-image" style="display: none" />
         </div>
         <div class="title-container">
           <label for="title">제목</label>
           <input type="text" id="title" />
         </div>
         <div class="detail-content-container">
-          <label style="display: block" id="detaile-content">상세내용</label>
+          <label id="detaile-content">상세내용</label>
           <textarea
             name="detaile-content"
             id="detaile-content-area"
-            cols="80"
+            cols="65"
             rows="10"
           ></textarea>
         </div>
@@ -94,42 +95,63 @@
         </div>
         <div class="goal-money-container">
           <label for="goal-money ">목표금액</label>
-          <input type="text" id="goal-money-input" onkeyup="inputNumberFormat(this)" />
+          <input
+            type="text"
+            id="goal-money-input"
+            onkeyup="inputNumberFormat(this)"
+          />
           <label>원</label>
         </div>
         <div class="product-container">
-          <label>상품명</label>
-          <hr>
+          <label style="font-size: 18px">상품정보</label>
+          <hr />
           <label for="product-name">이름</label>
-          <input id="product-name" type="text">
+          <input id="product-name" type="text" />
           <button id="product-plus">+</button>
           <button id="product-minus">-</button>
         </div>
-        <div class="product-count-price-container">
+        <div class="product-count-container">
           <label for="product-count">수량</label>
-          <input id="product-count" type="text">
-          <label for="product-price" id="product-price-label">금액</label>
-          <input id="product-price" type="text">
+          <input id="product-count" type="text" />
         </div>
-        <div class="product-checkbox-container">
-          <input type="checkbox" name="earlyBirdCheck" id="ealry-bird-box">
-          <label for="early-bird">얼리버드</label>
-          <input type="checkbox" name="generalSale" id="general-sale">
-          <label for="general-sale">일반판매</label>
-          <hr id="hr-margin">
+        <div class="product-price-container">
+          <label for="product-price" id="product-price-label">금액</label>
+          <input id="product-price" type="text" />
         </div>
         <div class="detail-image-container">
-          <input type="file" id="detail-image-input">
-          <label for="detail-image-input" id="detail-image-label">첨부하기</label>
-          <img src="./img/상세이미지.png" alt="상세이미지입니다." id="detail-image">
-          <hr>
+          <label>상세이미지</label>
+          <input type="file" id="detail-image-input" />
+          <label for="detail-image-input" id="detail-image-label"
+            >첨부하기</label
+          >
+          <div class="product-checkbox-container">
+            <input type="checkbox" name="earlyBirdCheck" id="ealry-bird-box" />
+            <label for="early-bird">얼리버드</label>
+            <input type="checkbox" name="generalSale" id="general-sale" />
+            <label for="general-sale">일반판매</label>
+          </div>
+          <!-- <img
+            src="./img/상세이미지.png"
+            alt="상세이미지입니다."
+            id="detail-image"
+          /> -->
         </div>
         <div class="register-modify-container">
+          <hr />
           <button id="register-button">등록요청하기</button>
           <button id="modify-button">수정요청하기</button>
         </div>
       </form>
     </div>
+    <hr id="footer-hr" />
+    <footer class="footer">
+      <div>
+        <h3>펀한누리</h3>
+        <p>주소 : 경기도 군포시 한세로 30</p>
+        <p>고객 문의 : 0509moon@naver.com</p>
+        <p>ver. Beta test</p>
+      </div>
+    </footer>
   </body>
   <script src="./index.js"></script>
 </html>

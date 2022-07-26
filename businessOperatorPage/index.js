@@ -13,6 +13,7 @@ function readImage(input) {
 }
 
 const inputImage = document.querySelector("#input-image");
+const plusImage = document.querySelector('#plus-image')
 
 inputImage.addEventListener("change", (e) => {
   readImage(e.target);
