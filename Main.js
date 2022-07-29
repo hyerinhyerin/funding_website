@@ -13,7 +13,7 @@ $(document).ready(function(){
         $.ajax({
             type : 'get',
             url:'category/'+thisurl,
-            dataType:"html",
+            dataType:'html',
             success: function(data){
                 $("#item-list").html(data);
                 setTimeout(() => {
@@ -25,6 +25,31 @@ $(document).ready(function(){
     $.jqProgress();
 });
 
+$(".all_menu").click(function(){
+    $.ajax({
+        type:'get',
+        url:'All_menu.html',
+        dataType:'html',
+        success:function(data){
+            $("#item-list").html(data);
+            setTimeout(()=>{
+                $.jqProgress();
+            },500);
+        }
+    });
+});
+
+$("#mainline ul li").click(function(){
+    var _this=$(".all_menu");
+    // _this.css("color","white");
+    if(_this.css("color")=="rgb(0,0,0)"){
+        console.log("black");
+        _this.css("color","white");
+    }else{
+        console.log("white");
+        _this.css("color","black");
+    }
+});
 // $(".listsort.new").click(function(){
 //     $(".progress-done").each(function(){
 //         var num=$(this).attr("data-done");
