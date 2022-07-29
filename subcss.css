@@ -1,0 +1,516 @@
+.container {
+  padding-left: 50px;
+  position: relative;
+
+}
+
+button {
+  touch-action: manipulation;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.title {
+  margin-top: 20px;
+  margin-bottom: -30px;
+  width: 500px;
+  height: 250px;
+  object-fit: cover;
+
+}
+
+.container .main_login {
+  font-family: "nanum";
+  font-size: 15px;
+  color: black;
+  position: absolute;
+  right: 170px;
+  top: 150px;
+  text-decoration: none;
+
+}
+
+.container .loginp {
+  color: black;
+  position: absolute;
+  right: 155px;
+  top: 136px;
+  font-family: "gong";
+  font-size: 15px;
+
+}
+
+#wrap {
+  position: absolute;
+  right: 115px;
+  top: 150px;
+}
+
+input[type="text"] {
+  height: 20px;
+  font-size: 15px;
+  font-family: "nanum";
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  padding: 3px;
+  padding-left: 30px;
+  padding-right: 20px;
+  width: 0px;
+  position: absolute;
+  right: 15px;
+  background: none;
+  z-index: 3;
+  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  cursor: pointer;
+}
+
+
+input[type="text"]:focus {
+  width: 170px;
+  z-index: 1;
+  cursor: text;
+  position: absolute;
+  right: 10px;
+  background-color: white;
+}
+
+input[type="submit"] {
+  height: 20px;
+  width: 30px;
+  color: red;
+  float: right;
+  background: url('/search.svg') no-repeat;
+  text-indent: -10000px;
+  border: none;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  transition: opacity .4s ease;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.4;
+}
+
+.nav__utils {
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.nav_menu {
+  margin-top: -30px;
+  border: 1px solid #008299;
+  border-radius: 15px;
+  width: auto;
+  height: 60px;
+  background-color: #008299;
+  margin-right: 50px;
+  position: relative;
+  opacity: 5;
+
+}
+
+.nav_menu .category_menu {
+  width: 50px;
+  height: 50px;
+  padding-left: 20px;
+  background-image: url("/≡.png");
+  background-repeat: no-repeat;
+  background-size: 22px;
+  position: absolute;
+  left: 5%;
+  top: 40%;
+  transition: ease 0.2s;
+  opacity: 10;
+  border: none;
+  background-color: transparent;
+
+}
+
+.nav_menu .category_menu1 {
+  width: 30px;
+  height: 30px;
+  padding-left: 0px;
+  background-repeat: no-repeat;
+  background-size: 22px;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  transition: ease 0.2s;
+  opacity: 10;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+
+
+}
+
+.nav_menu .category_menu1:focus,
+.category_menu1:hover {
+  fill: black;
+}
+
+
+
+
+@font-face {
+  font-family: "gong";
+  src: url('/Gong Gothic Medium.ttf');
+}
+
+@font-face {
+  font-family: "nanum";
+  src: url('/NanumSquareRoundB.ttf');
+}
+
+@font-face {
+  font-family: "gongli";
+  src: url('/Gong\ Gothic\ Light.ttf');
+}
+
+@font-face {
+  font-family: "main";
+  src: url('/HS두꺼비체.ttf');
+}
+
+
+.nav_menu .all_menu {
+  font-family: 'gong';
+  font-size: 20px;
+  padding-bottom: 20px;
+  position: absolute;
+  left: 25%;
+  top: 35%;
+  color: white;
+  text-decoration-line: none;
+
+
+}
+
+.nav_menu .funding_menu {
+  font-family: 'gong';
+  font-size: 20px;
+  padding-bottom: 20px;
+  position: absolute;
+  left: 49.3%;
+  top: 35%;
+  color: white;
+  text-decoration-line: none;
+
+}
+
+.nav_menu .earlybird_menu {
+  font-family: 'gong';
+  font-size: 20px;
+  padding-bottom: 20px;
+  position: absolute;
+  left: 75%;
+  top: 35%;
+  color: white;
+  text-decoration-line: none;
+
+}
+
+.nav_menu .my_menubutton {
+  width: 80px;
+  height: 80px;
+  padding-left: 20px;
+  background-image: url("점.png");
+  background-repeat: no-repeat;
+  background-size: 22px;
+  position: absolute;
+  left: 95%;
+  top: 35%;
+  transition: ease 0.2s;
+  opacity: 10;
+  border: none;
+  background-color: transparent;
+
+}
+
+
+
+
+.nav_menu .my_menu {
+  width: 80px;
+  height: 80px;
+  padding-left: 20px;
+  background-image: url("점.png");
+  background-repeat: no-repeat;
+  background-size: 22px;
+  position: absolute;
+  left: 95%;
+  top: 35%;
+  transition: ease 0.2s;
+  opacity: 10;
+  border: none;
+  background-color: transparent;
+
+}
+
+.nav_menu .my_menu1 {
+  width: 30px;
+  height: 30px;
+  padding-left: 20px;
+  background-repeat: no-repeat;
+  background-size: 22px;
+  position: absolute;
+  right: 2%;
+  top: 17%;
+  transition: ease 0.2s;
+  opacity: 10;
+  border: none;
+  background-color: transparent;
+
+}
+
+
+.nav_menu .all_menu:hover,
+.funding_menu:hover,
+.earlybird_menu:hover {
+  color: black;
+  transition: color 0.2s;
+}
+
+.nav_menu .my_menu1:focus,
+.my_menu1:hover {
+  fill: black;
+}
+
+/*category*/
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration-line: none;
+
+}
+
+#nav {
+  width: 100px;
+  height: 70px;
+  text-align: center;
+
+}
+
+#nav li {
+  position: relative;
+}
+
+#nav li a {
+  opacity: 1;
+  visibility: visible;
+  font-family: 'gongli';
+  padding: 17px 0px 17px 0px;
+  line-height: 10px;
+  color: black;
+  font-size: 15px;
+
+
+}
+
+#nav li:hover>a {
+  padding: 0px;
+  width: 100px;
+
+}
+
+#nav ul {
+  position: absolute;
+  left: -20px;
+  top: 35px;
+  width: 100px;
+  background-color: #ffffff;
+  border-radius: 7px;
+  padding-top: 15px;
+  padding-left: 0px;
+  padding-bottom: 10px;
+  opacity: 0;
+  box-shadow: 0px 0px 8px 2px rgb(0, 0, 0, 20%);
+
+}
+
+#nav ul li {
+  float: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+#nav ul a {
+  font-weight: normal;
+  color: black;
+
+}
+
+#nav ul li:hover a {
+  font-weight: bold;
+}
+
+#nav li:hover ul {
+  opacity: 1;
+}
+
+#nav li:hover ul li {
+  height: 35px;
+  overflow: visible;
+  padding: 0;
+
+}
+
+
+/*footer*/
+
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.footer {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  text-align: left;
+  left: 17%;
+  padding-top: 20px;
+  position: absolute;
+  height: 180px;
+}
+
+.footer h3 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  text-align: left;
+  padding-bottom: 15px;
+  font-family: 'gongli';
+}
+
+.footer p {
+  line-height: 10px;
+  font-family: 'nanum';
+}
+
+/*items*/
+
+#wapper-top {
+  width: 90%;
+  padding-top: 70px;
+  display: flex;
+  grid-template-columns: repeat(2, 600px);
+  grid-template-rows: minmax(300px, auto);
+  grid-gap: 100px 160px;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+
+}
+
+#wapper-middle {
+  width: 90%;
+  padding-top: 70px;
+  display: flex;
+  grid-template-columns: repeat(2, 600px);
+  grid-template-rows: minmax(300px, auto);
+  grid-gap: 100px 160px;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+
+}
+
+#wapper-bottom {
+  width: 90%;
+  display: flex;
+  grid-template-columns: repeat(2, 600px);
+  grid-template-rows: minmax(300px, auto);
+  grid-gap: 100px 160px;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  padding-bottom: 150px;
+}
+
+
+
+.item {
+  height: 350px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.item p,
+h3 {
+  font-family: 'gongli';
+  text-align: left;
+  line-height: 10px;
+}
+
+.item p {
+  color: #888;
+  font-size: 15px;
+}
+
+.funp {
+  display: flex;
+  font-family: 'gong';
+  font-size: 25px;
+  color: #008299;
+  justify-content: space-between;
+
+
+}
+
+.itemimg {
+  position: relative;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 420px;
+  height: 297px;
+  display: block;
+  object-fit: cover;
+}
+
+.over {
+  position: relative;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 420px;
+  height: 297px;
+  display: block;
+  opacity: 0.5;
+
+}
+
+
+
+.itemimg:hover {
+  border: 2px solid #008299;
+}
+
+/*sort*/
+
+.listsort {
+  float: right;
+  position: relative;
+  right: 5%;
+  padding-right: 20px;
+  padding-top: 45px;
+  font-family: 'gongli';
+  color: #4f4f4f;
+}
+
+/*hr*/
+hr {
+  text-align: center;
+  width: 95%;
+  margin-top: 90px;
+  margin-left: 15px;
+  border-color: #f2f4f641;
+}
