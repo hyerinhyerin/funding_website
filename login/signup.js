@@ -1,23 +1,10 @@
-$(document).ready(function(){
-    $("#business").click(function(){
-        $.ajax({
-            type : 'get',
-            url:"business_login.html",
-            dataType:"html",
-            success: function(data){
-                $(".contain_mid").html(data);
-            }
-        });
-    });
-    $("#consumer").click(function(){
-        $.ajax({
-            type : 'get',
-            url:"consumer_login.html",
-            dataType:"html",
-            success: function(data){
-                $(".contain_mid").html(data);
-            }
-        });
-    });
-});
+document.getElementById("business").addEventListener('click',singup_b);
+document.getElementById("consumer").addEventListener('click',singup_c);
 
+function singup_b(){
+    location.href = "business_login.html";
+}
+
+function singup_c(){
+    location.href = "consumer_login.html";
+}

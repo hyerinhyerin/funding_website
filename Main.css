@@ -282,28 +282,14 @@ a{
     top: 55%;
     left: 85%;
 }
-.main_singup{
-  font-family: "nanum";
-  font-size: 15px;
-  color : black;
-  text-decoration: none;
-  position: absolute;
-  top: 50%;
-  left: 90%;
-}
 #wrap {
   position: absolute;
   left: 80%;
   top: 44%;
 }
 
-<<<<<<< HEAD
-#wrap input[type="text"] {
-  height: 20px;
-=======
 input[type="text"] {
   height: 30px;
->>>>>>> 6e3590d654db904bba4537a9a4ba8b8e9c2dea3d
   font-size: 15px;
   font-family: "nanum";
   border: none;
@@ -320,26 +306,16 @@ input[type="text"] {
   cursor: pointer;
   text-align: center;
 }
-<<<<<<< HEAD
-#wrap input[type="text"]:focus {
-  width: 170px;
-=======
 input[type="text"]:focus {
   width: 210px;
->>>>>>> 6e3590d654db904bba4537a9a4ba8b8e9c2dea3d
   z-index: 1;
   cursor: text;
   position: absolute;
   right: 40px;
   background-color: white;
 }
-<<<<<<< HEAD
-#wrap input[type="submit"] {
-  height: 20px;
-=======
 input[type="submit"] {
   height: 25px;
->>>>>>> 6e3590d654db904bba4537a9a4ba8b8e9c2dea3d
   width: 30px;
   color: red;
   float: right;
@@ -352,7 +328,7 @@ input[type="submit"] {
   cursor: pointer;
   top: 7px;
 }
-#wrap input[type="submit"]:hover {
+input[type="submit"]:hover {
   opacity: 0.4;
 }
 

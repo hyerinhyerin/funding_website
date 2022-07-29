@@ -146,7 +146,7 @@ section {
   top: 44%;
 }
 
-#wrap input[type="text"] {
+input[type="text"] {
   height: 30px;
   font-size: 15px;
   font-family: "nanum";
@@ -166,7 +166,7 @@ section {
 }
 
 
-#wrap input[type="text"]:focus {
+input[type="text"]:focus {
   width: 210px;
   z-index: 1;
   cursor: text;
@@ -175,7 +175,7 @@ section {
   background-color: white;
 }
 
-#wrap input[type="submit"] {
+input[type="submit"] {
   height: 25px;
   width: 30px;
   color: red;
@@ -190,7 +190,7 @@ section {
   top: 7px;
 }
 
-#wrap input[type="submit"]:hover {
+input[type="submit"]:hover {
   opacity: 0.4;
 }
 
