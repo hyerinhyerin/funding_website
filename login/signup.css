@@ -359,7 +359,7 @@ body {
 }
 
 /* 헤더 부분 */
-#contain{
+#contain {
     border: 1px solid #008299;
     border-radius: 15px;
     width: auto;
@@ -368,6 +368,7 @@ body {
     position: relative;
     opacity: 5;
 }
+
 #contain p {
     font-family: 'gong';
     text-align: center;
@@ -376,20 +377,107 @@ body {
     color: white;
 }
 
-/* 로그인 폼 */
-#login_box{
-    margin: 150px auto;
-}
-#login_box p{
-    font-family: 'gong';
-    font-size: 30px;
-    text-align: center;
-}
-#login{
+/* 회원가입 폼 */
+#bt_box {
+    margin-top: 10%;
+    margin-bottom: 30%;
+    height: 150px;
     display: grid;
-    justify-items: center;
+    justify-content: center;
+    grid-template-columns: 150px 150px;
+    column-gap: 10%;
 }
-#login_box input{
-    width: 170px;
-    height: 17px;
+
+#bt_box button {
+    width: 150px;
+    height: 150px;
+    border: none;
+    background-color: #008299;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'gong';
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 20px;
+}
+
+#bt_box button:before,
+#bt_box button:after {
+    position: absolute;
+    content: "";
+    height: 0%;
+    width: 2px;
+    background: #008299;
+}
+
+#bt_box button:before {
+    right: 0;
+    top: 0;
+    transition: all 500ms ease;
+}
+
+#bt_box button:after {
+    left: 0;
+    bottom: 0;
+    transition: all 500ms ease;
+}
+
+#bt_box button:hover {
+    color: #008299;
+    background-color: white;
+}
+
+#bt_box button:hover:before {
+    transition: all 500ms ease;
+    height: 100%;
+}
+
+#bt_box button:hover:after {
+    transition: all 500ms ease;
+    height: 100%;
+}
+
+#bt {
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+#bt:before,
+#bt:after {
+    position: absolute;
+    content: "";
+    background: #008299;
+}
+
+#bt:before {
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 2px;
+    transition: all 500ms ease;
+}
+
+#bt:after {
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    transition: all 500ms ease;
+}
+
+#bt:hover:before {
+    transition: all 500ms ease;
+    width: 100%;
+    z-index: 11;
+}
+
+#bt:hover:after {
+    transition: all 500ms ease;
+    width: 100%;
+    z-index: 11;
 }

@@ -4,11 +4,19 @@ function login(){
     const id = "1234";
     const password = "1234";
 
-    if(id == document.querySelector("#id").value){
-        if(password == document.querySelector("#password").value){
+    var input_id = document.getElementById("id");
+    var input_password = document.getElementById("password");
+
+    if(id == input_id.value){
+        if(password == input_password.value){
             alert("로그인되었습니다.");
+            location.href = "../funding_planned_1 copy.html";
+        }
+        else{
+            alert("아이디/비밀번호가 맞지 않습니다.");
         }
     } else {
         alert("아이디/비밀번호가 맞지 않습니다.");
     }
 }
+

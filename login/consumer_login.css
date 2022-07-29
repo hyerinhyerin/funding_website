@@ -358,38 +358,16 @@ body {
     font-family: 'nanum';
 }
 
-/* 헤더 부분 */
-#contain{
-    border: 1px solid #008299;
-    border-radius: 15px;
-    width: auto;
-    height: 40px;
-    background-color: #008299;
-    position: relative;
-    opacity: 5;
-}
-#contain p {
-    font-family: 'gong';
+/* 바디 부분 */
+h1 {
     text-align: center;
-    position: relative;
-    margin: 10px;
-    color: white;
+    margin-top: 100px;
+    font-family: "gongli";
 }
 
-/* 로그인 폼 */
-#login_box{
-    margin: 150px auto;
-}
-#login_box p{
-    font-family: 'gong';
-    font-size: 30px;
-    text-align: center;
-}
-#login{
-    display: grid;
-    justify-items: center;
-}
-#login_box input{
-    width: 170px;
-    height: 17px;
+.signup_form {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
 }
