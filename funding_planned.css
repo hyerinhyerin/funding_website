@@ -146,7 +146,7 @@ section {
   top: 44%;
 }
 
-input[type="text"] {
+#wrap input[type="text"] {
   height: 30px;
   font-size: 15px;
   font-family: "nanum";
@@ -166,7 +166,7 @@ input[type="text"] {
 }
 
 
-input[type="text"]:focus {
+#wrap input[type="text"]:focus {
   width: 210px;
   z-index: 1;
   cursor: text;
@@ -175,7 +175,7 @@ input[type="text"]:focus {
   background-color: white;
 }
 
-input[type="submit"] {
+#wrap input[type="submit"] {
   height: 25px;
   width: 30px;
   color: red;
@@ -190,7 +190,7 @@ input[type="submit"] {
   top: 7px;
 }
 
-input[type="submit"]:hover {
+#wrap input[type="submit"]:hover {
   opacity: 0.4;
 }
 

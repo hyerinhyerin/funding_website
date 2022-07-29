@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8" />
     <title>login</title>
@@ -9,67 +10,68 @@
 <body>
     <div class="container">
         <div class="nav_menu">
-            <a href="#" class="_menu">ㅍㅎㄴㄹ</a>
+            <a href="../Main.html"><img class="title" src="../img/main_title.png" alt="편한누리" /></a>
             <!--카테고리 메뉴바-->
             <div>
                 <ul id="mainline">
                     <li>
                         <a href="#" class="category_menu">카테고리</a>
                         <ul>
-                            <li>
-                                <a href="#">가구</a>
+                            <li data-url="furniture.html">
+                                <span>가구</span>
                             </li>
-                            <li>
-                                <a href="#">전자기기</a>
+                            <li data-url="electronic.html">
+                                <span>전자기기</span>
                             </li>
-                            <li>
-                                <a href="#">생활용품</a>
+                            <li data-url="daily.html">
+                                <span>생활용품</span>
                             </li>
-                            <li>
-                                <a href="#">취미</a>
+                            <li data-url="hobby.html">
+                                <span>취미</span>
                             </li>
-                            <li>
-                                <a href="#">뷰티</a>
+                            <li data-url="beauty.html">
+                                <span>뷰티</span>
                             </li>
                         </ul>
-
                     </li>
                     <li>
-                        <a href="submain.html" class="all_menu">전체</a>
+                        <a href="../Main.html" class="all_menu">전체</a>
                     </li>
                     <li>
-                        <a href="funding_planned.html" class="funding_menu">펀딩예정</a>
+                        <a href="#" class="funding_menu">펀딩예정</a>
                     </li>
                     <li>
-                        <a href="submain.html" class="earlybird_menu">얼리버드</a>
+                        <a href="#" class="earlybird_menu">얼리버드</a>
                     </li>
                 </ul>
             </div>
-
+    
             <a href="login.html" class="main_login">로그인</a>
+            <a href="signup.html" class="main_singup">회원가입</a>
+    
             <div id="wrap">
                 <form action="" autocomplete="on">
-                    <input id="search" name="search" type="text" placeholder="얼리버드 특가 " />
+                    <input id="search" name="search" type="text" placeholder="검색어를 입력해 주세요." />
                     <input id="search_submit" value="Rechercher" type="submit" />
                 </form>
             </div>
         </div>
-
-        <div class ="contain_mid">
+        <div class="contain_mid">
             <div id="contain">
                 <p> 로그인/회원가입 </p>
             </div>
-        
+
             <div id="login_box">
                 <p> 로그인 </p>
                 <div id="login">
                     <input id="id" type="text" placeholder="아이디"> <br>
                     <input id="password" type="password" placeholder="비밀번호"><br>
-                    <button id="bt"> 로그인 </button> 
+                    <button id="bt"> 로그인 </button>
                 </div>
             </div>
-        </div>
-
+        </div>       
+        
+        <hr />
         <footer class="footer">
             <div>
                 <h3>펀한누리</h3>
@@ -81,4 +83,5 @@
     </div>
     <script src="login.js"></script>
 </body>
+
 </html>
