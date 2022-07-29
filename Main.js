@@ -22,6 +22,26 @@ $(document).ready(function(){
             }
         });
     });
+    $(".funding_menu").click(function(){
+        $.ajax({
+            type : 'get',
+            url:"funding_planned.html",
+            dataType:"html",
+            success: function(data){
+                $("#container2").html(data);
+            }
+        });
+    });
+    $(".earlybird_menu").click(function(){
+        $.ajax({
+            type : 'get',
+            url:"earlybird.html",
+            dataType:"html",
+            success: function(data){
+                $("#container2").html(data);
+            }
+        });
+    });
     $.jqProgress();
 });
 

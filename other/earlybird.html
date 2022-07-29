@@ -1,3 +1,6 @@
+<!-- ajax를 사용해서 div id container2로 묶은 애들만 불러옴.
+  원래 파일은 other 파일에 저장해놨으니까 그걸로 확인하면 될 거 같습니당!-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,8 +8,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Funding_Planned</title>
-  <link rel="stylesheet" href="funding_planned_0726.css" />
+  <title>EarlyBird</title>
+  <link rel="stylesheet" href="earlybird.css" />
 
 
 </head>
@@ -146,107 +149,100 @@
     </div>
 
 
-
-    <div>
-      <ul>
-        <li class="listsort">오름차순</li>
-        <li class="listsort">내림차순</li>
-      </ul>
-    </div>
-    <hr />
-    <div>
-      <div id="wapper-top">
-        <div class="item">
-          <div>
-            <div style="position: relative">
-              <div style="position: absolute">
-                <img src="img/pr_br.png" class="itemimg" />
-              </div>
-              <div>
-                <a href="#"> <img src="img/back_white.png" class="over" /></a>
-                <h2>오픈 예정</h2>
-              </div>
-            </div>
-          </div>
-
-          <h3>식빵 맛집</h3>
-          <div class="funp">
-            <p>미리당</p>
-            <p><span class="funp">7월 29일 오픈</span></p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div>
-            <div style="position: relative">
-              <div style="position: absolute">
-                <img src="img/pr_ph.png" class="itemimg" />
-              </div>
-              <div>
-                <a href="#"> <img src="img/back_white.png" class="over" /></a>
-                <h2>오픈 예정</h2>
-              </div>
-            </div>
-          </div>
-          <h3>아이폰 13 Pro</h3>
-          <div class="funp">
-            <p>Apple</p>
-            <p><span class="funp">7월 29일 오픈</span></p>
-          </div>
-        </div>
-      </div>
-
-      <div id="wapper-middle">
-        <div class="item">
-          <div>
-            <div style="position: relative">
-              <div style="position: absolute">
-                <img src="img/pr_tum.png" class="itemimg" />
-              </div>
-              <div>
-                <a href="#"> <img src="img/back_white.png" class="over" /></a>
-                <h2>오픈 예정</h2>
-              </div>
-            </div>
-          </div>
-
-          <h3>곰표 텀블러</h3>
-          <div class="funp">
-            <p>곰표</p>
-            <p><span class="funp">7월 29일 오픈</span></p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div>
-            <div style="position: relative">
-              <div style="position: absolute">
-                <img src="img/pr_tv.png" class="itemimg" />
-              </div>
-              <div>
-                <a href="#"> <img src="img/back_white.png" class="over" /></a>
-                <h2>오픈 예정</h2>
-              </div>
-            </div>
-          </div>
-
-          <h3>LG 스피커 얼리버드</h3>
-          <div class="funp">
-            <p>LG전자</p>
-            <p><span class="funp">7월 29일 오픈</span></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <hr />
-    <footer class="footer">
+    <div id="container2">
       <div>
-        <h3>펀한누리</h3>
-        <p>주소 : 경기도 군포시 한세로 30</p>
-        <p>고객 문의 : 0509moon@naver.com</p>
-        <p>ver. Beta test</p>
+        <ul>
+          <li class="listsort">오름차순</li>
+          <li class="listsort">내림차순</li>
+        </ul>
       </div>
-    </footer>
+      <hr />
+      <div>
+        <div id="wapper-top">
+          <div class="item">
+            <div>
+              <div style="position: relative">
+                <div style="position: absolute">
+              </div>
+                <div>
+                  <a href="#"><img src="img/pr_br.png" class="itemimg" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <h3>식빵 맛집</h3>
+            <div class="funp">
+              <p>얼리버드</p>
+              <p><span class="funp">수량 : 47</span></p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <div style="position: relative">
+                <div style="position: absolute">
+                </div>
+                <div>
+                  <a href="#"> <img src="img/pr_ph.png" class="itemimg" /></a>
+                </div>
+              </div>
+            </div>
+            <h3>아이폰 13 Pro</h3>
+            <div class = "funp">
+              <p>얼리버드</p>
+              <p><span class="funp">수량 : 2</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div id="wapper-middle">
+          <div class="item">
+            <div>
+              <div style="position: relative">
+                <div style="position: absolute">
+                </div>
+                <div>
+                  <a href="#"> <img src="img/pr_tum.png" class="itemimg" /></a>
+                </div>
+              </div>
+            </div>
+            <h3>곰표 텀블러</h3>
+            <div class="funp">
+              <p>얼리버드</p>
+              <p><span class="funp">수량 : 78</span></p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <div style="position: relative">
+                <div style="position: absolute">
+                </div>
+                <div>
+                  <a href="#"> <img src="img/pr_tv.png" class="itemimg" /></a>
+                </div>
+              </div>
+            </div>
+
+            <h3>LG 스피커 얼리버드</h3>
+            <div class="funp">
+              <p>얼리버드</p>
+              <p><span class="funp">수량 : 90</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <footer class="footer">
+        <div>
+          <h3>펀한누리</h3>
+          <p>주소 : 경기도 군포시 한세로 30</p>
+          <p>고객 문의 : 0509moon@naver.com</p>
+          <p>ver. Beta test</p>
+        </div>
+      </footer>
+    </div>
   </div>
 
 </body>
