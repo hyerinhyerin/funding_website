@@ -105,22 +105,22 @@ section {
 
 @font-face {
   font-family: "gong";
-  src: url('Gong Gothic Medium.ttf');
+  src: url('font/Gong Gothic Medium.ttf');
 }
 
 @font-face {
   font-family: "nanum";
-  src: url('NanumSquareRoundB.ttf');
+  src: url('font/NanumSquareRoundB.ttf');
 }
 
 @font-face {
   font-family: "gongli";
-  src: url('Gong\ Gothic\ Light.ttf');
+  src: url('font/Gong\ Gothic\ Light.ttf');
 }
 
 @font-face {
   font-family: "main";
-  src: url('HS두꺼비체.ttf');
+  src: url('font/HS두꺼비체.ttf');
 }
 
 .container {
@@ -563,7 +563,7 @@ body {
   font-size: 28px;
   color: black;
   position: absolute;
-  top: 37%;
+  top: 45%;
   left: 37%;
 
 }
