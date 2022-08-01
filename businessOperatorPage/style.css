@@ -1,3 +1,4 @@
+/* tags */
 ul {
   list-style: none;
 }
@@ -14,6 +15,7 @@ input {
   display: inline-block;
 }
 
+/* font */
 @font-face {
   font-family: "gong";
   src: url("./font/Gong\ Gothic\ Medium.ttf");
@@ -29,38 +31,6 @@ input {
 @font-face {
   font-family: "main";
   src: url("./font/HS두꺼비체.ttf");
-}
-
-/* footer */
-.footer {
-  display: inline-block;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  text-align: left;
-  left: 17%;
-  padding-top: 50px;
-  height: 150px;
-  position: relative;
-  top: 272px;
-  margin-bottom: 300px;
-}
-
-.footer h3 {
-  grid-row-start: 2;
-  grid-row-end: 3;
-  text-align: left;
-  padding-bottom: 20px;
-  font-family: "gongli";
-  font-weight: bold;
-  font-size: 20px;
-}
-.footer p {
-  line-height: 10px;
-  font-family: "nanum";
-}
-#footer-hr {
-  position: relative;
-  top: 300px;
 }
 
 .container {
@@ -334,7 +304,7 @@ a {
 
 h1 {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 257px;
   font-family: "gongli";
 }
 
@@ -375,13 +345,21 @@ h1 {
   color: white;
   cursor: pointer;
 }
+#ext_label {
+  position: relative;
+  bottom: 144px;
+  right: 60px;
+  color: lightgray;
+  font-family: "nanum";
+  font-size: 15px;
+}
 form input::file-selector-button {
   display: none;
 }
 
 .title-container {
   position: relative;
-  top: 30px;
+  top: 63px;
 }
 #title {
   width: 400px;
@@ -391,7 +369,7 @@ form input::file-selector-button {
 
 .detail-content-container {
   position: relative;
-  top: 60px;
+  top: 126px;
 }
 #detaile-content {
   position: relative;
@@ -404,24 +382,31 @@ form input::file-selector-button {
 
 .period-container {
   position: relative;
-  top: 90px;
+  top: 199px;
 }
 #period-date-first {
   margin-left: 80px;
 }
 #period-date-first,
 #period-date-second {
-  width: 130px;
   height: 23px;
 }
 #period-sysbol {
   position: relative;
   top: 5px;
 }
+input[type="date"]::before {
+  content: attr(date-placeholder);
+  width: 100%;
+}
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+  display: none;
+}
 
 .goal-money-container {
   position: relative;
-  top: 120px;
+  top: 262px;
 }
 #goal-money-input {
   position: relative;
@@ -433,7 +418,7 @@ form input::file-selector-button {
 
 .product-container {
   position: relative;
-  top: 170px;
+  top: 360px;
 }
 #product-name {
   position: relative;
@@ -454,14 +439,14 @@ form input::file-selector-button {
   font-size: 20px;
   background-color: #008299;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   color: white;
   cursor: pointer;
 }
 
 .product-count-container {
   position: relative;
-  top: 190px;
+  top: 423px;
 }
 #product-count {
   position: relative;
@@ -472,7 +457,7 @@ form input::file-selector-button {
 }
 .product-price-container {
   position: relative;
-  top: 210px;
+  top: 486px;
 }
 #product-price {
   width: 170px;
@@ -480,9 +465,23 @@ form input::file-selector-button {
   margin-left: 80px;
 }
 
+.product-checkbox-container {
+  position: relative;
+  top: 549px;
+}
+#ealry-bird-box {
+  position: relative;
+  top: 3px;
+}
+#general-sale {
+  position: relative;
+  top: 3px;
+  margin-left: 35px;
+}
+
 .detail-image-container {
   position: relative;
-  top: 230px;
+  top: 647px;
 }
 #detail-image-input {
   border: solid 1px gray;
@@ -501,32 +500,20 @@ form input::file-selector-button {
   cursor: pointer;
   margin-left: 10px;
 }
-/* #detail-image {
-  display: block;
-  width: 500px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-} */
-
-.product-checkbox-container {
+#ext_label_two {
   position: relative;
-  top: 15px;
-  text-align: center;
-}
-#ealry-bird-box {
-  position: relative;
-  top: 3px;
-}
-#general-sale {
-  position: relative;
-  top: 3px;
-  margin-left: 35px;
+  right: 304px;
+  top: 38px;
+  color: lightgray;
+  font-family: "nanum";
+  font-size: 15px;
 }
 
 .register-modify-container {
   position: relative;
-  top: 255px;
+  top: 767px;
   text-align: center;
+  margin-bottom: 360px;
 }
 #register-button,
 #modify-button {
@@ -541,4 +528,37 @@ form input::file-selector-button {
 }
 #modify-button {
   margin-left: 10px;
+}
+
+/* footer */
+.footer {
+  display: inline-block;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  text-align: left;
+  left: 17%;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  height: 150px;
+  position: relative;
+  top: 500px;
+  margin-bottom: 300px;
+}
+
+.footer h3 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  text-align: left;
+  padding-bottom: 20px;
+  font-family: "gongli";
+  font-weight: bold;
+  font-size: 20px;
+}
+.footer p {
+  line-height: 10px;
+  font-family: "nanum";
+}
+#footer-hr {
+  position: relative;
+  top: 550px;
 }

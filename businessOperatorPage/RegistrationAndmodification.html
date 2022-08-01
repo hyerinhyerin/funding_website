@@ -45,7 +45,7 @@
         </ul>
       </div>
 
-      <a href="submain.html/login" class="main_login">로그인</a>
+      <a href="./login/login.html" class="main_login">로그인</a>
       <div id="wrap">
         <form action="" autocomplete="on">
           <input
@@ -68,11 +68,14 @@
           <label id="product-label">상품이미지</label>
           <img
             id="preview-image"
-            src="./img/대표이미지.jpg"
+            src="./img/대표이미지.png"
             alt="대표이미지입니다."
           />
-          <label class="input-file-button" for="input-image">업로드</label>
+          <label class="input-file-button" for="input-image">첨부하기</label>
           <input type="file" id="input-image" style="display: none" />
+          <label id="ext_label"
+            >jpg, png, gif, svg, tif 업로드 가능합니다.</label
+          >
         </div>
         <div class="title-container">
           <label for="title">제목</label>
@@ -89,9 +92,23 @@
         </div>
         <div class="period-container">
           <label for="period-date">기간</label>
-          <input type="date" name="date" id="period-date-first" />
+          <input
+            type="date"
+            name="date-1"
+            id="period-date-first"
+            date-placeholder="날짜 선택"
+            required
+            aria-required="true"
+          />
           <label id="period-symbol">~</label>
-          <input type="date" name="date" id="period-date-second" />
+          <input
+            type="date"
+            name="date-2"
+            id="period-date-second"
+            date-placeholder="날짜 선택"
+            required
+            aria-required="true"
+          />
         </div>
         <div class="goal-money-container">
           <label for="goal-money ">목표금액</label>
@@ -100,10 +117,10 @@
             id="goal-money-input"
             onkeyup="inputNumberFormat(this)"
           />
-          <label>원</label>
+          <label style="margin-left: 10px">원</label>
         </div>
         <div class="product-container">
-          <label style="font-size: 18px">상품정보</label>
+          <label style="font-size: 22px">상품정보</label>
           <hr />
           <label for="product-name">이름</label>
           <input id="product-name" type="text" />
@@ -116,28 +133,34 @@
         </div>
         <div class="product-price-container">
           <label for="product-price" id="product-price-label">금액</label>
-          <input id="product-price" type="text" />
+          <input
+            id="product-price"
+            type="text"
+            onkeyup="inputNumberFormat(this)"
+          />
+          <label style="margin-left: 10px">원</label>
         </div>
+        <div class="product-checkbox-container">
+          <input type="checkbox" name="earlyBirdCheck" id="ealry-bird-box" />
+          <label for="early-bird">얼리버드</label>
+          <input type="checkbox" name="generalSale" id="general-sale" />
+          <label for="general-sale">일반판매</label>
+        </div>
+
         <div class="detail-image-container">
+          <label style="font-size: 22px">상품상세 이미지</label>
+          <hr />
           <label>상세이미지</label>
           <input type="file" id="detail-image-input" />
           <label for="detail-image-input" id="detail-image-label"
             >첨부하기</label
           >
-          <div class="product-checkbox-container">
-            <input type="checkbox" name="earlyBirdCheck" id="ealry-bird-box" />
-            <label for="early-bird">얼리버드</label>
-            <input type="checkbox" name="generalSale" id="general-sale" />
-            <label for="general-sale">일반판매</label>
-          </div>
-          <!-- <img
-            src="./img/상세이미지.png"
-            alt="상세이미지입니다."
-            id="detail-image"
-          /> -->
+          <label id="ext_label_two"
+            >jpg, png, gif, svg, tif 업로드 가능합니다.</label
+          >
         </div>
+        <hr style="position: relative; top: 745px" />
         <div class="register-modify-container">
-          <hr />
           <button id="register-button">등록요청하기</button>
           <button id="modify-button">수정요청하기</button>
         </div>
