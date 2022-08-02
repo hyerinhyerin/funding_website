@@ -359,7 +359,7 @@ form input::file-selector-button {
 
 .title-container {
   position: relative;
-  top: 63px;
+  top: 43px;
 }
 #title {
   width: 400px;
@@ -369,7 +369,7 @@ form input::file-selector-button {
 
 .detail-content-container {
   position: relative;
-  top: 126px;
+  top: 86px;
 }
 #detaile-content {
   position: relative;
@@ -382,7 +382,7 @@ form input::file-selector-button {
 
 .period-container {
   position: relative;
-  top: 199px;
+  top: 129px;
 }
 #period-date-first {
   margin-left: 80px;
@@ -406,7 +406,7 @@ input[type="date"]:valid::before {
 
 .goal-money-container {
   position: relative;
-  top: 262px;
+  top: 172px;
 }
 #goal-money-input {
   position: relative;
@@ -418,7 +418,7 @@ input[type="date"]:valid::before {
 
 .product-container {
   position: relative;
-  top: 360px;
+  top: 280px;
 }
 #product-name {
   position: relative;
@@ -446,7 +446,7 @@ input[type="date"]:valid::before {
 
 .product-count-container {
   position: relative;
-  top: 423px;
+  top: 323px;
 }
 #product-count {
   position: relative;
@@ -457,7 +457,7 @@ input[type="date"]:valid::before {
 }
 .product-price-container {
   position: relative;
-  top: 486px;
+  top: 366px;
 }
 #product-price {
   width: 170px;
@@ -467,7 +467,7 @@ input[type="date"]:valid::before {
 
 .product-checkbox-container {
   position: relative;
-  top: 549px;
+  top: 409px;
 }
 #ealry-bird-box {
   position: relative;
@@ -481,7 +481,7 @@ input[type="date"]:valid::before {
 
 .detail-image-container {
   position: relative;
-  top: 647px;
+  top: 517px;
 }
 #detail-image-input {
   border: solid 1px gray;
@@ -511,7 +511,7 @@ input[type="date"]:valid::before {
 
 .register-modify-container {
   position: relative;
-  top: 767px;
+  top: 622px;
   text-align: center;
   margin-bottom: 360px;
 }
@@ -519,7 +519,7 @@ input[type="date"]:valid::before {
 #modify-button {
   font-family: "gongli";
   font-size: 16px;
-  padding: 6px 25px;
+  padding: 16px 25px;
   background-color: #008299;
   border-radius: 4px;
   color: white;
@@ -527,7 +527,7 @@ input[type="date"]:valid::before {
   border: none;
 }
 #modify-button {
-  margin-left: 10px;
+  margin-left: 50px;
 }
 
 /* footer */
@@ -541,7 +541,7 @@ input[type="date"]:valid::before {
   padding-bottom: 25px;
   height: 150px;
   position: relative;
-  top: 500px;
+  top: 400px;
   margin-bottom: 300px;
 }
 
@@ -560,5 +560,5 @@ input[type="date"]:valid::before {
 }
 #footer-hr {
   position: relative;
-  top: 550px;
+  top: 450px;
 }
