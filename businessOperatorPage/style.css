@@ -323,8 +323,9 @@ h1 {
 #preview-image {
   position: relative;
   left: 36px;
-  width: 200px;
+  width: 313px;
   height: 200px;
+  object-fit: cover;
 }
 #input-image {
   position: relative;
@@ -378,30 +379,31 @@ form input::file-selector-button {
 #detaile-content-area {
   position: relative;
   left: 51px;
+  resize: none;
 }
 
 .period-container {
   position: relative;
   top: 129px;
 }
-#period-date-first {
-  margin-left: 80px;
-}
-#period-date-first,
-#period-date-second {
-  height: 23px;
-}
-#period-sysbol {
+#from {
   position: relative;
-  top: 5px;
+  bottom: 3px;
+  width: 160px;
+  height: 23px;
+  margin-left: 79px;
 }
-input[type="date"]::before {
-  content: attr(date-placeholder);
-  width: 100%;
+#period {
+  position: relative;
+  top: -2px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
-input[type="date"]:focus::before,
-input[type="date"]:valid::before {
-  display: none;
+#to {
+  position: relative;
+  bottom: 3px;
+  width: 160px;
+  height: 23px;
 }
 
 .goal-money-container {
@@ -561,4 +563,11 @@ input[type="date"]:valid::before {
 #footer-hr {
   position: relative;
   top: 450px;
+}
+
+.ui-datepicker-calendar > tbody td.ui-datepicker-week-end:first-child a {
+  color: red;
+}
+.ui-datepicker-calendar > tbody td.ui-datepicker-week-end:last-child a {
+  color: blue;
 }
