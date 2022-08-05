@@ -1,18 +1,108 @@
 @font-face {
     font-family: "gong";
-    src: url('../font/ Gothic Medium.ttf');
+    src: url('../font/Gong\ Gothic\ Medium.ttf');
+}
+
+@font-face {
+    font-family: "nanum";
+    src: url('../font/NanumSquareRoundB.ttf');
+}
+
+@font-face {
+    font-family: "gongli";
+    src: url('../font/Gong\ Gothic\ Light.ttf');
+}
+
+@font-face {
+    font-family: "main";
+    src: url('../font/HS두꺼비체.ttf');
 }
 
 /* 바디 부분 */
 h1 {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 150px;
     font-family: "gongli";
+    font-size: 40px;
+    color: #4a4a4a;
 }
+
+.form_hr{
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-color: #f2f4f641;
+}
+
+.contain_mid hr{
+    text-align: center;
+    width: 95%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-color: #f2f4f641;
+}
+
+/* 폼 부분*/
 
 .signup_form {
     margin-top: 50px;
     margin-bottom: 100px;
+    font-size: 20px;
+    font-family: "gongli";
     display: flex;
     justify-content: center;
+}
+.signup_form input{
+    width: 300px;
+    height: 20px;
+    position: relative;
+    font-family: "nanum";
+}
+.signup_form div{
+    position: relative;
+    margin-top: 30px;
+}
+
+#name{
+    left: 20px;
+}
+#id{
+    left: 70px;
+}
+#password{
+    left: 50px;
+}
+#address{
+    left: 90px;
+}
+#e-mail{
+    left: 70px;
+}
+#phone-number{
+    left: 70px;
+}
+#password_question{
+    position: relative;
+    left: 30px;
+    width: 250px;
+    height: 30px;
+    font-family: "gongli";
+}
+#password_answer{
+    left: 95px;
+}
+
+.submit_bt input{
+    position: relative;
+    width: 150px;
+    height: 50px;
+    font-family: "gongli";
+    font-size: 20px;
+    cursor: pointer;
+    left: 170px;
+    background-color: #008299;
+    color: white;
+    border: 0;
+    border-radius: 5px;
 }
