@@ -1,0 +1,85 @@
+.service-question
+{
+    position: relative;
+    font-family: "gongli";
+    left: 340px;
+}
+#title-size
+{
+    position: relative;
+    font-family: "namun";
+    font-size: large;
+    width: 1000px;
+    height: 500px;
+    margin-left: 60px;
+    top: 10px;
+}
+#label-size
+{
+    position: relative;
+    font-family: "gongli";
+    bottom: 230px;
+}
+#label-size-email
+{
+    position: relative;
+    font-family: "gongli";
+    bottom: 25px;
+}
+#title-size-email
+{
+    position: relative;
+    font-family: "namun";
+    font-size: large;
+    left: 15px;
+    width: 500px;
+    height: 50px;
+    margin-left: 60px;
+    margin-top: 30px;
+    bottom: 10px;
+}
+#button-submit
+{
+    position: relative;
+    bottom: 50px;
+    left: 1010px;
+    padding: 15px 30px;
+    background-color: #008299;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-family: "gongli";
+    font-size: medium;
+}
+#button-catagory
+{
+    position: relative;
+    left: 500px;
+    padding: 15px 30px;
+    background-color: #008299;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-family: "gongli";
+    font-size: medium;
+}
+
+.lineset{
+    position: relative;
+    top: 30px;
+}
+#category-style{
+    padding: 10px 15px;
+    background-color: white;
+    display: inline-block;
+    right: 0;
+    padding: 10;
+    color: #008299;
+    font-family: "gongli";
+    border-radius: 10px;
+    display: inline-block;
+    justify-content: space-between;
+    margin-left: 400px;
+}
