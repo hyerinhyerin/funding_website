@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>사업자 - 수정/등록</title>
+    <title>사업자 - 문의하기</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./service_style.css" />
   </head>
@@ -62,7 +62,13 @@
     <!--문의하기 내용-->
   <h1>문의하기</h1>
     <!--문의하기 카테고리-->
-    <button id="button-catagory">환불관련</button>
+    <div>
+      <button id="button-category">환불</button>
+      <button id="button-category">결제오류</button>
+      <button id="button-category">회원탈퇴</button>
+      <button id="button-category">상품문의</button>
+      <button id="button-category">기타문의</button>
+    </div>
     <!--문의하기 내용 작성부분-->
     <form>
       <div class="service-question">
@@ -70,8 +76,8 @@
         <input type="email" name="lineset" id="title-size-email" placeholder="이메일을 입력하세요.">
       </div>
       <div class="service-question" class="lineset">
-        <label for="title-size" id="label-size">문의내용</label>
-        <input type="text" name=""service-question id="title-size" placeholder="문의 내용을 입력하세요.">
+        <label id="label-size">문의내용</label>
+        <textarea name="service-question" id="title-size" cols="65" rows="10" placeholder="문의 내용을 입력하세요."></textarea>
       </div>
       <div class="service-question">
         <button id="button-submit">제출하기</button>

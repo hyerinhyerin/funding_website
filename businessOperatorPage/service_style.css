@@ -1,8 +1,17 @@
+h1
+{
+    display: block;
+    font-size: 2em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
 .service-question
 {
     position: relative;
     font-family: "gongli";
-    left: 340px;
+    left: 350px;
 }
 #title-size
 {
@@ -13,12 +22,13 @@
     height: 500px;
     margin-left: 60px;
     top: 10px;
+    resize: none;
 }
 #label-size
 {
     position: relative;
     font-family: "gongli";
-    bottom: 230px;
+    bottom: 475px;
 }
 #label-size-email
 {
@@ -41,7 +51,7 @@
 #button-submit
 {
     position: relative;
-    bottom: 50px;
+    top: 20px;
     left: 1010px;
     padding: 15px 30px;
     background-color: #008299;
@@ -52,10 +62,10 @@
     font-family: "gongli";
     font-size: medium;
 }
-#button-catagory
+#button-category
 {
     position: relative;
-    left: 500px;
+    left: 530px;
     padding: 15px 30px;
     background-color: #008299;
     border-radius: 4px;
@@ -64,8 +74,8 @@
     color: white;
     font-family: "gongli";
     font-size: medium;
+    margin-left: 50px;
 }
-
 .lineset{
     position: relative;
     top: 30px;
