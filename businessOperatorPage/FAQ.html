@@ -8,50 +8,53 @@
   <body>
     <!--header logo 부분 시작-->
     <div class="nav_menu">
-      <a href="./submain.html" class="_menu">ㅍㅎㄴㄹ</a>
+      <a href="/Main.html"><img class="title" src="/img/main_title.png" alt="편한누리" /></a>
       <!--카테고리 메뉴바-->
       <div>
         <ul id="mainline">
           <li>
             <a href="#" class="category_menu">카테고리</a>
             <ul>
-              <li>
-                <a href="#">가구</a>
+              <li data-url="furniture.html">
+                <span>가구</span>
               </li>
-              <li>
-                <a href="#">전자기기</a>
+              <li data-url="electronic.html">
+                <span>전자기기</span>
               </li>
-              <li>
-                <a href="#">생활용품</a>
+              <li data-url="daily.html">
+                <span>생활용품</span>
               </li>
-              <li>
-                <a href="#">취미</a>
+              <li data-url="hobby.html">
+                <span>취미</span>
               </li>
-              <li>
-                <a href="#">뷰티</a>
+              <li data-url="beauty.html">
+                <span>뷰티</span>
               </li>
             </ul>
           </li>
           <li>
-            <a href="submain.html/all_prouct" class="all_menu">전체</a>
+            <span class="all_menu">전체</span>
           </li>
           <li>
-            <a href="funding_planned.html" class="funding_menu">펀딩예정</a>
+            <a href="/funding_planned_0726.html" class="funding_menu"
+              >펀딩예정</a
+            >
           </li>
           <li>
-            <a href="submain.html/earlybird" class="earlybird_menu">얼리버드</a>
+            <a href="/submain.html/earlybird" class="earlybird_menu">얼리버드</a>
           </li>
         </ul>
       </div>
 
-      <a href="./login/login.html" class="main_login">로그인</a>
+      <a href="#" class="main_login">로그인</a>
+
       <div id="wrap">
         <form action="" autocomplete="on">
           <input
             id="search"
             name="search"
             type="text"
-            placeholder="검색어를 입력해 주세요."
+            placeholder="얼리버드 특가 "
           />
           <input id="search_submit" value="Rechercher" type="submit" />
         </form>
@@ -142,4 +145,6 @@
     </footer>
   </body>
   <script src="/businessOperatorPage/FAQ.js"></script>
+  <script type="text/javascript" src="/jquery-3.6.0.js"></script>
+  <script src="/Main.js"></script>
 </html>
