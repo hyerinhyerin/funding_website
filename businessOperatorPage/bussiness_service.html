@@ -65,28 +65,8 @@
     <!--문의하기 내용 작성부분-->
     <form>
       <div class="service-question">
-        <label for="title-size-email" id="label-size-email">이메일</label>
-        <input type="email" name="lineset" id="title-size-email" placeholder="이메일을 입력하세요.">
-      </div>
-      <div class="service-question" class="lineset">
-        <label id="label-size">문의내용</label>
-        <textarea name="service-question" id="title-size" cols="65" rows="10" placeholder="문의 내용을 입력하세요."></textarea>
-      </div>
-      <div class="service-question">
-        <input
-          type="checkbox"
-          name="status"
-          id="mamber-box"
-          onclick="checkOnlyOne(this)"
-        />
-        <label for="early-bird">회원</label>
-        <input
-          type="checkbox"
-          name="status"
-          id="general-sale"
-          onclick="checkOnlyOne(this)"
-        />
-        <label for="general-sale">비회원</label>
+        <label for="title-name">제목</label>
+        <input type="text" id="title-name" placeholder="제목을 입력하세요.">
       </div>
       <div class="service-question">
         <label for="answer-question" id="answer-question-label"> 문의내역 </label>
@@ -98,8 +78,22 @@
             <option> 배송상태 </option>
             <option> 기타내역 </option>
         </select> <br>
-    </div>
+      </div>
       <div class="service-question">
+        <label for="title-size-email" id="label-size-email">이메일</label>
+        <input type="email" name="lineset" id="title-size-email" placeholder="이메일을 입력하세요.">
+      </div>
+      <div class="service-question" class="lineset">
+        <label id="label-size">문의내용</label>
+        <textarea name="service-question" id="title-size" cols="65" rows="10" placeholder="문의 내용을 입력하세요."></textarea>
+      </div>
+      <div class="mamber-box-position">
+        <input type="checkbox" name="status" id="mamber-box" onclick="checkOnlyOne(this)"/>
+        <label for="mamber-box">회원</label>
+        <input type="checkbox" name="status" id="mamber-box" onclick="checkOnlyOne(this)"/>
+        <label for="mamber-box">비회원</label>
+      </div>
+      <div>
         <button id="button-submit">제출하기</button>
       </div>
     </form>

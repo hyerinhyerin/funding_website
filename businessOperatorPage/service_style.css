@@ -6,6 +6,15 @@ h1
     margin-bottom: 40px;
     color: #4a4a4a;
 }
+#title-name
+{
+    margin-left: 90px;
+    width: 505px;
+    height: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
 .service-question
 {
     position: relative;
@@ -41,8 +50,8 @@ h1
     font-family: "namun";
     font-size: large;
     left: 15px;
-    width: 500px;
-    height: 50px;
+    width: 510px;
+    height: 30px;
     margin-left: 60px;
     margin-top: 30px;
     bottom: 10px;
@@ -50,8 +59,8 @@ h1
 #button-submit
 {
     position: relative;
-    top: 30px;
-    left: 550px;
+    left: 50%;
+    transform: translate(-50%,-50%);
     padding: 15px 30px;
     background-color: #008299;
     border-radius: 4px;
@@ -60,6 +69,7 @@ h1
     border: none;
     font-family: "gongli";
     font-size: medium;
+    margin-top: 80px;
 }
 #button-category
 {
@@ -82,14 +92,20 @@ h1
 }
 #mamber-box
 {
-    margin-left: 125px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.mamber-box-position
+{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 30px;
 }
 #answer-question
 {
     margin-left: 60px;
-    padding: 5px 100px;
+    padding: 5px 200px;
 }
 #answer-question-label
 {
