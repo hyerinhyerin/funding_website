@@ -114,7 +114,7 @@ function rowDel4(obj) {
     var p2 = document.getElementById("text2").value;
     var p3 = document.getElementById("text3").value;
     var p4 = document.getElementById("text4").value;
-    console.log(text4)
+   
 
     if(p1 != null){
         total += product_price.one*p1;
