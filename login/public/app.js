@@ -226,13 +226,13 @@
 // });
 
 // db 연결
-const mysql = require('mysql');
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '1234',
-    database: 'loginTest', //db 이름 not 테이블 이름
-});
+// const mysql = require('mysql');
+// const connection = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: '1234',
+//     database: 'loginTest', //db 이름 not 테이블 이름
+// });
 
 // connection.connect();
 
@@ -245,11 +245,11 @@ const connection = mysql.createConnection({
 
 // 클라이언트 요청에 대응하는 route 설정
 
-const express = require('express');
+// const express = require('express');
 
-const app = express();
+// const app = express();
 
-app.set('port', process.env.PORT || 3001);
+// app.set('port', process.env.PORT || 3001);
 
 // app.get('/', (req, res) => {
 //     res.send('Root');
@@ -272,76 +272,218 @@ app.set('port', process.env.PORT || 3001);
 //     });
 // });
 
-const path = require('path');
+// const path = require('path');
+// const bodyParser = require('body-parser');
+
+// app.use(bodyParser.urlencoded({ extended : true }));
+
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, '/addUser.html'));
+// });
+
+// app.post('/', (req, res) => {
+//     const sql = "INSERT INTO user SET ?"
+
+//     connection.query(sql, req.body, function(err, result, fields){
+//         if(err) throw err;
+//         console.log(result);
+//         //res.send('등록이 완료 되었습니다.'); 
+//         res.redirect('/');
+//     });
+// });
+
+// // ejs 를 이용하여 테이블에서 가져온 사용자 정보를 나열
+
+// const ejs = require('ejs');
+
+// app.set('view engine', 'ejs');
+
+// // user 로 들어가면 테이블에 추가한 사용자 정보 목록 표시됨
+// app.get('/user', (req, res) => {
+//     connection.query('SELECT * from user', (error, result, fields) => {
+//         if(error) throw error;
+//         res.render('index', {user : result});
+//     });
+// });
+
+// // delete 문으로 데이터 삭제
+// // const sql = "DELETE FROM user WHERE id = ?";
+
+// app.get('/delete/:id', (req, res)=>{
+//     const sql = "DELETE FROM user WHERE id = ?";
+//     connection.query(sql, [req.params.id], function(err, result, fields){
+//         if(err) throw err;
+//         console.log(result)
+//         res.redirect('/');
+//     });
+// });
+
+// // update 문으로 동작 확인
+// // const sql = "UPDATE user SET ? WHERE id = " + req.params.id;
+
+// // 업데이트 폼 작성
+
+// app.get('/edit/:id', (req, res) => {
+//     const sql = "SELECT * FROM user WHERE id = ?";
+//     connection.query(sql, [req.params.id], function(err, result, fields){
+//         if(err) throw err;
+//         res.render('edit', {user : result});
+//     });
+// });
+
+// // '' 이거 잘 감싸줘야함 안그럼 계속 오류남 update 할 때 주의해야함
+// app.post('/update/:id', (req, res) => {
+//     const sql = "UPDATE user SET ? WHERE id = '" + req.params.id + "'";
+//     connection.query(sql, req.body, function(err, result, fields){
+//         if(err) throw err;
+//         console.log(result);
+//         res.redirect('/');
+//     });
+// });
+
+// app.listen(app.get('port'), () => {
+//     console.log('Express server listening on port '+ app.get('port'));
+// });
+
+
+const fs = require('fs');
+const mysql = require('mysql');
+const express = require('express');
 const bodyParser = require('body-parser');
-
-app.use(bodyParser.urlencoded({ extended : true }));
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/addUser.html'));
-});
-
-app.post('/', (req, res) => {
-    const sql = "INSERT INTO user SET ?"
-
-    connection.query(sql, req.body, function(err, result, fields){
-        if(err) throw err;
-        console.log(result);
-        //res.send('등록이 완료 되었습니다.'); 
-        res.redirect('/');
-    });
-});
-
-// ejs 를 이용하여 테이블에서 가져온 사용자 정보를 나열
-
+const path = require('path');
+const session = require('express-session');
+const crypto = require('crypto');
+const FileStore = require('session-file-store')(session); // 세션을 파일에 저장
+const cookieParser = require('cookie-parser');
 const ejs = require('ejs');
 
-app.set('view engine', 'ejs');
+// express 설정 1
+const app = express();
 
-// user 로 들어가면 테이블에 추가한 사용자 정보 목록 표시됨
-app.get('/user', (req, res) => {
-    connection.query('SELECT * from user', (error, result, fields) => {
-        if(error) throw error;
-        res.render('index', {user : result});
+// db 연결 2
+const client = mysql.createConnection({
+    user : 'root',
+    password : '1234',
+    database : 'loginTest',
+});
+
+// 정적 파일 설정 (미들웨어) 3
+app.use(express.static(path.join(__dirname,'/public')));
+
+// ejs 설정 4 html은 데이터베이스의 정보 가져올 수 없기에 ejs 확장자 사용
+app.set('views', __dirname + '\\views');
+app.set('view engine','ejs');
+
+// 정제 (미들웨어) 5 파일을 가져오면 깨질 수 있는데 그걸 방지
+app.use(bodyParser.urlencoded({extended:false}));
+
+// 세션 (미들웨어) 6
+app.use(session({
+    secret: 'blackzat', // 데이터를 암호화 하기 위해 필요한 옵션
+    resave: false, // 요청이 왔을때 세션을 수정하지 않더라도 다시 저장소에 저장되도록
+    saveUninitialized: true, // 세션이 필요하면 세션을 실행시칸다(서버에 부담을 줄이기 위해)
+    store : new FileStore() // 세션이 데이터를 저장하는 곳
+}));
+
+
+// 메인페이지
+app.get('/',(req,res)=>{
+    console.log('메인페이지 작동');
+    console.log(req.session);
+    if(req.session.is_logined == true){
+        res.render('main',{
+            is_logined : req.session.is_logined,
+            name : req.session.name
+        });
+    }else{
+        res.render('main',{
+            is_logined : false
+        });
+    }
+});
+
+// 회원가입
+app.get('/register',(req,res)=>{
+    console.log('회원가입 페이지');
+    res.render('register');
+});
+
+app.post('/register',(req,res)=>{
+    console.log('회원가입 하는중')
+    const body = req.body;
+    const id = body.id;
+    const pw = body.pw;
+    const name = body.name;
+    const age = body.age;
+
+    client.query('select * from userdata where id=?',[id],(err,data)=>{
+        if(data.length == 0){
+            console.log('회원가입 성공');
+            client.query('insert into userdata(id, name, age, pw) values(?,?,?,?)',[
+                id, name, age, pw
+            ]);
+            res.redirect('/');
+        }else{
+            console.log('회원가입 실패');
+            res.send('<script>alert("회원가입 실패");</script>');
+            console.log(err);
+            res.redirect('/login');
+        }
     });
 });
 
-// delete 문으로 데이터 삭제
-// const sql = "DELETE FROM user WHERE id = ?";
+// 로그인
+app.get('/login',(req,res)=>{
+    console.log('로그인 작동');
+    res.render('login');
+});
 
-app.get('/delete/:id', (req, res)=>{
-    const sql = "DELETE FROM user WHERE id = ?";
-    connection.query(sql, [req.params.id], function(err, result, fields){
-        if(err) throw err;
-        console.log(result)
+app.post('/login',(req,res)=>{
+    const body = req.body;
+    const id = body.id;
+    const pw = body.pw;
+
+    client.query('select * from userdata where id=?',[id],(err,data)=>{
+        // 로그인 확인
+        console.log(data[0]);
+        console.log(id);
+        console.log(data[0].id);
+        console.log(data[0].pw);
+        console.log(id == data[0].id);
+        console.log(pw == data[0].pw);
+        if(id == data[0].id || pw == data[0].pw){
+            console.log('로그인 성공');
+            // 세션에 추가
+            req.session.is_logined = true;
+            req.session.name = data.name;
+            req.session.id = data.id;
+            req.session.pw = data.pw;
+            req.session.save(function(){ // 세션 스토어에 적용하는 작업
+                res.render('main',{ // 정보전달
+                    name : data[0].name,
+                    id : data[0].id,
+                    age : data[0].age,
+                    is_logined : true
+                });
+            });
+        }else{
+            console.log('로그인 실패');
+            res.render('/login');
+        }
+    });
+    
+});
+
+// 로그아웃
+app.get('/logout',(req,res)=>{
+    console.log('로그아웃 성공');
+    req.session.destroy(function(err){
+        // 세션 파괴후 할 것들
         res.redirect('/');
     });
+
 });
 
-// update 문으로 동작 확인
-// const sql = "UPDATE user SET ? WHERE id = " + req.params.id;
-
-// 업데이트 폼 작성
-
-app.get('/edit/:id', (req, res) => {
-    const sql = "SELECT * FROM user WHERE id = ?";
-    connection.query(sql, [req.params.id], function(err, result, fields){
-        if(err) throw err;
-        res.render('edit', {user : result});
-    });
+app.listen(3001,()=>{
+    console.log('3001 port running...');
 });
-
-// '' 이거 잘 감싸줘야함 안그럼 계속 오류남 update 할 때 주의해야함
-app.post('/update/:id', (req, res) => {
-    const sql = "UPDATE user SET ? WHERE id = '" + req.params.id + "'";
-    connection.query(sql, req.body, function(err, result, fields){
-        if(err) throw err;
-        console.log(result);
-        res.redirect('/');
-    });
-});
-
-app.listen(app.get('port'), () => {
-    console.log('Express server listening on port '+ app.get('port'));
-});
-
