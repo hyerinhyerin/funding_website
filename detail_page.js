@@ -1,132 +1,117 @@
-function change(style) {
-    
-    if( style == "early_1" )
-        {
-        view1.style.display = "inline"
-        result.style.display = "inlene"
-        }
-    if( style == "early_2" )
-       {
-        result.style.display = "inlene"
-        view2.style.display = "inline"
-        }
-     if( style == "normal_1" )
-       {
-        result.style.display = "inlene"
-        view3.style.display = "inline"
-        }
+// 변수 부분
+const earlyFirst = document.querySelector(".early-first");
+const nomalFirst = document.querySelector(".nomal-first");
+const deleteFirst = document.querySelector("#delete1");
+const deleteSecond = document.querySelector("#delete2");
 
-    if( style == "normal_2" )
-        {
-        result.style.display = "inlene"
-        view4.style.display = "inline"
-        }
-}
+const totalPrice = document.querySelector("#total-price");
 
+let introCount1 = 1;
+let introCount2 = 1;
+let temp1 = 0;
+let temp2 = 0;
+const count1 = document.querySelector("#early-count");
+const count2 = document.querySelector("#nomal-count");
+const originPrice1 = document.querySelector("#origin-price1");
+const originPrice2 = document.querySelector("#origin-price2");
+const total = document.querySelector("#total");
+const totalDiv = document.querySelector(".total-div");
 
-        
-function form_btn1(n){
-
-    var text = document.getElementById("text1"); // 폼 선택
-            
-    text_val = parseInt(text.value); // 폼 값을 숫자열로 변환
-            
-    text_val += n; // 계산
-            
-    text.value = text_val; // 계산된 값을 바꾼다
-            
-    if(text_val <= 0){
-        text.value = 1;   // 만약 값이 0 이하면 1로 되돌려준다, 1보다 작은 수는 나타나지 않게하기 위해   
+// 옵션 선택하는 순간
+function optionChange(target) {
+  if (target == "early-1") {
+    earlyFirst.style.display = "block";
+    temp1 = eval(originPrice1.value) * eval(count1.value);
+    if (nomalFirst.style.display == "none") {
+      total.value = temp1;
+    } else {
+      total.value = temp1 + temp2;
     }
-            
-}
-function form_btn2(n){
-
-    var text = document.getElementById("text2"); // 폼 선택
-            
-    text_val = parseInt(text.value); // 폼 값을 숫자열로 변환
-            
-    text_val += n; // 계산
-            
-    text.value = text_val; // 계산된 값을 바꾼다
-            
-    if(text_val <= 0){
-        text.value = 1;   // 만약 값이 0 이하면 1로 되돌려준다, 1보다 작은 수는 나타나지 않게하기 위해   
+  }
+  if (target == "normal-1") {
+    nomalFirst.style.display = "block";
+    temp2 = eval(originPrice2.value) * eval(count2.value);
+    if (earlyFirst.style.display == "none") {
+      total.value = temp2;
+    } else {
+      total.value = temp1 + temp2;
     }
-            
-}
-function form_btn3(n){
-
-    var text = document.getElementById("text3"); // 폼 선택
-            
-    text_val = parseInt(text.value); // 폼 값을 숫자열로 변환
-            
-    text_val += n; // 계산
-            
-    text.value = text_val; // 계산된 값을 바꾼다
-            
-    if(text_val <= 0){
-        text.value = 1;   // 만약 값이 0 이하면 1로 되돌려준다, 1보다 작은 수는 나타나지 않게하기 위해   
-    }
-            
-}
-function form_btn4(n){
-
-    var text = document.getElementById("text4"); // 폼 선택
-            
-    text_val = parseInt(text.value); // 폼 값을 숫자열로 변환
-            
-    text_val += n; // 계산
-            
-    text.value = text_val; // 계산된 값을 바꾼다
-            
-    if(text_val <= 0){
-        text.value = 1;   // 만약 값이 0 이하면 1로 되돌려준다, 1보다 작은 수는 나타나지 않게하기 위해   
-    }
-            
+  }
+  if (target != "select") {
+    totalDiv.style.display = "block";
+  }
 }
 
+// x삭제 버튼
+deleteFirst.addEventListener("click", function deleteProduct1(e) {
+  e.preventDefault();
+  earlyFirst.style.display = "none";
+  total.value = 0;
+  if (nomalFirst.style.display == "none") {
+    total.value = 0;
+  } else {
+    total.value = temp2;
+  }
+  temp1 = 0;
+  count1.value = 1;
+  introCount1 = 1;
+  if (
+    earlyFirst.style.display == "none" &&
+    nomalFirst.style.display == "none"
+  ) {
+    totalDiv.style.display = "none";
+  }
+});
+deleteSecond.addEventListener("click", function deleteProduct2(e) {
+  e.preventDefault();
+  nomalFirst.style.display = "none";
+  total.value = 0;
+  if (earlyFirst.style.display == "none") {
+    total.value = 0;
+  } else {
+    total.value = temp1;
+  }
+  temp2 = 0;
+  count2.value = 1;
+  introCount2 = 1;
+  if (
+    earlyFirst.style.display == "none" &&
+    nomalFirst.style.display == "none"
+  ) {
+    totalDiv.style.display = "none";
+  }
+});
 
+// 실시간 합계
 
-function rowDel1(obj) { 
-    view1.style.display = "none"     
+function plusCount1() {
+  introCount1++;
+  count1.value = introCount1;
 }
-function rowDel2(obj) { 
-    view2.style.display = "none"     
-}
-function rowDel3(obj) { 
-    view3.style.display = "none"     
-}
-function rowDel4(obj) { 
-    view4.style.display = "none"     
+function minusCount1() {
+  if (introCount1 > 1) {
+    introCount1--;
+    count1.value = introCount1;
+  }
 }
 
+function plusCount2() {
+  introCount2++;
+  count2.value = introCount2;
+}
+function minusCount2() {
+  if (introCount2 > 1) {
+    introCount2--;
+    count2.value = introCount2;
+  }
+}
 
+function clac1() {
+  temp1 = eval(originPrice1.value) * eval(count1.value);
+  total.value = temp1 + temp2;
+}
 
-    var product_price = {
-        "one":15000,
-        "two":30000,
-        "three":17000,
-        "four":34000
-    };
-    var total = 0;
-    var p1 = document.getElementById("text1").value;
-    var p2 = document.getElementById("text2").value;
-    var p3 = document.getElementById("text3").value;
-    var p4 = document.getElementById("text4").value;
-   
-
-    if(p1 != null){
-        total += product_price.one*p1;
-    }
-    if(p2 != null){
-        total += product_price.two*p2;
-    }
-    if(p3 != null){
-        total += product_price.three*p3;
-    }
-    if(p4 != null){
-        total += product_price.four*p4;
-    }
-    document.querySelector("#total_result").innerHTML = total;
-
+function clac2() {
+  temp2 = eval(originPrice2.value) * eval(count2.value);
+  total.value = temp1 + temp2;
+}

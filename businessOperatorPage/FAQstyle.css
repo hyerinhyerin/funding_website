@@ -31,202 +31,201 @@ body {
   object-fit: cover;
 }
 .nav_menu {
-position: relative;
-width: 100%;
-height: 100px;
-background-color: #008299;
-/* margin: -10px;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: #008299;
+  /* margin: -10px;
 margin-top: -26px; */
-margin: 0px;
-margin-top: -26px;
-position: relative;
-z-index: 100;
-
+  margin: 0px;
+  margin-top: -26px;
+  position: relative;
+  z-index: 100;
 }
 ._menu {
   font-family: "main";
   font-size: 55px;
-  color :white;
+  color: white;
   text-decoration-line: none;
   position: absolute;
   top: 30%;
   left: 5%;
-
 }
-.nav_menu li{
+.nav_menu li {
   float: left;
 }
-.category_menu{
-  font-family: 'gong';
+.category_menu {
+  font-family: "gong";
   font-size: 20px;
-  color :white;
+  color: white;
   text-decoration-line: none;
   position: absolute;
   top: 53%;
   left: 25%;
-
 }
 .all_menu {
-  font-family: 'gong';
+  font-family: "gong";
   font-size: 20px;
-  color :white;
+  color: white;
   text-decoration-line: none;
   position: absolute;
   top: 53%;
   left: 32%;
 }
 .funding_menu {
-  font-family: 'gong';
+  font-family: "gong";
   font-size: 20px;
-  color :white;
+  color: white;
   text-decoration-line: none;
   position: absolute;
   top: 53%;
   left: 37%;
 }
 .earlybird_menu {
-  font-family: 'gong';
+  font-family: "gong";
   font-size: 20px;
-  color :white;
+  color: white;
   text-decoration-line: none;
   position: absolute;
   top: 53%;
   left: 44%;
 }
-.all_menu:hover, .funding_menu:hover, .earlybird_menu:hover, .category_menu:hover{
-  color:black;
+.all_menu:hover,
+.funding_menu:hover,
+.earlybird_menu:hover,
+.category_menu:hover {
+  color: black;
   transition: color 0.2s;
 }
 /* category */
-ul li{
-list-style: none;
-padding-inline-start: 0px;
+ul li {
+  list-style: none;
+  padding-inline-start: 0px;
 }
 
-a{
-text-decoration-line: none;
+a {
+  text-decoration-line: none;
 }
 
-#mainline{
-display: inline-block;
-right: 0;
-bottom: 0;
-left: 0;
-justify-content: space-between;
-z-index: 2;
-margin-left: 24px;
-padding: 0;
-width: auto;
-list-style: none;
-vertical-align: top;
+#mainline {
+  display: inline-block;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: space-between;
+  z-index: 2;
+  margin-left: 24px;
+  padding: 0;
+  width: auto;
+  list-style: none;
+  vertical-align: top;
 }
-#mainline ul{
-margin :0;
-width: 140px;
-background-color: #ffffff;
-border-radius: 7px;
-padding-top: 15px;
-padding-left: 0px;
-padding-bottom: 10px;
-box-shadow: 0px 0px 8px 2px rgb(0, 0, 0, 20%);
-position: absolute;
-top:75px;
-left: 23.2%;
-text-align: center;
-opacity: 0;
-z-index: 2;
+#mainline ul {
+  margin: 0;
+  width: 140px;
+  background-color: #ffffff;
+  border-radius: 7px;
+  padding-top: 15px;
+  padding-left: 0px;
+  padding-bottom: 10px;
+  box-shadow: 0px 0px 8px 2px rgb(0, 0, 0, 20%);
+  position: absolute;
+  top: 75px;
+  left: 23.2%;
+  text-align: center;
+  opacity: 0;
+  z-index: 2;
 }
-#mainline ul li{
-float: none;
-margin: 0;
-padding: 0;
-}
-
-#mainline ul li span{
-font-size: 15px;
-font-family: 'gongli';
-color:black;
-cursor: pointer;
+#mainline ul li {
+  float: none;
+  margin: 0;
+  padding: 0;
 }
 
-#mainline li span{
-cursor: pointer;
+#mainline ul li span {
+  font-size: 15px;
+  font-family: "gongli";
+  color: black;
+  cursor: pointer;
 }
 
-#mainline ul li:hover span{
-font-weight: bold;
+#mainline li span {
+  cursor: pointer;
 }
 
-#mainline li:hover ul{
-opacity: 1;
+#mainline ul li:hover span {
+  font-weight: bold;
 }
 
-#mainline li:hover ul li{
-height: 30px;
-overflow: visible;
-padding: 0;
+#mainline li:hover ul {
+  opacity: 1;
+}
+
+#mainline li:hover ul li {
+  height: 30px;
+  overflow: visible;
+  padding: 0;
 }
 
 /*login*/
-.main_login{
+.main_login {
   font-family: "nanum";
   font-size: 15px;
-  color : black;
+  color: black;
   text-decoration: none;
   position: absolute;
   top: 55%;
   left: 85%;
 }
 #wrap {
-position: absolute;
-left: 80%;
-top: 44%;
+  position: absolute;
+  left: 80%;
+  top: 44%;
 }
 
 input[type="text"] {
-height: 30px;
-font-size: 15px;
-font-family: "nanum";
-border: none;
-border-radius: 15px;
-outline: none;
-color: rgb(0, 0, 0);
-padding: 3px;
-padding-left: 30px;
-padding-right: 30px;
-width: 210px;
-position: absolute;
-right: 40px;
-z-index: 3;
-cursor: pointer;
-text-align: center;
+  height: 30px;
+  font-size: 15px;
+  font-family: "nanum";
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  color: rgb(0, 0, 0);
+  padding: 3px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 210px;
+  position: absolute;
+  right: 40px;
+  z-index: 3;
+  cursor: pointer;
+  text-align: center;
 }
 input[type="text"]:focus {
-width: 210px;
-z-index: 1;
-cursor: text;
-position: absolute;
-right: 40px;
-background-color: white;
+  width: 210px;
+  z-index: 1;
+  cursor: text;
+  position: absolute;
+  right: 40px;
+  background-color: white;
 }
 input[type="submit"] {
-height: 25px;
-width: 30px;
-color: red;
-float: right;
-background: url('/search.svg') no-repeat;
-text-indent: -10000px;
-border: none;
-position: absolute;
-right: 0px;
-z-index: 2;
-cursor: pointer;
-top: 7px;
+  height: 25px;
+  width: 30px;
+  color: red;
+  float: right;
+  background: url("/search.svg") no-repeat;
+  text-indent: -10000px;
+  border: none;
+  position: absolute;
+  right: 0px;
+  z-index: 2;
+  cursor: pointer;
+  top: 7px;
 }
 input[type="submit"]:hover {
-opacity: 0.4;
+  opacity: 0.4;
 }
-
 
 /* faq contents 시작 */
 
@@ -236,7 +235,7 @@ opacity: 0.4;
 
 #title-faq {
   color: #4a4a4a;
-  font-family: 'nanum';
+  font-family: "nanum";
   font-size: 50px;
   text-align: center;
   margin-top: 257px;
@@ -257,12 +256,14 @@ opacity: 0.4;
   border-right: 1px solid gray;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  color: gray;
 }
 #second-q {
   width: 75%;
   margin: 0 auto;
   padding: 15px;
   border: 1px solid gray;
+  color: gray;
 }
 #third-q {
   width: 75%;
@@ -270,6 +271,7 @@ opacity: 0.4;
   padding: 15px;
   border: 1px solid gray;
   border-top: none;
+  color: gray;
 }
 #fourth-q {
   width: 75%;
@@ -277,6 +279,7 @@ opacity: 0.4;
   padding: 15px;
   border: 1px solid gray;
   border-top: none;
+  color: gray;
 }
 #last-q {
   width: 75%;
@@ -287,6 +290,7 @@ opacity: 0.4;
   border-right: 1px solid gray;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  color: gray;
 }
 
 .first-constents {
@@ -296,7 +300,11 @@ opacity: 0.4;
   margin: 0 auto;
   padding: 15px;
   border-bottom: none;
-  background-color: #efefef;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  font-family: "nanum";
+  color: #606060;
+  line-height: 27px;
 }
 
 .second-constents {
@@ -306,7 +314,11 @@ opacity: 0.4;
   margin: 0 auto;
   padding: 15px;
   border-top: none;
-  background-color: #efefef;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  font-family: "nanum";
+  color: #606060;
+  line-height: 27px;
 }
 
 .third-constents {
@@ -316,7 +328,11 @@ opacity: 0.4;
   margin: 0 auto;
   padding: 15px;
   border-top: none;
-  background-color: #efefef;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  font-family: "nanum";
+  color: #606060;
+  line-height: 27px;
 }
 
 .fourth-constents {
@@ -326,7 +342,11 @@ opacity: 0.4;
   margin: 0 auto;
   padding: 15px;
   border-top: none;
-  background-color: #efefef;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  font-family: "nanum";
+  color: #606060;
+  line-height: 27px;
 }
 
 .last-constents {
@@ -335,21 +355,24 @@ opacity: 0.4;
   width: 75%;
   margin: 0 auto;
   padding: 15px;
-  background-color: #efefef;
-  /* border-top: none; */
+  padding-bottom: 50px;
+  padding-top: 50px;
+  font-family: "nanum";
+  color: #606060;
+  line-height: 27px;
 }
 
 #first-span,
 #second-span,
-#third-span, 
-#fourth-span, 
+#third-span,
+#fourth-span,
 #last-span {
   font-family: "nanum";
 }
 
 #first-btn,
 #second-btn,
-#third-btn, 
+#third-btn,
 #fourth-btn,
 #last-btn {
   float: right;

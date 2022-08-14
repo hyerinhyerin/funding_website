@@ -102,30 +102,28 @@ section {
   display: block;
 }
 
-
 @font-face {
   font-family: "gong";
-  src: url('font/Gong Gothic Medium.ttf');
+  src: url("font/Gong Gothic Medium.ttf");
 }
 
 @font-face {
   font-family: "nanum";
-  src: url('font/NanumSquareRoundB.ttf');
+  src: url("font/NanumSquareRoundB.ttf");
 }
 
 @font-face {
   font-family: "gongli";
-  src: url('font/Gong\ Gothic\ Light.ttf');
+  src: url("font/Gong\ Gothic\ Light.ttf");
 }
 
 @font-face {
   font-family: "main";
-  src: url('font/HS두꺼비체.ttf');
+  src: url("font/HS두꺼비체.ttf");
 }
 
 .container {
   position: relative;
-
 }
 
 /*login*/
@@ -165,7 +163,6 @@ section {
   text-align: center;
 }
 
-
 .sr input[type="text"]:focus {
   width: 210px;
   z-index: 1;
@@ -180,7 +177,7 @@ section {
   width: 30px;
   color: red;
   float: right;
-  background: url('/search.svg') no-repeat;
+  background: url("/search.svg") no-repeat;
   text-indent: -10000px;
   border: none;
   position: absolute;
@@ -194,8 +191,6 @@ section {
   opacity: 0.4;
 }
 
-
-
 .nav_main {
   width: 100%;
   height: 100px;
@@ -203,10 +198,7 @@ section {
   margin: 10px;
   margin-top: -26px;
   display: flex;
-
-
 }
-
 
 .nav_menu {
   width: 100%;
@@ -218,16 +210,10 @@ section {
   z-index: 100;
 }
 
-
-
 .nav_menu .category_menu:focus,
 .category_menu1:hover {
   fill: black;
 }
-
-
-
-
 
 ._menu {
   font-family: "main";
@@ -237,7 +223,6 @@ section {
   position: absolute;
   top: 30%;
   left: 5%;
-
 }
 
 .nav_menu li {
@@ -245,32 +230,27 @@ section {
 }
 
 .category_menu {
-  font-family: 'gong';
+  font-family: "gong";
   font-size: 20px;
   color: white;
   text-decoration-line: none;
   position: absolute;
   top: 53%;
   left: 25%;
-
-
 }
 
 .all_menu {
-  font-family: 'gong';
+  font-family: "gong";
   font-size: 20px;
   color: white;
   text-decoration-line: none;
   position: absolute;
   top: 53%;
   left: 32%;
-
 }
 
-
-
 .funding_menu {
-  font-family: 'gong';
+  font-family: "gong";
   font-size: 20px;
   color: white;
   text-decoration-line: none;
@@ -280,7 +260,7 @@ section {
 }
 
 .earlybird_menu {
-  font-family: 'gong';
+  font-family: "gong";
   font-size: 20px;
   color: rgb(255, 255, 255);
   text-decoration-line: none;
@@ -303,11 +283,7 @@ section {
   opacity: 10;
   border: none;
   background-color: transparent;
-
 }
-
-
-
 
 .nav_menu .my_menu {
   width: 80px;
@@ -323,7 +299,6 @@ section {
   opacity: 10;
   border: none;
   background-color: transparent;
-
 }
 
 .nav_menu .my_menu1 {
@@ -339,9 +314,7 @@ section {
   opacity: 10;
   border: none;
   background-color: transparent;
-
 }
-
 
 .all_menu:hover,
 .funding_menu:hover,
@@ -349,7 +322,6 @@ section {
   color: black;
   transition: color 0.2s;
 }
-
 
 .nav_menu .my_menu1:focus,
 .my_menu1:hover {
@@ -359,7 +331,6 @@ section {
 .category_menu:hover {
   color: black;
   transition: color 0.2s;
-
 }
 
 /*category*/
@@ -384,7 +355,6 @@ a {
   width: auto;
   list-style: none;
   vertical-align: top;
-
 }
 
 #mainline ul {
@@ -408,14 +378,12 @@ a {
   float: none;
   margin: 0;
   padding: 0;
-
 }
 
 #mainline ul a {
   font-size: 15px;
-  font-family: 'gongli';
+  font-family: "gongli";
   color: black;
-
 }
 
 #mainline ul li:hover a {
@@ -455,72 +423,50 @@ body {
   grid-row-end: 3;
   text-align: left;
   padding-bottom: 20px;
-  font-family: 'gongli';
+  font-family: "gongli";
   font-weight: bold;
   font-size: 20px;
 }
 
 .footer p {
   line-height: 20px;
-  font-family: 'nanum';
+  font-family: "nanum";
 }
 
 /*items*/
 
 #wapper-top {
-
   padding-top: 150px;
- 
-
 }
 
-
-.item {
-  height: 350px;
-  margin: 0 auto;
-  display: block;
-  
-}
 .itemsubj {
-  font-family: 'gongli';
+  font-family: "gongli";
   display: flex;
   justify-content: center;
-  align-items: flex-start
+  align-items: flex-start;
 }
 
 .itemsubjfont {
-  font-family: 'gongli';
+  font-family: "gongli";
   font-weight: bold;
   font-size: 27px;
   margin-top: 10px;
 }
 
-
 .itemsubj h3 {
-  font-family: 'gongli';
+  font-family: "gongli";
   font-weight: bold;
   font-size: 27px;
   margin-bottom: 15px;
 }
 
 .itemsubj p {
-  font-family: 'nanum';
+  font-family: "nanum";
   text-align: left;
   line-height: 25px;
   color: #888;
   font-size: 15px;
-  width:330px;
-}
-
-
-.funp {
-  display: flex;
-  font-family: 'gong';
-  font-size: 25px;
-  color: #008299;
-  justify-content: space-between;
-
-
+  width: 330px;
 }
 
 .itemimg {
@@ -532,16 +478,6 @@ body {
   margin-right: 50px;
 }
 
-.item h2 {
-  font-family: 'gong';
-  font-size: 28px;
-  color: black;
-  position: absolute;
-  top: 45%;
-  left: 37%;
-
-}
-
 /*sort*/
 
 .listsort {
@@ -550,7 +486,7 @@ body {
   right: 5%;
   padding-right: 20px;
   padding-top: 55px;
-  font-family: 'gongli';
+  font-family: "gongli";
   color: #4f4f4f;
 }
 
@@ -563,83 +499,12 @@ hr {
   border-color: #f2f4f641;
 }
 
-/*earlyicon*/
-
-.earlyicon{
-    width: 100px;
-    height: 100px;
-    position: relative;
-    top : -30px;
-    right: 30px;
-    z-index: 10;
-}
-/* 1번*/
-
-.early1{
-    display: flex;
-    font-family: 'nanum';
-    text-align: left;
-    line-height: 55px;
-    color: #888;
-    font-size: 15px;
-    justify-content: space-between;
-  }
-.funearly1 {
-    font-family: 'gong';
-    font-size: 27px;
-    color: #ee5836;
-  } 
-
-
-/* 2번*/
-
-.early2{
-    display: flex;
-    font-family: 'nanum';
-    text-align: left;
-    line-height: 55px;
-    justify-content: space-between;
-    padding-top: 5px;
-}
-.funearlyp2{
-    font-family: 'gong';
-    text-align: left;
-    line-height: 55px;
-    font-size: 25px;
-    color: #ee5836;
-}
-
-.item .funearly2 {
-    font-family: 'gong';
-    font-size: 23px;
-    color: #008299;
-  } 
-
-
-
 select {
-  width:330px;
+  width: 330px;
   height: 25px;
-  margin-top: 55px;
-
-}
-.select_table{
-  font-size: 17px;
-  font-family: "nanum";
-  color: #4f4f4f;
-  line-height: 25px;
+  margin-top: 48px;
 }
 
-
-.ect{
-  position: relative;
-  left: 155px;
-}
-
-.pr_value{
-  display: flex;
-  justify-content: space-between;
-}
 .button-submit {
   background-color: rgb(0, 130, 153);
   color: white;
@@ -652,27 +517,71 @@ select {
   border-style: none;
   border-color: initial;
   border-image: initial;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
-.button-submit-font{
+.button-submit-font {
   font-size: 20px;
 }
 
-.product-img{
+.product-img {
   display: flex;
   justify-content: center;
   margin-top: 100px;
   margin-bottom: 300px;
-  
 }
 
-.td_line{
-  padding-top: 15px;
-
+.early-first {
+  font-size: 15px;
+  font-family: "nanum";
+  color: #6e6e6e;
+  position: relative;
+  top: 25px;
 }
 
-.result{
-  padding-top: 15px;
-  text-align: right;
+.nomal-first {
+  font-size: 15px;
+  font-family: "nanum";
+  color: #6e6e6e;
+  position: relative;
+  top: 50px;
+}
+
+.total-div {
+  display: none;
+  font-size: 15px;
+  font-family: "nanum";
+  color: #6e6e6e;
+  position: relative;
+  top: 48px;
+}
+#total-hr {
+  margin-top: 11px;
+  margin-left: 0px;
+  width: 100%;
+}
+
+#total {
+  border: none;
+  font-family: "nanum";
+  color: #6e6e6e;
+  font-size: 15px;
+  position: relative;
+  top: 1px;
+  text-align: center;
+}
+
+#early-count {
+  text-align: center;
+  width: 10%;
+}
+
+#nomal-count {
+  text-align: center;
+  width: 10%;
+}
+
+.price-deleteBtn1,
+.price-deleteBtn2 {
+  float: right;
 }

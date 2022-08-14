@@ -1,6 +1,17 @@
 const firstQ = document.querySelector("#first-q");
 const firstCts = document.querySelector(".first-constents");
 
+firstQ.addEventListener("mouseover", () => {
+  firstQ.style.color = "black";
+});
+firstQ.addEventListener("mouseout", () => {
+  if (firstCts.classList.contains("on")) {
+    firstQ.style.color = "gray";
+  } else {
+    firstQ.style.color = "black";
+  }
+});
+
 firstQ.addEventListener("click", () => {
   if (firstCts.classList.contains("on")) {
     firstCts.style.display = "block";
@@ -13,6 +24,17 @@ firstQ.addEventListener("click", () => {
 
 const secondQ = document.querySelector("#second-q");
 const secondCts = document.querySelector(".second-constents");
+
+secondQ.addEventListener("mouseover", () => {
+  secondQ.style.color = "black";
+});
+secondQ.addEventListener("mouseout", () => {
+  if (secondCts.classList.contains("on")) {
+    secondQ.style.color = "gray";
+  } else {
+    secondQ.style.color = "black";
+  }
+});
 
 secondQ.addEventListener("click", () => {
   if (secondCts.classList.contains("on")) {
@@ -27,6 +49,17 @@ secondQ.addEventListener("click", () => {
 const thirdQ = document.querySelector("#third-q");
 const thirdCts = document.querySelector(".third-constents");
 
+thirdQ.addEventListener("mouseover", () => {
+  thirdQ.style.color = "black";
+});
+thirdQ.addEventListener("mouseout", () => {
+  if (thirdCts.classList.contains("on")) {
+    thirdQ.style.color = "gray";
+  } else {
+    thirdQ.style.color = "black";
+  }
+});
+
 thirdQ.addEventListener("click", () => {
   if (thirdCts.classList.contains("on")) {
     thirdCts.style.display = "block";
@@ -38,11 +71,23 @@ thirdQ.addEventListener("click", () => {
 });
 
 const fourthQ = document.querySelector("#fourth-q");
-const fourthCts = document.querySelector('.fourth-constents')
+const fourthCts = document.querySelector(".fourth-constents");
+
+fourthQ.addEventListener("mouseover", () => {
+  fourthQ.style.color = "black";
+});
+fourthQ.addEventListener("mouseout", () => {
+  if (fourthCts.classList.contains("on")) {
+    fourthQ.style.color = "gray";
+  } else {
+    fourthQ.style.color = "black";
+  }
+});
 
 fourthQ.addEventListener("click", () => {
   if (fourthCts.classList.contains("on")) {
     fourthCts.style.display = "block";
+
     fourthCts.classList.remove("on");
   } else if (!fourthCts.classList.contains("on")) {
     fourthCts.style.display = "none";
@@ -53,9 +98,21 @@ fourthQ.addEventListener("click", () => {
 const lastQ = document.querySelector("#last-q");
 const lastCts = document.querySelector(".last-constents");
 
+lastQ.addEventListener("mouseover", () => {
+  lastQ.style.color = "black";
+});
+lastQ.addEventListener("mouseout", () => {
+  if (lastCts.classList.contains("on")) {
+    lastQ.style.color = "gray";
+  } else {
+    lastQ.style.color = "black";
+  }
+});
+
 lastQ.addEventListener("click", () => {
   if (lastCts.classList.contains("on")) {
     lastCts.style.display = "block";
+    lastQ.style.color = "black";
     lastCts.classList.remove("on");
     lastCts.style.borderTop = "none";
     lastCts.style.borderBottomLeftRadius = "5px";
