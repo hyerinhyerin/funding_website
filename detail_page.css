@@ -554,11 +554,16 @@ select {
   color: #6e6e6e;
   position: relative;
   top: 48px;
+  text-align: right;
+  padding-top: 40px;
+  padding-bottom: 20px;
 }
 #total-hr {
-  margin-top: 11px;
   margin-left: 0px;
+  margin-top: 0;
   width: 100%;
+  position: relative;
+  top: 70px;
 }
 
 #total {
@@ -569,6 +574,10 @@ select {
   position: relative;
   top: 1px;
   text-align: center;
+}
+
+#total:focus {
+  outline: none;
 }
 
 #early-count {
