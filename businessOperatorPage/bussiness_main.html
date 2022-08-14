@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>사업자 - 문의하기</title>
+    <title>사업자 - 메인페이지</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./service_style.css" />
   </head>
@@ -59,45 +59,27 @@
         </form>
       </div>
     </div>
-    <!--문의하기 내용-->
-    <h1>문의하기</h1>
+<!--매인 페이지-->
+    <div class="bussiness_main_box" style="width: 700px; height: 300px;">
+      <img src="./img/대표이미지.png" alt="대표이미지" style="width: 200px; height: 200px; margin-left: 20px; margin-top: 15px;">
+      <div id="type_change" class="my_statue_change_option">
+        <button id="my_statue_change_option_button">소비자</button>
+        <button id="my_statue_change_option_button">사업자</button>
+      </div>  
+        <hr style="width: 95%" />
+      테스트입니다
+    </div>
+    <div class="range_option-position">
+        <ul>
+            <li class="range_option_time">최신순</li>
+            <li class="range_option_name">이름순</li>
+        </ul>
+    </div>
     <hr style="width: 95%" />
-    <!--문의하기 내용 작성부분-->
-    <form>
-      <div class="service-question">
-        <label for="title-name">제목</label>
-        <input type="text" id="title-name" placeholder="제목을 입력하세요.">
-      </div>
-      <div class="service-question">
-        <label for="answer-question" id="answer-question-label"> 문의내역 </label>
-        <select id="answer-question">
-            <option> 문의 내용을 입력하세요 </option>
-            <option> 결제/환불 </option>
-            <option> 회원가입/탈퇴 </option>
-            <option> 물품 등록/삭제 </option>
-            <option> 배송상태 </option>
-            <option> 기타내역 </option>
-        </select> <br>
-      </div>
-      <div class="service-question">
-        <label for="title-size-email" id="label-size-email">이메일</label>
-        <input type="email" name="lineset" id="title-size-email" placeholder="이메일을 입력하세요.">
-      </div>
-      <div class="service-question" class="lineset">
-        <label id="label-size">문의내용</label>
-        <textarea name="service-question" id="title-size" cols="65" rows="10" placeholder="문의 내용을 입력하세요."></textarea>
-      </div>
-      <div class="mamber-box-position">
-        <input type="checkbox" name="status" id="mamber-box" onclick="checkOnlyOne(this)"/>
-        <label for="mamber-box">회원</label>
-        <input type="checkbox" name="status" id="mamber-box" onclick="checkOnlyOne(this)"/>
-        <label for="mamber-box">비회원</label>
-      </div>
-      <div>
-        <button id="button-submit">제출하기</button>
-      </div>
-    </form>
-    <!--여기까지-->
+    <div class="my_idea_option_choise"> <!-- 버튼 -->
+      <input type="checkbox" name="option_choise" id="my_idea_option_choise"/>
+    </div>
+<!--여기까지-->
     <hr id="footer-hr" />
     <footer class="footer">
       <div>
