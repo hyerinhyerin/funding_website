@@ -549,9 +549,9 @@ select {
 
 .total-div {
   display: none;
-  font-size: 15px;
+  font-size: 18px;
   font-family: "nanum";
-  color: #6e6e6e;
+  color: black;
   position: relative;
   top: 48px;
   text-align: right;
