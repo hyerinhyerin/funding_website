@@ -1,0 +1,19 @@
+.category_menu{
+    font-family: 'gong';
+    font-size: 20px;
+    color :black;
+    text-decoration-line: none;
+    position: absolute;
+    top: 53%;
+    left: 25%;
+
+}
+
+.all_menu:hover, .funding_menu:hover, .earlybird_menu:hover{
+    color:black;
+    transition: color 0.2s;
+}
+.category_menu:hover{
+    color: white;
+    transition: color 0.2s;
+}

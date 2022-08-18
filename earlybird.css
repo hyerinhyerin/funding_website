@@ -401,8 +401,8 @@ a {
   padding-bottom: 10px;
   box-shadow: 0px 0px 8px 2px rgb(0, 0, 0, 20%);
   position: absolute;
-  top: 75px;
-  left: 23.2%;
+  top: 80px;
+  left: 22.6%;
   text-align: center;
   opacity: 0;
   z-index: 3;
@@ -731,22 +731,22 @@ input#img-6:checked~.nav-dots label#img-dot-6 {
 
 /*early*/
 
-  .item p {
-    font-family: 'gong';
-    text-align: left;
-    line-height: 55px;
-    font-size: 23px;
-    color: #008299;
-  }
-  
-  
-  .funp {
-    display: flex;
-    font-family: 'gong';
-    padding-top: 5px;
-    font-size: 25px;
-    justify-content: space-between;
-    line-height: 55px;
-    color: #ee5836;
-  
-  }
+.item p {
+  font-family: 'gong';
+  text-align: left;
+  line-height: 55px;
+  font-size: 23px;
+  color: #008299;
+}
+
+
+.early {
+  display: flex;
+  font-family: 'gong';
+  padding-top: 5px;
+  font-size: 25px;
+  justify-content: space-between;
+  line-height: 55px;
+  color: #ee5836;
+
+}
