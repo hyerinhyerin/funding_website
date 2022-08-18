@@ -1,9 +1,65 @@
-<link rel="stylesheet" href="business_login.css" />
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>business_login</title>
+    <link rel="stylesheet" type="text/css" href= "business_login.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav_menu">
+            <a href="../Main.html"><img class="title" src="../img/main_title.png" alt="편한누리" /></a>
+            <!--카테고리 메뉴바-->
+            <div>
+                <ul id="mainline">
+                    <li>
+                        <a href="#" class="category_menu">카테고리</a>
+                        <ul>
+                            <li data-url="furniture.html">
+                                <span>가구</span>
+                            </li>
+                            <li data-url="electronic.html">
+                                <span>전자기기</span>
+                            </li>
+                            <li data-url="daily.html">
+                                <span>생활용품</span>
+                            </li>
+                            <li data-url="hobby.html">
+                                <span>취미</span>
+                            </li>
+                            <li data-url="beauty.html">
+                                <span>뷰티</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../Main.html" class="all_menu">전체</a>
+                    </li>
+                    <li>
+                        <a href="#" class="funding_menu">펀딩예정</a>
+                    </li>
+                    <li>
+                        <a href="#" class="earlybird_menu">얼리버드</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <a href="login.html" class="main_login">로그인</a>
+            <a href="signup.html" class="main_singup">회원가입</a>
+    
+            <div id="wrap">
+                <form action="" autocomplete="on">
+                    <input id="search" name="search" type="text" placeholder="검색어를 입력해 주세요." />
+                    <input id="search_submit" value="Rechercher" type="submit" />
+                </form>
+            </div>
+        </div>
         <div class="contain_mid">
             <h1>사업자 회원가입</h1>
             <hr>
             <div class="signup_form">
-                <form>
+                <form method="post">
                     <div>
                         <label for="business_name"> 상호명 </label>
                         <input type="text" id="business_name" name="business_name"><br>
@@ -36,12 +92,12 @@
                         <input type="text" id="address" name="address"><br>
                     </div>
                     <div>
-                        <label for="e-mail"> 이메일 </label>
-                        <input type="text" id="e-mail" name="e-mail"><br>
+                        <label for="e_mail"> 이메일 </label>
+                        <input type="text" id="e-mail" name="e_mail"><br>
                     </div>
                     <div>
-                        <label for="phone-number"> 휴대폰 </label>
-                        <input type="text" id="phone-number" name="phone-number"><br>
+                        <label for="phone_number"> 휴대폰 </label>
+                        <input type="text" id="phone-number" name="phone_number"><br>
                     </div>
                     <div>
                         <label for="account_num"> 계좌번호 </label>
@@ -67,9 +123,23 @@
                     <hr class="form_hr">
 
                     <div class="submit_bt">
-                        <button type="button" id="submit_button1"> 신청하기 </button>
+                        <input type="submit" value="신청하기">
                     </div>
                 </form>
             </div>
-        </div>
+        </div> 
+        
+        <footer class="footer">
+            <hr />
+            <div>
+                <h3>펀한누리</h3>
+                <p>주소 : 경기도 군포시 한세로 30</p>
+                <p>고객 문의 : 0509moon@naver.com</p>
+                <p>ver. Beta test</p>
+            </div>
+        </footer>
+    </div>
     <script src="signup.js"></script>
+</body>
+</html>
+
