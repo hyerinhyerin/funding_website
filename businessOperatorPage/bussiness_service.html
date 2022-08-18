@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>사업자 - 문의하기</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./service_style.css" />
+  </head>
+  <body>
+    <!--header logo 부분 시작-->
+    <div class="nav_menu">
+      <a href="./submain.html" class="_menu">ㅍㅎㄴㄹ</a>
+      <!--카테고리 메뉴바-->
+      <div>
+        <ul id="mainline">
+          <li>
+            <a href="#" class="category_menu">카테고리</a>
+            <ul>
+              <li>
+                <a href="#">가구</a>
+              </li>
+              <li>
+                <a href="#">전자기기</a>
+              </li>
+              <li>
+                <a href="#">생활용품</a>
+              </li>
+              <li>
+                <a href="#">취미</a>
+              </li>
+              <li>
+                <a href="#">뷰티</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="submain.html/all_prouct" class="all_menu">전체</a>
+          </li>
+          <li>
+            <a href="funding_planned.html" class="funding_menu">펀딩예정</a>
+          </li>
+          <li>
+            <a href="submain.html/earlybird" class="earlybird_menu">얼리버드</a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="submain.html/login" class="main_login">로그인</a>
+      <div id="wrap">
+        <form action="" autocomplete="on">
+          <input
+            id="search"
+            name="search"
+            type="text"
+            placeholder="검색어를 입력해 주세요."
+          />
+          <input id="search_submit" value="Rechercher" type="submit" />
+        </form>
+      </div>
+    </div>
+    <!--문의하기 내용-->
+    <h1>문의하기</h1>
+    <hr style="width: 95%" />
+    <!--문의하기 내용 작성부분-->
+    <form>
+      <div class="service-question">
+        <label for="title-name">제목</label>
+        <input type="text" id="title-name" placeholder="제목을 입력하세요.">
+      </div>
+      <div class="service-question">
+        <label for="answer-question" id="answer-question-label"> 문의내역 </label>
+        <select id="answer-question">
+            <option> 문의 내용을 입력하세요 </option>
+            <option> 결제/환불 </option>
+            <option> 회원가입/탈퇴 </option>
+            <option> 물품 등록/삭제 </option>
+            <option> 배송상태 </option>
+            <option> 기타내역 </option>
+        </select> <br>
+      </div>
+      <div class="service-question">
+        <label for="title-size-email" id="label-size-email">이메일</label>
+        <input type="email" name="lineset" id="title-size-email" placeholder="이메일을 입력하세요.">
+      </div>
+      <div class="service-question" class="lineset">
+        <label id="label-size">문의내용</label>
+        <textarea name="service-question" id="title-size" cols="65" rows="10" placeholder="문의 내용을 입력하세요."></textarea>
+      </div>
+      <div class="mamber-box-position">
+        <input type="checkbox" name="status" id="mamber-box" onclick="checkOnlyOne(this)"/>
+        <label for="mamber-box">회원</label>
+        <input type="checkbox" name="status" id="mamber-box" onclick="checkOnlyOne(this)"/>
+        <label for="mamber-box">비회원</label>
+      </div>
+      <div>
+        <button id="button-submit">제출하기</button>
+      </div>
+    </form>
+    <!--여기까지-->
+    <hr id="footer-hr" />
+    <footer class="footer">
+      <div>
+        <h3>펀한누리</h3>
+        <p>주소 : 경기도 군포시 한세로 30</p>
+        <p>고객 문의 : 0509moon@naver.com</p>
+        <p>ver. Beta test</p>
+      </div>
+    </footer>
+  </body>
+  <script src="./service-style.js"></script>
+  <script src="./index.js"></script>
+</html>

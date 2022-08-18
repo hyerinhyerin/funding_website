@@ -262,12 +262,19 @@ a {
 .footer {
     width: 100%;
     bottom: 0;
-    left: 17%;
+    left: 17px;
     grid-row-start: 2;
     grid-row-end: 3;
     padding-top: 20px;
-    /* position: absolute; */
     height: 180px;
+}
+
+.footer hr {
+    text-align: center;
+    width: 95%;
+    margin-top: 90px;
+    margin-left: 45px;
+    border-color: #f2f4f641;
 }
 
 .footer h3 {
@@ -276,6 +283,11 @@ a {
     text-align: left;
     padding-bottom: 15px;
     font-family: 'gongli';
+}
+
+.footer div{
+    position: relative;
+    left: 150px;
 }
 
 .footer p {

@@ -565,9 +565,8 @@ form input::file-selector-button {
   top: 450px;
 }
 
-.ui-datepicker-calendar > tbody td.ui-datepicker-week-end:first-child a {
-  color: red;
-}
-.ui-datepicker-calendar > tbody td.ui-datepicker-week-end:last-child a {
-  color: blue;
+
+/* body 시작 */
+.body-container {
+  display: flex;
 }

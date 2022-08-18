@@ -1,0 +1,421 @@
+/* font */
+@font-face {
+  font-family: "gong";
+  src: url("./font/Gong\ Gothic\ Medium.ttf");
+}
+@font-face {
+  font-family: "nanum";
+  src: url("./font/NanumSquareRoundB.ttf");
+}
+@font-face {
+  font-family: "gongli";
+  src: url("./font/Gong\ Gothic\ Light.ttf");
+}
+@font-face {
+  font-family: "main";
+  src: url("./font/HS두꺼비체.ttf");
+}
+body {
+  margin: 0;
+}
+
+.container {
+  position: relative;
+}
+/* header */
+.title {
+  position: absolute;
+  top: 23px;
+  left: 23px;
+  width: 290px;
+  object-fit: cover;
+}
+.nav_menu {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: #008299;
+  /* margin: -10px;
+margin-top: -26px; */
+  margin: 0px;
+  margin-top: -26px;
+  position: relative;
+  z-index: 100;
+}
+._menu {
+  font-family: "main";
+  font-size: 55px;
+  color: white;
+  text-decoration-line: none;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+.nav_menu li {
+  float: left;
+}
+.category_menu {
+  font-family: "gong";
+  font-size: 20px;
+  color: white;
+  text-decoration-line: none;
+  position: absolute;
+  top: 53%;
+  left: 25%;
+}
+.all_menu {
+  font-family: "gong";
+  font-size: 20px;
+  color: white;
+  text-decoration-line: none;
+  position: absolute;
+  top: 53%;
+  left: 32%;
+}
+.funding_menu {
+  font-family: "gong";
+  font-size: 20px;
+  color: white;
+  text-decoration-line: none;
+  position: absolute;
+  top: 53%;
+  left: 37%;
+}
+.earlybird_menu {
+  font-family: "gong";
+  font-size: 20px;
+  color: white;
+  text-decoration-line: none;
+  position: absolute;
+  top: 53%;
+  left: 44%;
+}
+.all_menu:hover,
+.funding_menu:hover,
+.earlybird_menu:hover,
+.category_menu:hover {
+  color: black;
+  transition: color 0.2s;
+}
+/* category */
+ul li {
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+#mainline {
+  display: inline-block;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: space-between;
+  z-index: 2;
+  margin-left: 24px;
+  padding: 0;
+  width: auto;
+  list-style: none;
+  vertical-align: top;
+}
+#mainline ul {
+  margin: 0;
+  width: 140px;
+  background-color: #ffffff;
+  border-radius: 7px;
+  padding-top: 15px;
+  padding-left: 0px;
+  padding-bottom: 10px;
+  box-shadow: 0px 0px 8px 2px rgb(0, 0, 0, 20%);
+  position: absolute;
+  top: 75px;
+  left: 23.2%;
+  text-align: center;
+  opacity: 0;
+  z-index: 2;
+}
+#mainline ul li {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
+#mainline ul li span {
+  font-size: 15px;
+  font-family: "gongli";
+  color: black;
+  cursor: pointer;
+}
+
+#mainline li span {
+  cursor: pointer;
+}
+
+#mainline ul li:hover span {
+  font-weight: bold;
+}
+
+#mainline li:hover ul {
+  opacity: 1;
+}
+
+#mainline li:hover ul li {
+  height: 30px;
+  overflow: visible;
+  padding: 0;
+}
+
+/*login*/
+.main_login {
+  font-family: "nanum";
+  font-size: 15px;
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  top: 55%;
+  left: 85%;
+}
+#wrap {
+  position: absolute;
+  left: 80%;
+  top: 44%;
+}
+
+input[type="text"] {
+  height: 30px;
+  font-size: 15px;
+  font-family: "nanum";
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  color: rgb(0, 0, 0);
+  padding: 3px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 210px;
+  position: absolute;
+  right: 40px;
+  z-index: 3;
+  cursor: pointer;
+  text-align: center;
+}
+input[type="text"]:focus {
+  width: 210px;
+  z-index: 1;
+  cursor: text;
+  position: absolute;
+  right: 40px;
+  background-color: white;
+}
+input[type="submit"] {
+  height: 25px;
+  width: 30px;
+  color: red;
+  float: right;
+  background: url("/search.svg") no-repeat;
+  text-indent: -10000px;
+  border: none;
+  position: absolute;
+  right: 0px;
+  z-index: 2;
+  cursor: pointer;
+  top: 7px;
+}
+input[type="submit"]:hover {
+  opacity: 0.4;
+}
+
+/* faq contents 시작 */
+
+.body-container {
+  margin-bottom: 300px;
+}
+
+#title-faq {
+  color: #4a4a4a;
+  font-family: "nanum";
+  font-size: 50px;
+  text-align: center;
+  margin-top: 257px;
+  margin-bottom: 65px;
+}
+
+.faq-contents {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#first-q {
+  width: 75%;
+  margin: 0 auto;
+  padding: 15px;
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: gray;
+}
+#second-q {
+  width: 75%;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid gray;
+  color: gray;
+}
+#third-q {
+  width: 75%;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid gray;
+  border-top: none;
+  color: gray;
+}
+#fourth-q {
+  width: 75%;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid gray;
+  border-top: none;
+  color: gray;
+}
+#last-q {
+  width: 75%;
+  margin: 0 auto;
+  padding: 15px;
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: gray;
+}
+
+.first-constents {
+  display: none;
+  border: 1px solid gray;
+  width: 75%;
+  margin: 0 auto;
+  padding: 15px;
+  border-bottom: none;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  font-family: "nanum";
+  color: #606060;
+  line-height: 27px;
+}
+
+.second-constents {
+  display: none;
+  border: 1px solid gray;
+  width: 75%;
+  margin: 0 auto;
+  padding: 15px;
+  border-top: none;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  font-family: "nanum";
+  color: #606060;
+  line-height: 27px;
+}
+
+.third-constents {
+  display: none;
+  border: 1px solid gray;
+  width: 75%;
+  margin: 0 auto;
+  padding: 15px;
+  border-top: none;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  font-family: "nanum";
+  color: #606060;
+  line-height: 27px;
+}
+
+.fourth-constents {
+  display: none;
+  border: 1px solid gray;
+  width: 75%;
+  margin: 0 auto;
+  padding: 15px;
+  border-top: none;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  font-family: "nanum";
+  color: #606060;
+  line-height: 27px;
+}
+
+.last-constents {
+  display: none;
+  border: 1px solid gray;
+  width: 75%;
+  margin: 0 auto;
+  padding: 15px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  font-family: "nanum";
+  color: #606060;
+  line-height: 27px;
+}
+
+#first-span,
+#second-span,
+#third-span,
+#fourth-span,
+#last-span {
+  font-family: "nanum";
+}
+
+#first-btn,
+#second-btn,
+#third-btn,
+#fourth-btn,
+#last-btn {
+  float: right;
+  font-size: 25px;
+  border: none;
+  background-color: white;
+}
+
+#down {
+  width: 20px;
+  height: 20px;
+}
+
+/* footer */
+.footer {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  text-align: left;
+  left: 17%;
+  padding-top: 50px;
+  position: absolute;
+  height: 150px;
+}
+
+.footer h3 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  text-align: left;
+  padding-bottom: 20px;
+  font-family: "gongli";
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+}
+.footer p {
+  margin: 0;
+  line-height: 20px;
+  font-family: "nanum";
+}
+#footer-hr {
+  text-align: center;
+  width: 95%;
+  margin-top: 90px;
+  margin-left: 45px;
+  border-color: #f2f4f641;
+}
