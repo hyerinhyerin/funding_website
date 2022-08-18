@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main_consumer</title>
+    <link rel="stylesheet" href="Main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav_menu">
+        <a href="Main.html" class="_menu">ㅍㅎㄴㄹ</a>
+        <!--카테고리 메뉴바-->
+        <div>
+          <ul id="mainline">
+            <li>
+              <span class="category_menu">카테고리</span>
+              <ul>
+                <li data-url="furniture.html">
+                  <span>가구</span> 
+                </li>
+                <li data-url="electronic.html">
+                  <span>전자기기</span>
+                </li>
+                <li data-url="daily.html">
+                  <span>생활용품</span> 
+                </li>
+                <li data-url="hobby.html">
+                  <span>취미</span>
+                </li>
+                <li data-url="beauty.html">
+                  <span>뷰티</span>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span class="all_menu">전체</span>
+            </li>
+            <li>
+              <span class="funding_menu">펀딩예정</span>
+            </li>
+            <li>
+              <span class="earlybird_menu">얼리버드</span>
+            </li>
+          </ul>
+        </div>
+
+        <a href="login/login.html" class="main_login">로그인</a>
+        <a href="login/signup.html" class="main_singup">회원가입</a>
+        <div id="wrap">
+          <form action="" autocomplete="on">
+            <input
+              id="search"
+              name="search"
+              type="text"
+              placeholder="얼리버드 특가 "
+            />
+            <input id="search_submit" value="Rechercher" type="submit" />
+          </form>
+        </div>
+      </div>
+      <!-- search -->
+      <div id="main_search">
+        <form action="" autocomplete="on">
+          <input
+            id="search"
+            name="search"
+            type="text"
+            placeholder="내용을 입력하세요."
+          />
+          <input id="search_submit" value="Rechercher" type="submit" />
+        </form>
+      </div>
+      <div id="wapper">
+        <div class="item">
+          <div>
+            <img src="img/furniture_table.jpg" alt="수납 테이블" class="itemimg">
+          </div>
+          <div>
+            <h3>수납테이블</h3>
+            <p>상품 상세 내용----------------------
+              마켓비
+            </p>
+            <div class="progress">
+              <div class="progress-done" data-done="90"><span>90%</span></div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <hr>
+      <footer class="footer">
+        <div>
+          <h3>펀한누리</h3>
+          <p>주소 : 경기도 군포시 한세로 30</p>
+          <p>고객 문의 : 0509moon@naver.com</p>
+          <p>ver. Beta test</p>
+        </div>
+      </footer>
+    </div>
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script src="Main.js"></script>
+  </body>
+</html>
