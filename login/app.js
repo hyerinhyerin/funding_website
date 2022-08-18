@@ -16,6 +16,7 @@ const client = mysql.createConnection({
     database : 'loginTest',
 });
 
+
 // 정제 (미들웨어) 5 파일을 가져오면 깨질 수 있는데 그걸 방지
 app.use(bodyParser.urlencoded({extended:false}));
 
@@ -27,23 +28,7 @@ app.use(session({
     store : new FileStore() // 세션이 데이터를 저장하는 곳
 }));
 
-// 메인페이지 로그인 되면
-// app.get('/',(req,res)=>{
-//     console.log('메인페이지 작동');
-//     console.log(req.session);
-//     if(req.session.is_logined == true){
-//         res.render('main',{
-//             is_logined : req.session.is_logined,
-//             name : req.session.name
-//         });
-//     }else{
-//         res.render('main',{
-//             is_logined : false
-//         });
-//     }
-// });
-
-app.use(express.static(__dirname+''));
+app.use(express.static(path.join(__dirname, '../')));
 
 // 사업자 회원가입
 app.get('/signup',(req,res)=>{
@@ -140,17 +125,9 @@ app.post('/login',(req,res)=>{
         console.log(id == data[0].id);
         console.log(password == data[0].password);
         if(id == data[0].id && password == data[0].password){
-            console.log('로그인 성공');
-            // 세션에 추가
+            console.log('로그인 성공');            
             req.session.is_logined = true;
-            req.session.id = data.id;
-            req.session.pw = data.password;
-            // req.session.save(function(){ // 세션 스토어에 적용하는 작업
-            //     res.render('main',{ // 정보전달
-            //         id : data[0].id,
-            //         is_logined : true
-            //     });
-            // });
+            res.sendFile(path.join(__dirname,'../Main_login.html'));
         }else{
             console.log('로그인 실패');
             res.render('/login');
@@ -169,6 +146,7 @@ app.post('/login',(req,res)=>{
 
 // });
 
-app.listen(3001,()=>{
-    console.log('3001 port running...');
+app.listen(3002,()=>{
+    console.log('3002 port running...');
+    console.log(path.join(__dirname, '..'));
 });

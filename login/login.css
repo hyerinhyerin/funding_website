@@ -331,6 +331,17 @@ a {
     justify-items: center;
 }
 
+#bt{
+    width: 60px;
+    height: 25px;
+    font-family: "gongli";
+    cursor: pointer;
+    background-color: #008299;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+}
+
 #login_box input {
     width: 170px;
     height: 17px;
