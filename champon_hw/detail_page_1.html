@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details_수정본</title>
+    <link rel="stylesheet" href="detail_page.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav_menu">
+        <a href="submain.html" class="_menu">ㅍㅎㄴㄹ</a>
+        <!--카테고리 메뉴바-->
+        <div>
+          <ul id="mainline">
+            <li>
+              <a href="#" class="category_menu">카테고리</a>
+              <ul>
+                <li>
+                  <a href="#">가구</a>
+                </li>
+                <li>
+                  <a href="#">전자기기</a>
+                </li>
+                <li>
+                  <a href="#">생활용품</a>
+                </li>
+                <li>
+                  <a href="#">취미</a>
+                </li>
+                <li>
+                  <a href="#">뷰티</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="submain.html" class="all_menu">전체</a>
+            </li>
+            <li>
+              <a href="funding_planned.html" class="funding_menu">펀딩예정</a>
+            </li>
+            <li>
+              <a href="submain.html" class="earlybird_menu">얼리버드</a>
+            </li>
+          </ul>
+        </div>
+
+        <a href="login/login.html" class="main_login">로그인</a>
+        <div id="wrap" class="sr">
+          <form action="" autocomplete="on">
+            <input
+              id="search"
+              name="search"
+              type="text"
+              placeholder="얼리버드 특가 "
+            />
+            <input id="search_submit" value="Rechercher" type="submit" />
+          </form>
+        </div>
+      </div>
+
+      <div>
+        <div id="wapper-top">
+          <div class="itemsubj">
+            <img src="img/pr_br.png" class="itemimg" />
+            <div class="itemsubjfont">
+              <ul>
+                <li><h3>식빵 맛집</h3></li>
+                <li>
+                  <p>
+                    밀가루에 효모를 넣고 반죽하여 구워 낸 주식용 빵. 그는
+                    아침으로 식빵에 잼을 발라 먹었다. 고양이들이 휴식을 취할 때
+                    행하는 자세의 일종을 일컫는 신조어 고양이들의 자세가
+                    식빵처럼 동글동글한 모양을 하고 있어 붙여졌다.
+                  </p>
+                </li>
+                <form name="form1">
+                  <select
+                    onChange="optionChange(this.options[this.selectedIndex].value)"
+                  >
+                    <option value="select">제품을 선택하세요.</option>
+                    <option value="early-1">
+                      얼리버드 - 식빵 1개 : 15,000원
+                    </option>
+                    <option value="normal-1">식빵 1개 : 17,000원</option>
+                  </select>
+
+                  <div class="early-first" style="display: none">
+                    <label style="position: relative; bottom: 5px; right: 1px"
+                      >얼리버드 - 식빵 1개</label
+                    >
+                    <input
+                      type="hidden"
+                      name="intro"
+                      value="15000"
+                      id="origin-price1"
+                    />&nbsp;
+                    <br />
+                    <input
+                      type="button"
+                      value="-"
+                      id="minus"
+                      onclick="javascript:minusCount1(); clac1();"
+                    />
+                    <input
+                      type="text"
+                      name="intro_count"
+                      size="3"
+                      value="1"
+                      id="early-count"
+                    />
+                    <input
+                      type="button"
+                      value="+"
+                      id="plus"
+                      onclick="javascript:plusCount1(); clac1();"
+                    />
+                    <input
+                      type="text"
+                      name="intro_sum"
+                      size="6"
+                      readonly
+                      value="0"
+                      style="display: none"
+                    />
+                    <div class="price-deleteBtn1">
+                      <label>15,000원</label>
+                      <button id="delete1">X</button>
+                    </div>
+                  </div>
+
+                  <div class="nomal-first" style="display: none">
+                    <label style="position: relative; bottom: 5px; right: 1px"
+                      >식빵 1개</label
+                    >
+                    <input
+                      type="hidden"
+                      name="main"
+                      value="17000"
+                      id="origin-price2"
+                    />&nbsp;
+                    <br />
+                    <input
+                      type="button"
+                      value="-"
+                      id="minus"
+                      onclick="javascript:minusCount2(); clac2();"
+                    />
+                    <input
+                      type="text"
+                      name="main_count"
+                      size="3"
+                      value="1"
+                      id="nomal-count"
+                    />
+                    <input
+                      type="button"
+                      value="+"
+                      id="plus"
+                      onclick="javascript:plusCount2(); clac2();"
+                    />
+                    <input
+                      type="text"
+                      name="main_sum"
+                      size="6"
+                      readonly
+                      value="0"
+                      style="display: none"
+                    />
+                    <div class="price-deleteBtn2">
+                      <label>17,000원</label>
+                      <button id="delete2">X</button>
+                    </div>
+                  </div>
+                  <hr id="total-hr" style="display: none" />
+                  <div class="total-div">
+                    <label>합계&nbsp;</label>
+                    <input
+                      type="text"
+                      name="total"
+                      size="5"
+                      value="0"
+                      id="total"
+                      readonly
+                      style="color:black; font-size:18px;"
+                    />
+                    <label>원</label>
+                  </div>
+                </form>
+                <li>
+                  
+                  <button
+                    type="button"
+                    class="button-submit"
+                    id="add"
+                    onclick="newPage()"
+                  >
+                  <span class="button-submit-font">펀딩하기</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <hr />
+          <div class="product-img">
+            <img src="img/상세.png" style="width: 1000px" />
+          </div>
+        </div>
+
+        <hr />
+        <footer class="footer">
+          <div>
+            <h3>펀한누리</h3>
+            <p>주소 : 경기도 군포시 한세로 30</p>
+            <p>고객 문의 : 0509moon@naver.com</p>
+            <p>ver. Beta test</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="detail_page_1.js"></script>
+  </body>
+</html>
