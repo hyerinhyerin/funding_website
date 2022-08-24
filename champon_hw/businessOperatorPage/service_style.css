@@ -6,6 +6,13 @@ h1
     margin-bottom: 40px;
     color: #4a4a4a;
 }
+h4{
+    position: relative;
+    left: 90px;
+    bottom: -10px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
 #title-name
 {
     margin-left: 90px;
@@ -101,66 +108,271 @@ h1
 {
     font-family: "gongli";
 }
-.range_option-position{
-    margin-left: 1300px;
-}
-.range_option_time{
-    position: relative;
-    left: 60px;
-    top: 13px;
-    font-family: "namun";
-    font-size: x-small;
-}
-.range_option_name{
-    position: relative;
-    left: 100px;
-    font-family: "namun";
-    font-size: x-small;
-}
-.bussiness_main_box{
-    position: relative;
-    width: 1000px;
-    height: 1000px;
-    margin-top: 100px;
-    margin-left: 300px;
-    margin-right: 300px;
-    margin-bottom: 50px;
-    border: 2px solid;
-    background-color: #008299;
-}
-
-.my_statue_change_option{
-    width: 300px;
-    height: 0px;
-}
-#click_change_color{
-    background-color: red;
-    position: relative;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    font-family: "namun";
-    font-size: medium;
-    left: 500px;
-    bottom: 205px;
-}
-
-#my_statue_change_option_button{
-    position: relative;
-    padding: 10px 20px;
-    border: none;
-    background-color: gray;
-    border-radius: 4px;
-    color: white;
-    font-family: "namun";
-    font-size: medium;
-    left: 500px;
-    bottom: 205px;
-}
 
 .my_idea_option_choise{
     position: relative;
     left: 250px;
     top: 300px;
+}
+
+#first-q {
+    width: 75%;
+    margin: 0 auto;
+    padding: 15px;
+    border: 2px solid gray;
+    border-color: #008299;
+    border-radius: 5px;
+    color: gray;
+    cursor: pointer;
+}
+
+#last-q {
+    width: 75%;
+    margin: 0 auto;
+    padding: 15px;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: gray;
+}
+
+#first-span{
+  font-family: "nanum";
+  color: #606060;
+}
+.faq-contents {
+    width: 70%;
+    margin: 0 auto;
+}
+.first-constents{
+    display: none;
+    border: 1px solid gray;
+    border-color: #008299;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 0px;
+    padding: 15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-family: "nanum";
+    color: #606060;
+    line-height: 27px;
+}
+.second-constents{
+    display: none;
+    border: 1px solid gray;
+    border-color: #008299;
+    width: 75%;
+    margin: 0 auto;
+    padding: 15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-family: "nanum";
+    color: #606060;
+    line-height: 27px;
+}
+
+.last-constents{
+  display: none;
+  border: 1px solid gray;
+  border-color: #008299;
+  width: 75%;
+  margin: 0 auto;
+  padding: 15px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  font-family: "nanum";
+  color: #606060;
+  line-height: 27px;
+}   
+
+#down {
+  width: 20px;
+  height: 20px;
+}
+.body-container {
+    margin-bottom: 300px;
+}
+
+.cgv{
+    margin-top: 50px;
+    margin-left: 300px;
+    padding: 20px 400px;
+}
+.cgv_cgv{
+    color: #008299;
+}
+.object_option_first{
+    position: relative;
+    margin-top: 0%;
+    left: 280px;
+    bottom: 10px;
+    background-color: #008299;
+    border: none;
+    border-radius: 10px;
+    font-style: "nanum";
+    font-size: medium;
+    color: white;
+    padding: 10px 50px;
+}
+.object_option_second{
+    position: relative;
+    margin-left: 75px;
+    left: 250px;
+    bottom: 10px;
+    background-color: #008299;
+    border: none;
+    border-radius: 10px;
+    font-style: "nanum";
+    font-size: medium;
+    color: white;
+    padding: 10px 50px;
+}
+.object_option_third{
+    position: relative;
+    left: 270px;
+    bottom: 10px;
+    margin-left: 25px;
+    background-color: #008299;
+    border: none;
+    border-radius: 10px;
+    font-style: "nanum";
+    font-size: medium;
+    color: white;
+    padding: 10px 35px;
+}
+
+.list_set_option{
+    position: relative;
+    margin-left: none;
+    margin-right: 50px;
+    border: none;
+    font-family: "nanum";
+    color: #606060;
+    font-size: small;
+}
+.list_set_option_p{
+    position: relative;
+    margin-left: none;
+    margin-right: none;
+    border: none;
+    font-family: "nanum";
+    color: #606060;
+    font-size: small;
+}
+.list_set_option_count{
+    position: relative;
+    margin-left: 50px;
+    margin-right: none;
+    border: none;
+    font-family: "nanum";
+    color: #606060;
+    font-size: small;
+}
+.list_set_option_count_2{
+    position: relative;
+    margin-left: 50px;
+    margin-right: none;
+    border: none;
+    font-family: "nanum";
+    color: #606060;
+    font-size: small;
+}
+.list_set_option_l{
+    position: relative;
+    margin-left: none;
+    margin-right: none;
+    border: none;
+    font-family: "nanum";
+    color: #606060;
+    font-size: small;
+}
+.list_set_option_name{
+    position: relative;
+    margin-left: none;
+    margin-right: 355px;
+    border: none;
+    font-family: "nanum";
+    color: #606060;
+    font-size: small;
+}
+.list_set_option_final{
+    position: relative;
+    margin-left: none;
+    margin-right: none;
+    border: none;
+    font-family: "nanum";
+    color: #606060;
+    font-size: small;
+}
+.list_set_option_total{
+    position: relative;
+    margin-left: 12px;
+    margin-right: none;
+    border: none;
+    font-family: "nanum";
+    color: #606060;
+    font-size: small;
+}
+.list_set_option_a{
+    position: relative;
+    margin-left: 370px;
+    margin-right: none;
+    border: none;
+    font-family: "nanum";
+    color: #606060;
+    font-size: small;
+}
+.list_set_option_c{
+    position: relative;
+    margin-left: none;
+    margin-right: 347px;
+    border: none;
+    font-family: "nanum";
+    color: #606060;
+    font-size: small;
+}
+
+.progress{
+    position: relative;
+    left: 130px;
+    bottom: 5px;
+    margin-bottom: none;
+    background-color: #eee;
+    border-radius: 20px;
+    height: 20px;
+    width: 300px;
+}
+.progress-done{
+    background-color: #008299;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    height:100%;
+    width: 0;
+    transition: 1s ease;
+}
+.per_style{
+    position: relative;
+    left: 460px;
+    bottom: 27px;
+    color: #000;
+    font: "nanum";
+}
+.per_font{
+    position: relative;
+    margin-left: 200px;
+    margin-right: none;
+    border: none;
+    font-family: "nanum";
+    color: #606060;
+    font-size: small;   
+}
+
+.main_option_box{
+    margin-top: 100px;
 }

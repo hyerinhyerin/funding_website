@@ -60,25 +60,84 @@
       </div>
     </div>
 <!--매인 페이지-->
-    <div class="bussiness_main_box" style="width: 700px; height: 300px;">
-      <img src="./img/대표이미지.png" alt="대표이미지" style="width: 200px; height: 200px; margin-left: 20px; margin-top: 15px;">
-      <div id="type_change" class="my_statue_change_option">
-        <button id="my_statue_change_option_button">소비자</button>
-        <button id="my_statue_change_option_button">사업자</button>
-      </div>  
-        <hr style="width: 95%" />
-      테스트입니다
-    </div>
-    <div class="range_option-position">
-        <ul>
-            <li class="range_option_time">최신순</li>
-            <li class="range_option_name">이름순</li>
-        </ul>
-    </div>
-    <hr style="width: 95%" />
-    <div class="my_idea_option_choise"> <!-- 버튼 -->
-      <input type="checkbox" name="option_choise" id="my_idea_option_choise"/>
-    </div>
+    <div class="main_option_box">
+      <div class="body-container">
+        <section class="faq-contents">
+          <div id="first-q">
+            <span id="first-span">
+              <img src="./img/대표이미지.png" style="width: 250px; height: 150px; border-radius: 10px;">
+            </span>
+            <h4>
+              임시제목
+            </h4>
+            <button id="object_first" class="object_option_first">
+              결제
+            </button>
+            <button id="object_second" class="object_option_second">
+              정보
+            </button>
+            <button id="object_last" class="object_option_third">
+              판매 점수
+            </button>
+            <hr style="width: 95%" />
+            <div class="first-constents on">
+              사업체 명 : xxx(주)<br>
+              계좌번호 : 111-123456-789-012<br>
+              전화번호 : 010-xxxx-xxxx
+            </div>
+            <div class="second-constents on">
+              <div>
+                <label class="list_set_option"> 얼리버드</label>
+                <label class="list_set_option_p">금액 :</label>
+                <input type="text" style="text-align: right;" class="list_set_option_count">
+                <label class="list_set_option_p">원</label>
+                <input type="text" style="text-align: right;" class="list_set_option_count_2">
+                <label class="list_set_option_l">개</label>
+              </div>
+              <hr style="width: 95%" />
+              <div> 
+                <label class="list_set_option"> 얼리버드</label>
+                <label class="list_set_option_p">금액 :</label>
+                <input type="text" style="text-align: right;" class="list_set_option_count">
+                <label class="list_set_option_p">원</label>
+                <input type="text" style="text-align: right;" class="list_set_option_count_2">
+                <label class="list_set_option_l">개</label>
+              </div>
+              <hr style="width: 95%" />
+              <div>
+                <label class="list_set_option"> 얼리버드</label>
+                <label class="list_set_option_p">금액 :</label>
+                <input type="text" style="text-align: right;" class="list_set_option_count">
+                <label class="list_set_option_p">원</label>
+                <input type="text" style="text-align: right;" class="list_set_option_count_2">
+                <label class="list_set_option_l">개</label>
+              </div>
+              <hr style="width: 95%" />
+              <div>
+                <label class="list_set_option_name"> 총 개수 :</label>
+                <input type="text" class="list_set_option_final">
+                <label class="list_set_option_p">개</label><br>
+                <label class="list_set_option_c">판매개수 :</label>
+                <input type="text" class="list_set_option_final">
+                <label class="list_set_option_p">개</label><br><br>
+                <label class="list_set_option_a">총 :</label>
+                <input type="text" class="list_set_option_total">
+                <label class="list_set_option_l">원</label>
+              </div>
+            </div>
+            <div class="last-constents on">
+              <div class="progress">
+                <div class="progress-done" data-done="90"></div>
+              </div>
+              <span class="per_style">90%</span>
+              <hr style="width: 95%" />
+              <label class="per_font">현재 판매 점수는 90점입니다.</label>
+            </div>
+          </div>
+          
+        </section>
+      </div>
+    </div>    
 <!--여기까지-->
     <hr id="footer-hr" />
     <footer class="footer">
@@ -90,6 +149,6 @@
       </div>
     </footer>
   </body>
-  <script src="./service-style.js"></script>
-  <script src="./index.js"></script>
+  <script type="text/javascript" src="../jquery-3.6.0.js"></script>
+  <script src="./business_main_style.js"></script>
 </html>
