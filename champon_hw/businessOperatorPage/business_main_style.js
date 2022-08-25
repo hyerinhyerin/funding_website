@@ -14,14 +14,14 @@ firstQ.addEventListener("click", () => {
       firstCts.classList.remove("on");
       secondCts.style.display = "none";
       secondCts.classList.add("on");
-      secondQ.style.color = "white";
+      secondQ.style.color = "black";
       lastCts.style.display = "none";
       lastCts.classList.add("on");
-      lastQ.style.color = "white";
+      lastQ.style.color = "black";
     } else if (!firstCts.classList.contains("on")) {
       firstCts.style.display = "none";
       firstCts.classList.add("on");
-      firstQ.style.color = "white";
+      firstQ.style.color = "black";
   }
 });
 
@@ -32,14 +32,14 @@ secondQ.addEventListener("click", () => {
     secondCts.classList.remove("on");
     firstCts.style.display = "none";
     firstCts.classList.add("on");
-    firstQ.style.color = "white";
+    firstQ.style.color = "black";
     lastCts.style.display = "none";
     lastCts.classList.add("on");
-    lastQ.style.color = "white";
+    lastQ.style.color = "black";
   } else if (!secondCts.classList.contains("on")) {
     secondCts.style.display = "none";
     secondCts.classList.add("on");
-    secondQ.style.color = "white";
+    secondQ.style.color = "black";
   }
 });
 
@@ -50,16 +50,32 @@ lastQ.addEventListener("click", () => {
     lastCts.classList.remove("on");
     firstCts.style.display = "none";
     firstCts.classList.add("on");
-    firstQ.style.color = "white";
+    firstQ.style.color = "black";
     secondCts.style.display = "none";
     secondCts.classList.add("on");
-    secondQ.style.color = "white";
+    secondQ.style.color = "black";
   } else if (!lastCts.classList.contains("on")) {
     lastCts.style.display = "none";
     lastCts.classList.add("on");
-    lastQ.style.color = "white";
+    lastQ.style.color = "black";
   }
 });
+
+const nameQ = document.querySelector("#my-name");
+const nameCts = document.querySelector(".name-constents");
+
+nameQ.addEventListener("click", () => {
+  if (nameCts.classList.contains("on")) {
+    nameCts.style.display = "block";
+    nameQ.style.color = "#606060";
+    nameCts.classList.remove("on");
+  } else if (!nameCts.classList.contains("on")) {
+    nameCts.style.display = "none";
+    nameCts.classList.add("on");
+    nameQ.style.color = "black";
+  }
+});
+
 
 //현재 판매 현황
 $(document).ready(function(){

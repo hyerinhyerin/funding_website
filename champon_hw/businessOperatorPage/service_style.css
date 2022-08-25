@@ -6,12 +6,14 @@ h1
     margin-bottom: 40px;
     color: #4a4a4a;
 }
-h4{
-    position: relative;
-    left: 90px;
-    bottom: -10px;
-    margin-top: 0%;
-    margin-bottom: 0%;
+#v-r{
+    position: absolute;
+    width: 0px;
+    height: 300px;
+    margin-left: none;
+    margin-right: none;
+    left: 390px;
+    color: #000;
 }
 #title-name
 {
@@ -139,8 +141,11 @@ h4{
 }
 
 #first-span{
-  font-family: "nanum";
-  color: #606060;
+    position: relative;
+    margin-left: 100px;
+    top: 175px;
+    font-family: "nanum";
+    color: #606060;
 }
 .faq-contents {
     width: 70%;
@@ -164,7 +169,7 @@ h4{
     display: none;
     border: 1px solid gray;
     border-color: #008299;
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
     padding: 15px;
     padding-bottom: 30px;
@@ -188,6 +193,24 @@ h4{
   line-height: 27px;
 }   
 
+.name-constents{
+    display: none;
+    position: absolute;
+    border: 1px solid gray;
+    border-color: #008299;
+    left: 105px;
+    top: 460px;
+    width: 15%;
+    margin: 0 auto;
+    padding: 15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-family: "nanum";
+    font-size: small;
+    color: #606060;
+    line-height: 27px;
+}
+
 #down {
   width: 20px;
   height: 20px;
@@ -207,40 +230,34 @@ h4{
 .object_option_first{
     position: relative;
     margin-top: 0%;
-    left: 280px;
+    left: 50px;
     bottom: 10px;
-    background-color: #008299;
+    background-color: white;
     border: none;
-    border-radius: 10px;
     font-style: "nanum";
     font-size: medium;
-    color: white;
     padding: 10px 50px;
 }
 .object_option_second{
     position: relative;
     margin-left: 75px;
-    left: 250px;
+    left: 60px;
     bottom: 10px;
-    background-color: #008299;
+    background-color: white;
     border: none;
-    border-radius: 10px;
     font-style: "nanum";
     font-size: medium;
-    color: white;
     padding: 10px 50px;
 }
 .object_option_third{
     position: relative;
-    left: 270px;
+    left: 150px;
     bottom: 10px;
     margin-left: 25px;
-    background-color: #008299;
+    background-color: white;
     border: none;
-    border-radius: 10px;
     font-style: "nanum";
     font-size: medium;
-    color: white;
     padding: 10px 35px;
 }
 
@@ -374,5 +391,19 @@ h4{
 }
 
 .main_option_box{
-    margin-top: 100px;
+    margin-top: none;
+    margin-left: 100px;
+}
+
+.user-name{
+    position: relative;
+    margin-left: none;
+    top: 220px;
+    right: 220px;
+    border: none;
+    background-color: white;
+    font-family: "nanum";
+    font-size: large;
+    font-style: unset;
+    color: #606060;
 }
