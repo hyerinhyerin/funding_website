@@ -6,10 +6,16 @@ h1
     margin-bottom: 40px;
     color: #4a4a4a;
 }
+h4{
+    position: relative;
+    left: 270px;
+    bottom: 170px;
+    font-size: large;
+}
 #v-r{
     position: absolute;
     width: 0px;
-    height: 300px;
+    height: 700px;
     margin-left: none;
     margin-right: none;
     left: 390px;
@@ -120,6 +126,7 @@ h1
 #first-q {
     width: 75%;
     margin: 0 auto;
+    margin-top: 20px;
     padding: 15px;
     border: 2px solid gray;
     border-color: #008299;
@@ -153,8 +160,10 @@ h1
 }
 .first-constents{
     display: none;
-    border: 1px solid gray;
+    border: 2px solid gray;
     border-color: #008299;
+    border-radius: 7px;
+    border-top: none;
     width: 75%;
     margin: 0 auto;
     margin-top: 0px;
@@ -167,9 +176,11 @@ h1
 }
 .second-constents{
     display: none;
-    border: 1px solid gray;
+    border: 2px solid gray;
     border-color: #008299;
-    width: 80%;
+    border-radius: 7px;
+    border-top: none;
+    width: 75%;
     margin: 0 auto;
     padding: 15px;
     padding-bottom: 30px;
@@ -181,12 +192,13 @@ h1
 
 .last-constents{
   display: none;
-  border: 1px solid gray;
+  border: 2px solid gray;
   border-color: #008299;
-  width: 75%;
+  border-radius: 7px;
+  border-top: none;
+  width: 77.5%;
   margin: 0 auto;
-  padding: 15px;
-  padding-bottom: 30px;
+  padding: none;
   padding-top: 30px;
   font-family: "nanum";
   color: #606060;
@@ -200,7 +212,7 @@ h1
     border-color: #008299;
     left: 105px;
     top: 460px;
-    width: 15%;
+    width: 13%;
     margin: 0 auto;
     padding: 15px;
     padding-bottom: 30px;
@@ -227,10 +239,22 @@ h1
 .cgv_cgv{
     color: #008299;
 }
+.funding-charge{
+    position: absolute;
+    left: 150px;
+    top: 650px;
+    background-color: #008299;
+    color: white;
+    font-style: "nanum";
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+}
 .object_option_first{
     position: relative;
     margin-top: 0%;
-    left: 50px;
+    left: 30px;
     bottom: 10px;
     background-color: white;
     border: none;
@@ -240,8 +264,7 @@ h1
 }
 .object_option_second{
     position: relative;
-    margin-left: 75px;
-    left: 60px;
+    margin-left: 120px;
     bottom: 10px;
     background-color: white;
     border: none;
@@ -251,7 +274,7 @@ h1
 }
 .object_option_third{
     position: relative;
-    left: 150px;
+    left: 100px;
     bottom: 10px;
     margin-left: 25px;
     background-color: white;
@@ -354,13 +377,14 @@ h1
 
 .progress{
     position: relative;
-    left: 130px;
+    left: 30px;
     bottom: 5px;
-    margin-bottom: none;
+    margin-top: -80px;
+    margin-bottom: -10px;
     background-color: #eee;
     border-radius: 20px;
-    height: 20px;
-    width: 300px;
+    height: 30px;
+    width: 600px;
 }
 .progress-done{
     background-color: #008299;
@@ -375,15 +399,16 @@ h1
 }
 .per_style{
     position: relative;
-    left: 460px;
-    bottom: 27px;
-    color: #000;
-    font: "nanum";
+    left: 300px;
+    bottom: 23px;
+    font-size: medium;
+    color: white;
 }
 .per_font{
     position: relative;
-    margin-left: 200px;
+    margin-left: 273px;
     margin-right: none;
+    bottom: 195px;
     border: none;
     font-family: "nanum";
     color: #606060;
@@ -406,4 +431,42 @@ h1
     font-size: large;
     font-style: unset;
     color: #606060;
+}
+.img-style{
+    position: relative;
+    margin: none;
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: none;
+}
+
+.img-style-two{
+    position: relative;
+    margin: none;
+    left: 15px;
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: none;
+}
+
+.funding-done{
+    background-color: beige;
+}
+
+.funding-done-done{
+    position: absolute;
+    margin-left: 700px;
+    margin-top: -200px;
+    background-color: #008299;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+}
+.funding-done-font{
+    position: relative;
+    color: white;
+    left: 20px;
+    top: 35px;
 }
