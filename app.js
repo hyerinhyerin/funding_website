@@ -244,8 +244,13 @@ app.get('/logout',(req,res)=>{
 });
 
 
+// 페이지 이동
+app.get('/detail',(req,res) => {
+    console.log('사업자 상세페이지');
+    res.sendFile(__dirname + '/champon_hw/detail_page.html');
+});
+
 
 app.listen(3002,()=>{
     console.log('3002 port running...');
-    console.log(path.join(__dirname));
 });
