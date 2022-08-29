@@ -1,3 +1,9 @@
+const Text=document.getElementById("search");
+
+new URLSearchParams(window.location.search).forEach((value,name)=>{
+    Text.value=`${value}`;
+})
+
 $(document).ready(function(){
     $.jqProgress=function(){
         $(".progress-done").each(function(){
@@ -8,14 +14,15 @@ $(document).ready(function(){
         });
     }
     $("#mainline ul li").click(function(){
+        $("#main_search").remove();
         var _this=$(this);
         var thisurl=_this.data("url");
         $.ajax({
             type : 'get',
-            url: thisurl,
+            url:'category/'+thisurl,
             dataType:'html',
             success: function(data){
-                $("#main_body").html(data);
+                $("#item-list").html(data);
                 setTimeout(() => {
                     $.jqProgress();
                 }, 500);
@@ -26,12 +33,13 @@ $(document).ready(function(){
 });
 
 $(".all_menu").click(function(){
+    $("#main_search").remove();
     $.ajax({
         type:'get',
-        url:'/all',
+        url:'All_menu.html',
         dataType:'html',
         success:function(data){
-            $("#main_body").html(data);
+            $("#item-list").html(data);
             setTimeout(()=>{
                 $.jqProgress();
             },500);
@@ -39,23 +47,25 @@ $(".all_menu").click(function(){
     });
 });
 $(".funding_menu").click(function(){
+    $("#main_search").remove();
     $.ajax({
         type:'get',
-        url:'/funding_plan',
+        url:'funding_plan.html',
         dataType:'html',
         success:function(data){
-            $("#main_body").html(data);
+            $("#item-list").html(data);
         }
     });
 });
 
 $(".earlybird_menu").click(function(){
+    $("#main_search").remove();
     $.ajax({
         type:'get',
-        url:'/early',
+        url:'earlybird.html',
         dataType:'html',
         success:function(data){
-            $("#main_body").html(data);
+            $("#item-list").html(data);
         }
     });
 });
