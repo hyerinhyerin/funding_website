@@ -32,7 +32,7 @@ app.use(session({
     store : new FileStore() // 세션이 데이터를 저장하는 곳
 }));
 
-app.use(express.static(path.join(__dirname,'')));
+app.use(express.static(path.join(__dirname + '/champon_hw/')));
 
 // 마이페이지 불러오기
 app.get('/mypage',(req,res)=>{
@@ -75,7 +75,7 @@ app.get('/mypage',(req,res)=>{
 // 사업자 회원가입
 app.get('/signup',(req,res)=>{
     console.log('회원가입 페이지');
-    res.sendFile(path.join(__dirname + '/champon_hw/login/signup.html'));
+    res.sendFile(__dirname + '/champon_hw/login/signup.html');
 });
 
 app.get('/business_login',(req,res) => {
@@ -245,12 +245,66 @@ app.get('/logout',(req,res)=>{
 
 
 // 페이지 이동
+
+// 로고
+app.get('/Main',(req,res) => {
+    console.log('메인페이지');
+    res.sendFile(__dirname + '/champon_hw/Main.html');
+});
+
+// 카테고리
+app.get('/furniture',(req,res) => {
+    console.log('카테고리 가구');
+    res.sendFile(__dirname + '/champon_hw/category/furniture.html');
+});
+app.get('/elec',(req,res) => {
+    console.log('카테고리 전자기구');
+    res.sendFile(__dirname + '/champon_hw/category/electronic.html');
+});
+app.get('/daily',(req,res) => {
+    console.log('카테고리 생활용품');
+    res.sendFile(__dirname + '/champon_hw/category/daily.html');
+});
+app.get('/hobby',(req,res) => {
+    console.log('카테고리 취미');
+    res.sendFile(__dirname + '/champon_hw/category/hobby.html');
+});
+app.get('/beauty',(req,res) => {
+    console.log('카테고리 뷰티');
+    res.sendFile(__dirname + '/champon_hw/category/beauty.html');
+});
+
+// 사업자
 app.get('/detail',(req,res) => {
-    console.log('사업자 상세페이지');
+    console.log('소비자 상세페이지');
     res.sendFile(__dirname + '/champon_hw/detail_page.html');
 });
 
 
+// 소비자
+app.get('/all',(req,res) => {
+    console.log('ajax 전체');
+    res.sendFile(__dirname + '/champon_hw/All_menu.html');
+});
+app.get('/funding_plan',(req,res) => {
+    console.log('펀딩예정');
+    res.sendFile(__dirname + '/champon_hw/funding_plan.html');
+});
+app.get('/early',(req,res) => {
+    console.log('얼리버드');
+    res.sendFile(__dirname + '/champon_hw/earlybird.html');
+});
+// app.get('/early_after',(req,res) => {
+//     console.log('얼리버드에프터');
+//     res.redirect('/Main');
+//     res.sendFile(__dirname + '/champon_hw/earlybird.html');
+// });
+app.get('/search',(req,res) => {
+    console.log('검색 form action 변수');
+    res.sendFile(__dirname + '/champon_hw/Search.html');
+});
+
 app.listen(3002,()=>{
     console.log('3002 port running...');
+    console.log(path.join(__dirname + '/champon_hw/'));
 });
