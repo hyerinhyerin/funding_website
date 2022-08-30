@@ -60,82 +60,322 @@
       </div>
     </div>
 <!--매인 페이지-->
-    <div class="main_option_box">
-      <div class="body-container">
-        <section class="faq-contents">
-          <div id="first-q">
-            <span id="first-span">
-              <img src="./img/대표이미지.png" style="width: 250px; height: 150px; border-radius: 10px;">
-            </span>
-            <h4>
-              임시제목
-            </h4>
-            <button id="object_first" class="object_option_first">
-              결제
-            </button>
-            <button id="object_second" class="object_option_second">
-              정보
-            </button>
-            <button id="object_last" class="object_option_third">
-              판매 점수
-            </button>
-            <hr style="width: 95%" />
+    <div class="all-area">
+      <span id="first-span">
+        <img src="./img/대표이미지.png" style="width: 250px; height: 150px; border-radius: 10px;">
+      </span>
+      <button id="my-name" class="user-name">
+        할!수!있!다!챔!프!온!
+      </button>
+      <div class="name-constents on">
+        사업체 명 : xxx(주)<br>
+        계좌번호 : 111-123456-789-012<br>
+        전화번호 : 010-xxxx-xxxx
+      </div>
+      <button class="funding-charge">
+        펀딩 등록하기
+      </button>
+      <hr id="v-r"> <!-- 세로선 --> 
+      <div class="main_option_box">
+        <div class="body-container">
+          <section class="faq-contents">
+            <div id="first-q">
+              <button id="object_first" class="object_option_first">
+                내 정보 <br><br><br> >
+              </button>
+              <button id="object_second" class="object_option_second">
+                전체펀딩 <br><br><br> >
+              </button>
+              <button id="object_last" class="object_option_third">
+                진행중인 펀딩 <br><br><br> >
+              </button>
+              <hr style="width: 95%" />
+
+            </div>
             <div class="first-constents on">
-              사업체 명 : xxx(주)<br>
-              계좌번호 : 111-123456-789-012<br>
-              전화번호 : 010-xxxx-xxxx
+              
             </div>
+            
             <div class="second-constents on">
-              <div>
-                <label class="list_set_option"> 얼리버드</label>
-                <label class="list_set_option_p">금액 :</label>
-                <input type="text" style="text-align: right;" class="list_set_option_count">
-                <label class="list_set_option_p">원</label>
-                <input type="text" style="text-align: right;" class="list_set_option_count_2">
-                <label class="list_set_option_l">개</label>
+              <div id="first-one">
+                <img src="./img/대표이미지.png" class="img-style-two">
+                <h4>상품명(1번상품)</h4>
+                <label class="per_font">제품 상세 내용</label>
+                <div class="progress">
+                  <div class="progress-done" data-done="90"></div>
+                </div>
+                <span class="per_style">90%</span>
               </div>
               <hr style="width: 95%" />
-              <div> 
-                <label class="list_set_option"> 얼리버드</label>
-                <label class="list_set_option_p">금액 :</label>
-                <input type="text" style="text-align: right;" class="list_set_option_count">
-                <label class="list_set_option_p">원</label>
-                <input type="text" style="text-align: right;" class="list_set_option_count_2">
-                <label class="list_set_option_l">개</label>
+
+              <div class="first-first-one">
+                <div>
+                  <label class="list_set_option"> 1번제품</label>
+                  <label class="list_set_option_p">금액 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="915,000">
+                  <label class="list_set_option_p">원</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_2" placeholder="150">
+                  <label class="list_set_option_l">개</label>
+                </div>
+                
+                <hr style="width: 95%" />
+                <div> 
+                  <label class="list_set_option"> 2번제품</label>
+                  <label class="list_set_option_p">금액 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="38,000">
+                  <label class="list_set_option_p">원</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_2" placeholder="1200">
+                  <label class="list_set_option_l">개</label>
+                </div>
+                <hr style="width: 95%" />
+                <div>
+                  <label class="list_set_option"> 3번재품 </label>
+                  <label class="list_set_option_p">금액 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="15,000">
+                  <label class="list_set_option_p">원</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_2" placeholder="500">
+                  <label class="list_set_option_l">개</label>
+                </div>
+                <hr style="width: 95%" />
+                <div>
+                  <label class="list_set_option_name"> 전체개수 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_final" placeholder="2000">
+                  <label class="list_set_option_k">개</label><br>
+                  <label class="list_set_option_name">판매개수 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_final" placeholder="1850">
+                  <label class="list_set_option_k">개</label><br>
+                  <hr style="width: 95%" />
+                  <label class="list_set_option_a">총 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_3" placeholder="190,350,000">
+                  <label class="list_set_option_b">원</label>
+                </div>
+              </div>
+
+              <div id="second-one">
+                <img src="./img/대표이미지.png" class="img-style-two">
+                <h4>상품명(2번상품)</h4>
+                <label class="per_font">제품 상세 내용</label>
+                <div class="progress">
+                  <div class="progress-done" data-done="60"></div>
+                </div>
+                <span class="per_style">60%</span>
               </div>
               <hr style="width: 95%" />
-              <div>
-                <label class="list_set_option"> 얼리버드</label>
-                <label class="list_set_option_p">금액 :</label>
-                <input type="text" style="text-align: right;" class="list_set_option_count">
-                <label class="list_set_option_p">원</label>
-                <input type="text" style="text-align: right;" class="list_set_option_count_2">
-                <label class="list_set_option_l">개</label>
+
+              <div class="second-second-one">
+                <div>
+                  <label class="list_set_option"> 1번재품</label>
+                  <label class="list_set_option_p">금액 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="915,000">
+                  <label class="list_set_option_p">원</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_2" placeholder="150">
+                  <label class="list_set_option_l">개</label>
+                </div>
+                
+                <hr style="width: 95%" />
+                <div> 
+                  <label class="list_set_option"> 2번재품</label>
+                  <label class="list_set_option_p">금액 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="38,000">
+                  <label class="list_set_option_p">원</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_2" placeholder="1200">
+                  <label class="list_set_option_l">개</label>
+                </div>
+                <hr style="width: 95%" />
+                <div>
+                  <label class="list_set_option"> 3번제품 </label>
+                  <label class="list_set_option_p">금액 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="15,000">
+                  <label class="list_set_option_p">원</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_2" placeholder="500">
+                  <label class="list_set_option_l">개</label>
+                </div>
+                <hr style="width: 95%" />
+                <div>
+                  <label class="list_set_option_name"> 전체개수 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_final" placeholder="2000">
+                  <label class="list_set_option_k">개</label><br>
+                  <label class="list_set_option_name">판매개수 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_final" placeholder="1850">
+                  <label class="list_set_option_k">개</label><br>
+                  <hr style="width: 95%" />
+                  <label class="list_set_option_a">총 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_3" placeholder="190,350,000">
+                  <label class="list_set_option_b">원</label>
+                </div>
               </div>
-              <hr style="width: 95%" />
-              <div>
-                <label class="list_set_option_name"> 총 개수 :</label>
-                <input type="text" class="list_set_option_final">
-                <label class="list_set_option_p">개</label><br>
-                <label class="list_set_option_c">판매개수 :</label>
-                <input type="text" class="list_set_option_final">
-                <label class="list_set_option_p">개</label><br><br>
-                <label class="list_set_option_a">총 :</label>
-                <input type="text" class="list_set_option_total">
-                <label class="list_set_option_l">원</label>
+              
+              <div id="third-one">
+                <div class="funding-done">
+                  <img src="./img/대표이미지.png" class="img-style-two">
+                  <h4>상품명(3번상품)</h4>
+                  <label class="per_font">제품 상세 내용</label>
+                  <div class="progress">
+                    <div class="progress-done" data-done="60"></div>
+                  </div>
+                  <span class="per_style">60%</span>
+                </div>
+                <div class="funding-done-done">
+                  <label class="funding-done-font">펀딩완료</label>
+                </div>
+              </div>
+
+              <div class="third-third-one">
+                <div>
+                  <label class="list_set_option"> 1번재품</label>
+                  <label class="list_set_option_p">금액 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="915,000">
+                  <label class="list_set_option_p">원</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_2" placeholder="150">
+                  <label class="list_set_option_l">개</label>
+                </div>
+                
+                <hr style="width: 95%" />
+                <div> 
+                  <label class="list_set_option"> 2번재품</label>
+                  <label class="list_set_option_p">금액 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="38,000">
+                  <label class="list_set_option_p">원</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_2" placeholder="1200">
+                  <label class="list_set_option_l">개</label>
+                </div>
+                <hr style="width: 95%" />
+                <div>
+                  <label class="list_set_option"> 3번제품 </label>
+                  <label class="list_set_option_p">금액 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="15,000">
+                  <label class="list_set_option_p">원</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_2" placeholder="500">
+                  <label class="list_set_option_l">개</label>
+                </div>
+                <hr style="width: 95%" />
+                <div>
+                  <label class="list_set_option_name"> 전체개수 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_final" placeholder="2000">
+                  <label class="list_set_option_k">개</label><br>
+                  <label class="list_set_option_name">판매개수 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_final" placeholder="1850">
+                  <label class="list_set_option_k">개</label><br>
+                  <hr style="width: 95%" />
+                  <label class="list_set_option_a">총 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_3" placeholder="190,350,000">
+                  <label class="list_set_option_b">원</label>
+                </div>
               </div>
             </div>
+            
             <div class="last-constents on">
-              <div class="progress">
-                <div class="progress-done" data-done="90"></div>
+              <div id="first-two">
+                <img src="./img/대표이미지.png" class="img-style-two">
+                <h4>상품명(1번상품)</h4>
+                <label class="per_font">제품 상세 내용</label>
+                <div class="progress">
+                  <div class="progress-done" data-done="90"></div>
+                </div>
+                <span class="per_style">90%</span>
               </div>
-              <span class="per_style">90%</span>
               <hr style="width: 95%" />
-              <label class="per_font">현재 판매 점수는 90점입니다.</label>
+
+              <div class="first-first-two">
+                <div>
+                  <label class="list_set_option"> 1번제품</label>
+                  <label class="list_set_option_p">금액 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="915,000">
+                  <label class="list_set_option_p">원</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_2" placeholder="150">
+                  <label class="list_set_option_l">개</label>
+                </div>
+                
+                <hr style="width: 95%" />
+                <div> 
+                  <label class="list_set_option"> 2번제품</label>
+                  <label class="list_set_option_p">금액 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="38,000">
+                  <label class="list_set_option_p">원</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_2" placeholder="1200">
+                  <label class="list_set_option_l">개</label>
+                </div>
+                <hr style="width: 95%" />
+                <div>
+                  <label class="list_set_option"> 3번재품 </label>
+                  <label class="list_set_option_p">금액 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="15,000">
+                  <label class="list_set_option_p">원</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_2" placeholder="500">
+                  <label class="list_set_option_l">개</label>
+                </div>
+                <hr style="width: 95%" />
+                <div>
+                  <label class="list_set_option_name"> 전체개수 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_final" placeholder="2000">
+                  <label class="list_set_option_k">개</label><br>
+                  <label class="list_set_option_name">판매개수 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_final" placeholder="1850">
+                  <label class="list_set_option_k">개</label><br>
+                  <hr style="width: 95%" />
+                  <label class="list_set_option_a">총 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_3" placeholder="190,350,000">
+                  <label class="list_set_option_b">원</label>
+                </div>
+              </div>
+
+              <div id="second-two">
+                <img src="./img/대표이미지.png" class="img-style-two">
+                <h4>상품명(2번상품)</h4>
+                <label class="per_font">제품 상세 내용</label>
+                <div class="progress">
+                  <div class="progress-done" data-done="60"></div>
+                </div>
+                <span class="per_style">60%</span>
+              </div>
+              <hr style="width: 95%" />
+
+              <div class="second-second-two">
+                <div>
+                  <label class="list_set_option"> 1번재품</label>
+                  <label class="list_set_option_p">금액 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="915,000">
+                  <label class="list_set_option_p">원</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_2" placeholder="150">
+                  <label class="list_set_option_l">개</label>
+                </div>
+                
+                <hr style="width: 95%" />
+                <div> 
+                  <label class="list_set_option"> 2번재품</label>
+                  <label class="list_set_option_p">금액 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="38,000">
+                  <label class="list_set_option_p">원</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_2" placeholder="1200">
+                  <label class="list_set_option_l">개</label>
+                </div>
+                <hr style="width: 95%" />
+                <div>
+                  <label class="list_set_option"> 3번제품 </label>
+                  <label class="list_set_option_p">금액 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="15,000">
+                  <label class="list_set_option_p">원</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_2" placeholder="500">
+                  <label class="list_set_option_l">개</label>
+                </div>
+                <hr style="width: 95%" />
+                <div>
+                  <label class="list_set_option_name"> 전체개수 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_final" placeholder="2000">
+                  <label class="list_set_option_k">개</label><br>
+                  <label class="list_set_option_name">판매개수 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_final" placeholder="1850">
+                  <label class="list_set_option_k">개</label><br>
+                  <hr style="width: 95%" />
+                  <label class="list_set_option_a">총 :</label>
+                  <input type="text" style="text-align: right;" class="list_set_option_count_3" placeholder="190,350,000">
+                  <label class="list_set_option_b">원</label>
+                </div>
+              </div>
             </div>
-          </div>
-          
-        </section>
+            
+          </section>
+        </div>
       </div>
     </div>    
 <!--여기까지-->
@@ -152,3 +392,46 @@
   <script type="text/javascript" src="../jquery-3.6.0.js"></script>
   <script src="./business_main_style.js"></script>
 </html>
+
+<!--
+<div>
+  <label class="list_set_option"> 1번재품</label>
+  <label class="list_set_option_p">금액 :</label>
+  <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="915,000">
+  <label class="list_set_option_p">원</label>
+  <input type="text" style="text-align: right;" class="list_set_option_count_2" placeholder="150">
+  <label class="list_set_option_l">개</label>
+</div>
+
+<hr style="width: 95%" />
+<div> 
+  <label class="list_set_option"> 2번재품</label>
+  <label class="list_set_option_p">금액 :</label>
+  <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="38,000">
+  <label class="list_set_option_p">원</label>
+  <input type="text" style="text-align: right;" class="list_set_option_count_2" placeholder="1200">
+  <label class="list_set_option_l">개</label>
+</div>
+<hr style="width: 95%" />
+<div>
+  <label class="list_set_option"> 3번제품 </label>
+  <label class="list_set_option_p">금액 :</label>
+  <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="15,000">
+  <label class="list_set_option_p">원</label>
+  <input type="text" style="text-align: right;" class="list_set_option_count_2" placeholder="500">
+  <label class="list_set_option_l">개</label>
+</div>
+<hr style="width: 95%" />
+<div>
+  <label class="list_set_option_name"> 전체개수 :</label>
+  <input type="text" style="text-align: right;" class="list_set_option_final" placeholder="2000">
+  <label class="list_set_option_k">개</label><br>
+  <label class="list_set_option_name">판매개수 :</label>
+  <input type="text" style="text-align: right;" class="list_set_option_final" placeholder="1850">
+  <label class="list_set_option_k">개</label><br>
+  <hr style="width: 95%" />
+  <label class="list_set_option_a">총 :</label>
+  <input type="text" style="text-align: right;" class="list_set_option_count_3" placeholder="190,350,000">
+  <label class="list_set_option_b">원</label>
+</div>
+-->

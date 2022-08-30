@@ -6,8 +6,8 @@ const deleteSecond = document.querySelector("#delete2");
 
 const totalPrice = document.querySelector("#total-price");
 
-let introCount1 = 1;
-let introCount2 = 1;
+let introCount1 = 0;
+let introCount2 = 0;
 let temp1 = 0;
 let temp2 = 0;
 const count1 = document.querySelector("#early-count");
@@ -20,7 +20,9 @@ const totalHr = document.querySelector("#total-hr");
 
 // 옵션 선택하는 순간
 function optionChange(target) {
+  
   if (target == "early-1") {
+    introCount1 = 1;
     checkSize();
     inputNumberFormat(total);
     earlyFirst.style.display = "block";
@@ -32,6 +34,7 @@ function optionChange(target) {
     }
   }
   if (target == "normal-1") {
+    introCount2 = 1;
     checkSize();
     inputNumberFormat(total);
     nomalFirst.style.display = "block";
@@ -63,7 +66,7 @@ deleteFirst.addEventListener("click", function deleteProduct1(e) {
   }
   temp1 = 0;
   count1.value = 1;
-  introCount1 = 1;
+  introCount1 = 0;
   if (
     earlyFirst.style.display == "none" &&
     nomalFirst.style.display == "none"
@@ -86,7 +89,7 @@ deleteSecond.addEventListener("click", function deleteProduct2(e) {
   }
   temp2 = 0;
   count2.value = 1;
-  introCount2 = 1;
+  introCount2 = 0;
   if (
     earlyFirst.style.display == "none" &&
     nomalFirst.style.display == "none"
@@ -165,4 +168,14 @@ function comma(str) {
 function uncomma(str) {
   str = String(str);
   return str.replace(/[^\d]+/g, "");
+}
+
+
+function newPage()  {
+  if(introCount1 > 0 || introCount2 > 0){
+    window.location.href = "funding.html";
+  }
+  else{
+    window.alert("제품을 선택하여 주세요.");
+  }
 }

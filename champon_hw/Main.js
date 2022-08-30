@@ -12,10 +12,10 @@ $(document).ready(function(){
         var thisurl=_this.data("url");
         $.ajax({
             type : 'get',
-            url:'category/'+thisurl,
+            url: thisurl,
             dataType:'html',
             success: function(data){
-                $("#item-list").html(data);
+                $("#main_body").html(data);
                 setTimeout(() => {
                     $.jqProgress();
                 }, 500);
@@ -28,10 +28,10 @@ $(document).ready(function(){
 $(".all_menu").click(function(){
     $.ajax({
         type:'get',
-        url:'All_menu.html',
+        url:'/all',
         dataType:'html',
         success:function(data){
-            $("#item-list").html(data);
+            $("#main_body").html(data);
             setTimeout(()=>{
                 $.jqProgress();
             },500);
@@ -41,10 +41,10 @@ $(".all_menu").click(function(){
 $(".funding_menu").click(function(){
     $.ajax({
         type:'get',
-        url:'funding_plan.html',
+        url:'/funding_plan',
         dataType:'html',
         success:function(data){
-            $("#item-list").html(data);
+            $("#main_body").html(data);
         }
     });
 });
@@ -52,10 +52,10 @@ $(".funding_menu").click(function(){
 $(".earlybird_menu").click(function(){
     $.ajax({
         type:'get',
-        url:'earlybird.html',
+        url:'/early',
         dataType:'html',
         success:function(data){
-            $("#item-list").html(data);
+            $("#main_body").html(data);
         }
     });
 });
