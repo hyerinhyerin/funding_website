@@ -327,7 +327,7 @@ h1 {
   height: 200px;
   object-fit: cover;
 }
-#input-image {
+#input_image {
   position: relative;
   bottom: 182px;
   width: 216px;
@@ -485,7 +485,7 @@ form input::file-selector-button {
   position: relative;
   top: 517px;
 }
-#detail-image-input {
+#detail_image {
   border: solid 1px gray;
   width: 175px;
   height: 27px;

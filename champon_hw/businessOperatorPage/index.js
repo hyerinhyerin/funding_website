@@ -12,7 +12,7 @@ function readImage(input) {
   }
 }
 
-const inputImage = document.querySelector("#input-image");
+const inputImage = document.querySelector("#input_image");
 
 inputImage.addEventListener("change", (e) => {
   readImage(e.target);
@@ -31,7 +31,7 @@ function detailReadImage(input) {
   }
 }
 
-const detailImage = document.querySelector("#detail-image-input");
+const detailImage = document.querySelector("#detail_image");
 
 detailImage.addEventListener("change", (e) => {
   detailReadImage(e.target);

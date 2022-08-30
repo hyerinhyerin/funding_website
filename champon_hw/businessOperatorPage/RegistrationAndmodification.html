@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>사업자 - 수정/등록</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="/champon_hw/businessOperatorPage/style.css" />
     <link
       rel="stylesheet"
       href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
@@ -61,7 +61,7 @@
         </ul>
       </div>
 
-      <a href="./login/login.html" class="main_login">마이페이지</a>
+      <a href="/champon_hw/login/login.html" class="main_login">마이페이지</a>
       <div id="wrap">
         <form action="" autocomplete="on">
           <input
@@ -79,44 +79,45 @@
     <h1 style="color: #4a4a4a;">상품 등록/수정</h1>
     <hr style="width: 95%" />
     <div class="form-container">
-      <form>
+      <form method="post">
         <div class="image-container">
           <label id="product-label">상품이미지</label>
           <img
             id="preview-image"
-            src="./img/대표이미지.png"
+            src="/champon_hw/businessOperatorPage/img/대표이미지.png"
             alt="대표이미지입니다."
           />
-          <label class="input-file-button" for="input-image">첨부하기</label>
-          <input type="file" id="input-image" style="display: none" />
+          <label class="input-file-button" for="input_image">첨부하기</label>
+          <input type="file" id="input_image" name="input_image" style="display: none" />
           <label id="ext_label"
             >jpg, png, gif, svg, tif 업로드 가능합니다.</label
           >
         </div>
         <div class="title-container">
           <label for="title">제목</label>
-          <input type="text" id="title" />
+          <input type="text" id="title" name="title" />
         </div>
         <div class="detail-content-container">
-          <label id="detaile-content">상세내용</label>
+          <label id="detaile-content" for="detaile_content">상세내용</label>
           <textarea
-            name="detaile-content"
+            name="detaile_content"
             id="detaile-content-area"
             cols="65"
             rows="10"
           ></textarea>
         </div>
         <div class="period-container">
-          <label for="period-date">기간</label>
-          <input type="text" id="from" placeholder="0000-00-00" />
-          <label id="period">~</label>
-          <input type="text" id="to" placeholder="0000-00-00" />
+          <label for="period_date">기간</label>
+          <input type="text" id="from" name="period_date" placeholder="0000-00-00" />
+          <label id="period" for="to">~</label>
+          <input type="text" id="to" name="to" placeholder="0000-00-00" />
         </div>
         <div class="goal-money-container">
-          <label for="goal-money ">목표금액</label>
+          <label for="goal_money ">목표금액</label>
           <input
             type="text"
             id="goal-money-input"
+            name="goal_money"
             onkeyup="inputNumberFormat(this)"
           />
           <label style="margin-left: 10px">원</label>
@@ -124,19 +125,20 @@
         <div class="product-container">
           <label style="font-size: 22px">상품정보</label>
           <hr />
-          <label for="product-name">이름</label>
-          <input id="product-name" type="text" />
+          <label for="product_name">이름</label>
+          <input id="product-name" type="text" name="product_name" />
           <button id="product-plus">+</button>
           <button id="product-minus">-</button>
         </div>
         <div class="product-count-container">
-          <label for="product-count">수량</label>
-          <input id="product-count" type="text" />
+          <label for="product_count">수량</label>
+          <input id="product-count" type="text" name="product_count" />
         </div>
         <div class="product-price-container">
-          <label for="product-price" id="product-price-label">금액</label>
+          <label for="product_price" id="product-price-label">금액</label>
           <input
             id="product-price"
+            name="product_price"
             type="text"
             onkeyup="inputNumberFormat(this)"
           />
@@ -145,14 +147,16 @@
         <div class="product-checkbox-container">
           <input
             type="checkbox"
-            name="status"
+            name="ealry"
+            value="bird"
             id="ealry-bird-box"
             onclick="checkOnlyOne(this)"
           />
           <label for="early-bird">얼리버드</label>
           <input
             type="checkbox"
-            name="status"
+            name="general"
+            value="sale"
             id="general-sale"
             onclick="checkOnlyOne(this)"
           />
@@ -163,8 +167,8 @@
           <label style="font-size: 22px">상품 상세 이미지</label>
           <hr />
           <label style="margin-top: 13px">상세이미지</label>
-          <input type="file" id="detail-image-input" />
-          <label for="detail-image-input" id="detail-image-label"
+          <input type="file" id="detail_image" name="detail_image" />
+          <label for="detail_image" id="detail-image-label"
             >첨부하기</label
           >
           <label id="ext_label_two"
@@ -173,8 +177,8 @@
         </div>
         <hr style="position: relative; top: 600px" />
         <div class="register-modify-container">
-          <button id="register-button">등록요청하기</button>
-          <button id="modify-button">수정요청하기</button>
+          <button type="submit" id="register-button">등록요청하기</button>
+          <button type="submit" id="modify-button">수정요청하기</button>
         </div>
       </form>
     </div>
@@ -188,5 +192,5 @@
       </div>
     </footer>
   </body>
-  <script src="./index.js"></script>
+  <script src="/champon_hw/businessOperatorPage/index.js"></script>
 </html>
