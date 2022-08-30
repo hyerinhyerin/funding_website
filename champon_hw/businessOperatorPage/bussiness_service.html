@@ -69,8 +69,8 @@
         <input type="text" id="title-name" placeholder="제목을 입력하세요.">
       </div>
       <div class="service-question">
-        <label for="answer-question" id="answer-question-label"> 문의내역 </label>
-        <select id="answer-question">
+        <label for="answer-question"> 문의내역 </label>
+        <select class="answer-question">
             <option> 문의 내용을 입력하세요 </option>
             <option> 결제/환불 </option>
             <option> 회원가입/탈퇴 </option>
@@ -81,11 +81,11 @@
       </div>
       <div class="service-question">
         <label for="title-size-email" id="label-size-email">이메일</label>
-        <input type="email" name="lineset" id="title-size-email" placeholder="이메일을 입력하세요.">
+        <input type="email" id="title-size-email" placeholder="이메일을 입력하세요.">
       </div>
       <div class="service-question" class="lineset">
         <label id="label-size">문의내용</label>
-        <textarea name="service-question" id="title-size" cols="65" rows="10" placeholder="문의 내용을 입력하세요."></textarea>
+        <textarea id="title-size" cols="65" rows="10" placeholder="문의 내용을 입력하세요."></textarea>
       </div>
       <div class="mamber-box-position">
         <input type="checkbox" name="status" id="mamber-box" onclick="checkOnlyOne(this)"/>
