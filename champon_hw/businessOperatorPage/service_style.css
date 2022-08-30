@@ -12,13 +12,15 @@ h4{
     bottom: 170px;
     font-size: large;
 }
+.all-area{
+    position: relative;
+    left: 105px;
+}
 #v-r{
     position: absolute;
     width: 0px;
     height: 700px;
-    margin-left: none;
-    margin-right: none;
-    left: 390px;
+    left: 445px;
     color: #000;
 }
 #title-name
@@ -124,7 +126,7 @@ h4{
 }
 
 #first-q {
-    width: 75%;
+    width: 60%;
     margin: 0 auto;
     margin-top: 20px;
     padding: 15px;
@@ -164,7 +166,7 @@ h4{
     border-color: #008299;
     border-radius: 7px;
     border-top: none;
-    width: 75%;
+    width: 60%;
     margin: 0 auto;
     margin-top: 0px;
     padding: 15px;
@@ -180,7 +182,7 @@ h4{
     border-color: #008299;
     border-radius: 7px;
     border-top: none;
-    width: 75%;
+    width: 60%;
     margin: 0 auto;
     padding: 15px;
     padding-bottom: 30px;
@@ -196,9 +198,10 @@ h4{
   border-color: #008299;
   border-radius: 7px;
   border-top: none;
-  width: 77.5%;
+  width: 60%;
   margin: 0 auto;
-  padding: none;
+  padding: 15px;
+  padding-bottom: 30px;
   padding-top: 30px;
   font-family: "nanum";
   color: #606060;
@@ -215,6 +218,7 @@ h4{
     width: 13%;
     margin: 0 auto;
     padding: 15px;
+    border-radius: 7px;
     padding-bottom: 30px;
     padding-top: 30px;
     font-family: "nanum";
@@ -241,20 +245,20 @@ h4{
 }
 .funding-charge{
     position: absolute;
-    left: 150px;
+    left: 70px;
     top: 650px;
     background-color: #008299;
     color: white;
     font-style: "nanum";
-    font-size: medium;
+    font-size: large;
     border: none;
     border-radius: 5px;
-    padding: 10px 30px;
+    padding: 30px 100px;
 }
 .object_option_first{
     position: relative;
     margin-top: 0%;
-    left: 30px;
+    left:-15px;
     bottom: 10px;
     background-color: white;
     border: none;
@@ -264,7 +268,8 @@ h4{
 }
 .object_option_second{
     position: relative;
-    margin-left: 120px;
+    margin-left: none;
+    left: 40px;
     bottom: 10px;
     background-color: white;
     border: none;
@@ -276,7 +281,6 @@ h4{
     position: relative;
     left: 100px;
     bottom: 10px;
-    margin-left: 25px;
     background-color: white;
     border: none;
     font-style: "nanum";
@@ -286,7 +290,7 @@ h4{
 
 .list_set_option{
     position: relative;
-    margin-left: none;
+    margin-left: 15px;
     margin-right: 50px;
     border: none;
     font-family: "nanum";
@@ -294,9 +298,6 @@ h4{
     font-size: small;
 }
 .list_set_option_p{
-    position: relative;
-    margin-left: none;
-    margin-right: none;
     border: none;
     font-family: "nanum";
     color: #606060;
@@ -304,7 +305,7 @@ h4{
 }
 .list_set_option_count{
     position: relative;
-    margin-left: 50px;
+    margin-left: 10px;
     margin-right: none;
     border: none;
     font-family: "nanum";
@@ -313,8 +314,23 @@ h4{
 }
 .list_set_option_count_2{
     position: relative;
-    margin-left: 50px;
-    margin-right: none;
+    left: 100px;
+    border: none;
+    font-family: "nanum";
+    color: #606060;
+    font-size: small;
+}
+.list_set_option_count_3{
+    position: relative;
+    left: 30px;
+    border: none;
+    font-family: "nanum";
+    color: #606060;
+    font-size: large;
+}
+.list_set_option_k{
+    position: relative;
+    left: -2px;
     border: none;
     font-family: "nanum";
     color: #606060;
@@ -322,7 +338,7 @@ h4{
 }
 .list_set_option_l{
     position: relative;
-    margin-left: none;
+    margin-left: 100px;
     margin-right: none;
     border: none;
     font-family: "nanum";
@@ -331,7 +347,7 @@ h4{
 }
 .list_set_option_name{
     position: relative;
-    margin-left: none;
+    margin-left: 15px;
     margin-right: 355px;
     border: none;
     font-family: "nanum";
@@ -340,30 +356,31 @@ h4{
 }
 .list_set_option_final{
     position: relative;
-    margin-left: none;
-    margin-right: none;
+    left: -2px;
     border: none;
     font-family: "nanum";
     color: #606060;
     font-size: small;
 }
-.list_set_option_total{
-    position: relative;
-    margin-left: 12px;
-    margin-right: none;
-    border: none;
-    font-family: "nanum";
-    color: #606060;
-    font-size: small;
-}
+
 .list_set_option_a{
     position: relative;
-    margin-left: 370px;
+    margin-left: 300px;
     margin-right: none;
     border: none;
     font-family: "nanum";
     color: #606060;
-    font-size: small;
+    font-size: large;
+}
+.list_set_option_b{
+    position: relative;
+    left: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    font-family: "nanum";
+    color: #606060;
+    font-size: large;
 }
 .list_set_option_c{
     position: relative;
@@ -384,7 +401,7 @@ h4{
     background-color: #eee;
     border-radius: 20px;
     height: 30px;
-    width: 600px;
+    width: 500px;
 }
 .progress-done{
     background-color: #008299;
@@ -399,7 +416,7 @@ h4{
 }
 .per_style{
     position: relative;
-    left: 300px;
+    left: 270px;
     bottom: 23px;
     font-size: medium;
     color: white;
@@ -435,6 +452,7 @@ h4{
 .img-style{
     position: relative;
     margin: none;
+    left: 15px;
     width: 250px;
     height: 150px;
     border-radius: 10px;
@@ -452,13 +470,13 @@ h4{
 }
 
 .funding-done{
-    background-color: beige;
+    opacity: 0.5;
 }
 
 .funding-done-done{
     position: absolute;
-    margin-left: 700px;
-    margin-top: -200px;
+    margin-left: 90px;
+    margin-top: -210px;
     background-color: #008299;
     border-radius: 100%;
     width: 100px;
@@ -469,4 +487,99 @@ h4{
     color: white;
     left: 20px;
     top: 35px;
+}
+
+.first-first-one{
+    display: none;
+    position: relative;
+    border: 2px solid gray;
+    border-color: #008299;
+    border-radius: 7px;
+    width: 100%;
+    right: 17px;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    padding: 15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-family: "nanum";
+    color: #606060;
+    line-height: 27px;
+}
+.second-second-one{
+    display: none;
+    position: relative;
+    border: 2px solid gray;
+    border-color: #008299;
+    border-radius: 7px;
+    width: 100%;
+    right: 17px;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    padding: 15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-family: "nanum";
+    color: #606060;
+    line-height: 27px;
+}
+
+.third-third-one{
+    display: none;
+    position: relative;
+    border: 2px solid gray;
+    border-color: #008299;
+    border-radius: 7px;
+    border-bottom: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    width: 100%;
+    right: 17px;
+    margin: 0 auto;
+    margin-top: 0px;
+    padding: 15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-family: "nanum";
+    color: #606060;
+    line-height: 27px;
+}
+
+.first-first-two{
+    display: none;
+    position: relative;
+    border: 2px solid gray;
+    border-color: #008299;
+    border-radius: 7px;
+    width: 100%;
+    right: 17px;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    padding: 15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-family: "nanum";
+    color: #606060;
+    line-height: 27px;
+}
+.second-second-two{
+    display: none;
+    position: relative;
+    border: 2px solid gray;
+    border-color: #008299;
+    border-radius: 7px;
+    width: 100%;
+    right: 17px;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    padding: 15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-family: "nanum";
+    color: #606060;
+    line-height: 27px;
 }
