@@ -35,7 +35,7 @@ app.use(
   })
 );
 
-app.use(express.static(path.join(__dirname, "")));
+app.use(express.static(path.join(__dirname+"/champon_hw/")));
 
 // 마이페이지 불러오기
 app.get("/mypage", (req, res) => {
@@ -323,9 +323,10 @@ app.post("/RegistrationAndmodification", (req, res) => {
   const detailImage = body.detail_image;
 
   client.query("select * from product where name=?", [name], (err, data) => {
-    console.log("상품데이터 등록중");
+    if(data.length == 0){
+      console.log("상품데이터 등록중");
     client.query(
-      "insert into product(image, title, content, from, to, money, name, count, price, ealry, sale, detailImage) values(?,?,?,?,?,?,?,?,?,?,?,?)",
+      'insert into product(image, title, content, `from`, `to`, money, name, count, price, ealry, sale, detailImage) values(?,?,?,?,?,?,?,?,?,?,?,?)',
       [
         image,
         title,
@@ -354,7 +355,14 @@ app.post("/RegistrationAndmodification", (req, res) => {
     req.session.ealry = data.ealry;
     req.session.sale = data.sale;
     req.session.detailImage = data.detailImage;
-  });
+  }else{
+    console.log('상품등록 실패');
+    res.send('<script>alert("회원가입 실패");</script>');
+    console.log(err);
+    res.redirect('/RegistrationAndmodification');
+  }
+});
+    
 });
 
 app.listen(3002, () => {
