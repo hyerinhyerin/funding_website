@@ -20,7 +20,7 @@ h4{
     position: absolute;
     width: 0px;
     height: 700px;
-    left: 445px;
+    left: 415px;
     color: #000;
 }
 #title-name
@@ -311,7 +311,7 @@ h4{
 }
 .list_set_option_count_2{
     position: relative;
-    left: 100px;
+    left: 80px;
     border: none;
     font-family: "nanum";
     color: #606060;
@@ -335,8 +335,9 @@ h4{
 }
 .list_set_option_l{
     position: relative;
-    margin-left: 100px;
+    margin-left: none;
     margin-right: none;
+    left: 80px;
     border: none;
     font-family: "nanum";
     color: #606060;
@@ -345,7 +346,7 @@ h4{
 .list_set_option_name{
     position: relative;
     margin-left: 15px;
-    margin-right: 355px;
+    margin-right: 335px;
     border: none;
     font-family: "nanum";
     color: #606060;
@@ -362,7 +363,7 @@ h4{
 
 .list_set_option_a{
     position: relative;
-    margin-left: 300px;
+    margin-left: 285px;
     margin-right: none;
     border: none;
     font-family: "nanum";
@@ -465,6 +466,15 @@ h4{
     border-radius: 10px;
     background-color: none;
 }
+.img-style-information{
+    position: relative;
+    margin: none;
+    left: 15px;
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: none;
+}
 
 .funding-done{
     opacity: 0.5;
@@ -472,16 +482,18 @@ h4{
 
 .funding-done-done{
     position: absolute;
-    margin-left: 90px;
-    margin-top: -210px;
-    background-color: #008299;
-    border-radius: 100%;
-    width: 100px;
+    margin-left: 25px;
+    margin-top: -200px;
+    background-color: none;
+    width: 178px;
     height: 100px;
 }
 .funding-done-font{
     position: relative;
-    color: white;
+    color: black;
+    font-family: "gongli";
+    font-size: xxx-large;
+    font-weight: 1000;
     left: 20px;
     top: 35px;
 }
@@ -510,11 +522,14 @@ h4{
     border: 2px solid gray;
     border-color: #008299;
     border-radius: 7px;
+    border-bottom: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     width: 100%;
     right: 17px;
     margin: 0 auto;
     margin-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: none;
     padding: 15px;
     padding-bottom: 30px;
     padding-top: 30px;
@@ -523,7 +538,7 @@ h4{
     line-height: 27px;
 }
 
-.third-third-one{
+.third-third-two{
     display: none;
     position: relative;
     border: 2px solid gray;
@@ -537,7 +552,7 @@ h4{
     margin: 0 auto;
     margin-top: 0px;
     padding: 15px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     padding-top: 30px;
     font-family: "nanum";
     color: #606060;

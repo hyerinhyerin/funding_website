@@ -44,9 +44,6 @@ secondQ.addEventListener("click", () => {
 
     secondAA.style.display = "none";
     secondAA.classList.add("on");
-
-    thirdAA.style.display = "none";
-    thirdAA.classList.add("on");
   } else if (!secondCts.classList.contains("on")) {
     secondCts.style.display = "none";
     secondCts.classList.add("on");
@@ -73,6 +70,9 @@ lastQ.addEventListener("click", () => {
     
     secondBB.style.display = "none";
     secondBB.classList.add("on");
+    
+    thirdBB.style.display = "none";
+    thirdBB.classList.add("on");
 
   } else if (!lastCts.classList.contains("on")) {
     lastCts.style.display = "none";
@@ -122,19 +122,6 @@ secondOn.addEventListener("click", () => {
   }
 });
 
-const thirdOn = document.querySelector("#third-one");
-const thirdAA = document.querySelector(".third-third-one");
-
-thirdOn.addEventListener("click", () => {
-  if (thirdAA.classList.contains("on")) {
-    thirdAA.style.display = "block";
-    thirdAA.classList.remove("on");
-  } else if (!thirdAA.classList.contains("on")) {
-    thirdAA.style.display = "none";
-    thirdAA.classList.add("on");
-  }
-});
-
 const firstOff = document.querySelector("#first-two");
 const firstBB = document.querySelector(".first-first-two");
 
@@ -161,13 +148,21 @@ secondOff.addEventListener("click", () => {
   }
 });
 
+const thirdOff = document.querySelector("#third-two");
+const thirdBB = document.querySelector(".third-third-two");
+
+thirdOff.addEventListener("click", () => {
+  if (thirdBB.classList.contains("on")) {
+    thirdBB.style.display = "block";
+    thirdBB.classList.remove("on");
+  } else if (!thirdBB.classList.contains("on")) {
+    thirdBB.style.display = "none";
+    thirdBB.classList.add("on");
+  }
+});
 
 
-
-
-
-
-//현재 판매 현황
+  //현재 판매 현황
 $(document).ready(function(){
   $.jqProgress=function(){
       $(".progress-done").each(function(){
