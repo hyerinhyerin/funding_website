@@ -275,6 +275,67 @@ app.get("/logout", (req, res) => {
   });
 });
 
+// 페이지 이동
+
+// 로고
+app.get('/Main',(req,res) => {
+  console.log('메인페이지');
+  res.sendFile(__dirname + '/champon_hw/Main.html');
+});
+
+// 카테고리
+app.get('/furniture',(req,res) => {
+  console.log('카테고리 가구');
+  res.sendFile(__dirname + '/champon_hw/category/furniture.html');
+});
+app.get('/elec',(req,res) => {
+  console.log('카테고리 전자기구');
+  res.sendFile(__dirname + '/champon_hw/category/electronic.html');
+});
+app.get('/daily',(req,res) => {
+  console.log('카테고리 생활용품');
+  res.sendFile(__dirname + '/champon_hw/category/daily.html');
+});
+app.get('/hobby',(req,res) => {
+  console.log('카테고리 취미');
+  res.sendFile(__dirname + '/champon_hw/category/hobby.html');
+});
+app.get('/beauty',(req,res) => {
+  console.log('카테고리 뷰티');
+  res.sendFile(__dirname + '/champon_hw/category/beauty.html');
+});
+
+// 사업자
+app.get('/detail',(req,res) => {
+  console.log('사업자 상세페이지');
+  console.log('소비자 상세페이지');
+  res.sendFile(__dirname + '/champon_hw/detail_page.html');
+});
+
+
+// 소비자
+app.get('/all',(req,res) => {
+  console.log('ajax 전체');
+  res.sendFile(__dirname + '/champon_hw/All_menu.html');
+});
+app.get('/funding_plan',(req,res) => {
+  console.log('펀딩예정');
+  res.sendFile(__dirname + '/champon_hw/funding_plan.html');
+});
+app.get('/early',(req,res) => {
+  console.log('얼리버드');
+  res.sendFile(__dirname + '/champon_hw/earlybird.html');
+});
+// app.get('/early_after',(req,res) => {
+//     console.log('얼리버드에프터');
+//     res.redirect('/Main');
+//     res.sendFile(__dirname + '/champon_hw/earlybird.html');
+// });
+app.get('/search',(req,res) => {
+  console.log('검색 form action 변수');
+  res.sendFile(__dirname + '/champon_hw/Search.html');
+});
+
 // 상품등록수정
 
 app.get("/product", (req, res) => {
