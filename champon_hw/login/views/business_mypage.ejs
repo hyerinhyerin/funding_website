@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>business_mypage</title>
-    <link rel="stylesheet" type="text/css" href="/champon_hw/login/views/business_mypage.css" />
+    <link rel="stylesheet" type="text/css" href="views/business_mypage.css" />
 </head>
 
 <body>
@@ -114,8 +114,66 @@
                         <td name="account_num" class = "label_name" > <%= account_num %> </td>
                     </tr>
                     <tr>
-                        <td colspan="2" id="bt">
-                            <button type="" value=""> 수정하기 </button>
+                        <td colspan="2">
+                            <input id="bt" type="button" value="수정하기">
+                        </td>                    
+                </table>
+            </form>
+        </div>
+        <div id = "mypage_div_update">
+            <form method="post" action="/update">
+                <table  class="mypage_table2">
+                    <tr>
+                        <td><label>상호명 : </label></td>
+                        <td><input name="business_name" class="label_name" value="<%= business_name %>"></td>
+                    </tr>
+                    <tr>
+                        <td><label>사업자 번호 : </label></td>
+                        <td name="business_num" class = "label_name" > <%= business_num %> </td>
+                    </tr>
+                    <tr>
+                        <td><label>분야 : </label></td>
+                        <td name="field" class = "label_name" > <%= field %> </td>
+                    </tr>
+                    <tr>
+                        <td><label>이름(담당자) : </label></td>
+                        <td name="name" class = "label_name" > <%= name %> </td>
+                    </tr>
+                    <tr>
+                        <td><label>아이디 : </label></td>
+                        <td name="id" class = "label_name" > <%= id %> </td>
+                    </tr>
+                    <tr>
+                        <td><label>비밀번호 : </label></td>
+                        <td> <input name="password" class = "label_name" value="<%= password %>" > </td>
+                    </tr>
+                    <tr>
+                        <td><label>비밀번호 확인 질문 : </label></td>
+                        <td name="password_question" class = "label_name" > <%= password_question %> </td>
+                    </tr>
+                    <tr>
+                        <td><label>비밀번호 확인 답변 : </label></td>
+                        <td> <input  name="password_answer" class = "label_name" value="<%= password_answer %>"> </td>
+                    </tr>
+                    <tr>
+                        <td><label>주소 : </label></td>
+                        <td> <input name="address" class = "label_name" value = "<%= address %>"> </td>
+                    </tr>
+                    <tr>
+                        <td><label>e-mail : </label></td>
+                        <td> <input  name="e_mail" class = "label_name" value = "<%= e_mail %>"> </td>
+                    </tr>
+                    <tr>
+                        <td><label>전화번호 : </label></td>
+                        <td> <input  name="phone_number" class = "label_name" value = "<%= phone_number %>"> </td>
+                    </tr>
+                    <tr>
+                        <td><label>계좌번호 : </label></td>
+                        <td> <input name="account_num" class = "label_name" value = "<%= account_num %>"> </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="확인" id="bt2">
                         </td>
                     
                 </table>
@@ -134,7 +192,7 @@
         </footer>
     </div>
     <script type="text/javascript" src="jquery-3.6.0.js"></script>
-    <script src="/login/mypage.js"></script>
+    <script src="mypage.js"></script>
 </body>
 
 </html>

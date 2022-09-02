@@ -35,11 +35,11 @@ app.use(
   })
 );
 
-app.use(express.static(path.join(__dirname+"/champon_hw/")));
+app.use(express.static(path.join(__dirname + '/champon_hw/')));
 
 // 마이페이지 불러오기
 app.get("/mypage", (req, res) => {
-  console.log("회원가입 페이지");
+  console.log("마이페이지");
   if (req.session.is_logined == true) {
     if (req.session.division == "1") {
       res.render("business_mypage", {
@@ -275,6 +275,38 @@ app.get("/logout", (req, res) => {
   });
 });
 
+// 마이페이지 수정
+app.post('/update',(req,res) => {
+  const body = req.body;
+  const business_name = body.business_name;
+  const password = body.password;
+  const password_answer = body.password_answer;
+  const address = body.address;
+  const e_mail = body.e_mail;
+  const phone_number = body.phone_number;
+  const account_num = body.account_num;
+  const id = body.id;
+
+  console.log(id);
+
+  client.query("update client set business_name = ?, password = ?, password_answer = ?, address = ?, e_mail = ?, phone_number = ?, account_num = ?  where id = '" + id + "'", [
+    business_name,
+    password,
+    password_answer,
+    address,
+    e_mail,
+    phone_number,
+    account_num,
+  ], (err, result) => {
+    if (err){
+      console.log(err)
+      res.sendStatus(500)
+      return
+    }
+  });  
+  res.redirect('/mypage');
+});
+
 // 페이지 이동
 
 // 로고
@@ -428,5 +460,5 @@ app.post("/RegistrationAndmodification", (req, res) => {
 
 app.listen(3002, () => {
   console.log("3002 port running...");
-  console.log(path.join(__dirname));
+  console.log(path.join(__dirname + '/champon_hw/'));
 });

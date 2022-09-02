@@ -295,6 +295,7 @@ a {
     font-family: 'nanum';
 }
 
+
 /* 바디 부분 */
 h1 {
     text-align: center;
@@ -333,10 +334,10 @@ th,td{
 .label_name{
     text-align: left;
     width : 350px;
-    padding-left : 15px;  
+    padding-left : 15px; 
 }
 
-.mypage_table button{
+#bt{
     width: 150px;
     height: 50px;
     font-family: "gongli";
@@ -346,7 +347,15 @@ th,td{
     color: white;
     border: 0;
     border-radius: 5px;
-    margin-top : 30px;
+    margin: 30px auto;
 }
 
+#mypage_div_update input{ 
+    border-radius: 5px;    
+    height: 30px; 
+    font-size: 20px;
+}
 
+#mypage_div_update{
+    display: none;
+}
