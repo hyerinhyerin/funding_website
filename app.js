@@ -320,7 +320,7 @@ app.get('/all',(req,res) => {
 });
 app.get('/funding_plan',(req,res) => {
   console.log('펀딩예정');
-  res.sendFile(__dirname + '/champon_hw/funding_plan.html');
+  res.sendFile(__dirname + '/champon_hw/funding_planned.html');
 });
 app.get('/early',(req,res) => {
   console.log('얼리버드');
