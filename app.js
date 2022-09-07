@@ -12,10 +12,14 @@ const app = express();
 
 // db 연결 2
 const client = mysql.createConnection({
-  host: "funtestdb.c48enj5ykq9v.ap-northeast-2.rds.amazonaws.com",
+  // host: "funtestdb.c48enj5ykq9v.ap-northeast-2.rds.amazonaws.com",
+  // user: "root",
+  // password: "rlawodbs223",
+  // database: "funTestDb",
+  host: "localhost",
   user: "root",
-  password: "rlawodbs223",
-  database: "funTestDb",
+  password: "1234",
+  database: "loginTest",
 });
 
 // ejs 설정 4 html은 데이터베이스의 정보 가져올 수 없기에 ejs 확장자 사용
@@ -35,15 +39,16 @@ app.use(
   })
 );
 
-app.use(express.static(path.join(__dirname + '/champon_hw/')));
+app.use(express.static(path.join(__dirname + '/champon_hw')));
 
 // 마이페이지 불러오기
 app.get("/mypage", (req, res) => {
   console.log("마이페이지");
   if (req.session.is_logined == true) {
     if (req.session.division == "1") {
-      res.render("business_mypage", {
+      res.render("bussiness_main", {
         is_logined: req.session.is_logined,
+        division : req.session.division,
         business_name: req.session.business_name,
         business_num: req.session.business_num,
         field: req.session.field,
@@ -58,8 +63,9 @@ app.get("/mypage", (req, res) => {
         account_num: req.session.account_num,
       });
     } else if (req.session.division == "2") {
-      res.render("consumer_mypage", {
-        is_logined: req.session.is_logined,
+      res.render("bussiness_main", {
+        is_logined: req.session.is_logined,        
+        division : req.session.division,
         name: req.session.name,
         id: req.session.id,
         password: req.session.password,
@@ -222,8 +228,9 @@ app.post("/login", (req, res) => {
         //사업자면 불러옴
         req.session.save(function () {
           // 세션 스토어에 적용하는 작업
-          res.render("business_mypage", {
+          res.render("bussiness_main", {
             // 정보전달
+            division : data[0].division,
             business_name: data[0].business_name,
             business_num: data[0].business_num,
             field: data[0].field,
@@ -243,8 +250,9 @@ app.post("/login", (req, res) => {
         //소비자면 불러옴
         req.session.save(function () {
           // 세션 스토어에 적용하는 작업
-          res.render("consumer_mypage", {
+          res.render("bussiness_main", {
             // 정보전달
+            division : data[0].division,
             name: data[0].name,
             id: data[0].id,
             password: data[0].password,
@@ -288,6 +296,7 @@ app.post('/update',(req,res) => {
   const id = body.id;
 
   console.log(id);
+  console.log(password);
 
   client.query("update client set business_name = ?, password = ?, password_answer = ?, address = ?, e_mail = ?, phone_number = ?, account_num = ?  where id = '" + id + "'", [
     business_name,
@@ -297,14 +306,30 @@ app.post('/update',(req,res) => {
     e_mail,
     phone_number,
     account_num,
-  ], (err, result) => {
-    if (err){
-      console.log(err)
-      res.sendStatus(500)
-      return
-    }
-  });  
-  res.redirect('/mypage');
+  ], (error, result) => {
+    if(error){
+      throw error;
+    } client.query("select * from client where id = ?", id, (err,data) => {
+      console.log(data);
+      res.render("bussiness_main", {
+        // 정보전달
+        division : data[0].division,
+        business_name: data[0].business_name,
+        business_num: data[0].business_num,
+        field: data[0].field,
+        name: data[0].name,
+        id: data[0].id,
+        password: data[0].password,
+        password_question: data[0].password_question,
+        password_answer: data[0].password_answer,
+        address: data[0].address,
+        e_mail: data[0].e_mail,
+        phone_number: data[0].phone_number,
+        account_num: data[0].account_num,
+        is_logined: true,
+      });
+    })
+  });    
 });
 
 // 페이지 이동
@@ -391,12 +416,7 @@ app.get("/product", (req, res) => {
 
 app.get("/RegistrationAndmodification", (req, res) => {
   console.log("상품등록수정 페이지 로드");
-  res.sendFile(
-    path.join(
-      __dirname +
-        "/champon_hw/businessOperatorPage/RegistrationAndmodification.html"
-    )
-  );
+  res.render("bussiness_main");
 });
 
 app.post("/RegistrationAndmodification", (req, res) => {

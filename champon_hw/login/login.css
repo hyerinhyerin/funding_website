@@ -1,21 +1,21 @@
 @font-face {
     font-family: "gong";
-    src: url('/champon_hw/font/Gong\ Gothic\ Medium.ttf');
+    src: url('/font/Gong\ Gothic\ Medium.ttf');
 }
 
 @font-face {
     font-family: "nanum";
-    src: url('/champon_hw/font/NanumSquareRoundB.ttf');
+    src: url('/font/NanumSquareRoundB.ttf');
 }
 
 @font-face {
     font-family: "gongli";
-    src: url('/champon_hw/font/Gong\ Gothic\ Light.ttf');
+    src: url('/font/Gong\ Gothic\ Light.ttf');
 }
 
 @font-face {
     font-family: "main";
-    src: url('/champon_hw/font/HS두꺼비체.ttf');
+    src: url('/font/HS두꺼비체.ttf');
 }
 
 body {
@@ -189,17 +189,17 @@ a {
     color: black;
     text-decoration: none;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 85%;
 }
 
-.main_singup {
+.main_signup {
     font-family: "nanum";
     font-size: 15px;
     color: black;
     text-decoration: none;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 90%;
 }
 
@@ -285,7 +285,7 @@ a {
     font-family: 'gongli';
 }
 
-.footer div{
+.footer div {
     position: relative;
     left: 150px;
 }
@@ -331,7 +331,7 @@ a {
     justify-items: center;
 }
 
-#bt{
+#bt {
     width: 60px;
     height: 25px;
     font-family: "gongli";
