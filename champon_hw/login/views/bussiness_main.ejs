@@ -46,7 +46,7 @@
           </ul>
       </div>
 
-      <a href="/login" class="main_login">로그인</a>
+      <a href="/logout" class="main_login">로그아웃</a>
       <a href="/mypage" class="main_signup">마이페이지</a>
       <div id="wrap">
           <form action="/search" post="get" autocomplete="on">
@@ -89,7 +89,7 @@
 
             </div>
             <div class="first-constents on">
-              <% if( division == "1" ){ %>
+              <% if( division == "1"){ %>
               <div id = "mypage_div">
                 <form method="post" action="">
                     <table  class="mypage_table">
@@ -172,7 +172,7 @@
                         </tr>
                         <tr>
                             <td><label>아이디 : </label></td>
-                            <td class = "label_name" > <input name="id" class="label_name_id" value="<%= id %>" readonly> </td>
+                            <td name="id" class="label_name" > <%= id %> </td>
                         </tr>
                         <tr>
                             <td><label>비밀번호 : </label></td>
@@ -246,9 +246,9 @@
                                 <td><label>전화번호 : </label></td>
                                 <td name="phone_number" class = "label_name" > <%= phone_number %> </td>
                             <tr>
-                                <td colspan="2" id="bt">
-                                    <button type="" value=""> 수정하기 </button>
-                                </td>
+                              <td colspan="2" id="bt_td">
+                                <input id="bt" type="button" value="수정하기">
+                            </td>   
                             </tr>
                         </table>
                     </form>
@@ -263,7 +263,7 @@
                           </tr>
                           <tr>
                               <td><label>아이디 : </label></td>
-                              <td class = "label_name" > <input name="id" class="label_name_id" value="<%= id %>" readonly> </td>
+                              <td name="id" class="label_name" > <%= id %> </td>
                           </tr>
                           <tr>
                             <td><label>비밀번호 : </label></td>
