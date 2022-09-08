@@ -79,7 +79,7 @@
     <h1 style="color: #4a4a4a;">상품 등록/수정</h1>
     <hr style="width: 95%" />
     <div class="form-container">
-      <form method="post">
+      <form method="post" enctype="multipart/form-data">
         <div class="image-container">
           <label id="product-label">상품이미지</label>
           <img
@@ -100,10 +100,10 @@
         <div class="detail-content-container">
           <label id="detaile-content" for="detaile_content">상세내용</label>
           <textarea
-            name="detaile_content"
-            id="detaile-content-area"
-            cols="65"
-            rows="10"
+          name="detale_content"
+          id="detaile-content-area"
+          cols="60"
+          rows="10"
           ></textarea>
         </div>
         <div class="period-container">

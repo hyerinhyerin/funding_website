@@ -374,7 +374,9 @@ form input::file-selector-button {
 }
 #detaile-content {
   position: relative;
-  bottom: 136px;
+  right: 2px;
+  bottom: 134px;
+
 }
 #detaile-content-area {
   position: relative;
@@ -564,7 +566,6 @@ form input::file-selector-button {
   position: relative;
   top: 450px;
 }
-
 
 /* body 시작 */
 .body-container {
