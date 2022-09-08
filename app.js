@@ -41,46 +41,6 @@ app.use(
 
 app.use(express.static(path.join(__dirname + '/champon_hw')));
 
-// 마이페이지 불러오기
-app.get("/mypage", (req, res) => {
-  console.log("마이페이지");
-  if (req.session.is_logined == true) {    
-    client.query("select * from client where id = ?",[req.session.client_id], (err,data) => {
-      if (data[0].division == "1") {
-        res.render("bussiness_main", {
-          division : data[0].division,
-          business_name: data[0].business_name,
-          business_num: data[0].business_num,
-          field: data[0].field,
-          name: data[0].name,
-          id: data[0].id,
-          password: data[0].password,
-          password_question: data[0].password_question,
-          password_answer: data[0].password_answer,
-          address: data[0].address,
-          e_mail: data[0].e_mail,
-          phone_number: data[0].phone_number,
-          account_num: data[0].account_num,
-        });
-      } else if (data[0].division == "2") {
-        res.render("bussiness_main", {     
-          division : data[0].division,
-          name: data[0].name,
-          id: data[0].id,
-          password: data[0].password,
-          password_question: data[0].password_question,
-          password_answer: data[0].password_answer,
-          address: data[0].address,
-          e_mail: data[0].e_mail,
-          phone_number: data[0].phone_number,
-        });
-      }
-    });
-  } else {
-    res.redirect("/login");
-  }
-});
-
 // 사업자 회원가입
 app.get("/signup", (req, res) => {
   console.log("회원가입 페이지");
@@ -203,10 +163,11 @@ app.post("/login", (req, res) => {
       // 세션에 추가
       req.session.is_logined = true;
       req.session.client_id = data[0].id;
+
+      console.log(req.session.is_logined);
+      console.log(req.session.client_id);
+
       res.redirect("/mypage");
-      if(err){
-        console.log(err);
-      }
     } else {
       console.log("로그인 실패");
       res.redirect("/login");
@@ -222,6 +183,47 @@ app.get("/logout", (req, res) => {
     res.redirect("/login");
   });
 });
+
+// 마이페이지 불러오기
+app.get("/mypage", (req, res) => {
+  console.log("마이페이지");
+  if (req.session.is_logined == true) {    
+    client.query("select * from client where id = ?",[req.session.client_id], (err,data) => {
+      if (data[0].division == "1") {
+        res.render("bussiness_main", {
+          division : data[0].division,
+          business_name: data[0].business_name,
+          business_num: data[0].business_num,
+          field: data[0].field,
+          name: data[0].name,
+          id: data[0].id,
+          password: data[0].password,
+          password_question: data[0].password_question,
+          password_answer: data[0].password_answer,
+          address: data[0].address,
+          e_mail: data[0].e_mail,
+          phone_number: data[0].phone_number,
+          account_num: data[0].account_num,
+        });
+      } else if (data[0].division == "2") {
+        res.render("bussiness_main", {     
+          division : data[0].division,
+          name: data[0].name,
+          id: data[0].id,
+          password: data[0].password,
+          password_question: data[0].password_question,
+          password_answer: data[0].password_answer,
+          address: data[0].address,
+          e_mail: data[0].e_mail,
+          phone_number: data[0].phone_number,
+        });
+      }
+    });
+  } else {
+    res.redirect("/login");
+  }
+});
+
 
 // 마이페이지 수정
 app.post('/update',(req,res) => {
