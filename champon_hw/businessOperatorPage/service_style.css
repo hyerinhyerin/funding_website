@@ -595,3 +595,74 @@ h4{
     color: #606060;
     line-height: 27px;
 }
+
+/* mypage */
+
+table{
+    width: 100%;
+    margin: auto;
+}
+
+#bt{
+    text-align: center;
+}
+
+th,td{
+    height: 35px;
+    text-align: center;
+    font-family: "gongli";
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    padding-left: 60px;
+}
+
+.label_name{
+    text-align: left;
+    width : 240px;
+    padding-left : 15px; 
+}
+
+#bt{
+    width: 150px;
+    height: 50px;
+    font-family: "gongli";
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #008299;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    margin: 30px auto;
+}
+
+#bt2{
+    width: 150px;
+    height: 50px;
+    font-family: "gongli";
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #008299;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    margin: 30px auto;
+}
+
+#mypage_div_update input{ 
+    border-radius: 5px;    
+    height: 30px; 
+    font-size: 20px;
+}
+
+#mypage_div_update{
+    display: none;
+}
+
+#bt_td{
+    padding-left: 0px;
+}
+
+#label_name_id{
+    border: none;
+}

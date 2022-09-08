@@ -4,54 +4,53 @@
 <head>
     <meta charset="UTF-8" />
     <title>login</title>
-    <link rel="stylesheet" type="text/css" href="/champon_hw/login/login.css" />
+    <link rel="stylesheet" type="text/css" href="/login/login.css" />
 </head>
 
 <body>
     <div class="container">
         <div class="nav_menu">
-            <a href="/champon_hw/Main.html"><img class="title" src="/champon_hw/img/main_title.png" alt="편한누리" /></a>
+            <a href="/Main" class="_menu">ㅍㅎㄴㄹ</a>
             <!--카테고리 메뉴바-->
             <div>
                 <ul id="mainline">
                     <li>
-                        <a href="#" class="category_menu">카테고리</a>
+                        <span class="category_menu">카테고리</span>
                         <ul>
-                            <li data-url="furniture.html">
+                            <li data-url="/furniture">
                                 <span>가구</span>
                             </li>
-                            <li data-url="electronic.html">
+                            <li data-url="/elec">
                                 <span>전자기기</span>
                             </li>
-                            <li data-url="daily.html">
+                            <li data-url="/daily">
                                 <span>생활용품</span>
                             </li>
-                            <li data-url="hobby.html">
+                            <li data-url="/hobby">
                                 <span>취미</span>
                             </li>
-                            <li data-url="beauty.html">
+                            <li data-url="/beauty">
                                 <span>뷰티</span>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="/champon_hw/Main.html" class="all_menu">전체</a>
+                        <span class="all_menu">전체</span>
                     </li>
                     <li>
-                        <a href="#" class="funding_menu">펀딩예정</a>
+                        <span class="funding_menu">펀딩예정</span>
                     </li>
                     <li>
-                        <a href="#" class="earlybird_menu">얼리버드</a>
+                        <span class="earlybird_menu">얼리버드</span>
                     </li>
                 </ul>
             </div>
-    
+
             <a href="/login" class="main_login">로그인</a>
-            <a href="/signup" class="main_singup">회원가입</a>
-    
+            <a href="/signup" class="main_signup">회원가입</a>
             <div id="wrap">
-                <form action="" autocomplete="on">
-                    <input id="search" name="search" type="text" placeholder="검색어를 입력해 주세요." />
+                <form action="/search" post="get" autocomplete="on">
+                    <input id="search" name="search" type="text" placeholder="얼리버드 특가 " />
                     <input id="search_submit" value="Rechercher" type="submit" />
                 </form>
             </div>
@@ -62,18 +61,18 @@
             </div>
 
             <form method="post">
-            <div id="login_box">
-                <p> 로그인 </p>
-                <div id="login">
-                    <input id="id" name="id" type="text" placeholder="아이디"> <br>
-                    <input id="password" name="password" type="password" placeholder="비밀번호"><br>
-                    <button id="bt"> 로그인 </button> 
+                <div id="login_box">
+                    <p> 로그인 </p>
+                    <div id="login">
+                        <input id="id" name="id" type="text" placeholder="아이디"> <br>
+                        <input id="password" name="password" type="password" placeholder="비밀번호"><br>
+                        <button id="bt"> 로그인 </button>
+                    </div>
                 </div>
-            </div>
             </form>
-        </div>       
-        
-        
+        </div>
+
+
         <footer class="footer">
             <hr />
             <div>
@@ -84,7 +83,7 @@
             </div>
         </footer>
     </div>
-    <script src="/champon_hw/login/login.js"></script>
+    <script src="/login/login.js"></script>
 </body>
 
 </html>

@@ -12,10 +12,14 @@ const app = express();
 
 // db 연결 2
 const client = mysql.createConnection({
-  host: "funtestdb.c48enj5ykq9v.ap-northeast-2.rds.amazonaws.com",
+  // host: "funtestdb.c48enj5ykq9v.ap-northeast-2.rds.amazonaws.com",
+  // user: "root",
+  // password: "rlawodbs223",
+  // database: "funTestDb",
+  host: "localhost",
   user: "root",
-  password: "rlawodbs223",
-  database: "funTestDb",
+  password: "1234",
+  database: "loginTest",
 });
 
 // ejs 설정 4 html은 데이터베이스의 정보 가져올 수 없기에 ejs 확장자 사용
@@ -35,41 +39,43 @@ app.use(
   })
 );
 
-app.use(express.static(path.join(__dirname+"/champon_hw/")));
+app.use(express.static(path.join(__dirname + '/champon_hw')));
 
 // 마이페이지 불러오기
 app.get("/mypage", (req, res) => {
-  console.log("회원가입 페이지");
-  if (req.session.is_logined == true) {
-    if (req.session.division == "1") {
-      res.render("business_mypage", {
-        is_logined: req.session.is_logined,
-        business_name: req.session.business_name,
-        business_num: req.session.business_num,
-        field: req.session.field,
-        name: req.session.name,
-        id: req.session.id,
-        password: req.session.password,
-        password_question: req.session.password_question,
-        password_answer: req.session.password_answer,
-        address: req.session.address,
-        e_mail: req.session.e_mail,
-        phone_number: req.session.phone_number,
-        account_num: req.session.account_num,
-      });
-    } else if (req.session.division == "2") {
-      res.render("consumer_mypage", {
-        is_logined: req.session.is_logined,
-        name: req.session.name,
-        id: req.session.id,
-        password: req.session.password,
-        password_question: req.session.password_question,
-        password_answer: req.session.password_answer,
-        address: req.session.address,
-        e_mail: req.session.e_mail,
-        phone_number: req.session.phone_number,
-      });
-    }
+  console.log("마이페이지");
+  if (req.session.is_logined == true) {    
+    client.query("select * from client where id = ?",[req.session.client_id], (err,data) => {
+      if (data[0].division == "1") {
+        res.render("bussiness_main", {
+          division : data[0].division,
+          business_name: data[0].business_name,
+          business_num: data[0].business_num,
+          field: data[0].field,
+          name: data[0].name,
+          id: data[0].id,
+          password: data[0].password,
+          password_question: data[0].password_question,
+          password_answer: data[0].password_answer,
+          address: data[0].address,
+          e_mail: data[0].e_mail,
+          phone_number: data[0].phone_number,
+          account_num: data[0].account_num,
+        });
+      } else if (data[0].division == "2") {
+        res.render("bussiness_main", {     
+          division : data[0].division,
+          name: data[0].name,
+          id: data[0].id,
+          password: data[0].password,
+          password_question: data[0].password_question,
+          password_answer: data[0].password_answer,
+          address: data[0].address,
+          e_mail: data[0].e_mail,
+          phone_number: data[0].phone_number,
+        });
+      }
+    });
   } else {
     res.redirect("/login");
   }
@@ -192,73 +198,15 @@ app.post("/login", (req, res) => {
   const password = body.password;
 
   client.query("select * from client where id=?", [id], (err, data) => {
-    // 로그인 확인
-    console.log(data[0]);
-    console.log(id);
-    console.log(data[0].id);
-    console.log(data[0].password);
-    console.log(data[0].division);
-    console.log(id == data[0].id);
-    console.log(password == data[0].password);
     if (id == data[0].id && password == data[0].password) {
       console.log("로그인 성공");
       // 세션에 추가
       req.session.is_logined = true;
-      req.session.division = data.division;
-      req.session.business_name = data.business_name;
-      req.session.business_num = data.business_num;
-      req.session.field = data.field;
-      req.session.name = data.name;
-      req.session.id = data.id;
-      req.session.password = data.password;
-      req.session.password_question = data.password_question;
-      req.session.password_answer = data.password_answer;
-      req.session.address = data.address;
-      req.session.e_mail = data.e_mail;
-      req.session.phone_number = data.phone_number;
-      req.session.account_num = data.account_num;
-
-      if (data[0].division == "1") {
-        //사업자면 불러옴
-        req.session.save(function () {
-          // 세션 스토어에 적용하는 작업
-          res.render("business_mypage", {
-            // 정보전달
-            business_name: data[0].business_name,
-            business_num: data[0].business_num,
-            field: data[0].field,
-            name: data[0].name,
-            id: data[0].id,
-            password: data[0].password,
-            password_question: data[0].password_question,
-            password_answer: data[0].password_answer,
-            address: data[0].address,
-            e_mail: data[0].e_mail,
-            phone_number: data[0].phone_number,
-            account_num: data[0].account_num,
-            is_logined: true,
-          });
-        });
-      } else if (data[0].division == "2") {
-        //소비자면 불러옴
-        req.session.save(function () {
-          // 세션 스토어에 적용하는 작업
-          res.render("consumer_mypage", {
-            // 정보전달
-            name: data[0].name,
-            id: data[0].id,
-            password: data[0].password,
-            password_question: data[0].password_question,
-            password_answer: data[0].password_answer,
-            address: data[0].address,
-            e_mail: data[0].e_mail,
-            phone_number: data[0].phone_number,
-            is_logined: true,
-          });
-        });
+      req.session.client_id = data[0].id;
+      res.redirect("/mypage");
+      if(err){
+        console.log(err);
       }
-
-      //res.sendFile(path.join(__dirname,'../Main_login.html'));
     } else {
       console.log("로그인 실패");
       res.redirect("/login");
@@ -273,6 +221,35 @@ app.get("/logout", (req, res) => {
     // 세션 파괴후 할 것들
     res.redirect("/login");
   });
+});
+
+// 마이페이지 수정
+app.post('/update',(req,res) => {
+  const body = req.body;
+  const business_name = body.business_name;
+  const password = body.password;
+  const password_answer = body.password_answer;
+  const address = body.address;
+  const e_mail = body.e_mail;
+  const phone_number = body.phone_number;
+  const account_num = body.account_num;
+  const id = req.session.client_id;
+
+  client.query("update client set business_name = ?, password = ?, password_answer = ?, address = ?, e_mail = ?, phone_number = ?, account_num = ?  where id = '" + id + "'", [
+    business_name,
+    password,
+    password_answer,
+    address,
+    e_mail,
+    phone_number,
+    account_num,
+  ], (error, result) => {
+    if(error){
+      throw error;
+    } else{
+      res.redirect("/mypage");
+    }
+  });    
 });
 
 // 페이지 이동
@@ -326,11 +303,6 @@ app.get('/early',(req,res) => {
   console.log('얼리버드');
   res.sendFile(__dirname + '/champon_hw/earlybird.html');
 });
-// app.get('/early_after',(req,res) => {
-//     console.log('얼리버드에프터');
-//     res.redirect('/Main');
-//     res.sendFile(__dirname + '/champon_hw/earlybird.html');
-// });
 app.get('/search',(req,res) => {
   console.log('검색 form action 변수');
   res.sendFile(__dirname + '/champon_hw/Search.html');
@@ -359,12 +331,7 @@ app.get("/product", (req, res) => {
 
 app.get("/RegistrationAndmodification", (req, res) => {
   console.log("상품등록수정 페이지 로드");
-  res.sendFile(
-    path.join(
-      __dirname +
-        "/champon_hw/businessOperatorPage/RegistrationAndmodification.html"
-    )
-  );
+  res.render("bussiness_main");
 });
 
 app.post("/RegistrationAndmodification", (req, res) => {
@@ -428,5 +395,5 @@ app.post("/RegistrationAndmodification", (req, res) => {
 
 app.listen(3002, () => {
   console.log("3002 port running...");
-  console.log(path.join(__dirname));
+  console.log(path.join(__dirname + '/champon_hw/'));
 });
