@@ -60,3 +60,6 @@ $(".earlybird_menu").click(function(){
     });
 });
 
+$(".item").click(function(){
+    location.href = "/detail";
+});
