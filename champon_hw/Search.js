@@ -1,29 +1,4 @@
-const searchText=document.getElementById("search");
-const searchBtn=document.getElementById("search_submit");
-const searchValue=searchText.getAttribute('value');
-
-new URLSearchParams(window.location.search).forEach((value,name)=>{
-    searchText.value=`${value}`;
-})
-
-
-searchBtn.addEventListener("submit",function(){
-    if(searchValue==document.querySelector("img").getAttribute("data-name")){
-        console.log(searchValue);
-        document.querySelector(".item").remove();
-    }
-});
-// window.addEventListener("onbeforeunload",function(){
-//     alert("??");
-//     console.log("hi");
-//     searchText.value="";
-// });
-// window.onbeforeunload=function(event){
-//     alert("??");
-//     console.log("hi");
-//     searchText.value="";
-// }
-
+// ajax 배너부터 페이지 변환
 $(document).ready(function(){
     $.jqProgress=function(){
         $(".progress-done").each(function(){
@@ -35,6 +10,7 @@ $(document).ready(function(){
     }
     $("#mainline ul li").click(function(){
         $("#main_search").remove();
+        $("#wrap").css("display","block"); 
         var _this=$(this);
         var thisurl=_this.data("url");
         $.ajax({
@@ -54,6 +30,7 @@ $(document).ready(function(){
 
 $(".all_menu").click(function(){
     $("#main_search").remove();
+    $("#wrap").css("display","block"); 
     $.ajax({
         type:'get',
         url:'/all',
@@ -68,6 +45,7 @@ $(".all_menu").click(function(){
 });
 $(".funding_menu").click(function(){
     $("#main_search").remove();
+    $("#wrap").css("display","block"); 
     $.ajax({
         type:'get',
         url:'/funding_plan',
@@ -80,6 +58,7 @@ $(".funding_menu").click(function(){
 
 $(".earlybird_menu").click(function(){
     $("#main_search").remove();
+    $("#wrap").css("display","block"); 
     $.ajax({
         type:'get',
         url:'/early',

@@ -1,3 +1,10 @@
+const searchbtn=document.querySelector("#search_submit");
+function searchDisplay(){
+    location.href="/search";
+    console.log("search");
+}
+searchbtn.addEventListener("click",searchDisplay);
+
 $(document).ready(function(){
     $.jqProgress=function(){
         $(".progress-done").each(function(){
