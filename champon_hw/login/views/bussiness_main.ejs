@@ -55,39 +55,50 @@
           </form>
       </div>
   </div>
+
 <!--매인 페이지-->
     <div class="all-area">
-      <span id="first-span">
-        <img src="../../businessOperatorPage/img/펀한누리.jpg" style="width: 250px; height: 150px;">
-      </span>
-      <button id="my-name" class="user-name">
-        펀한누리(주)
-      </button>
-      <div class="name-constents on">
-        사업체 명 : xxx(주)<br>
-        계좌번호 : 111-123456-789-012<br>
-        전화번호 : 010-xxxx-xxxx
+      <div id="header-container">
+        <div id="first-span">
+          <img src="../../businessOperatorPage/img/펀한누리.jpg">
+        </div>
+        <div id="my-name" class="user-name">
+          펀한누리(주)
+        </div>
+        <div class="name-constents on">
+          사업체 명 : xxx(주)<br>
+          계좌번호 : 111-123456-789-012<br>
+          전화번호 : 010-xxxx-xxxx
+        </div>
+        <button class="funding-charge">
+          펀딩 등록하기
+        </button>
       </div>
-      <button class="funding-charge">
-        펀딩 등록하기
-      </button>
-      <hr id="v-r"> <!-- 세로선 --> 
+      
       <div class="main_option_box">
         <div class="body-container">
           <section class="faq-contents">
             <div id="first-q">
-              <button id="object_first" class="object_option_first">
-                내 정보 <br><br><br> >
-              </button>
-              <button id="object_second" class="object_option_second">
-                진행중인 펀딩 <br><br><br> >
-              </button>
-              <button id="object_last" class="object_option_third">
-                전체 펀딩 <br><br><br> >
-              </button>
-              <hr style="width: 95%" />
-
+              <div id="object_first" class="object_option">
+                내 정보
+                <div>
+                  >
+                </div>
+              </div>
+              <div id="object_second" class="object_option">
+                진행중인 펀딩
+                <div>
+                  >
+                </div>
+              </div>
+              <div id="object_last" class="object_option">
+                전체 펀딩
+                <div>
+                  >
+                </div>
+              </div>
             </div>
+
             <div class="first-constents on">
               <% if( division == "1"){ %>
               <div id = "mypage_div">
@@ -332,7 +343,7 @@
                 </div>
                 <hr style="width: 95%" />
                 <div>
-                  <label class="list_set_option"> 3번재품 </label>
+                  <label class="list_set_option"> 3번제품 </label>
                   <label class="list_set_option_p">금액 :</label>
                   <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="15,000">
                   <label class="list_set_option_p">원</label>
@@ -367,7 +378,7 @@
 
               <div class="second-second-one">
                 <div>
-                  <label class="list_set_option"> 1번재품</label>
+                  <label class="list_set_option"> 1번제품</label>
                   <label class="list_set_option_p">금액 :</label>
                   <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="915,000">
                   <label class="list_set_option_p">원</label>
@@ -377,7 +388,7 @@
                 
                 <hr style="width: 95%" />
                 <div> 
-                  <label class="list_set_option"> 2번재품</label>
+                  <label class="list_set_option"> 2번제품</label>
                   <label class="list_set_option_p">금액 :</label>
                   <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="38,000">
                   <label class="list_set_option_p">원</label>
@@ -442,7 +453,7 @@
                 </div>
                 <hr style="width: 95%" />
                 <div>
-                  <label class="list_set_option"> 3번재품 </label>
+                  <label class="list_set_option"> 3번제품 </label>
                   <label class="list_set_option_p">금액 :</label>
                   <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="15,000">
                   <label class="list_set_option_p">원</label>
@@ -477,7 +488,7 @@
 
               <div class="second-second-two">
                 <div>
-                  <label class="list_set_option"> 1번재품</label>
+                  <label class="list_set_option"> 1번제품</label>
                   <label class="list_set_option_p">금액 :</label>
                   <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="915,000">
                   <label class="list_set_option_p">원</label>
@@ -487,7 +498,7 @@
                 
                 <hr style="width: 95%" />
                 <div> 
-                  <label class="list_set_option"> 2번재품</label>
+                  <label class="list_set_option"> 2번제품</label>
                   <label class="list_set_option_p">금액 :</label>
                   <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="38,000">
                   <label class="list_set_option_p">원</label>
@@ -535,7 +546,7 @@
 
               <div class="third-third-two">
                 <div>
-                  <label class="list_set_option"> 1번재품</label>
+                  <label class="list_set_option"> 1번제품</label>
                   <label class="list_set_option_p">금액 :</label>
                   <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="915,000">
                   <label class="list_set_option_p">원</label>
@@ -545,7 +556,7 @@
                 
                 <hr style="width: 95%" />
                 <div> 
-                  <label class="list_set_option"> 2번재품</label>
+                  <label class="list_set_option"> 2번제품</label>
                   <label class="list_set_option_p">금액 :</label>
                   <input type="text" style="text-align: right;" class="list_set_option_count" placeholder="38,000">
                   <label class="list_set_option_p">원</label>
@@ -575,9 +586,7 @@
                   <label class="list_set_option_b">원</label>
                 </div>
               </div>
-
-            </div>
-            
+            </div>            
           </section>
         </div>
       </div>
