@@ -376,7 +376,6 @@ form input::file-selector-button {
   position: relative;
   right: 2px;
   bottom: 134px;
-
 }
 #detaile-content-area {
   position: relative;
@@ -468,10 +467,20 @@ form input::file-selector-button {
   height: 23px;
   margin-left: 80px;
 }
+.product-category-container {
+  position: relative;
+  top: 409px;
+}
+#product_category {
+  position: relative;
+  left: 50px;
+  width: 180px;
+  height: 27px;
+}
 
 .product-checkbox-container {
   position: relative;
-  top: 409px;
+  top: 452px;
 }
 #ealry-bird-box {
   position: relative;

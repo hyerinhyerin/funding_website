@@ -416,12 +416,13 @@ app.post(
     const name = body.product_name;
     const count = body.product_count;
     const price = body.product_price;
+    const category = body.product_category;
     const ealry = body.ealry;
     const sale = body.general;
     const detailImage = `/images/${req.files['detail_image'][0].filename}`;
 
     const sql =
-      "INSERT INTO product(image, title, content, start, end, money, name, count, price, ealry, sale, detailImage) values(?,?,?,?,?,?,?,?,?,?,?,?)";
+      "INSERT INTO product(image, title, content, start, end, money, name, count, price, category, ealry, sale, detailImage) values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
     const data = [
       image,
       title,
@@ -432,6 +433,7 @@ app.post(
       name,
       count,
       price,
+      category,
       ealry,
       sale,
       detailImage,
@@ -449,7 +451,7 @@ app.post(
 
     client.query(sql2, [name], (err, row) => {
       if (name == row[0].name) {
-        res.render("product", {
+        res.render("product_complete", {
           image: row[0].image,
           title: row[0].title,
           content: row[0].content,
@@ -459,6 +461,7 @@ app.post(
           name: row[0].name,
           count: row[0].count,
           price: row[0].price,
+          category: row[0].category,
           ealry: row[0].ealry,
           sale: row[0].sale,
           detailImage: row[0].detailImage,
@@ -471,6 +474,16 @@ app.post(
     });
   }
 );
+
+app.get("/Main", (req, res) => {
+  console.log("상품등록수정 완료");
+  res.sendFile(
+    path.join(
+      __dirname +
+        "/champon_hw/Main.html"
+    )
+  );
+});
 
 app.listen(3002, () => {
   console.log("3002 port running...");
