@@ -206,3 +206,9 @@ const bt2 = document.querySelector("#bt2");
 bt2.addEventListener("click", () => {
     location.href = "/update";
 })
+
+const bt3 = document.querySelector('.funding-charge');
+
+bt3.addEventListener("click",() => {
+  location.href = "/RegistrationAndmodification";
+})
