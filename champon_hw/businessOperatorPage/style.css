@@ -374,7 +374,8 @@ form input::file-selector-button {
 }
 #detaile-content {
   position: relative;
-  bottom: 136px;
+  right: 2px;
+  bottom: 134px;
 }
 #detaile-content-area {
   position: relative;
@@ -466,10 +467,20 @@ form input::file-selector-button {
   height: 23px;
   margin-left: 80px;
 }
+.product-category-container {
+  position: relative;
+  top: 409px;
+}
+#product_category {
+  position: relative;
+  left: 50px;
+  width: 180px;
+  height: 27px;
+}
 
 .product-checkbox-container {
   position: relative;
-  top: 409px;
+  top: 452px;
 }
 #ealry-bird-box {
   position: relative;
@@ -565,11 +576,11 @@ form input::file-selector-button {
   top: 450px;
 } */
 
-
 /* body 시작 */
 .body-container {
   display: flex;
 }
+<<<<<<< HEAD
 
 /* 헤더 */
 /* header */
@@ -839,3 +850,5 @@ a {
   line-height: 10px;
   font-family: 'nanum';
 }
+=======
+>>>>>>> backend-j
