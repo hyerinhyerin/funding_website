@@ -253,6 +253,7 @@ app.post("/update", (req, res) => {
       res.redirect("/mypage");
     }
   });
+});
 
   // 페이지 이동
 
@@ -417,8 +418,9 @@ app.post("/update", (req, res) => {
     );
   });
 
-  const port = process.env.PORT || 3002;
 
-  app.listen(port, function () {
-    console.log(`${port} is running`);
-  });
+const port = process.env.PORT || 3002;
+
+app.listen(port, function(){
+  console.log(`${port} is running`);
+});
