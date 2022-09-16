@@ -13,19 +13,19 @@ const app = express();
 
 // db 연결 2
 const client = mysql.createConnection({
-  // host: "funtestdb.c48enj5ykq9v.ap-northeast-2.rds.amazonaws.com",
-  // user: "root",
-  // password: "rlawodbs223",
-  // database: "funTestDb",
-  host: "localhost",
+  // host : "us-cdbr-east-06.cleardb.net",
+  // user : "ba7149f08d47c2",
+  // password : "751b7369",
+  // database : "heroku_99d017c83498894",
+  host: "funtestdb.c48enj5ykq9v.ap-northeast-2.rds.amazonaws.com",
   user: "root",
-  password: "1234",
-  database: "loginTest",
+  password: "rlawodbs223",
+  database: "funTestDb",
 });
 
 // ejs 설정 4 html은 데이터베이스의 정보 가져올 수 없기에 ejs 확장자 사용
 app.set("view engine", "ejs");
-app.set("views", __dirname + "\\champon_hw/login/views");
+app.set("views", path.join(__dirname + "/champon_hw/login/views"));
 
 // 정제 (미들웨어) 5 파일을 가져오면 깨질 수 있는데 그걸 방지
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -176,15 +176,6 @@ app.post("/login", (req, res) => {
   });
 });
 
-//로그아웃
-app.get("/logout", (req, res) => {
-  console.log("로그아웃 성공");
-  req.session.destroy(function (err) {
-    // 세션 파괴후 할 것들
-    res.redirect("/login");
-  });
-});
-
 // 마이페이지 불러오기
 app.get("/mypage", (req, res) => {
   console.log("마이페이지");
@@ -252,6 +243,15 @@ app.post("/update", (req, res) => {
     } else {
       res.redirect("/mypage");
     }
+  });
+});
+
+//로그아웃
+app.get("/logout", (req, res) => {
+  console.log("로그아웃 성공");
+  req.session.destroy(function (err) {
+    // 세션 파괴후 할 것들
+    res.redirect("/login");
   });
 });
 
