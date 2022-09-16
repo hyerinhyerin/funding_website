@@ -40,50 +40,7 @@ app.use(
   })
 );
 
-<<<<<<< HEAD
 app.use(express.static(path.join(__dirname + '/champon_hw')));
-=======
-app.use(express.static(path.join(__dirname + "/champon_hw/")));
-
-
-// 마이페이지 불러오기
-app.get("/mypage", (req, res) => {
-  console.log("마이페이지");
-  if (req.session.is_logined == true) {
-    if (req.session.division == "1") {
-      res.render("business_mypage", {
-        is_logined: req.session.is_logined,
-        business_name: req.session.business_name,
-        business_num: req.session.business_num,
-        field: req.session.field,
-        name: req.session.name,
-        id: req.session.id,
-        password: req.session.password,
-        password_question: req.session.password_question,
-        password_answer: req.session.password_answer,
-        address: req.session.address,
-        e_mail: req.session.e_mail,
-        phone_number: req.session.phone_number,
-        account_num: req.session.account_num,
-      });
-    } else if (req.session.division == "2") {
-      res.render("consumer_mypage", {
-        is_logined: req.session.is_logined,
-        name: req.session.name,
-        id: req.session.id,
-        password: req.session.password,
-        password_question: req.session.password_question,
-        password_answer: req.session.password_answer,
-        address: req.session.address,
-        e_mail: req.session.e_mail,
-        phone_number: req.session.phone_number,
-      });
-    }
-  } else {
-    res.redirect("/login");
-  }
-});
->>>>>>> backend-j
 
 // 사업자 회원가입
 app.get("/signup", (req, res) => {
@@ -231,11 +188,11 @@ app.get("/logout", (req, res) => {
 // 마이페이지 불러오기
 app.get("/mypage", (req, res) => {
   console.log("마이페이지");
-  if (req.session.is_logined == true) {    
-    client.query("select * from client where id = ?",[req.session.client_id], (err,data) => {
+  if (req.session.is_logined == true) {
+    client.query("select * from client where id = ?", [req.session.client_id], (err, data) => {
       if (data[0].division == "1") {
         res.render("bussiness_main", {
-          division : data[0].division,
+          division: data[0].division,
           business_name: data[0].business_name,
           business_num: data[0].business_num,
           field: data[0].field,
@@ -250,8 +207,8 @@ app.get("/mypage", (req, res) => {
           account_num: data[0].account_num,
         });
       } else if (data[0].division == "2") {
-        res.render("bussiness_main", {     
-          division : data[0].division,
+        res.render("bussiness_main", {
+          division: data[0].division,
           name: data[0].name,
           id: data[0].id,
           password: data[0].password,
@@ -281,7 +238,6 @@ app.post("/update", (req, res) => {
   const account_num = body.account_num;
   const id = req.session.client_id;
 
-<<<<<<< HEAD
   client.query("update client set business_name = ?, password = ?, password_answer = ?, address = ?, e_mail = ?, phone_number = ?, account_num = ?  where id = '" + id + "'", [
     business_name,
     password,
@@ -291,216 +247,178 @@ app.post("/update", (req, res) => {
     phone_number,
     account_num,
   ], (error, result) => {
-    if(error){
+    if (error) {
       throw error;
-    } else{
+    } else {
       res.redirect("/mypage");
     }
-  });    
-=======
-  client.query(
-    "update client set business_name = ?, password = ?, password_answer = ?, address = ?, e_mail = ?, phone_number = ?, account_num = ?  where id = '" +
-      id +
-      "'",
-    [
-      business_name,
-      password,
-      password_answer,
-      address,
-      e_mail,
-      phone_number,
-      account_num,
-    ],
-    (err, result) => {
-      if (err) {
-        console.log(err);
-        res.sendStatus(500);
-        return;
-      }
+  });
+
+  // 페이지 이동
+
+  // 로고
+  app.get("/", (req, res) => {
+    console.log("메인페이지");
+    res.sendFile(__dirname + "/champon_hw/Main.html");
+  });
+
+  // 카테고리
+  app.get("/furniture", (req, res) => {
+    console.log("카테고리 가구");
+    res.sendFile(__dirname + "/champon_hw/category/furniture.html");
+  });
+  app.get("/elec", (req, res) => {
+    console.log("카테고리 전자기구");
+    res.sendFile(__dirname + "/champon_hw/category/electronic.html");
+  });
+  app.get("/daily", (req, res) => {
+    console.log("카테고리 생활용품");
+    res.sendFile(__dirname + "/champon_hw/category/daily.html");
+  });
+  app.get("/hobby", (req, res) => {
+    console.log("카테고리 취미");
+    res.sendFile(__dirname + "/champon_hw/category/hobby.html");
+  });
+  app.get("/beauty", (req, res) => {
+    console.log("카테고리 뷰티");
+    res.sendFile(__dirname + "/champon_hw/category/beauty.html");
+  });
+
+  // 사업자
+  app.get("/detail", (req, res) => {
+    console.log("사업자 상세페이지");
+    console.log("소비자 상세페이지");
+    res.sendFile(__dirname + "/champon_hw/detail_page.html");
+  });
+
+  // 소비자
+  app.get("/all", (req, res) => {
+    console.log("ajax 전체");
+    res.sendFile(__dirname + "/champon_hw/All_menu.html");
+  });
+
+  app.get('/funding_plan', (req, res) => {
+    console.log('펀딩예정');
+    res.sendFile(__dirname + '/champon_hw/funding_planned.html');
+  });
+
+  app.get("/early", (req, res) => {
+    console.log("얼리버드");
+    res.sendFile(__dirname + "/champon_hw/earlybird.html");
+  });
+
+  app.get('/search', (req, res) => {
+    console.log('검색 form action 변수');
+    res.sendFile(__dirname + '/champon_hw/Search.html');
+  });
+
+  // 상품등록수정
+
+  app.use(express.static("champon_hw/public"));
+
+  var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, "champon_hw/public/images/");
+    },
+    filename: function (req, file, cb) {
+      const ext = path.extname(file.originalname);
+      cb(null, path.basename(file.originalname, ext) + "-" + Date.now() + ext);
+    },
+  });
+
+  var upload = multer({ storage: storage }, { filesize: 313 * 200 });
+
+  app.get("/RegistrationAndmodification", (req, res) => {
+    console.log("상품등록수정 페이지 로드");
+    res.render("bussiness_main");
+  });
+
+  app.post(
+    "/RegistrationAndmodification",
+    upload.fields([{ name: "input_image" }, { name: "detail_image" }]),
+    (req, res) => {
+      console.log("상품등록수정중");
+      const body = req.body;
+      const image = `/images/${req.files['input_image'][0].filename}`;
+      const title = body.title;
+      const content = body.detale_content;
+      const start = body.period_date;
+      const end = body.to;
+      const money = body.goal_money;
+      const name = body.product_name;
+      const count = body.product_count;
+      const price = body.product_price;
+      const category = body.product_category;
+      const ealry = body.ealry;
+      const sale = body.general;
+      const detailImage = `/images/${req.files['detail_image'][0].filename}`;
+
+      const sql =
+        "INSERT INTO product(image, title, content, start, end, money, name, count, price, category, ealry, sale, detailImage) values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+      const data = [
+        image,
+        title,
+        content,
+        start,
+        end,
+        money,
+        name,
+        count,
+        price,
+        category,
+        ealry,
+        sale,
+        detailImage,
+      ];
+
+      client.query(sql, data, (err, row) => {
+        if (err) {
+          console.error("err : " + err);
+        } else {
+          console.log("row : " + JSON.stringify(row));
+        }
+      });
+
+      const sql2 = "SELECT * FROM product WHERE name = ? ";
+
+      client.query(sql2, [name], (err, row) => {
+        if (name == row[0].name) {
+          res.render("product_complete", {
+            image: row[0].image,
+            title: row[0].title,
+            content: row[0].content,
+            start: row[0].start,
+            end: row[0].end,
+            money: row[0].money,
+            name: row[0].name,
+            count: row[0].count,
+            price: row[0].price,
+            category: row[0].category,
+            ealry: row[0].ealry,
+            sale: row[0].sale,
+            detailImage: row[0].detailImage,
+          });
+        } else if (err) {
+          console.error(err)
+        } else {
+          res.redirect("/RegistrationAndmodification");
+        }
+      });
     }
   );
-  res.redirect("/mypage");
->>>>>>> backend-j
-});
 
-// 페이지 이동
-
-// 로고
-app.get("/Main", (req, res) => {
-  console.log("메인페이지");
-  res.sendFile(__dirname + "/champon_hw/Main.html");
-});
-
-// 카테고리
-app.get("/furniture", (req, res) => {
-  console.log("카테고리 가구");
-  res.sendFile(__dirname + "/champon_hw/category/furniture.html");
-});
-app.get("/elec", (req, res) => {
-  console.log("카테고리 전자기구");
-  res.sendFile(__dirname + "/champon_hw/category/electronic.html");
-});
-app.get("/daily", (req, res) => {
-  console.log("카테고리 생활용품");
-  res.sendFile(__dirname + "/champon_hw/category/daily.html");
-});
-app.get("/hobby", (req, res) => {
-  console.log("카테고리 취미");
-  res.sendFile(__dirname + "/champon_hw/category/hobby.html");
-});
-app.get("/beauty", (req, res) => {
-  console.log("카테고리 뷰티");
-  res.sendFile(__dirname + "/champon_hw/category/beauty.html");
-});
-
-// 사업자
-app.get("/detail", (req, res) => {
-  console.log("사업자 상세페이지");
-  console.log("소비자 상세페이지");
-  res.sendFile(__dirname + "/champon_hw/detail_page.html");
-});
-
-// 소비자
-app.get("/all", (req, res) => {
-  console.log("ajax 전체");
-  res.sendFile(__dirname + "/champon_hw/All_menu.html");
-});
-<<<<<<< HEAD
-app.get('/funding_plan',(req,res) => {
-  console.log('펀딩예정');
-  res.sendFile(__dirname + '/champon_hw/funding_planned.html');
-=======
-app.get("/funding_plan", (req, res) => {
-  console.log("펀딩예정");
-  res.sendFile(__dirname + "/champon_hw/funding_plan.html");
->>>>>>> backend-j
-});
-app.get("/early", (req, res) => {
-  console.log("얼리버드");
-  res.sendFile(__dirname + "/champon_hw/earlybird.html");
-});
-<<<<<<< HEAD
-app.get('/search',(req,res) => {
-  console.log('검색 form action 변수');
-  res.sendFile(__dirname + '/champon_hw/Search.html');
-=======
-// app.get('/early_after',(req,res) => {
-//     console.log('얼리버드에프터');
-//     res.redirect('/Main');
-//     res.sendFile(__dirname + '/champon_hw/earlybird.html');
-// });
-app.get("/search", (req, res) => {
-  console.log("검색 form action 변수");
-  res.sendFile(__dirname + "/champon_hw/Search.html");
->>>>>>> backend-j
-});
-
-// 상품등록수정
-
-app.use(express.static("champon_hw/public"));
-
-var storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "champon_hw/public/images/");
-  },
-  filename: function (req, file, cb) {
-    const ext = path.extname(file.originalname);
-    cb(null, path.basename(file.originalname, ext) + "-" + Date.now() + ext);
-  },
-});
-
-var upload = multer({ storage: storage }, {filesize: 313 * 200});
-
-app.get("/RegistrationAndmodification", (req, res) => {
-  console.log("상품등록수정 페이지 로드");
-  res.render("bussiness_main");
-});
-
-app.post(
-  "/RegistrationAndmodification",
-  upload.fields([{name: "input_image"}, {name: "detail_image"}]),
-  (req, res) => {
-    console.log("상품등록수정중");
-    const body = req.body;
-    const image = `/images/${req.files['input_image'][0].filename}`;
-    const title = body.title;
-    const content = body.detale_content;
-    const start = body.period_date;
-    const end = body.to;
-    const money = body.goal_money;
-    const name = body.product_name;
-    const count = body.product_count;
-    const price = body.product_price;
-    const category = body.product_category;
-    const ealry = body.ealry;
-    const sale = body.general;
-    const detailImage = `/images/${req.files['detail_image'][0].filename}`;
-
-    const sql =
-      "INSERT INTO product(image, title, content, start, end, money, name, count, price, category, ealry, sale, detailImage) values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
-    const data = [
-      image,
-      title,
-      content,
-      start,
-      end,
-      money,
-      name,
-      count,
-      price,
-      category,
-      ealry,
-      sale,
-      detailImage,
-    ];
-
-    client.query(sql, data, (err, row) => {
-      if (err) {
-        console.error("err : " + err);
-      } else {
-        console.log("row : " + JSON.stringify(row));
-      }
-    });
-
-    const sql2 = "SELECT * FROM product WHERE name = ? ";
-
-    client.query(sql2, [name], (err, row) => {
-      if (name == row[0].name) {
-        res.render("product_complete", {
-          image: row[0].image,
-          title: row[0].title,
-          content: row[0].content,
-          start: row[0].start,
-          end: row[0].end,
-          money: row[0].money,
-          name: row[0].name,
-          count: row[0].count,
-          price: row[0].price,
-          category: row[0].category,
-          ealry: row[0].ealry,
-          sale: row[0].sale,
-          detailImage: row[0].detailImage,
-        });
-      } else if(err) {
-        console.error(err)
-      } else {
-        res.redirect("/RegistrationAndmodification")
-      }
-    });
-  }
-);
-
-app.get("/Main", (req, res) => {
-  console.log("상품등록수정 완료");
-  res.sendFile(
-    path.join(
-      __dirname +
+  app.get("/Main", (req, res) => {
+    console.log("상품등록수정 완료");
+    res.sendFile(
+      path.join(
+        __dirname +
         "/champon_hw/Main.html"
-    )
-  );
-});
+      )
+    );
+  });
 
-app.listen(3002, () => {
-  console.log("3002 port running...");
-  console.log(path.join(__dirname + "/champon_hw/"));
-});
+  const port = process.env.PORT || 3002;
+
+  app.listen(port, function () {
+    console.log(`${port} is running`);
+  });
