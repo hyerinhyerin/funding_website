@@ -331,7 +331,12 @@ app.get("/logout", (req, res) => {
 
   app.get("/RegistrationAndmodification", (req, res) => {
     console.log("상품등록수정 페이지 로드");
-    res.render("bussiness_main");
+    res.sendFile(
+      path.join(
+        __dirname +
+          "/champon_hw/businessOperatorPage/RegistrationAndmodification.html"
+      )
+    );
   });
 
   app.post(
