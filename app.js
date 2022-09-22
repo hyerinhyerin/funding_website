@@ -382,46 +382,47 @@ app.get("/logout", (req, res) => {
           console.error("err : " + err);
         } else {
           console.log("row : " + JSON.stringify(row));
+          res.redirect('/mypage');
         }
       });
 
-      const sql2 = "SELECT * FROM product WHERE name = ? ";
+      // const sql2 = "SELECT * FROM product WHERE name = ? ";
 
-      client.query(sql2, [name], (err, row) => {
-        if (name == row[0].name) {
-          res.render("product_complete", {
-            image: row[0].image,
-            title: row[0].title,
-            content: row[0].content,
-            start: row[0].start,
-            end: row[0].end,
-            money: row[0].money,
-            name: row[0].name,
-            count: row[0].count,
-            price: row[0].price,
-            category: row[0].category,
-            ealry: row[0].ealry,
-            sale: row[0].sale,
-            detailImage: row[0].detailImage,
-          });
-        } else if (err) {
-          console.error(err)
-        } else {
-          res.redirect("/RegistrationAndmodification");
-        }
-      });
+      // client.query(sql2, [name], (err, row) => {
+      //   if (name == row[0].name) {
+      //     res.render("product_complete", {
+      //       image: row[0].image,
+      //       title: row[0].title,
+      //       content: row[0].content,
+      //       start: row[0].start,
+      //       end: row[0].end,
+      //       money: row[0].money,
+      //       name: row[0].name,
+      //       count: row[0].count,
+      //       price: row[0].price,
+      //       category: row[0].category,
+      //       ealry: row[0].ealry,
+      //       sale: row[0].sale,
+      //       detailImage: row[0].detailImage,
+      //     }); 
+        // } else if (err) {
+        //   console.error(err)
+        // } else {
+        //   res.redirect("/RegistrationAndmodification");
+        // }
+      // });
     }
   );
 
-  app.get("/Main", (req, res) => {
-    console.log("상품등록수정 완료");
-    res.sendFile(
-      path.join(
-        __dirname +
-        "/champon_hw/Main.html"
-      )
-    );
-  });
+  // app.get("/Main", (req, res) => {
+  //   console.log("상품등록수정 완료");
+  //   res.sendFile(
+  //     path.join(
+  //       __dirname +
+  //       "/champon_hw/Main.html"
+  //     )
+  //   );
+  // });
 
 
 const port = process.env.PORT || 3002;
