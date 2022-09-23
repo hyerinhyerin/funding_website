@@ -298,7 +298,7 @@ a {
   height: 30px;
   overflow: visible;
   padding: 0;
-} */
+}
 
 /* body  */
 
@@ -580,7 +580,6 @@ form input::file-selector-button {
 .body-container {
   display: flex;
 }
-<<<<<<< HEAD
 
 /* 헤더 */
 /* header */
@@ -602,7 +601,6 @@ form input::file-selector-button {
   background-color: #008299;
   margin: -10px;
   margin-top: -26px;
-
 }
 
 ._menu {
@@ -613,7 +611,6 @@ form input::file-selector-button {
   position: absolute;
   top: 25%;
   left: 5%;
-
 }
 
 .nav_menu li {
@@ -621,18 +618,17 @@ form input::file-selector-button {
 }
 
 .category_menu {
-  font-family: 'gong';
+  font-family: "gong";
   font-size: 20px;
   color: white;
   text-decoration-line: none;
   position: absolute;
   top: 50%;
   left: 25%;
-
 }
 
 .all_menu {
-  font-family: 'gong';
+  font-family: "gong";
   font-size: 20px;
   color: white;
   text-decoration-line: none;
@@ -642,7 +638,7 @@ form input::file-selector-button {
 }
 
 .funding_menu {
-  font-family: 'gong';
+  font-family: "gong";
   font-size: 20px;
   color: white;
   text-decoration-line: none;
@@ -652,7 +648,7 @@ form input::file-selector-button {
 }
 
 .earlybird_menu {
-  font-family: 'gong';
+  font-family: "gong";
   font-size: 20px;
   color: white;
   text-decoration-line: none;
@@ -717,7 +713,7 @@ a {
 
 #mainline ul li span {
   font-size: 15px;
-  font-family: 'gongli';
+  font-family: "gongli";
   color: black;
   cursor: pointer;
 }
@@ -779,7 +775,7 @@ a {
   right: 15px;
   background: none;
   z-index: 3;
-  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
   cursor: pointer;
 }
 
@@ -797,14 +793,14 @@ a {
   width: 30px;
   color: red;
   float: right;
-  background: url('search.svg') no-repeat;
+  background: url("search.svg") no-repeat;
   text-indent: -10000px;
   border: none;
   position: absolute;
   right: 0;
   z-index: 2;
   cursor: pointer;
-  transition: opacity .4s ease;
+  transition: opacity 0.4s ease;
 }
 
 #wrap input[type="submit"]:hover {
@@ -828,6 +824,9 @@ a {
   padding-top: 50px;
   position: absolute;
   height: 150px;
+  position: relative;
+  top: 400px;
+  padding-bottom: 50px;
 }
 
 .footer hr {
@@ -838,17 +837,20 @@ a {
   border-color: #f2f4f641;
 }
 
+#footer-hr {
+  position: relative;
+  top: 460px;
+}
+
 .footer h3 {
   grid-row-start: 2;
   grid-row-end: 3;
   text-align: left;
   padding-bottom: 15px;
-  font-family: 'gongli';
+  font-family: "gongli";
 }
 
 .footer p {
   line-height: 10px;
-  font-family: 'nanum';
+  font-family: "nanum";
 }
-=======
->>>>>>> backend-j

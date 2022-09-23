@@ -291,6 +291,10 @@ app.get("/logout", (req, res) => {
     console.log("소비자 상세페이지");
     res.sendFile(__dirname + "/champon_hw/detail_page.html");
   });
+  app.get("/productEdit",(req, res) => {
+    console.log("사업자 상품 수정 페이지")
+    res.sendFile(__dirname + "/champon_hw/businessOperatorPage/productEdit.html")
+  })
 
   // 소비자
   app.get("/all", (req, res) => {
@@ -343,7 +347,7 @@ app.get("/logout", (req, res) => {
     "/RegistrationAndmodification",
     upload.fields([{ name: "input_image" }, { name: "detail_image" }]),
     (req, res) => {
-      console.log("상품등록수정중");
+      console.log("상품등록중");
       const body = req.body;
       const image = `/images/${req.files['input_image'][0].filename}`;
       const title = body.title;
