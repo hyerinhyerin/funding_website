@@ -42,7 +42,7 @@ app.use(
   })
 );
 
-app.use(express.static(__dirname, "/"));
+app.use(express.static(__dirname + "/"));
 
 // 사업자 회원가입
 app.get("/signup", (req, res) => {
