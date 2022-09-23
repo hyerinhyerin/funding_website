@@ -7,6 +7,7 @@ const FileStore = require("session-file-store")(session); // 세션을 파일에
 const cookieParser = require("cookie-parser");
 const ejs = require("ejs");
 const multer = require("multer");
+const { runInNewContext } = require("vm");
 
 // express 설정 1
 const app = express();
@@ -407,6 +408,7 @@ app.get("/logout", (req, res) => {
             ealry: row[0].ealry,
             sale: row[0].sale,
             detailImage: row[0].detailImage,
+            number : row[0].number,
           }); 
         } else if (err) {
           console.error(err)
