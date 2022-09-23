@@ -1,21 +1,21 @@
 @font-face {
     font-family: "gong";
-    src: url('/font/Gong\ Gothic\ Medium.ttf');
+    src: url("/img&font/font/Gong\ Gothic\ Medium.ttf");
 }
 
 @font-face {
     font-family: "nanum";
-    src: url('/font/NanumSquareRoundB.ttf');
+    src: url("/img&font/font/NanumSquareRoundB.ttf");
 }
 
 @font-face {
     font-family: "gongli";
-    src: url('/font/Gong\ Gothic\ Light.ttf');
+    src: url("/img&font/font/Gong\ Gothic\ Light.ttf");
 }
 
 @font-face {
     font-family: "main";
-    src: url('/font/HS두꺼비체.ttf');
+    src: url("/img&font/font/HS두꺼비체.ttf");
 }
 
 body {
@@ -285,7 +285,7 @@ a {
     font-family: 'gongli';
 }
 
-.footer div{
+.footer div {
     position: relative;
     left: 150px;
 }
@@ -304,7 +304,7 @@ h1 {
     color: #4a4a4a;
 }
 
-.form_hr{
+.form_hr {
     text-align: center;
     width: 100%;
     margin-top: 30px;
@@ -312,7 +312,7 @@ h1 {
     border-color: #f2f4f641;
 }
 
-.contain_mid hr{
+.contain_mid hr {
     text-align: center;
     width: 95%;
     margin-top: 30px;
@@ -329,59 +329,72 @@ h1 {
     display: flex;
     justify-content: center;
 }
-.signup_form input{
+
+.signup_form input {
     width: 300px;
     font-size: 20px;
     position: relative;
     font-family: "nanum";
 }
-.signup_form div{
+
+.signup_form div {
     position: relative;
     margin-top: 30px;
 }
 
-#business_name{
+#business_name {
     left: 70px;
 }
-#business_num{
+
+#business_num {
     left: 35px;
 }
-#field{
+
+#field {
     left: 90px;
 }
-#name{
+
+#name {
     left: 20px;
 }
-#id{
+
+#id {
     left: 70px;
 }
-#password{
+
+#password {
     left: 50px;
 }
-#address{
+
+#address {
     left: 90px;
 }
-#e-mail{
+
+#e-mail {
     left: 70px;
 }
-#phone-number{
+
+#phone-number {
     left: 70px;
 }
-#account_num{
+
+#account_num {
     left: 50px;
 }
-#password_question{
+
+#password_question {
     position: relative;
     left: 30px;
     width: 250px;
     height: 25px;
     font-family: "gongli";
 }
-#password_answer{
+
+#password_answer {
     left: 95px;
 }
 
-.submit_bt input{
+.submit_bt input {
     position: relative;
     width: 150px;
     height: 50px;

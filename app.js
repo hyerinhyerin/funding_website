@@ -8,6 +8,7 @@ const cookieParser = require("cookie-parser");
 const ejs = require("ejs");
 const multer = require("multer");
 const { runInNewContext } = require("vm");
+const { dirname } = require("path");
 
 // express 설정 1
 const app = express();
@@ -26,7 +27,7 @@ const client = mysql.createConnection({
 
 // ejs 설정 4 html은 데이터베이스의 정보 가져올 수 없기에 ejs 확장자 사용
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname + "/champon_hw/login/views"));
+app.set("views", path.join(__dirname + "/views"));
 
 // 정제 (미들웨어) 5 파일을 가져오면 깨질 수 있는데 그걸 방지
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -41,17 +42,17 @@ app.use(
   })
 );
 
-app.use(express.static(path.join(__dirname + '/champon_hw')));
+app.use(express.static(__dirname, "/"));
 
 // 사업자 회원가입
 app.get("/signup", (req, res) => {
   console.log("회원가입 페이지");
-  res.sendFile(path.join(__dirname + "/champon_hw/login/signup.html"));
+  res.sendFile(path.join(__dirname + "/login/signup.html"));
 });
 
 app.get("/business_login", (req, res) => {
   console.log("사업자 회원가입");
-  res.sendFile(__dirname + "/champon_hw/login/business_login.html");
+  res.sendFile(__dirname + "/login/business_login.html");
 });
 
 app.post("/business_login", (req, res) => {
@@ -105,7 +106,7 @@ app.post("/business_login", (req, res) => {
 // 소비자 회원가입
 app.get("/consumer_login", (req, res) => {
   console.log("소비자 회원가입");
-  res.sendFile(__dirname + "/champon_hw/login/consumer_login.html");
+  res.sendFile(__dirname + "/login/consumer_login.html");
 });
 
 app.post("/consumer_login", (req, res) => {
@@ -151,7 +152,7 @@ app.post("/consumer_login", (req, res) => {
 // 로그인
 app.get("/login", (req, res) => {
   console.log("로그인");
-  res.sendFile(__dirname + "/champon_hw/login/login.html");
+  res.sendFile(__dirname + "/login/login.html");
 });
 
 app.post("/login", (req, res) => {
@@ -261,70 +262,70 @@ app.get("/logout", (req, res) => {
   // 로고
   app.get("/", (req, res) => {
     console.log("메인페이지");
-    res.sendFile(__dirname + "/champon_hw/Main.html");
+    res.sendFile(__dirname + "/consumer/Main.html");
   });
 
   // 카테고리
   app.get("/furniture", (req, res) => {
     console.log("카테고리 가구");
-    res.sendFile(__dirname + "/champon_hw/category/furniture.html");
+    res.sendFile(__dirname + "/consumer/category/furniture.html");
   });
   app.get("/elec", (req, res) => {
     console.log("카테고리 전자기구");
-    res.sendFile(__dirname + "/champon_hw/category/electronic.html");
+    res.sendFile(__dirname + "/consumer/category/electronic.html");
   });
   app.get("/daily", (req, res) => {
     console.log("카테고리 생활용품");
-    res.sendFile(__dirname + "/champon_hw/category/daily.html");
+    res.sendFile(__dirname + "/consumer/category/daily.html");
   });
   app.get("/hobby", (req, res) => {
     console.log("카테고리 취미");
-    res.sendFile(__dirname + "/champon_hw/category/hobby.html");
+    res.sendFile(__dirname + "/consumer/category/hobby.html");
   });
   app.get("/beauty", (req, res) => {
     console.log("카테고리 뷰티");
-    res.sendFile(__dirname + "/champon_hw/category/beauty.html");
+    res.sendFile(__dirname + "/consumer/category/beauty.html");
   });
 
   // 사업자
   app.get("/detail", (req, res) => {
     console.log("사업자 상세페이지");
     console.log("소비자 상세페이지");
-    res.sendFile(__dirname + "/champon_hw/detail_page.html");
+    res.sendFile(__dirname + "/consumer/detail_page.html");
   });
   app.get("/productEdit",(req, res) => {
     console.log("사업자 상품 수정 페이지")
-    res.sendFile(__dirname + "/champon_hw/businessOperatorPage/productEdit.html")
+    res.sendFile(__dirname + "/business/businessOperatorPage/productEdit.html")
   })
 
   // 소비자
   app.get("/all", (req, res) => {
     console.log("ajax 전체");
-    res.sendFile(__dirname + "/champon_hw/All_menu.html");
+    res.sendFile(__dirname + "/consumer/All_menu.html");
   });
 
   app.get('/funding_plan', (req, res) => {
     console.log('펀딩예정');
-    res.sendFile(__dirname + '/champon_hw/funding_planned.html');
+    res.sendFile(__dirname + '/consumer/funding_planned.html');
   });
 
   app.get("/early", (req, res) => {
     console.log("얼리버드");
-    res.sendFile(__dirname + "/champon_hw/earlybird.html");
+    res.sendFile(__dirname + "/consumer/earlybird.html");
   });
 
   app.get('/search', (req, res) => {
     console.log('검색 form action 변수');
-    res.sendFile(__dirname + '/champon_hw/Search.html');
+    res.sendFile(__dirname + '/consumer/Search.html');
   });
 
   // 상품등록수정
 
-  app.use(express.static("champon_hw/public"));
+  app.use(express.static("public"));
 
   var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, "champon_hw/public/images/");
+      cb(null, "public/images/");
     },
     filename: function (req, file, cb) {
       const ext = path.extname(file.originalname);
@@ -339,7 +340,7 @@ app.get("/logout", (req, res) => {
     res.sendFile(
       path.join(
         __dirname +
-          "/champon_hw/businessOperatorPage/RegistrationAndmodification.html"
+          "/business/businessOperatorPage/RegistrationAndmodification.html"
       )
     );
   });
