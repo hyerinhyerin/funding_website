@@ -26,7 +26,7 @@ const client = mysql.createConnection({
 
 // ejs 설정 4 html은 데이터베이스의 정보 가져올 수 없기에 ejs 확장자 사용
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname + "/champon_hw/login/views"));
+app.set("views", path.join(__dirname + "/login/views"));
 
 // 정제 (미들웨어) 5 파일을 가져오면 깨질 수 있는데 그걸 방지
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -41,7 +41,7 @@ app.use(
   })
 );
 
-app.use(express.static(path.join(__dirname + '/champon_hw')));
+app.use(express.static(path.join(__dirname)));
 
 // 사업자 회원가입
 app.get("/signup", (req, res) => {
@@ -257,12 +257,14 @@ app.get("/logout", (req, res) => {
 });
 
   // 페이지 이동
-
   // 로고
-  app.get("/", (req, res) => {
-    console.log("메인페이지");
-    res.sendFile(__dirname + "/champon_hw/Main.html");
-  });
+  const main = require("./main")
+  app.use('/', main)
+  
+  // app.get("/", (req, res) => {
+  //   console.log("메인페이지");
+  //   res.sendFile(__dirname + "/champon_hw/Main.html");
+  // });
 
   // 카테고리
   app.get("/furniture", (req, res) => {
