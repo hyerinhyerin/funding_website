@@ -1,174 +1,198 @@
-<link rel="stylesheet" href="/consumer/funding_planned.css" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main_consumer</title>
+    <link rel="stylesheet" href="/consumer/funding_planned.css" />
+    <link rel="stylesheet" href="/consumer/common.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header data-include="/Header.html">
+      </header>
+      
+      <div id="main_body">
+        <!-- 이벤트 창 -->
+        <div>
+          <div id="arrow-left" class="arrow"></div>
+          <ul class="slides">
+            <input type="radio" name="radio-btn" id="img-1" checked />
+            <li class="slide-container">
+              <div class="slide">
+                <img src="/img&font/img/배너_1.png" />
+              </div>
+              <div class="nav">
+                <label for="img-6" class="prev">&#x2039;</label>
+                <label for="img-2" class="next">&#x203a;</label>
+              </div>
+            </li>
 
-<!-- 이벤트 창 -->
-<div>
-  <div id="arrow-left" class="arrow"></div>
-  <ul class="slides">
-    <input type="radio" name="radio-btn" id="img-1" checked />
-    <li class="slide-container">
-      <div class="slide">
-        <img src="/img&font/img/배너_1.png" />
-      </div>
-      <div class="nav">
-        <label for="img-6" class="prev">&#x2039;</label>
-        <label for="img-2" class="next">&#x203a;</label>
-      </div>
-    </li>
+            <input type="radio" name="radio-btn" id="img-2" />
+            <li class="slide-container">
+              <div class="slide">
+                <img src="/img&font/img/배너_2.png" />
+              </div>
+              <div class="nav">
+                <label for="img-1" class="prev">&#x2039;</label>
+                <label for="img-3" class="next">&#x203a;</label>
+              </div>
+            </li>
 
-    <input type="radio" name="radio-btn" id="img-2" />
-    <li class="slide-container">
-      <div class="slide">
-        <img src="/img&font/img/배너_2.png" />
-      </div>
-      <div class="nav">
-        <label for="img-1" class="prev">&#x2039;</label>
-        <label for="img-3" class="next">&#x203a;</label>
-      </div>
-    </li>
+            <input type="radio" name="radio-btn" id="img-3" />
+            <li class="slide-container">
+              <div class="slide">
+                <img src="/img&font/img/배너_3.png" />
+              </div>
+              <div class="nav">
+                <label for="img-2" class="prev">&#x2039;</label>
+                <label for="img-4" class="next">&#x203a;</label>
+              </div>
+            </li>
 
-    <input type="radio" name="radio-btn" id="img-3" />
-    <li class="slide-container">
-      <div class="slide">
-        <img src="/img&font/img/배너_3.png" />
-      </div>
-      <div class="nav">
-        <label for="img-2" class="prev">&#x2039;</label>
-        <label for="img-4" class="next">&#x203a;</label>
-      </div>
-    </li>
+            <input type="radio" name="radio-btn" id="img-4" />
+            <li class="slide-container">
+              <div class="slide">
+                <img src="/img&font/img/배너_4.png" />
+              </div>
+              <div class="nav">
+                <label for="img-3" class="prev">&#x2039;</label>
+                <label for="img-5" class="next">&#x203a;</label>
+              </div>
+            </li>
 
-    <input type="radio" name="radio-btn" id="img-4" />
-    <li class="slide-container">
-      <div class="slide">
-        <img src="/img&font/img/배너_4.png" />
-      </div>
-      <div class="nav">
-        <label for="img-3" class="prev">&#x2039;</label>
-        <label for="img-5" class="next">&#x203a;</label>
-      </div>
-    </li>
+            <input type="radio" name="radio-btn" id="img-5" />
+            <li class="slide-container">
+              <div class="slide">
+                <img src="/img&font/img/배너_5.jpg" />
+              </div>
+              <div class="nav">
+                <label for="img-4" class="prev">&#x2039;</label>
+                <label for="img-6" class="next">&#x203a;</label>
+              </div>
+            </li>
 
-    <input type="radio" name="radio-btn" id="img-5" />
-    <li class="slide-container">
-      <div class="slide">
-        <img src="/img&font/img/배너_5.jpg" />
-      </div>
-      <div class="nav">
-        <label for="img-4" class="prev">&#x2039;</label>
-        <label for="img-6" class="next">&#x203a;</label>
-      </div>
-    </li>
+            <input type="radio" name="radio-btn" id="img-6" />
+            <li class="slide-container">
+              <div class="slide">
+                <img src="/img&font/img/배너_6.png" />
+              </div>
+              <div class="nav">
+                <label for="img-5" class="prev">&#x2039;</label>
+                <label for="img-1" class="next">&#x203a;</label>
+              </div>
+            </li>
 
-    <input type="radio" name="radio-btn" id="img-6" />
-    <li class="slide-container">
-      <div class="slide">
-        <img src="/img&font/img/배너_6.png" />
-      </div>
-      <div class="nav">
-        <label for="img-5" class="prev">&#x2039;</label>
-        <label for="img-1" class="next">&#x203a;</label>
-      </div>
-    </li>
-
-    <li class="nav-dots">
-      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
-      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
-      <label for="img-3" class="nav-dot" id="img-dot-3"></label>
-      <label for="img-4" class="nav-dot" id="img-dot-4"></label>
-      <label for="img-5" class="nav-dot" id="img-dot-5"></label>
-      <label for="img-6" class="nav-dot" id="img-dot-6"></label>
-    </li>
-  </ul>
-</div>
-<!-- item -->
-<div id="item-list">
-  <div>
-    <ul>
-      <li class="listsort">오름차순</li>
-      <li class="listsort">내림차순</li>
-    </ul>
-  </div>
-  <hr />
-  <div id="wapper" class="funplan">
-    <div class="item">
-      <div>
-        <div style="position: relative">
-          <div style="position: absolute">
-            <img src="/img&font/img/pr_br.png" class="itemimg" />
-          </div>
+            <li class="nav-dots">
+              <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+              <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+              <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+              <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+              <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+              <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+            </li>
+          </ul> 
+        </div>
+        <!-- item -->
+        <div id="item-list">
           <div>
-            <a href="#"> <img src="/img&font/img/back_white.png" class="over" /></a>
-            <h2>오픈 예정</h2>
+            <ul>
+              <li class="listsort">오름차순</li>
+              <li class="listsort">내림차순</li>
+            </ul>
+          </div>
+          <hr />
+          <div id="wapper" class="funplan">
+            <div class="item">
+              <div>
+                <div style="position: relative">
+                  <div style="position: absolute">
+                    <img src="/img&font/img/pr_br.png" class="itemimg" />
+                  </div>
+                  <div>
+                    <a href="#"> <img src="/img&font/img/back_white.png" class="over" /></a>
+                    <h2>오픈 예정</h2>
+                  </div>
+                </div>
+              </div>
+        
+              <h3>식빵 맛집</h3>
+              <div class="funp">
+                <p>미리당</p>
+                <p><span class="funp">7월 29일 오픈</span></p>
+              </div>
+            </div>
+        
+            <div class="item">
+              <div>
+                <div style="position: relative">
+                  <div style="position: absolute">
+                    <img src="/img&font/img/pr_ph.png" class="itemimg" />
+                  </div>
+                  <div>
+                    <a href="#"> <img src="/img&font/img/back_white.png" class="over" /></a>
+                    <h2>오픈 예정</h2>
+                  </div>
+                </div>
+              </div>
+              <h3>아이폰 13 Pro</h3>
+              <div class="funp">
+                <p>Apple</p>
+                <p><span class="funp">7월 29일 오픈</span></p>
+              </div>
+            </div>
+          </div>
+        
+          <div id="wapper" class="funplan">
+            <div class="item">
+              <div>
+                <div style="position: relative">
+                  <div style="position: absolute">
+                    <img src="/img&font/img/pr_tum.png" class="itemimg" />
+                  </div>
+                  <div>
+                    <a href="#"> <img src="/img&font/img/back_white.png" class="over" /></a>
+                    <h2>오픈 예정</h2>
+                  </div>
+                </div>
+              </div>
+        
+              <h3>곰표 텀블러</h3>
+              <div class="funp">
+                <p>곰표</p>
+                <p><span class="funp">7월 29일 오픈</span></p>
+              </div>
+            </div>
+        
+            <div class="item">
+              <div>
+                <div style="position: relative">
+                  <div style="position: absolute">
+                    <img src="/img&font/img/pr_tv.png" class="itemimg" />
+                  </div>
+                  <div>
+                    <a href="#"> <img src="/img&font/img/back_white.png" class="over" /></a>
+                    <h2>오픈 예정</h2>
+                  </div>
+                </div>
+              </div>
+        
+              <h3>LG 스피커 얼리버드</h3>
+              <div class="funp">
+                <p>LG전자</p>
+                <p><span class="funp">7월 29일 오픈</span></p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <h3>식빵 맛집</h3>
-      <div class="funp">
-        <p>미리당</p>
-        <p><span class="funp">7월 29일 오픈</span></p>
-      </div>
+      <hr />
+      <footer data-include="/Footer.html" class="footer">
+      </footer>
     </div>
-
-    <div class="item">
-      <div>
-        <div style="position: relative">
-          <div style="position: absolute">
-            <img src="/img&font/img/pr_ph.png" class="itemimg" />
-          </div>
-          <div>
-            <a href="#"> <img src="/img&font/img/back_white.png" class="over" /></a>
-            <h2>오픈 예정</h2>
-          </div>
-        </div>
-      </div>
-      <h3>아이폰 13 Pro</h3>
-      <div class="funp">
-        <p>Apple</p>
-        <p><span class="funp">7월 29일 오픈</span></p>
-      </div>
-    </div>
-  </div>
-
-  <div id="wapper" class="funplan">
-    <div class="item">
-      <div>
-        <div style="position: relative">
-          <div style="position: absolute">
-            <img src="/img&font/img/pr_tum.png" class="itemimg" />
-          </div>
-          <div>
-            <a href="#"> <img src="/img&font/img/back_white.png" class="over" /></a>
-            <h2>오픈 예정</h2>
-          </div>
-        </div>
-      </div>
-
-      <h3>곰표 텀블러</h3>
-      <div class="funp">
-        <p>곰표</p>
-        <p><span class="funp">7월 29일 오픈</span></p>
-      </div>
-    </div>
-
-    <div class="item">
-      <div>
-        <div style="position: relative">
-          <div style="position: absolute">
-            <img src="/img&font/img/pr_tv.png" class="itemimg" />
-          </div>
-          <div>
-            <a href="#"> <img src="/img&font/img/back_white.png" class="over" /></a>
-            <h2>오픈 예정</h2>
-          </div>
-        </div>
-      </div>
-
-      <h3>LG 스피커 얼리버드</h3>
-      <div class="funp">
-        <p>LG전자</p>
-        <p><span class="funp">7월 29일 오픈</span></p>
-      </div>
-    </div>
-  </div>
-</div>
+    <script type="text/javascript" src="/jquery-3.6.0.js"></script>
+    <script src="/consumer/Main.js"></script>
+    <script src="/H_F.js"></script>
+  </body>
+</html>
