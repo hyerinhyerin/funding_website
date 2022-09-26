@@ -1,4 +1,7 @@
-.category_menu{
+
+/* header */
+
+#category{
     font-family: 'gong';
     font-size: 20px;
     color :black;
@@ -6,14 +9,61 @@
     position: absolute;
     top: 53%;
     left: 25%;
-
 }
 
-.all_menu:hover, .funding_menu:hover, .earlybird_menu:hover{
-    color:black;
-    transition: color 0.2s;
-}
-.category_menu:hover{
+#category:hover{
     color: white;
     transition: color 0.2s;
 }
+
+/* sort */
+.listsort{
+  float: right;
+  position: relative;
+  right : 5%;
+  padding-right: 20px;
+  padding-top: 55px;
+  padding-bottom: 15px;
+  font-family: 'gongli';
+  color: #4f4f4f;
+}
+
+/* item */
+#wapper{
+  width: 90%;
+  padding-top: 100px;
+  display: flex;
+  grid-template-columns: repeat(2, 600px);
+  grid-template-rows: minmax(300px, auto);
+  /* grid-gap: 100px 160px; */
+  align-items: center;
+  margin: auto;
+  justify-content: center; 
+  
+}
+
+/* progress */
+.progress{
+  background-color: #eee;
+  border-radius: 20px;
+  height: 20px;
+  width: 375px;
+}
+.progress-done{
+  background-color: #008299;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  height:100%;
+  width: 0;
+  transition: 1s ease;
+}
+.progress-done span{
+  position: absolute;
+  font-family: 'gongli';
+  right: 0px;
+}
+
+
