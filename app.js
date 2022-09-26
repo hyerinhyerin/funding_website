@@ -27,7 +27,7 @@ const client = mysql.createConnection({
 
 // ejs 설정 4 html은 데이터베이스의 정보 가져올 수 없기에 ejs 확장자 사용
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname + "/views"));
+app.set("views", path.join(__dirname , "/views"));
 
 // 정제 (미들웨어) 5 파일을 가져오면 깨질 수 있는데 그걸 방지
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -42,7 +42,7 @@ app.use(
   })
 );
 
-app.use(express.static(__dirname, "/"));
+app.use(express.static(__dirname + "/"));
 
 // 사업자 회원가입
 app.get("/signup", (req, res) => {
@@ -340,7 +340,7 @@ app.get("/logout", (req, res) => {
     res.sendFile(
       path.join(
         __dirname +
-          "/business/businessOperatorPage/RegistrationAndmodification.html"
+          "/business/RegistrationAndmodification.html"
       )
     );
   });
