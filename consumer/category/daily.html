@@ -1,168 +1,195 @@
-<link rel="stylesheet" href="../Category.css" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main_consumer</title>
+    <link rel="stylesheet" href="/consumer/Category.css" />
+    <link rel="stylesheet" href="/consumer/common.css" />
 
-<!-- 이벤트 창 -->
-<div>
-  <div id="arrow-left" class="arrow"></div>
-  <ul class="slides">
-    <input type="radio" name="radio-btn" id="img-1" checked />
-    <li class="slide-container">
-      <div class="slide">
-        <img src="img/배너_1.png" />
-      </div>
-      <div class="nav">
-        <label for="img-6" class="prev">&#x2039;</label>
-        <label for="img-2" class="next">&#x203a;</label>
-      </div>
-    </li>
+  </head>
+  <body>
+    <div class="container">
+      <header data-include="/Header.html">
+      </header>
+      <div id="main_body">
+        <!-- 이벤트 창 -->
+        <div>
+          <div id="arrow-left" class="arrow"></div>
+          <ul class="slides">
+            <input type="radio" name="radio-btn" id="img-1" checked />
+            <li class="slide-container">
+              <div class="slide">
+                <img src="/img&font/img/배너_1.png" />
+              </div>
+              <div class="nav">
+                <label for="img-6" class="prev">&#x2039;</label>
+                <label for="img-2" class="next">&#x203a;</label>
+              </div>
+            </li>
 
-    <input type="radio" name="radio-btn" id="img-2" />
-    <li class="slide-container">
-      <div class="slide">
-        <img src="img/배너_2.png" />
-      </div>
-      <div class="nav">
-        <label for="img-1" class="prev">&#x2039;</label>
-        <label for="img-3" class="next">&#x203a;</label>
-      </div>
-    </li>
+            <input type="radio" name="radio-btn" id="img-2" />
+            <li class="slide-container">
+              <div class="slide">
+                <img src="/img&font/img/배너_2.png" />
+              </div>
+              <div class="nav">
+                <label for="img-1" class="prev">&#x2039;</label>
+                <label for="img-3" class="next">&#x203a;</label>
+              </div>
+            </li>
 
-    <input type="radio" name="radio-btn" id="img-3" />
-    <li class="slide-container">
-      <div class="slide">
-        <img src="img/배너_3.png" />
-      </div>
-      <div class="nav">
-        <label for="img-2" class="prev">&#x2039;</label>
-        <label for="img-4" class="next">&#x203a;</label>
-      </div>
-    </li>
+            <input type="radio" name="radio-btn" id="img-3" />
+            <li class="slide-container">
+              <div class="slide">
+                <img src="/img&font/img/배너_3.png" />
+              </div>
+              <div class="nav">
+                <label for="img-2" class="prev">&#x2039;</label>
+                <label for="img-4" class="next">&#x203a;</label>
+              </div>
+            </li>
 
-    <input type="radio" name="radio-btn" id="img-4" />
-    <li class="slide-container">
-      <div class="slide">
-        <img src="img/배너_4.png" />
-      </div>
-      <div class="nav">
-        <label for="img-3" class="prev">&#x2039;</label>
-        <label for="img-5" class="next">&#x203a;</label>
-      </div>
-    </li>
+            <input type="radio" name="radio-btn" id="img-4" />
+            <li class="slide-container">
+              <div class="slide">
+                <img src="/img&font/img/배너_4.png" />
+              </div>
+              <div class="nav">
+                <label for="img-3" class="prev">&#x2039;</label>
+                <label for="img-5" class="next">&#x203a;</label>
+              </div>
+            </li>
 
-    <input type="radio" name="radio-btn" id="img-5" />
-    <li class="slide-container">
-      <div class="slide">
-        <img src="img/배너_5.jpg" />
-      </div>
-      <div class="nav">
-        <label for="img-4" class="prev">&#x2039;</label>
-        <label for="img-6" class="next">&#x203a;</label>
-      </div>
-    </li>
+            <input type="radio" name="radio-btn" id="img-5" />
+            <li class="slide-container">
+              <div class="slide">
+                <img src="/img&font/img/배너_5.jpg" />
+              </div>
+              <div class="nav">
+                <label for="img-4" class="prev">&#x2039;</label>
+                <label for="img-6" class="next">&#x203a;</label>
+              </div>
+            </li>
 
-    <input type="radio" name="radio-btn" id="img-6" />
-    <li class="slide-container">
-      <div class="slide">
-        <img src="img/배너_6.png" />
-      </div>
-      <div class="nav">
-        <label for="img-5" class="prev">&#x2039;</label>
-        <label for="img-1" class="next">&#x203a;</label>
-      </div>
-    </li>
+            <input type="radio" name="radio-btn" id="img-6" />
+            <li class="slide-container">
+              <div class="slide">
+                <img src="/img&font/img/배너_6.png" />
+              </div>
+              <div class="nav">
+                <label for="img-5" class="prev">&#x2039;</label>
+                <label for="img-1" class="next">&#x203a;</label>
+              </div>
+            </li>
 
-    <li class="nav-dots">
-      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
-      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
-      <label for="img-3" class="nav-dot" id="img-dot-3"></label>
-      <label for="img-4" class="nav-dot" id="img-dot-4"></label>
-      <label for="img-5" class="nav-dot" id="img-dot-5"></label>
-      <label for="img-6" class="nav-dot" id="img-dot-6"></label>
-    </li>
-  </ul>
-</div>
-<!-- item -->
-<div id="item_list">
-  <div>
-    <ul>
-      <li class="listsort">오름차순</li>
-      <li class="listsort">내림차순</li>
-    </ul>
-  </div>
-  <hr />
-  <div id="wapper">
-    <div class="item">
-      <div>
-        <img src="img/daily_grill.jpg" alt="전기그릴" class="itemimg" />
-      </div>
-      <div>
-        <h3>전기그릴</h3>
-        <p>상품 상세 내용---------------------- 벨로닉스</p>
-        <div class="progress">
-          <div class="progress-done" data-done="90"><span>90%</span></div>
+            <li class="nav-dots">
+              <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+              <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+              <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+              <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+              <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+              <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+            </li>
+          </ul>
+        </div>
+        <!-- item -->
+        <div id="item_list">
+          <div>
+            <ul>
+              <li class="listsort">오름차순</li>
+              <li class="listsort">내림차순</li>
+            </ul>
+          </div>
+          <hr />
+          <div id="wapper">
+            <div class="item">
+              <div>
+                <img src="/img&font/img/daily_grill.jpg" alt="전기그릴" class="itemimg" />
+              </div>
+              <div>
+                <h3>전기그릴</h3>
+                <p>상품 상세 내용---------------------- 벨로닉스</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="90"><span>90%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/daily_egg.jpg" alt="계란 찜기" class="itemimg" />
+              </div>
+              <div>
+                <h3>계란 찜기</h3>
+                <p>상품 상세 내용---------------------- 라쿠진</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="82"><span>82%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/daily_dry.jpg" alt="원목 빨래 건조대" class="itemimg" />
+              </div>
+              <div>
+                <h3>원목 빨래 건조대</h3>
+                <p>상품 상세 내용---------------------- 아카시아</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="75"><span>75%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="wapper">
+            <div class="item">
+              <div>
+                <img src="/img&font/img/daily_slipper.jpg" alt="슬리퍼" class="itemimg" />
+              </div>
+              <div>
+                <h3>층간소음 거실화</h3>
+                <p>상품 상세 내용---------------------- 룸앤홈</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="55"><span>55%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/daily_basket.jpg" alt="빨래 바구니" class="itemimg" />
+              </div>
+              <div>
+                <h3>라탄 바구니</h3>
+                <p>상품 상세 내용---------------------- 빨래바구니-룸앤홈</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="50"><span>50%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/daily_spoon.jpg" alt="수저" class="itemimg" />
+              </div>
+              <div>
+                <h3>수저 세트</h3>
+                <p>상품 상세 내용---------------------- 아카시아</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="40"><span>40%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      <hr />
+      <footer data-include="/Footer.html" class="footer">
+      </footer>
     </div>
-    <div class="item">
-      <div>
-        <img src="img/daily_egg.jpg" alt="계란 찜기" class="itemimg" />
-      </div>
-      <div>
-        <h3>계란 찜기</h3>
-        <p>상품 상세 내용---------------------- 라쿠진</p>
-        <div class="progress">
-          <div class="progress-done" data-done="82"><span>82%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="img/daily_dry.jpg" alt="원목 빨래 건조대" class="itemimg" />
-      </div>
-      <div>
-        <h3>원목 빨래 건조대</h3>
-        <p>상품 상세 내용---------------------- 아카시아</p>
-        <div class="progress">
-          <div class="progress-done" data-done="75"><span>75%</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="wapper">
-    <div class="item">
-      <div>
-        <img src="img/daily_slipper.jpg" alt="슬리퍼" class="itemimg" />
-      </div>
-      <div>
-        <h3>층간소음 거실화</h3>
-        <p>상품 상세 내용---------------------- 룸앤홈</p>
-        <div class="progress">
-          <div class="progress-done" data-done="55"><span>55%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="img/daily_basket.jpg" alt="빨래 바구니" class="itemimg" />
-      </div>
-      <div>
-        <h3>라탄 바구니</h3>
-        <p>상품 상세 내용---------------------- 빨래바구니-룸앤홈</p>
-        <div class="progress">
-          <div class="progress-done" data-done="50"><span>50%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="img/daily_spoon.jpg" alt="수저" class="itemimg" />
-      </div>
-      <div>
-        <h3>수저 세트</h3>
-        <p>상품 상세 내용---------------------- 아카시아</p>
-        <div class="progress">
-          <div class="progress-done" data-done="40"><span>40%</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+    <script type="text/javascript" src="/jquery-3.6.0.js"></script>
+    <script src="/consumer/Main.js"></script>
+    <script src="/H_F.js"></script>
+
+  </body>
+</html>
+

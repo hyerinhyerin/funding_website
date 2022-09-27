@@ -1,23 +1,35 @@
-/* funding_plan item */
 
-.funding_menu {
-  font-family: 'gong';
-  font-size: 20px;
-  color :black;
-  text-decoration-line: none;
-  position: absolute;
-  top: 53%;
-  left: 37%;
+/* header */
+
+#fundingplan {
+    font-family: 'gong';
+    font-size: 20px;
+    color :black;
+    text-decoration-line: none;
+    position: absolute;
+    top: 53%;
+    left: 37%;
 }
 
-.all_menu:hover, .earlybird_menu:hover, .category_menu:hover{
-  color:black;
-  transition: color 0.2s;
-}
-.funding_menu:hover{
+#fundingplan:hover{
   color: white;
   transition: color 0.2s;
 }
+
+
+
+/* sort */
+.listsort{
+  float: right;
+  position: relative;
+  right : 5%;
+  padding-right: 20px;
+  padding-top: 55px;
+  padding-bottom: 15px;
+  font-family: 'gongli';
+  color: #4f4f4f;
+}
+
 
 /* funding_plan item */
 #wapper.funplan{
@@ -59,3 +71,4 @@
 .over:hover {
   border: 2px solid #008299;
 }
+

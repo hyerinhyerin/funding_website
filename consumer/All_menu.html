@@ -1,476 +1,498 @@
-<link rel="stylesheet" href="/consumer/All_menu.css" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main_consumer</title>
+    <link rel="stylesheet" href="/consumer/All_menu.css" />
+    <link rel="stylesheet" href="/consumer/common.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header data-include="/Header.html">
+      </header>
+      <div id="main_body">
+        <!-- 이벤트 창 -->
+        <div>
+          <div id="arrow-left" class="arrow"></div>
+          <ul class="slides">
+            <input type="radio" name="radio-btn" id="img-1" checked />
+            <li class="slide-container">
+              <div class="slide">
+                <img src="/img&font/img/배너_1.png" />
+              </div>
+              <div class="nav">
+                <label for="img-6" class="prev">&#x2039;</label>
+                <label for="img-2" class="next">&#x203a;</label>
+              </div>
+            </li>
 
-<!-- 이벤트 창 -->
-<div>
-  <div id="arrow-left" class="arrow"></div>
-  <ul class="slides">
-    <input type="radio" name="radio-btn" id="img-1" checked />
-    <li class="slide-container">
-      <div class="slide">
-        <img src="/img&font/img/배너_1.png" />
-      </div>
-      <div class="nav">
-        <label for="img-6" class="prev">&#x2039;</label>
-        <label for="img-2" class="next">&#x203a;</label>
-      </div>
-    </li>
+            <input type="radio" name="radio-btn" id="img-2" />
+            <li class="slide-container">
+              <div class="slide">
+                <img src="/img&font/img/배너_2.png" />
+              </div>
+              <div class="nav">
+                <label for="img-1" class="prev">&#x2039;</label>
+                <label for="img-3" class="next">&#x203a;</label>
+              </div>
+            </li>
 
-    <input type="radio" name="radio-btn" id="img-2" />
-    <li class="slide-container">
-      <div class="slide">
-        <img src="/img&font/img/배너_2.png" />
-      </div>
-      <div class="nav">
-        <label for="img-1" class="prev">&#x2039;</label>
-        <label for="img-3" class="next">&#x203a;</label>
-      </div>
-    </li>
+            <input type="radio" name="radio-btn" id="img-3" />
+            <li class="slide-container">
+              <div class="slide">
+                <img src="/img&font/img/배너_3.png" />
+              </div>
+              <div class="nav">
+                <label for="img-2" class="prev">&#x2039;</label>
+                <label for="img-4" class="next">&#x203a;</label>
+              </div>
+            </li>
 
-    <input type="radio" name="radio-btn" id="img-3" />
-    <li class="slide-container">
-      <div class="slide">
-        <img src="/img&font/img/배너_3.png" />
-      </div>
-      <div class="nav">
-        <label for="img-2" class="prev">&#x2039;</label>
-        <label for="img-4" class="next">&#x203a;</label>
-      </div>
-    </li>
+            <input type="radio" name="radio-btn" id="img-4" />
+            <li class="slide-container">
+              <div class="slide">
+                <img src="/img&font/img/배너_4.png" />
+              </div>
+              <div class="nav">
+                <label for="img-3" class="prev">&#x2039;</label>
+                <label for="img-5" class="next">&#x203a;</label>
+              </div>
+            </li>
 
-    <input type="radio" name="radio-btn" id="img-4" />
-    <li class="slide-container">
-      <div class="slide">
-        <img src="/img&font/img/배너_4.png" />
-      </div>
-      <div class="nav">
-        <label for="img-3" class="prev">&#x2039;</label>
-        <label for="img-5" class="next">&#x203a;</label>
-      </div>
-    </li>
+            <input type="radio" name="radio-btn" id="img-5" />
+            <li class="slide-container">
+              <div class="slide">
+                <img src="/img&font/img/배너_5.png" />
+              </div>
+              <div class="nav">
+                <label for="img-4" class="prev">&#x2039;</label>
+                <label for="img-6" class="next">&#x203a;</label>
+              </div>
+            </li>
 
-    <input type="radio" name="radio-btn" id="img-5" />
-    <li class="slide-container">
-      <div class="slide">
-        <img src="/img&font/img/배너_5.jpg" />
-      </div>
-      <div class="nav">
-        <label for="img-4" class="prev">&#x2039;</label>
-        <label for="img-6" class="next">&#x203a;</label>
-      </div>
-    </li>
+            <input type="radio" name="radio-btn" id="img-6" />
+            <li class="slide-container">
+              <div class="slide">
+                <img src="/img&font/img/배너_6.png" />
+              </div>
+              <div class="nav">
+                <label for="img-5" class="prev">&#x2039;</label>
+                <label for="img-1" class="next">&#x203a;</label>
+              </div>
+            </li>
 
-    <input type="radio" name="radio-btn" id="img-6" />
-    <li class="slide-container">
-      <div class="slide">
-        <img src="/img&font/img/배너_6.png" />
-      </div>
-      <div class="nav">
-        <label for="img-5" class="prev">&#x2039;</label>
-        <label for="img-1" class="next">&#x203a;</label>
-      </div>
-    </li>
-
-    <li class="nav-dots">
-      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
-      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
-      <label for="img-3" class="nav-dot" id="img-dot-3"></label>
-      <label for="img-4" class="nav-dot" id="img-dot-4"></label>
-      <label for="img-5" class="nav-dot" id="img-dot-5"></label>
-      <label for="img-6" class="nav-dot" id="img-dot-6"></label>
-    </li>
-  </ul>
-</div>
-<!-- item -->
-<div id="item-list">
-  <div>
-    <ul>
-      <li class="listsort">오름차순</li>
-      <li class="listsort">내림차순</li>
-    </ul>
-  </div>
-  <hr />
-  <div id="wapper">
-    <div class="item">
-      <div>
-        <img src="/img&font/img/daily_grill.jpg" alt="전기그릴" class="itemimg" />
-      </div>
-      <div>
-        <h3>전기그릴</h3>
-        <p>상품 상세 내용---------------------- 벨로닉스</p>
-        <div class="progress">
-          <div class="progress-done" data-done="90"><span>90%</span></div>
+            <li class="nav-dots">
+              <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+              <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+              <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+              <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+              <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+              <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+            </li>
+          </ul>
         </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/daily_egg.jpg" alt="계란 찜기" class="itemimg" />
-      </div>
-      <div>
-        <h3>계란 찜기</h3>
-        <p>상품 상세 내용---------------------- 라쿠진</p>
-        <div class="progress">
-          <div class="progress-done" data-done="82"><span>82%</span></div>
+        <!-- item -->
+        <div id="item-list">
+          <div>
+            <ul>
+              <li class="listsort">오름차순</li>
+              <li class="listsort">내림차순</li>
+            </ul>
+          </div>
+          <hr />
+          <div id="wapper">
+            <div class="item">
+              <div>
+                <img src="/img&font/img/daily_grill.jpg" alt="전기그릴" class="itemimg" />
+              </div>
+              <div>
+                <h3>전기그릴</h3>
+                <p>상품 상세 내용---------------------- 벨로닉스</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="90"><span>90%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/daily_egg.jpg" alt="계란 찜기" class="itemimg" />
+              </div>
+              <div>
+                <h3>계란 찜기</h3>
+                <p>상품 상세 내용---------------------- 라쿠진</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="82"><span>82%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/daily_dry.jpg" alt="원목 빨래 건조대" class="itemimg" />
+              </div>
+              <div>
+                <h3>원목 빨래 건조대</h3>
+                <p>상품 상세 내용---------------------- 아카시아</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="75"><span>75%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="wapper">
+            <div class="item">
+              <div>
+                <img src="/img&font/img/daily_slipper.jpg" alt="슬리퍼" class="itemimg" />
+              </div>
+              <div>
+                <h3>층간소음 거실화</h3>
+                <p>상품 상세 내용---------------------- 룸앤홈</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="55"><span>55%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/daily_basket.jpg" alt="빨래 바구니" class="itemimg" />
+              </div>
+              <div>
+                <h3>라탄 바구니</h3>
+                <p>상품 상세 내용---------------------- 빨래바구니-룸앤홈</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="50"><span>50%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/daily_spoon.jpg" alt="수저" class="itemimg" />
+              </div>
+              <div>
+                <h3>수저 세트</h3>
+                <p>상품 상세 내용---------------------- 아카시아</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="40"><span>40%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="wapper">
+            <div class="item">
+              <div>
+                <img src="/img&font/img/pr_tv.png" alt="tv" class="itemimg" />
+              </div>
+              <div>
+                <h3>스피커인가 티비인가</h3>
+                <p>상품 상세 내용---------------------- LG</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="90"><span>90%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/pr_ph.png" alt="phone" class="itemimg" />
+              </div>
+              <div>
+                <h3>iphone 13 Pro</h3>
+                <p>상품 상세 내용---------------------- apple</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="82"><span>82%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/elec_airpods.jpg" alt="airpods" class="itemimg" />
+              </div>
+              <div>
+                <h3>에어팟 프로</h3>
+                <p>상품 상세 내용---------------------- apple</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="75"><span>75%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="wapper">
+            <div class="item">
+              <div>
+                <img src="/img&font/img/elec_speaker.jpg" alt="스피커" class="itemimg" />
+              </div>
+              <div>
+                <h3>블루투스 스피커</h3>
+                <p>상품 상세 내용---------------------- 소니</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="55"><span>55%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/elec_steam.jpg" alt="다리미" class="itemimg" />
+              </div>
+              <div>
+                <h3>스팀 다리미</h3>
+                <p>상품 상세 내용---------------------- 벨로닉스</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="50"><span>50%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/elec_camera.jpg" alt="camera" class="itemimg" />
+              </div>
+              <div>
+                <h3>카메라</h3>
+                <p>상품 상세 내용---------------------- 캐논</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="40"><span>40%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="wapper">
+            <div class="item">
+              <div>
+                <img src="/img&font/img/furniture_table.jpg" alt="수납 테이블" class="itemimg" />
+              </div>
+              <div>
+                <h3>수납테이블</h3>
+                <p>상품 상세 내용---------------------- 마켓비</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="90"><span>90%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/furniture_sofa.jpg" alt="소파" class="itemimg" />
+              </div>
+              <div>
+                <h3>소파</h3>
+                <p>상품 상세 내용---------------------- 마켓비</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="82"><span>82%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/furniture_book.png" alt="회전책장" class="itemimg" />
+              </div>
+              <div>
+                <h3>회전 책장</h3>
+                <p>상품 상세 내용---------------------- 라삐앤모우</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="75"><span>75%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="wapper">
+            <div class="item">
+              <div>
+                <img src="/img&font/img/furniture_mirror.jpg" alt="거울" class="itemimg" />
+              </div>
+              <div>
+                <h3>탁상 거울</h3>
+                <p>상품 상세 내용---------------------- 룸앤홈</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="55"><span>55%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img
+                  src="/img&font/img/furniture_speakerTable.jpg"
+                  alt="스피커 테이블"
+                  class="itemimg"
+                />
+              </div>
+              <div>
+                <h3>블루투스 스피커 테이블</h3>
+                <p>상품 상세 내용---------------------- 라르츠</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="50"><span>50%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/furniture_animalT.png" alt="동물 식탁" class="itemimg" />
+              </div>
+              <div>
+                <h3>반려동물 식탁</h3>
+                <p>상품 상세 내용---------------------- PET502</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="40"><span>40%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="wapper">
+            <div class="item">
+              <div>
+                <img src="/img&font/img/hobby_paints.jpg" alt="물감" class="itemimg" />
+              </div>
+              <div>
+                <h3>아크릴 물감</h3>
+                <p>상품 상세 내용---------------------- 쉴드</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="80"><span>80%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/hobby_fish.jpg" alt="낚시" class="itemimg" />
+              </div>
+              <div>
+                <h3>낚시대</h3>
+                <p>상품 상세 내용---------------------- 싸파 빅헌터</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="82"><span>82%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/elec_airpods.jpg" alt="airpods" class="itemimg" />
+              </div>
+              <div>
+                <h3>에어팟 프로</h3>
+                <p>상품 상세 내용---------------------- apple</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="75"><span>75%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="wapper">
+            <div class="item">
+              <div>
+                <img src="/img&font/img/elec_speaker.jpg" alt="스피커" class="itemimg" />
+              </div>
+              <div>
+                <h3>블루투스 스피커</h3>
+                <p>상품 상세 내용---------------------- 소니</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="55"><span>55%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/elec_steam.jpg" alt="다리미" class="itemimg" />
+              </div>
+              <div>
+                <h3>스팀 다리미</h3>
+                <p>상품 상세 내용---------------------- 벨로닉스</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="50"><span>50%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/elec_camera.jpg" alt="camera" class="itemimg" />
+              </div>
+              <div>
+                <h3>카메라</h3>
+                <p>상품 상세 내용---------------------- 캐논</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="40"><span>40%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="wapper">
+            <div class="item">
+              <div>
+                <img src="/img&font/img/beauty_hand.jpg" alt="핸드크림" class="itemimg" />
+              </div>
+              <div>
+                <h3>핸드크림</h3>
+                <p>상품 상세 내용---------------------- 멈칫</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="50"><span>50%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/beauty_clean.jpg" alt="클렌징" class="itemimg" />
+              </div>
+              <div>
+                <h3>클렌징폼</h3>
+                <p>상품 상세 내용---------------------- 마녀공장</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="45"><span>45%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/beauty_oil.jpg" alt="오일 클렌져" class="itemimg" />
+              </div>
+              <div>
+                <h3>오일 클렌져</h3>
+                <p>상품 상세 내용---------------------- 바이오더마</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="70"><span>70%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="wapper">
+            <div class="item">
+              <div>
+                <img src="/img&font/img/beauty_shaving.jpg" alt="쉐이빙" class="itemimg" />
+              </div>
+              <div>
+                <h3>쉐이빙</h3>
+                <p>상품 상세 내용---------------------- 바버501</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="65"><span>65%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/beauty_ball.jpg" alt="샤워볼" class="itemimg" />
+              </div>
+              <div>
+                <h3>샤워볼</h3>
+                <p>상품 상세 내용---------------------- 필리밀리</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="50"><span>50%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <img src="/img&font/img/beauty_brush.jpg" alt="브러쉬" class="itemimg" />
+              </div>
+              <div>
+                <h3>목욕 브러쉬</h3>
+                <p>상품 상세 내용---------------------- 웨신</p>
+                <div class="progress">
+                  <div class="progress-done" data-done="40"><span>40%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      <hr />
+      <footer data-include="/Footer.html" class="footer">
+      </footer>
     </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/daily_dry.jpg" alt="원목 빨래 건조대" class="itemimg" />
-      </div>
-      <div>
-        <h3>원목 빨래 건조대</h3>
-        <p>상품 상세 내용---------------------- 아카시아</p>
-        <div class="progress">
-          <div class="progress-done" data-done="75"><span>75%</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="wapper">
-    <div class="item">
-      <div>
-        <img src="/img&font/img/daily_slipper.jpg" alt="슬리퍼" class="itemimg" />
-      </div>
-      <div>
-        <h3>층간소음 거실화</h3>
-        <p>상품 상세 내용---------------------- 룸앤홈</p>
-        <div class="progress">
-          <div class="progress-done" data-done="55"><span>55%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/daily_basket.jpg" alt="빨래 바구니" class="itemimg" />
-      </div>
-      <div>
-        <h3>라탄 바구니</h3>
-        <p>상품 상세 내용---------------------- 빨래바구니-룸앤홈</p>
-        <div class="progress">
-          <div class="progress-done" data-done="50"><span>50%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/daily_spoon.jpg" alt="수저" class="itemimg" />
-      </div>
-      <div>
-        <h3>수저 세트</h3>
-        <p>상품 상세 내용---------------------- 아카시아</p>
-        <div class="progress">
-          <div class="progress-done" data-done="40"><span>40%</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="wapper">
-    <div class="item">
-      <div>
-        <img src="/img&font/img/pr_tv.png" alt="tv" class="itemimg" />
-      </div>
-      <div>
-        <h3>스피커인가 티비인가</h3>
-        <p>상품 상세 내용---------------------- LG</p>
-        <div class="progress">
-          <div class="progress-done" data-done="90"><span>90%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/pr_ph.png" alt="phone" class="itemimg" />
-      </div>
-      <div>
-        <h3>iphone 13 Pro</h3>
-        <p>상품 상세 내용---------------------- apple</p>
-        <div class="progress">
-          <div class="progress-done" data-done="82"><span>82%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/elec_airpods.jpg" alt="airpods" class="itemimg" />
-      </div>
-      <div>
-        <h3>에어팟 프로</h3>
-        <p>상품 상세 내용---------------------- apple</p>
-        <div class="progress">
-          <div class="progress-done" data-done="75"><span>75%</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="wapper">
-    <div class="item">
-      <div>
-        <img src="/img&font/img/elec_speaker.jpg" alt="스피커" class="itemimg" />
-      </div>
-      <div>
-        <h3>블루투스 스피커</h3>
-        <p>상품 상세 내용---------------------- 소니</p>
-        <div class="progress">
-          <div class="progress-done" data-done="55"><span>55%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/elec_steam.jpg" alt="다리미" class="itemimg" />
-      </div>
-      <div>
-        <h3>스팀 다리미</h3>
-        <p>상품 상세 내용---------------------- 벨로닉스</p>
-        <div class="progress">
-          <div class="progress-done" data-done="50"><span>50%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/elec_camera.jpg" alt="camera" class="itemimg" />
-      </div>
-      <div>
-        <h3>카메라</h3>
-        <p>상품 상세 내용---------------------- 캐논</p>
-        <div class="progress">
-          <div class="progress-done" data-done="40"><span>40%</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="wapper">
-    <div class="item">
-      <div>
-        <img src="/img&font/img/furniture_table.jpg" alt="수납 테이블" class="itemimg" />
-      </div>
-      <div>
-        <h3>수납테이블</h3>
-        <p>상품 상세 내용---------------------- 마켓비</p>
-        <div class="progress">
-          <div class="progress-done" data-done="90"><span>90%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/furniture_sofa.jpg" alt="소파" class="itemimg" />
-      </div>
-      <div>
-        <h3>소파</h3>
-        <p>상품 상세 내용---------------------- 마켓비</p>
-        <div class="progress">
-          <div class="progress-done" data-done="82"><span>82%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/furniture_book.png" alt="회전책장" class="itemimg" />
-      </div>
-      <div>
-        <h3>회전 책장</h3>
-        <p>상품 상세 내용---------------------- 라삐앤모우</p>
-        <div class="progress">
-          <div class="progress-done" data-done="75"><span>75%</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="wapper">
-    <div class="item">
-      <div>
-        <img src="/img&font/img/furniture_mirror.jpg" alt="거울" class="itemimg" />
-      </div>
-      <div>
-        <h3>탁상 거울</h3>
-        <p>상품 상세 내용---------------------- 룸앤홈</p>
-        <div class="progress">
-          <div class="progress-done" data-done="55"><span>55%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img
-          src="/img&font/img/furniture_speakerTable.jpg"
-          alt="스피커 테이블"
-          class="itemimg"
-        />
-      </div>
-      <div>
-        <h3>블루투스 스피커 테이블</h3>
-        <p>상품 상세 내용---------------------- 라르츠</p>
-        <div class="progress">
-          <div class="progress-done" data-done="50"><span>50%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/furniture_animalT.png" alt="동물 식탁" class="itemimg" />
-      </div>
-      <div>
-        <h3>반려동물 식탁</h3>
-        <p>상품 상세 내용---------------------- PET502</p>
-        <div class="progress">
-          <div class="progress-done" data-done="40"><span>40%</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="wapper">
-    <div class="item">
-      <div>
-        <img src="/img&font/img/hobby_paints.jpg" alt="물감" class="itemimg" />
-      </div>
-      <div>
-        <h3>아크릴 물감</h3>
-        <p>상품 상세 내용---------------------- 쉴드</p>
-        <div class="progress">
-          <div class="progress-done" data-done="80"><span>80%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/hobby_fish.jpg" alt="낚시" class="itemimg" />
-      </div>
-      <div>
-        <h3>낚시대</h3>
-        <p>상품 상세 내용---------------------- 싸파 빅헌터</p>
-        <div class="progress">
-          <div class="progress-done" data-done="82"><span>82%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/elec_airpods.jpg" alt="airpods" class="itemimg" />
-      </div>
-      <div>
-        <h3>에어팟 프로</h3>
-        <p>상품 상세 내용---------------------- apple</p>
-        <div class="progress">
-          <div class="progress-done" data-done="75"><span>75%</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="wapper">
-    <div class="item">
-      <div>
-        <img src="/img&font/img/elec_speaker.jpg" alt="스피커" class="itemimg" />
-      </div>
-      <div>
-        <h3>블루투스 스피커</h3>
-        <p>상품 상세 내용---------------------- 소니</p>
-        <div class="progress">
-          <div class="progress-done" data-done="55"><span>55%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/elec_steam.jpg" alt="다리미" class="itemimg" />
-      </div>
-      <div>
-        <h3>스팀 다리미</h3>
-        <p>상품 상세 내용---------------------- 벨로닉스</p>
-        <div class="progress">
-          <div class="progress-done" data-done="50"><span>50%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/elec_camera.jpg" alt="camera" class="itemimg" />
-      </div>
-      <div>
-        <h3>카메라</h3>
-        <p>상품 상세 내용---------------------- 캐논</p>
-        <div class="progress">
-          <div class="progress-done" data-done="40"><span>40%</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="wapper">
-    <div class="item">
-      <div>
-        <img src="/img&font/img/beauty_hand.jpg" alt="핸드크림" class="itemimg" />
-      </div>
-      <div>
-        <h3>핸드크림</h3>
-        <p>상품 상세 내용---------------------- 멈칫</p>
-        <div class="progress">
-          <div class="progress-done" data-done="50"><span>50%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/beauty_clean.jpg" alt="클렌징" class="itemimg" />
-      </div>
-      <div>
-        <h3>클렌징폼</h3>
-        <p>상품 상세 내용---------------------- 마녀공장</p>
-        <div class="progress">
-          <div class="progress-done" data-done="45"><span>45%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/beauty_oil.jpg" alt="오일 클렌져" class="itemimg" />
-      </div>
-      <div>
-        <h3>오일 클렌져</h3>
-        <p>상품 상세 내용---------------------- 바이오더마</p>
-        <div class="progress">
-          <div class="progress-done" data-done="70"><span>70%</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="wapper">
-    <div class="item">
-      <div>
-        <img src="/img&font/img/beauty_shaving.jpg" alt="쉐이빙" class="itemimg" />
-      </div>
-      <div>
-        <h3>쉐이빙</h3>
-        <p>상품 상세 내용---------------------- 바버501</p>
-        <div class="progress">
-          <div class="progress-done" data-done="65"><span>65%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/beauty_ball.jpg" alt="샤워볼" class="itemimg" />
-      </div>
-      <div>
-        <h3>샤워볼</h3>
-        <p>상품 상세 내용---------------------- 필리밀리</p>
-        <div class="progress">
-          <div class="progress-done" data-done="50"><span>50%</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div>
-        <img src="/img&font/img/beauty_brush.jpg" alt="브러쉬" class="itemimg" />
-      </div>
-      <div>
-        <h3>목욕 브러쉬</h3>
-        <p>상품 상세 내용---------------------- 웨신</p>
-        <div class="progress">
-          <div class="progress-done" data-done="40"><span>40%</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+    <script type="text/javascript" src="/jquery-3.6.0.js"></script>
+    <script src="/consumer/Main.js"></script>
+    <script src="/H_F.js"></script>
+  </body>
+</html>
