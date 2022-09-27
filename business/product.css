@@ -1,21 +1,21 @@
 @font-face {
     font-family: "gong";
-    src: url('../font/Gong\ Gothic\ Medium.ttf');
+    src: url("/img&font/font/Gong\ Gothic\ Medium.ttf");
 }
 
 @font-face {
     font-family: "nanum";
-    src: url('../font/NanumSquareRoundB.ttf');
+    src: url("/img&font/font/NanumSquareRoundB.ttf");
 }
 
 @font-face {
     font-family: "gongli";
-    src: url('../font/Gong\ Gothic\ Light.ttf');
+    src: url("/img&font/font/Gong\ Gothic\ Light.ttf");
 }
 
 @font-face {
     font-family: "main";
-    src: url('../font/HS두꺼비체.ttf');
+    src: url("/img&font/font/HS두꺼비체.ttf");
 }
 
 
@@ -286,7 +286,7 @@ a {
     font-family: 'gongli';
 }
 
-.footer div{
+.footer div {
     position: relative;
     left: 150px;
 }
@@ -305,23 +305,24 @@ h1 {
     color: #4a4a4a;
 }
 
-hr{
+hr {
     text-align: center;
     width: 95%;
     margin-top: 10px;
     border-color: #f2f4f641;
 }
 
-table{
+table {
     width: 700px;
     margin: 100px auto;
 }
 
-#bt{
+#bt {
     text-align: center;
 }
 
-th,td{
+th,
+td {
     width: 350px;
     height: 50px;
     text-align: right;
@@ -332,13 +333,13 @@ th,td{
     padding-right: 25px;
 }
 
-.label_name{
+.label_name {
     text-align: left;
-    width : 350px;
-    padding-left : 15px;  
+    width: 350px;
+    padding-left: 15px;
 }
 
-.mypage_table button{
+.mypage_table button {
     width: 150px;
     height: 50px;
     font-family: "gongli";
@@ -348,7 +349,5 @@ th,td{
     color: white;
     border: 0;
     border-radius: 5px;
-    margin-top : 30px;
+    margin-top: 30px;
 }
-
-

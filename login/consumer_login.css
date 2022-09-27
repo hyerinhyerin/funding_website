@@ -1,21 +1,21 @@
 @font-face {
     font-family: "gong";
-    src: url('/font/Gong\ Gothic\ Medium.ttf');
+    src: url("/img&font/font/Gong\ Gothic\ Medium.ttf");
 }
 
 @font-face {
     font-family: "nanum";
-    src: url('/font/NanumSquareRoundB.ttf');
+    src: url("/img&font/font/NanumSquareRoundB.ttf");
 }
 
 @font-face {
     font-family: "gongli";
-    src: url('/font/Gong\ Gothic\ Light.ttf');
+    src: url("/img&font/font/Gong\ Gothic\ Light.ttf");
 }
 
 @font-face {
     font-family: "main";
-    src: url('/font/HS두꺼비체.ttf');
+    src: url("/img&font/font/HS두꺼비체.ttf");
 }
 
 body {
