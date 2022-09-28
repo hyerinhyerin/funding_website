@@ -93,32 +93,7 @@ input[type="submit"]:hover {
   }
 
 
-/*items*/
-
-
-/* header */
-
-#fundingplan {
-  font-family: 'gong';
-  font-size: 20px;
-  color :black;
-  text-decoration-line: none;
-  position: absolute;
-  top: 53%;
-  left: 37%;
-}
-
-#fundingplan:hover{
-color: white;
-transition: color 0.2s;
-}
-
-
-
-
-
-
-/* funding_plan item */
+/* early item */
 #wapper.funplan{
 width: 420px;
 display: grid;
@@ -210,6 +185,6 @@ border-left: none;
   white-space: normal;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   overflow: hidden;
 }
