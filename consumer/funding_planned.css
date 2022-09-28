@@ -20,6 +20,7 @@
 
 /* sort */
 .listsort{
+  list-style: none;
   float: right;
   position: relative;
   right : 5%;
@@ -33,22 +34,29 @@
 
 /* funding_plan item */
 #wapper.funplan{
-  width: 90%;
-  padding-top: 100px;
-  display: flex;
+  width: 420px;
+  display: grid;
   grid-template-columns: repeat(2, 600px);
   grid-template-rows: minmax(300px, auto);
   grid-gap: 100px 160px;
   align-items: center;
-  margin: auto;
+  margin: 0px auto;
   justify-content: center;
+  justify-items: center;
+
+}
+
+#plusp{
+  padding-top: 15px ;
 }
 .funp {
   display: flex;
-  font-family: 'gong';
-  font-size: 25px;
-  color: #008299;
-  justify-content: space-between;
+    font-family: 'gong';
+    font-size: 25px;
+    color: #008299;
+    flex-direction: column;
+    align-items: flex-end;
+    
 }
 .item h2 {
   font-family: 'gong';
@@ -72,3 +80,19 @@
   border: 2px solid #008299;
 }
 
+
+
+/* 정렬 */
+hr{
+  padding-bottom: 100px;  
+  border-left: none;
+}
+
+/* 글자 줄임*/
+#hidden{
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}

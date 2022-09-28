@@ -79,79 +79,98 @@ input[type="submit"]:hover {
   transition: color 0.2s;
 }
 
-/*sort*/
-
-.listsort {
+/* sort */
+.listsort{
+  list-style: none;
   float: right;
   position: relative;
-  right: 5%;
+  right : 5%;
   padding-right: 20px;
   padding-top: 55px;
   padding-bottom: 15px;
   font-family: 'gongli';
   color: #4f4f4f;
-}
+  }
+
+
 /*items*/
 
-#wapper-top {
-  width: 90%;
-  padding-top: 100px;
-  display: flex;
-  grid-template-columns: repeat(2, 600px);
-  grid-template-rows: minmax(300px, auto);
-  grid-gap: 100px 160px;
-  align-items: center;
-  margin: auto;
-  justify-content: center;
 
-}
+/* header */
 
-#wapper-middle {
-  width: 90%;
-  padding-top: 100px;
-  display: flex;
-  grid-template-columns: repeat(2, 600px);
-  grid-template-rows: minmax(300px, auto);
-  grid-gap: 100px 160px;
-  align-items: center;
-  margin: auto;
-  justify-content: center;
-
-}
-
-#wapper-bottom {
-  width: 90%;
-  display: flex;
-  grid-template-columns: repeat(2, 600px);
-  grid-template-rows: minmax(300px, auto);
-  grid-gap: 100px 160px;
-  align-items: center;
-  margin: auto;
-  justify-content: center;
-  padding-bottom: 150px;
-}
-
-
-
-.item h2 {
+#fundingplan {
   font-family: 'gong';
-  font-size: 28px;
-  color: black;
+  font-size: 20px;
+  color :black;
+  text-decoration-line: none;
   position: absolute;
-  top: 45%;
+  top: 53%;
   left: 37%;
+}
+
+#fundingplan:hover{
+color: white;
+transition: color 0.2s;
+}
+
+
+
+
+
+
+/* funding_plan item */
+#wapper.funplan{
+width: 420px;
+display: grid;
+grid-template-columns: repeat(2, 600px);
+grid-template-rows: minmax(300px, auto);
+grid-gap: 100px 160px;
+align-items: center;
+margin: 0px auto;
+justify-content: center;
+justify-items: center;
 
 }
 
+#plusp{
+padding-top: 15px ;
+}
+.funp {
+display: flex;
+  font-family: 'gong';
+  font-size: 25px;
+  color: #008299;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.item h2 {
+font-family: 'gong';
+font-size: 28px;
+color: black;
+position: absolute;
+top: 45%;
+left: 37%;
+}
 .over {
-  position: relative;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  width: 420px;
-  height: 300px;
-  display: block;
-  opacity: 0.6;
+position: relative;
+border: 2px solid #ccc;
+border-radius: 5px;
+width: 420px;
+height: 300px;
+display: block;
+opacity: 0.6;
 
+}
+.over:hover {
+border: 2px solid #008299;
+}
+
+
+
+/* 정렬 */
+hr{
+padding-bottom: 100px;  
+border-left: none;
 }
 
 
@@ -180,6 +199,17 @@ input[type="submit"]:hover {
   justify-content: space-between;
   line-height: 55px;
   color: #ee5836;
+  flex-direction: column;
+    align-items: flex-end;
 
 }
 
+/*글자 줄임*/
+
+#hidden{
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}

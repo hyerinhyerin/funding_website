@@ -304,15 +304,28 @@ app.get("/logout", (req, res) => {
     res.sendFile(__dirname + "/consumer/All_menu.html");
   });
 
-  app.get('/funding_plan', (req, res) => {
+  app.get('/funding_plan',(req, res) => {
     console.log('펀딩예정');
-    res.sendFile(__dirname + '/consumer/funding_planned.html');
+    client.query("select * from product where start > now()",(err,rows) =>{
+        res.render("funding_planned",{
+          rows : rows,
+        });
+    });
   });
 
-  app.get("/early", (req, res) => {
-    console.log("얼리버드");
-    res.sendFile(__dirname + "/consumer/earlybird.html");
-  });
+  app.get('/early',(req, res) => {
+    console.log('얼리버드');
+    const bird = "bird";
+    client.query("select * from product where start <= now()",(err,rows) =>{
+      for(var i = 0; i<rows.length; ++i){
+        if(rows[i].ealry == bird){
+          res.render("earlybird",{
+            rows : rows[i],
+          });
+        }
+      }
+      });
+    });
 
   app.get('/search', (req, res) => {
     console.log('검색 form action 변수');
