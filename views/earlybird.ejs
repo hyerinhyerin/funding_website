@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Main_consumer</title>
+    <title>Early_consumer</title>
     <link rel="stylesheet" href="/consumer/earlybird.css" />
     <link rel="stylesheet" href="/consumer/common.css" />
   </head>
@@ -103,25 +103,28 @@
           </ul>
         </div>
         <hr />
-  
-    
-  <div id="wapper" class = "funplan">
+        <div id="wapper" class = "funplan">
+        <% for(var i=0; i<rows.length; i++) { 
+                var data = rows[i];
+              %>
     <div class="item">
       <div>
         <div style="position: relative">
           <div style="position: absolute"></div>
           <div>
-            <a href="/detail"><img src="<%= rows.image %>" class="itemimg" /> </a>
+            <a href="/detail"><img src="<%= data.image %>" class="itemimg" /> </a>
           </div>
         </div>
       </div>
-      <h3><%= rows.title %></h3>
+      <h3><%= data.title %></h3>
       <div class="early">
-        <p><span id="hidden"><%= rows.content %></span></p>
-        <p><span class="early">수량 : <%= rows.count %></span></p>
+        <p><span id="hidden"><%= data.content %></span></p>
+        <p><span class="early">수량 : <%= data.count %></span></p>
       </div>
     </div>
+    <% } %>
   </div>
+  
 <!-- 
     <div class="item">
       <div>

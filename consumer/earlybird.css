@@ -95,16 +95,15 @@ input[type="submit"]:hover {
 
 /* early item */
 #wapper.funplan{
-width: 420px;
-display: grid;
-grid-template-columns: repeat(2, 600px);
-grid-template-rows: minmax(300px, auto);
-grid-gap: 100px 160px;
-align-items: center;
-margin: 0px auto;
-justify-content: center;
-justify-items: center;
-
+  width: 420px;
+  display: grid;
+  grid-template-columns: repeat(2, 600px);
+  grid-template-rows: minmax(300px, auto);
+  grid-gap: 100px 160px;
+  align-items: center;
+  margin: 0px auto;
+  justify-content: center;
+  justify-items: center;
 }
 
 #plusp{

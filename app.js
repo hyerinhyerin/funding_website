@@ -312,20 +312,29 @@ app.get("/logout", (req, res) => {
         });
     });
   });
-
   app.get('/early',(req, res) => {
     console.log('얼리버드');
-    const bird = "bird";
-    client.query("select * from product where start <= now()",(err,rows) =>{
-      for(var i = 0; i<rows.length; ++i){
-        if(rows[i].ealry == bird){
-          res.render("earlybird",{
-            rows : rows[i],
-          });
-        }
-      }
+    client.query("select * from product where ealry = 'bird' and start <= now()",(err,rows) =>{
+        res.render('earlybird', {
+          rows : rows,
+        });
+      
       });
     });
+
+  // app.get('/early',(req, res) => {
+  //   console.log('얼리버드');
+  //   const bird = "bird";
+  //   client.query("select * from product where start <= now()",(err,rows) =>{
+  //     for(var i = 0; i<rows.length; i++){
+  //       if(rows[i].ealry == bird){
+  //         res.render("earlybird",{
+  //           rows : rows[i],
+  //         });
+  //       }
+  //     }
+  //     });
+  //   });
 
   app.get('/search', (req, res) => {
     console.log('검색 form action 변수');
