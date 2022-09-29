@@ -173,7 +173,7 @@ function uncomma(str) {
 
 function newPage()  {
   if(introCount1 > 0 || introCount2 > 0){
-    window.location.href = "funding.html";
+    window.location.href = "/consumer/funding.html";
   }
   else{
     window.alert("제품을 선택하여 주세요.");

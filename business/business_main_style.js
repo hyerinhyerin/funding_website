@@ -81,21 +81,6 @@ lastQ.addEventListener("click", () => {
   }
 });
 
-const nameQ = document.querySelector("#my-name");
-const nameCts = document.querySelector(".name-constents");
-
-nameQ.addEventListener("click", () => {
-  if (nameCts.classList.contains("on")) {
-    nameCts.style.display = "block";
-    nameQ.style.color = "#606060";
-    nameCts.classList.remove("on");
-  } else if (!nameCts.classList.contains("on")) {
-    nameCts.style.display = "none";
-    nameCts.classList.add("on");
-    nameQ.style.color = "black";
-  }
-});
-
 const firstOn = document.querySelector("#first-one");
 const firstAA = document.querySelector(".first-first-one");
 

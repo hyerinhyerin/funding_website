@@ -44,74 +44,17 @@ app.use(
 
 app.use(express.static(__dirname + "/"));
 
-// 페이지 이동
-
-// 카테고리
-const main = require("./index")
-const detail = require("./detailRouter")
-const furniture = require("./furnitureRouter")
-const electronic = require("./electronicRouter")
-const daily = require("./dailyRouter")
-const hobby = require("./hobbyRouter")
-const beauty = require("./beautyRouter")
-
-app.use("/", main)
-app.use("/detail", detail)
-app.use("/furniture", furniture)
-app.use("/elec", electronic)
-app.use("/daily", daily)
-app.use("/hobby", hobby)
-app.use("/beauty", beauty)
-
-// 사업자
-const productEdit = require("./productEditRouter")
-const registration = require("./RegistrationAndmodificationRouter")
-
-app.use("/productEdit", productEdit)
-app.use("/RegistrationAndmodification", registration)
-
-// 소비자
-const all = require("./allRouter")
-const fundingPlan = require("./fundingPlanRouter")
-const early = require("./earlyRouter")
-const search = require("./searchRouter")
-
-app.use("/all", all)
-app.use("/funding_plan", fundingPlan)
-app.use("/early", early)
-app.use("/search", search)
-
-// 회원가입
-const signup = require("./signupRouter")
-
-app.use("/signup", signup)
-
-// 소비자 회원가입
-const consumerLogin = require("./consumerLoginRouter")
-
-app.use("/consumer_login", consumerLogin)
-
 // 사업자 회원가입
-const businessLogin = require("./businessLoginRouter")
+app.get("/signup", (req, res) => {
+  console.log("회원가입 페이지");
+  res.sendFile(path.join(__dirname + "/login/signup.html"));
+});
 
-app.use("/business_login", businessLogin)
+app.get("/business_login", (req, res) => {
+  console.log("사업자 회원가입");
+  res.sendFile(__dirname + "/login/business_login.html");
+});
 
-// 로그인
-const login = require("./loginRouter")
-
-app.use("/login", login)
-
-// 로그아웃
-const logout = require("./logoutRouter")
-
-app.use("/logout", logout)
-
-// error
-app.use(function(req, res, next) {
-  res.status(404).send("라우터 에러")
-})
-
-// 사업자 회원가입
 app.post("/business_login", (req, res) => {
   console.log("회원가입 하는중");
   const body = req.body;
@@ -161,6 +104,11 @@ app.post("/business_login", (req, res) => {
 });
 
 // 소비자 회원가입
+app.get("/consumer_login", (req, res) => {
+  console.log("소비자 회원가입");
+  res.sendFile(__dirname + "/login/consumer_login.html");
+});
+
 app.post("/consumer_login", (req, res) => {
   console.log("회원가입 하는중");
   const body = req.body;
@@ -202,6 +150,11 @@ app.post("/consumer_login", (req, res) => {
 });
 
 // 로그인
+app.get("/login", (req, res) => {
+  console.log("로그인");
+  res.sendFile(__dirname + "/login/login.html");
+});
+
 app.post("/login", (req, res) => {
   const body = req.body;
   const id = body.id;
@@ -295,7 +248,91 @@ app.post("/update", (req, res) => {
   });
 });
 
-  // 상품등록
+//로그아웃
+app.get("/logout", (req, res) => {
+  console.log("로그아웃 성공");
+  req.session.destroy(function (err) {
+    // 세션 파괴후 할 것들
+    res.redirect("/login");
+  });
+});
+
+  // 페이지 이동
+
+  // 로고
+  app.get("/", (req, res) => {
+    console.log("메인페이지");
+    res.sendFile(__dirname + "/consumer/Main.html");
+  });
+
+  // 카테고리
+  app.get("/furniture", (req, res) => {
+    console.log("카테고리 가구");
+    res.sendFile(__dirname + "/consumer/category/furniture.html");
+  });
+  app.get("/elec", (req, res) => {
+    console.log("카테고리 전자기구");
+    res.sendFile(__dirname + "/consumer/category/electronic.html");
+  });
+  app.get("/daily", (req, res) => {
+    console.log("카테고리 생활용품");
+    res.sendFile(__dirname + "/consumer/category/daily.html");
+  });
+  app.get("/hobby", (req, res) => {
+    console.log("카테고리 취미");
+    res.sendFile(__dirname + "/consumer/category/hobby.html");
+  });
+  app.get("/beauty", (req, res) => {
+    console.log("카테고리 뷰티");
+    res.sendFile(__dirname + "/consumer/category/beauty.html");
+  });
+
+  // 사업자
+  app.get("/detail", (req, res) => {
+    console.log("사업자 상세페이지");
+    console.log("소비자 상세페이지");
+    res.sendFile(__dirname + "/consumer/detail_page.html");
+  });
+  app.get("/productEdit",(req, res) => {
+    console.log("사업자 상품 수정 페이지")
+    res.sendFile(__dirname + "/business/businessOperatorPage/productEdit.html")
+  })
+
+  // 소비자
+  app.get("/all", (req, res) => {
+    console.log("ajax 전체");
+    res.sendFile(__dirname + "/consumer/All_menu.html");
+  });
+
+  app.get('/funding_plan',(req, res) => {
+    console.log('펀딩예정');
+    client.query("select * from product where start > now()",(err,rows) =>{
+        res.render("funding_planned",{
+          rows : rows,
+        });
+    });
+  });
+
+  app.get('/early',(req, res) => {
+    console.log('얼리버드');
+    const bird = "bird";
+    client.query("select * from product where start <= now()",(err,rows) =>{
+      for(var i = 0; i<rows.length; ++i){
+        if(rows[i].ealry == bird){
+          res.render("earlybird",{
+            rows : rows[i],
+          });
+        }
+      }
+      });
+    });
+
+  app.get('/search', (req, res) => {
+    console.log('검색 form action 변수');
+    res.sendFile(__dirname + '/consumer/Search.html');
+  });
+
+  // 상품등록수정
 
   app.use(express.static("public"));
 
@@ -310,6 +347,16 @@ app.post("/update", (req, res) => {
   });
 
   var upload = multer({ storage: storage }, { filesize: 313 * 200 });
+
+  app.get("/RegistrationAndmodification", (req, res) => {
+    console.log("상품등록수정 페이지 로드");
+    res.sendFile(
+      path.join(
+        __dirname +
+          "/business/RegistrationAndmodification.html"
+      )
+    );
+  });
 
   app.post(
     "/RegistrationAndmodification",
@@ -385,6 +432,17 @@ app.post("/update", (req, res) => {
       });
     }
   );
+
+  // app.get("/Main", (req, res) => {
+  //   console.log("상품등록수정 완료");
+  //   res.sendFile(
+  //     path.join(
+  //       __dirname +
+  //       "/champon_hw/Main.html"
+  //     )
+  //   );
+  // });
+
 
 const port = process.env.PORT || 3002;
 
