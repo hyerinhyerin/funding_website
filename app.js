@@ -27,7 +27,7 @@ const client = mysql.createConnection({
 
 // ejs 설정 4 html은 데이터베이스의 정보 가져올 수 없기에 ejs 확장자 사용
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname , "/views"));
+app.set("views", path.join(__dirname, "/views"));
 
 // 정제 (미들웨어) 5 파일을 가져오면 깨질 수 있는데 그걸 방지
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -45,16 +45,6 @@ app.use(
 app.use(express.static(__dirname + "/"));
 
 // 사업자 회원가입
-app.get("/signup", (req, res) => {
-  console.log("회원가입 페이지");
-  res.sendFile(path.join(__dirname + "/login/signup.html"));
-});
-
-app.get("/business_login", (req, res) => {
-  console.log("사업자 회원가입");
-  res.sendFile(__dirname + "/login/business_login.html");
-});
-
 app.post("/business_login", (req, res) => {
   console.log("회원가입 하는중");
   const body = req.body;
@@ -96,17 +86,14 @@ app.post("/business_login", (req, res) => {
       res.redirect("/signup");
     } else {
       console.log(err);
-      res.send("<script>alert('회원가입 실패.'); location.href='/signup';</script>");
+      res.send(
+        '<script>alert("회원가입 실패"); location.href="/signup";</script>'
+      );
     }
   });
 });
 
 // 소비자 회원가입
-app.get("/consumer_login", (req, res) => {
-  console.log("소비자 회원가입");
-  res.sendFile(__dirname + "/login/consumer_login.html");
-});
-
 app.post("/consumer_login", (req, res) => {
   console.log("회원가입 하는중");
   const body = req.body;
@@ -140,17 +127,14 @@ app.post("/consumer_login", (req, res) => {
       res.redirect("/signup");
     } else {
       console.log(err);
-      res.send("<script>alert('회원가입 실패.'); location.href='/signup';</script>");
+      res.send(
+        '<script>alert("회원가입 실패"); location.href="/signup";</script>'
+      );
     }
   });
 });
 
 // 로그인
-app.get("/login", (req, res) => {
-  console.log("로그인");
-  res.sendFile(__dirname + "/login/login.html");
-});
-
 app.post("/login", (req, res) => {
   const body = req.body;
   const id = body.id;
@@ -169,7 +153,9 @@ app.post("/login", (req, res) => {
       res.redirect("/mypage");
     } else {
       console.log(err);
-      res.send("<script>alert('회원가입 실패.'); location.href='/signup';</script>");
+      res.send(
+        '<script>alert("회원가입 실패"); location.href="/signup";</script>'
+      );
     }
   });
 });
@@ -178,42 +164,45 @@ app.post("/login", (req, res) => {
 app.get("/mypage", (req, res) => {
   console.log("마이페이지");
   if (req.session.is_logined == true) {
-    client.query("select * from client where id = ?", [req.session.client_id], (err, rows) => {
-      if (rows[0].division == "1") {
-        res.render("bussiness_main", {
-          division: rows[0].division,
-          business_name: rows[0].business_name,
-          business_num: rows[0].business_num,
-          field: rows[0].field,
-          name: rows[0].name,
-          id: rows[0].id,
-          password: rows[0].password,
-          password_question: rows[0].password_question,
-          password_answer: rows[0].password_answer,
-          address: rows[0].address,
-          e_mail: rows[0].e_mail,
-          phone_number: rows[0].phone_number,
-          account_num: rows[0].account_num,
-        });
-      } else if (rows[0].division == "2") {
-        res.render("bussiness_main", {
-          division: rows[0].division,
-          name: rows[0].name,
-          id: rows[0].id,
-          password: rows[0].password,
-          password_question: rows[0].password_question,
-          password_answer: rows[0].password_answer,
-          address: rows[0].address,
-          e_mail: rows[0].e_mail,
-          phone_number: rows[0].phone_number,
-        });
+    client.query(
+      "select * from client where id = ?",
+      [req.session.client_id],
+      (err, rows) => {
+        if (rows[0].division == "1") {
+          res.render("bussiness_main", {
+            division: rows[0].division,
+            business_name: rows[0].business_name,
+            business_num: rows[0].business_num,
+            field: rows[0].field,
+            name: rows[0].name,
+            id: rows[0].id,
+            password: rows[0].password,
+            password_question: rows[0].password_question,
+            password_answer: rows[0].password_answer,
+            address: rows[0].address,
+            e_mail: rows[0].e_mail,
+            phone_number: rows[0].phone_number,
+            account_num: rows[0].account_num,
+          });
+        } else if (rows[0].division == "2") {
+          res.render("bussiness_main", {
+            division: rows[0].division,
+            name: rows[0].name,
+            id: rows[0].id,
+            password: rows[0].password,
+            password_question: rows[0].password_question,
+            password_answer: rows[0].password_answer,
+            address: rows[0].address,
+            e_mail: rows[0].e_mail,
+            phone_number: rows[0].phone_number,
+          });
+        }
       }
-    });
+    );
   } else {
     res.redirect("/login");
   }
 });
-
 
 // 마이페이지 수정
 app.post("/update", (req, res) => {
@@ -227,222 +216,140 @@ app.post("/update", (req, res) => {
   const account_num = body.account_num;
   const id = req.session.client_id;
 
-  client.query("update client set business_name = ?, password = ?, password_answer = ?, address = ?, e_mail = ?, phone_number = ?, account_num = ?  where id = '" + id + "'", [
-    business_name,
-    password,
-    password_answer,
-    address,
-    e_mail,
-    phone_number,
-    account_num,
-  ], (error, result) => {
-    if (error) {
-      throw error;
-    } else {
-      res.redirect("/mypage");
-    }
-  });
-});
-
-//로그아웃
-app.get("/logout", (req, res) => {
-  console.log("로그아웃 성공");
-  req.session.destroy(function (err) {
-    // 세션 파괴후 할 것들
-    res.redirect("/login");
-  });
-});
-
-  // 페이지 이동
-
-  // 로고
-  app.get("/", (req, res) => {
-    console.log("메인페이지");
-    res.sendFile(__dirname + "/consumer/Main.html");
-  });
-
-  // 카테고리
-  app.get("/furniture", (req, res) => {
-    console.log("카테고리 가구");
-    res.sendFile(__dirname + "/consumer/category/furniture.html");
-  });
-  app.get("/elec", (req, res) => {
-    console.log("카테고리 전자기구");
-    res.sendFile(__dirname + "/consumer/category/electronic.html");
-  });
-  app.get("/daily", (req, res) => {
-    console.log("카테고리 생활용품");
-    res.sendFile(__dirname + "/consumer/category/daily.html");
-  });
-  app.get("/hobby", (req, res) => {
-    console.log("카테고리 취미");
-    res.sendFile(__dirname + "/consumer/category/hobby.html");
-  });
-  app.get("/beauty", (req, res) => {
-    console.log("카테고리 뷰티");
-    res.sendFile(__dirname + "/consumer/category/beauty.html");
-  });
-
-  // 사업자
-  app.get("/detail", (req, res) => {
-    console.log("사업자 상세페이지");
-    console.log("소비자 상세페이지");
-    res.sendFile(__dirname + "/consumer/detail_page.html");
-  });
-  app.get("/productEdit",(req, res) => {
-    console.log("사업자 상품 수정 페이지")
-    res.sendFile(__dirname + "/business/businessOperatorPage/productEdit.html")
-  })
-
-  // 소비자
-  app.get("/all", (req, res) => {
-    console.log("ajax 전체");
-    res.sendFile(__dirname + "/consumer/All_menu.html");
-  });
-
-  app.get('/funding_plan',(req, res) => {
-    console.log('펀딩예정');
-    client.query("select * from product where start > now()",(err,rows) =>{
-        res.render("funding_planned",{
-          rows : rows,
-        });
-    });
-  });
-
-  app.get('/early',(req, res) => {
-    console.log('얼리버드');
-    client.query("select * from product where ealry = 'bird' and start <= now()",(err,rows) =>{
-      for(var i = 0; i<rows.length; ++i){
-        console.log(rows[i]);
-        res.render("earlybird", {
-          title : rows[i].title,
-          content : rows[i].content,
-          count : rows[i].count,
-          image : rows[i].image,
-        });
-      } 10
-      });
-    });
-
-  app.get('/search', (req, res) => {
-    console.log('검색 form action 변수');
-    res.sendFile(__dirname + '/consumer/Search.html');
-  });
-
-  // 상품등록수정
-
-  app.use(express.static("public"));
-
-  var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, "public/images/");
-    },
-    filename: function (req, file, cb) {
-      const ext = path.extname(file.originalname);
-      cb(null, path.basename(file.originalname, ext) + "-" + Date.now() + ext);
-    },
-  });
-
-  var upload = multer({ storage: storage }, { filesize: 313 * 200 });
-
-  app.get("/RegistrationAndmodification", (req, res) => {
-    console.log("상품등록수정 페이지 로드");
-    res.sendFile(
-      path.join(
-        __dirname +
-          "/business/RegistrationAndmodification.html"
-      )
-    );
-  });
-
-  app.post(
-    "/RegistrationAndmodification",
-    upload.fields([{ name: "input_image" }, { name: "detail_image" }]),
-    (req, res) => {
-      console.log("상품등록중");
-      const body = req.body;
-      const image = `/images/${req.files['input_image'][0].filename}`;
-      const title = body.title;
-      const content = body.detale_content;
-      const start = body.period_date;
-      const end = body.to;
-      const money = body.goal_money;
-      const name = body.product_name;
-      const count = body.product_count;
-      const price = body.product_price;
-      const category = body.product_category;
-      const ealry = body.ealry;
-      const sale = body.general;
-      const detailImage = `/images/${req.files['detail_image'][0].filename}`;
-
-      const sql =
-        "INSERT INTO product(image, title, content, start, end, money, name, count, price, category, ealry, sale, detailImage) values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
-      const data = [
-        image,
-        title,
-        content,
-        start,
-        end,
-        money,
-        name,
-        count,
-        price,
-        category,
-        ealry,
-        sale,
-        detailImage,
-      ];
-
-      client.query(sql, data, (err, row) => {
-        if (err) {
-          console.error("err : " + err);
-        } else {
-          console.log("row : " + JSON.stringify(row));
-        }
-      });
-
-      const sql2 = "SELECT * FROM product WHERE name = ? ";
-
-      client.query(sql2, [name], (err, row) => {
-        if (name == row[0].name) {
-          res.render("product", {
-            image: row[0].image,
-            title: row[0].title,
-            content: row[0].content,
-            start: row[0].start,
-            end: row[0].end,
-            money: row[0].money,
-            name: row[0].name,
-            count: row[0].count,
-            price: row[0].price,
-            category: row[0].category,
-            ealry: row[0].ealry,
-            sale: row[0].sale,
-            detailImage: row[0].detailImage,
-            number : row[0].number,
-          }); 
-        } else if (err) {
-          console.error(err)
-        } else {
-          res.redirect("/RegistrationAndmodification");
-        }
-      });
+  client.query(
+    "update client set business_name = ?, password = ?, password_answer = ?, address = ?, e_mail = ?, phone_number = ?, account_num = ?  where id = '" +
+      id +
+      "'",
+    [
+      business_name,
+      password,
+      password_answer,
+      address,
+      e_mail,
+      phone_number,
+      account_num,
+    ],
+    (error, result) => {
+      if (error) {
+        throw error;
+      } else {
+        res.redirect("/mypage");
+      }
     }
   );
+});
 
-  // app.get("/Main", (req, res) => {
-  //   console.log("상품등록수정 완료");
-  //   res.sendFile(
-  //     path.join(
-  //       __dirname +
-  //       "/champon_hw/Main.html"
-  //     )
-  //   );
-  // });
+app.get("early", (req, res) => {
+  console.log("얼리버드");
+  client.query(
+    "select * from product where ealry = 'bird' and start <= now()",
+    (err, rows) => {
+      for (var i = 0; i < rows.length; ++i) {
+        console.log(rows[i]);
+        res.render("earlybird", {
+          title: rows[i].title,
+          content: rows[i].content,
+          count: rows[i].count,
+          image: rows[i].image,
+        });
+      }
+    }
+  );
+});
 
+// 상품등록
+
+app.use(express.static("public"));
+
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "public/images/");
+  },
+  filename: function (req, file, cb) {
+    const ext = path.extname(file.originalname);
+    cb(null, path.basename(file.originalname, ext) + "-" + Date.now() + ext);
+  },
+});
+
+var upload = multer({ storage: storage }, { filesize: 313 * 200 });
+
+app.post(
+  "/RegistrationAndmodification",
+  upload.fields([{ name: "input_image" }, { name: "detail_image" }]),
+  (req, res) => {
+    console.log("상품등록중");
+    const body = req.body;
+    const image = `/images/${req.files["input_image"][0].filename}`;
+    const title = body.title;
+    const content = body.detale_content;
+    const start = body.period_date;
+    const end = body.to;
+    const money = body.goal_money;
+    const name = body.product_name;
+    const count = body.product_count;
+    const price = body.product_price;
+    const category = body.product_category;
+    const ealry = body.ealry;
+    const sale = body.general;
+    const detailImage = `/images/${req.files["detail_image"][0].filename}`;
+
+    const sql =
+      "INSERT INTO product(image, title, content, start, end, money, name, count, price, category, ealry, sale, detailImage) values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    const data = [
+      image,
+      title,
+      content,
+      start,
+      end,
+      money,
+      name,
+      count,
+      price,
+      category,
+      ealry,
+      sale,
+      detailImage,
+    ];
+
+    client.query(sql, data, (err, row) => {
+      if (err) {
+        console.error("err : " + err);
+      } else {
+        console.log("row : " + JSON.stringify(row));
+      }
+    });
+
+    const sql2 = "SELECT * FROM product WHERE name = ? ";
+
+    client.query(sql2, [name], (err, row) => {
+      if (name == row[0].name) {
+        res.render("product", {
+          image: row[0].image,
+          title: row[0].title,
+          content: row[0].content,
+          start: row[0].start,
+          end: row[0].end,
+          money: row[0].money,
+          name: row[0].name,
+          count: row[0].count,
+          price: row[0].price,
+          category: row[0].category,
+          ealry: row[0].ealry,
+          sale: row[0].sale,
+          detailImage: row[0].detailImage,
+          number: row[0].number,
+        });
+      } else if (err) {
+        console.error(err);
+      } else {
+        res.redirect("/RegistrationAndmodification");
+      }
+    });
+  }
+);
 
 const port = process.env.PORT || 3002;
 
-app.listen(port, function(){
+app.listen(port, function () {
   console.log(`${port} is running`);
 });
