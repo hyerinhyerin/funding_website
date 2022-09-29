@@ -72,8 +72,8 @@ app.post("/business_login", (req, res) => {
   const password_question = body.password_question;
   const password_answer = body.password_answer;
 
-  client.query("select * from client where id=?", [id], (err, data) => {
-    if (data.length == 0) {
+  client.query("select * from client where id=?", [id], (err, rows) => {
+    if (rows.length == 0) {
       console.log("회원가입 성공");
       client.query(
         "insert into client(division,business_name, business_num, field, name, id, password, address, e_mail, phone_number, account_num, password_question, password_answer) values(?,?,?,?,?,?,?,?,?,?,?,?,?)",
@@ -95,10 +95,8 @@ app.post("/business_login", (req, res) => {
       );
       res.redirect("/signup");
     } else {
-      console.log("회원가입 실패");
-      res.send('<script>alert("회원가입 실패");</script>');
       console.log(err);
-      res.redirect("/signup");
+      res.send("<script>alert('회원가입 실패.'); location.href='/signup';</script>");
     }
   });
 });
@@ -122,8 +120,8 @@ app.post("/consumer_login", (req, res) => {
   const password_question = body.password_question;
   const password_answer = body.password_answer;
 
-  client.query("select * from client where id=?", [id], (err, data) => {
-    if (data.length == 0) {
+  client.query("select * from client where id=?", [id], (err, rows) => {
+    if (rows.length == 0) {
       console.log("회원가입 성공");
       client.query(
         "insert into client(division, name, id, password, address, e_mail, phone_number, password_question, password_answer) values(?,?,?,?,?,?,?,?,?)",
@@ -141,10 +139,8 @@ app.post("/consumer_login", (req, res) => {
       );
       res.redirect("/signup");
     } else {
-      console.log("회원가입 실패");
-      res.send('<script>alert("회원가입 실패");</script>');
       console.log(err);
-      res.redirect("/signup");
+      res.send("<script>alert('회원가입 실패.'); location.href='/signup';</script>");
     }
   });
 });
@@ -160,20 +156,20 @@ app.post("/login", (req, res) => {
   const id = body.id;
   const password = body.password;
 
-  client.query("select * from client where id=?", [id], (err, data) => {
-    if (id == data[0].id && password == data[0].password) {
+  client.query("select * from client where id=?", [id], (err, rows) => {
+    if (id == rows[0].id && password == rows[0].password) {
       console.log("로그인 성공");
       // 세션에 추가
       req.session.is_logined = true;
-      req.session.client_id = data[0].id;
+      req.session.client_id = rows[0].id;
 
       console.log(req.session.is_logined);
       console.log(req.session.client_id);
 
       res.redirect("/mypage");
     } else {
-      console.log("로그인 실패");
-      res.redirect("/login");
+      console.log(err);
+      res.send("<script>alert('회원가입 실패.'); location.href='/signup';</script>");
     }
   });
 });
@@ -182,34 +178,34 @@ app.post("/login", (req, res) => {
 app.get("/mypage", (req, res) => {
   console.log("마이페이지");
   if (req.session.is_logined == true) {
-    client.query("select * from client where id = ?", [req.session.client_id], (err, data) => {
-      if (data[0].division == "1") {
+    client.query("select * from client where id = ?", [req.session.client_id], (err, rows) => {
+      if (rows[0].division == "1") {
         res.render("bussiness_main", {
-          division: data[0].division,
-          business_name: data[0].business_name,
-          business_num: data[0].business_num,
-          field: data[0].field,
-          name: data[0].name,
-          id: data[0].id,
-          password: data[0].password,
-          password_question: data[0].password_question,
-          password_answer: data[0].password_answer,
-          address: data[0].address,
-          e_mail: data[0].e_mail,
-          phone_number: data[0].phone_number,
-          account_num: data[0].account_num,
+          division: rows[0].division,
+          business_name: rows[0].business_name,
+          business_num: rows[0].business_num,
+          field: rows[0].field,
+          name: rows[0].name,
+          id: rows[0].id,
+          password: rows[0].password,
+          password_question: rows[0].password_question,
+          password_answer: rows[0].password_answer,
+          address: rows[0].address,
+          e_mail: rows[0].e_mail,
+          phone_number: rows[0].phone_number,
+          account_num: rows[0].account_num,
         });
-      } else if (data[0].division == "2") {
+      } else if (rows[0].division == "2") {
         res.render("bussiness_main", {
-          division: data[0].division,
-          name: data[0].name,
-          id: data[0].id,
-          password: data[0].password,
-          password_question: data[0].password_question,
-          password_answer: data[0].password_answer,
-          address: data[0].address,
-          e_mail: data[0].e_mail,
-          phone_number: data[0].phone_number,
+          division: rows[0].division,
+          name: rows[0].name,
+          id: rows[0].id,
+          password: rows[0].password,
+          password_question: rows[0].password_question,
+          password_answer: rows[0].password_answer,
+          address: rows[0].address,
+          e_mail: rows[0].e_mail,
+          phone_number: rows[0].phone_number,
         });
       }
     });
@@ -318,7 +314,6 @@ app.get("/logout", (req, res) => {
         res.render('earlybird', {
           rows : rows,
         });
-      
       });
     });
 
