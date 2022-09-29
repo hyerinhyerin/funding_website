@@ -295,7 +295,7 @@ app.post("/update", (req, res) => {
   });
 });
 
-  // 상품등록수정
+  // 상품등록
 
   app.use(express.static("public"));
 
