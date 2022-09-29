@@ -44,6 +44,64 @@ app.use(
 
 app.use(express.static(__dirname + "/"));
 
+// 페이지 이동 라우터
+
+// 카테고리
+const main = require("./index");
+const detail = require("./detailRouter");
+const furnitrue = require("./furnitureRouter");
+const electronic = require("./electronicRouter");
+const daily = require("./dailyRouter");
+const hobby = require("./hobbyRouter");
+const beauty = require("./beautyRouter");
+
+app.use("/", main);
+app.use("/detail", detail);
+app.use("/furnitrue", furnitrue);
+app.use("/elec", electronic);
+app.use("/daily", daily);
+app.use("/hobby", hobby);
+app.use("/beauty", beauty);
+
+// 사업자
+const productEdit = require("./productEditRouter");
+const registration = require("./RegistrationAndmodificationRouter");
+
+app.use("/productEdit", productEdit);
+app.use("/RegistrationAndmodification", registration);
+
+// 소비자
+const all = require("./allRouter");
+const fundingPlan = require("./fundingPlanRouter");
+const early = require("./earlyRouter");
+const search = require("./searchRouter");
+
+app.use("/all", all);
+app.use("/funding_plan", fundingPlan);
+app.use("/early", early);
+app.use("/search", search);
+
+// 회원가입
+const signup = require("./signupRouter");
+const consumer = require("./consumerLoginRouter");
+const business = require("./businessLoginRouter");
+
+app.use("/signup", signup);
+app.use("/consumer_login", consumer);
+app.use("/business_login", business);
+
+// 로그인 로그아웃
+const login = require("./loginRouter");
+const logout = require("./logoutRouter");
+
+app.use("/login", login);
+app.use("/logout", logout);
+
+// error
+app.use(function (req, res, next) {
+  res.status(404).send("라우터 에러");
+});
+
 // 사업자 회원가입
 app.post("/business_login", (req, res) => {
   console.log("회원가입 하는중");
