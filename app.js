@@ -14,16 +14,16 @@ const { dirname } = require("path");
 const app = express();
 
 // db 연결 2
-const client = mysql.createConnection({
-  // host : "us-cdbr-east-06.cleardb.net",
-  // user : "ba7149f08d47c2",
-  // password : "751b7369",
-  // database : "heroku_99d017c83498894",
-  host: "funtestdb.c48enj5ykq9v.ap-northeast-2.rds.amazonaws.com",
-  user: "root",
-  password: "rlawodbs223",
-  database: "funTestDb",
-});
+// const client = mysql.createConnection({
+//   // host : "us-cdbr-east-06.cleardb.net",
+//   // user : "ba7149f08d47c2",
+//   // password : "751b7369",
+//   // database : "heroku_99d017c83498894",
+//   host: "funtestdb.c48enj5ykq9v.ap-northeast-2.rds.amazonaws.com",
+//   user: "root",
+//   password: "rlawodbs223",
+//   database: "funTestDb",
+// });
 
 // ejs 설정 4 html은 데이터베이스의 정보 가져올 수 없기에 ejs 확장자 사용
 app.set("view engine", "ejs");
@@ -45,6 +45,7 @@ app.use(
 app.use(express.static(__dirname + "/"));
 
 // 페이지 이동 라우터
+
 
 // 카테고리
 const main = require("./index");
