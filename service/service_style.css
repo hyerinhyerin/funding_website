@@ -237,7 +237,7 @@ h4 {
     margin: 0 auto;
     padding: 15px;
     padding-top: 30px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     font-family: "nanum";
     color: #606060;
     line-height: 27px;
@@ -303,7 +303,7 @@ h4 {
     position: relative;
     margin-right: 30px;
     border: none;
-    left: 110px;
+    left: 150px;
     font-family: "nanum";
     color: #606060;
     font-size: small;
@@ -322,8 +322,9 @@ h4 {
     position: relative;
     margin-left: none;
     margin-right: none;
-    left: 110px;
+    left: 150px;
     border: none;
+    width: 100px;
     font-family: "nanum";
     color: #606060;
     font-size: small;
@@ -331,8 +332,9 @@ h4 {
 
 .list_set_option_count_2 {
     position: relative;
-    left: 100px;
+    left: 190px;
     border: none;
+    width: 100px;
     font-family: "nanum";
     color: #606060;
     font-size: small;
@@ -348,20 +350,11 @@ h4 {
     font-size: large;
 }
 
-.list_set_option_k {
-    position: relative;
-    left: 70px;
-    border: none;
-    font-family: "nanum";
-    color: #606060;
-    font-size: small;
-}
-
 .list_set_option_l {
     position: relative;
     margin-left: none;
     margin-right: none;
-    left: 100px;
+    left: 195px;
     border: none;
     font-family: "nanum";
     color: #606060;
@@ -371,7 +364,7 @@ h4 {
 .list_set_option_name {
     position: relative;
     margin-left: 15px;
-    margin-right: 335px;
+    margin-right: 258px;
     border: none;
     font-family: "nanum";
     color: #606060;
@@ -421,14 +414,13 @@ h4 {
 
 .progress {
     position: relative;
-    left: 25px;
-    bottom: 5px;
-    margin-top: -50px;
-    margin-bottom: -10px;
+    margin-top: -75px;
+    left: 40%;
+    bottom: 80px;
     background-color: #eee;
     border-radius: 20px;
     height: 30px;
-    width: 90%;
+    width: 50%;
 }
 
 .progress-done {
@@ -444,26 +436,21 @@ h4 {
 
 .per_style {
     position: relative;
-    justify-content: center;
-    left: 50%;
-    bottom: 23px;
-    font-size: medium;
-    color: white;
+    left: 105%;
+    bottom: 85%;
+    font-size: large;
+    color: black;
 }
 
-.per_font {
+.per_img {
     position: relative;
-    left: 470px;
-    bottom: 235px;
-    width: 30%;
-    height: 50px;
-    border: 1px solid #008299;
-    border-radius: 5px;
-    font-family: "nanum";
-    background-color: white;
-    font-size: x-large;
-    color: #008299;
+    left: 60%;
+    bottom: 230px;
+    margin: 0px;
+    width: 30px;
+    height: 30px;
 }
+
 .per_font_done {
     position: relative;
     left: 470px;
@@ -488,7 +475,7 @@ h4 {
 .user-name {
     position: relative;
     margin-top: 30px;
-    left: 50%;
+    left: 52%;
     font-family: "nanum";
     font-size: larger;
     color: #606060;
