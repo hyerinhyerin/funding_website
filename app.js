@@ -366,6 +366,60 @@ app.get("/logout", (req, res) => {
       });
     });
 
+  app.get('/all',(req, res) => {
+    console.log('전체메뉴');
+    client.query("select * from product where start <= now()",(err,rows) =>{
+        res.render('All_menu', {
+          rows : rows,
+        });
+    });
+  });
+  
+  app.get('/beauty',(req, res) => {
+    console.log('카테고리 뷰티');
+    client.query("select * from product where start <= now() and category='beauty'",(err,rows) =>{
+        res.render('Category_beauty', {
+          rows : rows,
+        });
+    });
+  });
+
+  app.get('/daily',(req, res) => {
+    console.log('카테고리 생활용품');
+    client.query("select * from product where start <= now() and category='daily_supplies'",(err,rows) =>{
+        res.render('Category_daily', {
+          rows : rows,
+        });
+    });
+  });
+
+  app.get('/elec',(req, res) => {
+    console.log('카테고리 전자기기');
+    client.query("select * from product where start <= now() and category='electronic_devices'",(err,rows) =>{
+        res.render('Category_elec', {
+          rows : rows,
+        });
+    });
+  });
+
+  app.get('/furniture',(req, res) => {
+    console.log('카테고리 가구');
+    client.query("select * from product where start <= now() and category='furniture'",(err,rows) =>{
+        res.render('Category_furniture', {
+          rows : rows,
+        });
+    });
+  });
+
+  app.get('/hobby',(req, res) => {
+    console.log('카테고리 취미용품');
+    client.query("select * from product where start <= now() and category='hobby'",(err,rows) =>{
+        res.render('Category_hobby', {
+          rows : rows,
+        });
+    });
+  });
+
   app.get('/search', (req, res) => {
     console.log('검색 form action 변수');
     res.sendFile(__dirname + '/consumer/Search.html');

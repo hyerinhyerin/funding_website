@@ -39,15 +39,25 @@
   align-items: center;
   margin: auto;
   justify-content: center; 
-  
+
 }
 
+/*글자 줄임*/
+
+#hidden{
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
 /* progress */
 .progress{
   background-color: #eee;
   border-radius: 20px;
   height: 20px;
   width: 375px;
+  margin-top: 20px;
 }
 .progress-done{
   background-color: #008299;
