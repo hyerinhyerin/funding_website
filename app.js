@@ -94,9 +94,11 @@ app.use("/business_login", business);
 // 로그인 로그아웃
 const login = require("./loginRouter");
 const logout = require("./logoutRouter");
+const mypage = require("./mypageRouter")(app);
 
 app.use("/login", login);
 app.use("/logout", logout);
+app.use("/mypage", mypage);
 
 // error
 app.use(function (req, res, next) {
