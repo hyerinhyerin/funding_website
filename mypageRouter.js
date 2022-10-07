@@ -5,6 +5,7 @@ module.exports = (app) => {
 
     router.get("/", (req, res) => {
         console.log("마이페이지");
+        console.log(req.session.is_logined);
         if (req.session.is_logined == true) {
             client.query(
                 "select * from client where id = ?",
