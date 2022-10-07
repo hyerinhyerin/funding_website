@@ -44,11 +44,11 @@ body {
 
 .nav_menu {
     position: relative;
-    width: 100.97%;
-    height: 100px;
+    padding: 6px 25px;
     background-color: #008299;
-    margin: -10px;
-    margin-top: -26px;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
 
 }
 

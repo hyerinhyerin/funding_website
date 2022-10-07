@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "gong";
+    src: url("/img&font/font/Gong\ Gothic\ Medium.ttf");
+}
+
+@font-face {
+    font-family: "nanum";
+    src: url("/img&font/font/NanumSquareRoundB.ttf");
+}
+
+@font-face {
+    font-family: "gongli";
+    src: url("/img&font/font/Gong\ Gothic\ Light.ttf");
+}
+
+@font-face {
+    font-family: "main";
+    src: url("/img&font/font/HS두꺼비체.ttf");
+}
+.container {
+  text-align: center;
+  position: relative;
+  top: 325px;
+}
+.footer-div {
+    position: relative;
+    top: 500px;
+}
+#contents, #main-btn {
+    font-family: "gongli";
+}
+#contents {
+    font-size: 35px;
+}
+#main-btn {
+    width: 182px;
+    height: 50px;
+    background-color: #008299;
+    margin: -10px;
+    margin-top: 14px;
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
