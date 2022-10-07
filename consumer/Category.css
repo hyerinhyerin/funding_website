@@ -29,16 +29,14 @@
 }
 
 /* item */
-#wapper{
+ #wapper{
   width: 90%;
   padding-top: 100px;
   display: flex;
   grid-template-columns: repeat(2, 600px);
   grid-template-rows: minmax(300px, auto);
-  /* grid-gap: 100px 160px; */
   align-items: center;
-  margin: auto;
-  justify-content: center; 
+  margin: auto 64px;
 
 }
 
