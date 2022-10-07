@@ -20,15 +20,24 @@
 
 /* item */
 #wapper {
-  width: 90%;
+  width: 420px;
   padding-top: 100px;
-  display: flex;
-  grid-template-columns: repeat(2, 600px);
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   grid-template-rows: minmax(300px, auto);
   /* grid-gap: 100px 160px; */
   align-items: center;
   margin: auto;
   justify-content: center;
+
+}
+
+#hidden {
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 /* sort */
@@ -50,6 +59,7 @@
   border-radius: 20px;
   height: 20px;
   width: 375px;
+  margin-top: 20px;
 }
 .progress-done{
   background-color: #008299;

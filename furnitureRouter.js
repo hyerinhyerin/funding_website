@@ -1,10 +1,14 @@
 const express = require("express");
-
+const client = require('./database');
 const router = express.Router();
 
 router.get("/", (req, res) => {
     console.log("카테고리 가구");
-    res.sendFile(__dirname + "/consumer/category/furniture.html");
+    client.query("select * from product where start <= now() and category='furniture'",(err,rows) =>{
+        res.render('Category_furniture', {
+          rows : rows,
+        });
+    });
 })
 
 module.exports = router;

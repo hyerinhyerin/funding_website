@@ -1,10 +1,14 @@
 const express = require("express");
-
+const client = require('./database');
 const router = express.Router();
 
-router.get("/", (req, res) => {
-    console.log("소비자 상품 얼리버드 페이지");
-    res.sendFile(__dirname + "/consumer/earlybird.html");
-})
+router.get('/', (req, res) => {
+    console.log('얼리버드');
+    client.query("select * from product where ealry = 'bird' and start <= now()", (err, rows) => {
+        res.render("earlybird", {
+            rows: rows,
+        });
+    });
+});
 
 module.exports = router;

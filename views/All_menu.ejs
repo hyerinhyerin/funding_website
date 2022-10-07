@@ -4,15 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Funding_planned_consumer</title>
-    <link rel="stylesheet" href="/consumer/funding_planned.css" />
+    <title>Main_consumer</title>
+    <link rel="stylesheet" href="/consumer/All_menu.css" />
     <link rel="stylesheet" href="/consumer/common.css" />
   </head>
   <body>
     <div class="container">
       <header data-include="/Header.html">
       </header>
-      
       <div id="main_body">
         <!-- 이벤트 창 -->
         <div>
@@ -65,7 +64,7 @@
             <input type="radio" name="radio-btn" id="img-5" />
             <li class="slide-container">
               <div class="slide">
-                <img src="/img&font/img/배너_5.jpg" />
+                <img src="/img&font/img/배너_5.png" />
               </div>
               <div class="nav">
                 <label for="img-4" class="prev">&#x2039;</label>
@@ -92,109 +91,37 @@
               <label for="img-5" class="nav-dot" id="img-dot-5"></label>
               <label for="img-6" class="nav-dot" id="img-dot-6"></label>
             </li>
-          </ul> 
+          </ul>
         </div>
         <!-- item -->
         <div id="item-list">
           <div>
             <ul>
-              <li class="listsort">최신순</li>
-              <li class="listsort">오래된순</li>
+              <li class="listsort">오름차순</li>
+              <li class="listsort">내림차순</li>
             </ul>
           </div>
           <hr />
-          
-          <div id="wapper" class="funplan">
-            <%  
-              for(var i=0; i<rows.length; i++) { 
+          <div id="wapper">
+            <% for(var i=0; i<rows.length; i++) { 
                 var data = rows[i];
-                var month = data.start.getMonth()+1;
-                var day = data.start.getDate();
-            
-          %>
+              %>
             <div class="item">
               <div>
-                <div style="position: relative">
-                  <div style="position: absolute">
-                    <img src="<%= data.image %>" class="itemimg" />
-                  </div>
-                  <div>
-                    <a href="#"> <img src="/img&font/img/back_white.png" class="over" /></a>
-                    <h2>오픈 예정</h2>
-                  </div>
-                </div>
+                <img src="<%= data.image %>" class="itemimg" />
               </div>
-        
-              <h3><%= data.title %></h3>
-              <div class="funp">
-                <p><span id ="hidden"><%= data.content %></span></p>
-                <p><span id = "plusp" class="funp"><%= month %>월 <%= day %>일 오픈</span></p>
+              <div>
+                <h3><%= data.title %></h3>
+                <p><span id="hidden"><%= data.content %></span></p>
+                <div class="progress">
+                  <div class="progress-done" data-done="90"><span>90%</span></div>
+                </div>
               </div>
             </div>
             <% } %>
-            <!-- <div class="item">
-              <div>
-                <div style="position: relative">
-                  <div style="position: absolute">
-                    <img src="/img&font/img/pr_ph.png" class="itemimg" />
-                  </div>
-                  <div>
-                    <a href="#"> <img src="/img&font/img/back_white.png" class="over" /></a>
-                    <h2>오픈 예정</h2>
-                  </div>
-                </div>
-              </div>
-              <h3>아이폰 13 Pro</h3>
-              <div class="funp">
-                <p>Apple</p>
-                <p><span class="funp">7월 29일 오픈</span></p>
-              </div>
-            </div>
           </div>
-        
-          <div id="wapper" class="funplan">
-            <div class="item">
-              <div>
-                <div style="position: relative">
-                  <div style="position: absolute">
-                    <img src="/img&font/img/pr_tum.png" class="itemimg" />
-                  </div>
-                  <div>
-                    <a href="#"> <img src="/img&font/img/back_white.png" class="over" /></a>
-                    <h2>오픈 예정</h2>
-                  </div>
-                </div>
-              </div>
-        
-              <h3>곰표 텀블러</h3>
-              <div class="funp">
-                <p>곰표</p>
-                <p><span class="funp">7월 29일 오픈</span></p>
-              </div>
-            </div>
-        
-            <div class="item">
-              <div>
-                <div style="position: relative">
-                  <div style="position: absolute">
-                    <img src="/img&font/img/pr_tv.png" class="itemimg" />
-                  </div>
-                  <div>
-                    <a href="#"> <img src="/img&font/img/back_white.png" class="over" /></a>
-                    <h2>오픈 예정</h2>
-                  </div>
-                </div>
-              </div>
-        
-              <h3>LG 스피커 얼리버드</h3>
-              <div class="funp">
-                <p>LG전자</p>
-                <p><span class="funp">7월 29일 오픈</span></p>
-              </div>
-            </div>-->
-          </div>
-        </div> 
-
+        </div>
+      </div>
       <hr />
       <footer data-include="/Footer.html" class="footer">
       </footer>

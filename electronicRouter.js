@@ -1,10 +1,14 @@
 const express = require("express");
-
+const client = require('./database');
 const router = express.Router();
 
 router.get("/", (req, res) => {
     console.log("카테고리 전자기기");
-    res.sendFile(__dirname + "/consumer/category/electronic.html");
+    client.query("select * from product where start <= now() and category='electronic_devices'",(err,rows) =>{
+        res.render('Category_elec', {
+          rows : rows,
+        });
+    });
 })
 
 module.exports = router;
