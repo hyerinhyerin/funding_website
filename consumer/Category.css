@@ -157,14 +157,16 @@ color: #4f4f4f;
 
 /* item */
 #wapper{
-  width: 90%;
+  width: 420px;
   padding-top: 100px;
-  display: flex;
-  grid-template-columns: repeat(2, 600px);
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
   grid-template-rows: minmax(300px, auto);
+  grid-gap: 100px 160px;
   align-items: center;
-  margin: auto 64px;
-
+  margin: 0px auto;
+  justify-content: center;
+  justify-items: center;
 }
 
 /*글자 줄임*/
