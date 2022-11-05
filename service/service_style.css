@@ -9,6 +9,12 @@
 }
 
 @font-face {
+    font-family: "nanum";
+    src: url("/img&font/font/NanumSquareRoundB.ttf");
+    font-weight: 900;
+}
+
+@font-face {
     font-family: "gongli";
     src: url("/img&font/font/Gong\ Gothic\ Light.ttf");
 }
@@ -224,9 +230,6 @@ h4 {
     padding: 15px;
     padding-top: 30px;
     padding-bottom: 0px;
-    font-family: "nanum";
-    color: #606060;
-    line-height: 27px;
 }
 
 .last-constents {
@@ -359,6 +362,17 @@ h4 {
     font-family: "nanum";
     color: #606060;
     font-size: small;
+}   
+
+.list_set_option_ll {
+    position: relative;
+    margin-left: none;
+    margin-right: none;
+    left: 190px;
+    border: none;
+    font-family: "nanum";
+    color: #606060;
+    font-size: small;
 }
 
 .list_set_option_name {
@@ -366,7 +380,8 @@ h4 {
     margin-left: 15px;
     margin-right: 258px;
     border: none;
-    font-family: "nanum";
+    font-family: "nanum2";
+    font-weight: bold;
     color: #606060;
     font-size: small;
 }
@@ -444,11 +459,11 @@ h4 {
 
 .per_img {
     position: relative;
-    left: 60%;
-    bottom: 230px;
-    margin: 0px;
-    width: 30px;
-    height: 30px;
+    margin-top: 25px;
+    margin-left: 5px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
 }
 
 .per_font_done {
@@ -567,8 +582,6 @@ h4 {
     padding: 15px;
     padding-bottom: 30px;
     padding-top: 30px;
-    font-family: "nanum";
-    color: #606060;
     line-height: 27px;
 }
 
