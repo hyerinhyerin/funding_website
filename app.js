@@ -100,9 +100,11 @@ app.use("/logout", logout);
 app.use("/mypage", mypage);
 
 // 사업자 회원가입
+app.use(express.static("public"));
+
 const businessSignup = require("./businessSignup");
 
-app.post("/business_login", businessSignup.businessRouter);
+app.post("/business_login", businessSignup);
 
 // 소비자 회원가입
 const consumerSignup = require("./consumerSignup");

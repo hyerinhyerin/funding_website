@@ -42,9 +42,10 @@ router.post(
     const ealry = body.ealry;
     const sale = body.general;
     const detailImage = `/images/${req.files["detail_image"][0].filename}`;
+    const id = req.session.client_id;
 
     const sql =
-      "INSERT INTO product(image, title, content, start, end, money, name, count, price, category, ealry, sale, detailImage) values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+      "INSERT INTO product(image, title, content, start, end, money, name, count, price, category, ealry, sale, detailImage,id) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
     const data = [
       image,
       title,
@@ -59,6 +60,7 @@ router.post(
       ealry,
       sale,
       detailImage,
+      id
     ];
 
     client.query(sql, data, (err, row) => {
