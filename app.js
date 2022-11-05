@@ -46,7 +46,6 @@ app.use(express.static(__dirname + "/"));
 
 // 페이지 이동 라우터
 
-
 // 카테고리
 const main = require("./index");
 const detail = require("./detailRouter");
@@ -101,35 +100,34 @@ app.use("/logout", logout);
 app.use("/mypage", mypage);
 
 // 사업자 회원가입
-const businessSignup = require("./businessSignup")
+const businessSignup = require("./businessSignup");
 
 app.post("/business_login", businessSignup.businessRouter);
 
 // 소비자 회원가입
-const consumerSignup = require("./consumerSignup")
+const consumerSignup = require("./consumerSignup");
 
 app.post("/consumer_login", consumerSignup.consumerRouter);
 
 // 로그인
-const loginPostSignup = require("./loginPostRouter")
+const loginPostSignup = require("./loginPostRouter");
 
 app.post("/login", loginPostSignup.loginRouter);
 
 // 마이페이지 불러오기
-const mypageRouter = require("./mypageRouter")
+const mypageRouter = require("./mypageRouter");
 
 app.get("/mypage", mypageRouter);
 
 // 마이페이지 수정
-const updateRouter = require("./updateRouter")
+const updateRouter = require("./updateRouter");
 
 app.post("/update", updateRouter.updateRouter);
 
 // 상품등록수정
-
 app.use(express.static("public"));
 
-const multerRouter = require("./multerRouter")
+const multerRouter = require("./multerRouter");
 
 app.post("/RegistrationAndmodification", multerRouter);
 
