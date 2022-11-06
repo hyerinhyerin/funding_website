@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="/H_F.css" />
+
+<div class="nav_menu">
+  <a href="/" class="_menu">ㅍㅎㄴㄹ</a>
+  <!--카테고리 메뉴바-->
+  <div>
+    <ul id="mainline">
+      <li>
+        <span id="category" class="category_menu">카테고리</span>
+        <ul>
+          <li>
+            <a href="/furniture">가구</a>
+          </li>
+          <li>
+            <a href="/elec">전자기기</a>
+          </li>
+          <li>
+            <a href="/daily">생활용품</a>
+          </li>
+          <li>
+            <a href="/hobby">취미</a>
+          </li>
+          <li>
+            <a href="/beauty">뷰티</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/all" id="all" class="all_menu">전체</a>
+      </li>
+      <li>
+        <a href="/funding_plan" id="fundingplan" class="funding_menu">펀딩예정</a>
+      </li>
+      <li>
+        <a href="/early" id="early" class="earlybird_menu">얼리버드</a>
+      </li>
+    </ul>
+  </div>
+
+  <a href="/mypage" class="main_login">마이페이지</a>
+  <a href="/logout" class="main_signup">로그아웃</a>
+  <div id="wrap">
+    <!-- <form action="/search" post="get" autocomplete="on"> -->
+    <input
+      id="search"
+      name="search"
+      type="text"
+      placeholder="얼리버드 특가 "
+    />
+    <input id="search_submit" value="Rechercher" type="submit" onclick="location.href='/search';"/>
+    <!-- </form> -->
+  </div>
+</div>
+

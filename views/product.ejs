@@ -8,58 +8,8 @@
 
   <body>
     <div class="container">
-      <div class="nav_menu">
-        <a href="/" class="_menu">ㅍㅎㄴㄹ</a>
-        <!--카테고리 메뉴바-->
-        <div>
-          <ul id="mainline">
-            <li>
-              <a href="#" class="category_menu">카테고리</a>
-              <ul>
-                <li data-url="furniture.html">
-                  <span>가구</span>
-                </li>
-                <li data-url="electronic.html">
-                  <span>전자기기</span>
-                </li>
-                <li data-url="daily.html">
-                  <span>생활용품</span>
-                </li>
-                <li data-url="hobby.html">
-                  <span>취미</span>
-                </li>
-                <li data-url="beauty.html">
-                  <span>뷰티</span>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="/champon_hw/Main.html" class="all_menu">전체</a>
-            </li>
-            <li>
-              <a href="#" class="funding_menu">펀딩예정</a>
-            </li>
-            <li>
-              <a href="#" class="earlybird_menu">얼리버드</a>
-            </li>
-          </ul>
-        </div>
-
-        <a href="/mypage" class="main_mypage">마이페이지</a>
-        <a href="/logout" class="main_logout">로그아웃</a>
-
-        <div id="wrap">
-          <form action="" autocomplete="on">
-            <input
-              id="search"
-              name="search"
-              type="text"
-              placeholder="검색어를 입력해 주세요."
-            />
-            <input id="search_submit" value="Rechercher" type="submit" />
-          </form>
-        </div>
-      </div>
+      <header data-include="/Header_login.html">
+      </header>
 
       <!-- body -->
       <h1>상품 정보</h1>
@@ -121,16 +71,10 @@
         </form>
       </div>
 
-      <footer class="footer">
-        <hr />
-        <div>
-          <h3>펀한누리</h3>
-          <p>주소 : 경기도 군포시 한세로 30</p>
-          <p>고객 문의 : 0509moon@naver.com</p>
-          <p>ver. Beta test</p>
-        </div>
+      <footer data-include="/Footer.html" class="footer">
       </footer>
     </div>
     <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script src="/H_F.js"></script>
   </body>
 </html>
