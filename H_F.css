@@ -221,8 +221,8 @@ body {
   text-align: left;
   left: 17%;
   padding-top: 50px;
-  /* position: absolute;
-  bottom: 0; */
+  position: absolute;
+  /*bottom: 0; */
   height: 150px;
 }
 
