@@ -425,7 +425,7 @@ h1 {
 #preview-image {
     position: relative;
     left: 31px;
-    width: 313px;
+    width: 150px;
     height: 200px;
     object-fit: cover;
 }
