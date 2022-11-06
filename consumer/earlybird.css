@@ -372,7 +372,7 @@ hr{
     border-color: #f2f4f641;
   }
   /* 정렬 */
-hr{
+.hr{
   padding-bottom: 100px;  
   border-left: none;
   }
