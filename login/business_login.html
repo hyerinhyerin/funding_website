@@ -1,158 +1,150 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>business_login</title>
     <link rel="stylesheet" type="text/css" href="/login/business_login.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="nav_menu">
-            <a href="/" class="_menu">ㅍㅎㄴㄹ</a>
-            <!--카테고리 메뉴바-->
-            <div>
-                <ul id="mainline">
-                    <li>
-                        <span class="category_menu">카테고리</span>
-                        <ul>
-                            <li data-url="/furniture">
-                                <span>가구</span>
-                            </li>
-                            <li data-url="/elec">
-                                <span>전자기기</span>
-                            </li>
-                            <li data-url="/daily">
-                                <span>생활용품</span>
-                            </li>
-                            <li data-url="/hobby">
-                                <span>취미</span>
-                            </li>
-                            <li data-url="/beauty">
-                                <span>뷰티</span>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="all_menu">전체</span>
-                    </li>
-                    <li>
-                        <span class="funding_menu">펀딩예정</span>
-                    </li>
-                    <li>
-                        <span class="earlybird_menu">얼리버드</span>
-                    </li>
-                </ul>
-            </div>
+      <header data-include="/Header.html"></header>
+      <div class="contain_mid">
+        <h1>사업자 회원가입</h1>
+        <hr />
+        <div class="contain_mid2">
+          <div class="signup_form">
+            <form method="post" enctype="multipart/form-data">
+              <div>
+                <label for="business_name" class="name"> 상호명 </label>
+                <input
+                  type="text"
+                  id="business_name"
+                  name="business_name"
+                  required
+                /><br />
+              </div>
+              <div>
+                <label for="business_num" class="name"> 사업자번호 </label>
+                <input
+                  type="number"
+                  id="business_num"
+                  name="business_num"
+                  required
+                /><br />
+              </div>
+              <div>
+                <label for="field" class="name"> 분야 </label>
+                <input type="text" id="field" name="field" required /><br />
+              </div>
 
-            <a href="/login" class="main_login">로그인</a>
-            <a href="/signup" class="main_signup">회원가입</a>
-            <div id="wrap">
-                <form action="/search" post="get" autocomplete="on">
-                    <input id="search" name="search" type="text" placeholder="얼리버드 특가 " />
-                    <input id="search_submit" value="Rechercher" type="submit" />
-                </form>
-            </div>
+              <hr class="form_hr" />
+
+              <div>
+                <label for="name" class="name"> 이름(담당자) </label>
+                <input type="text" id="name" name="name" required /><br />
+              </div>
+              <div>
+                <label for="id" class="name"> 아이디 </label>
+                <input type="text" id="id" name="id" required /><br />
+              </div>
+              <div>
+                <label for="password" class="name"> 비밀번호 </label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                /><br />
+              </div>
+              <div>
+                <label for="address" class="name"> 주소 </label>
+                <input type="text" id="address" name="address" required /><br />
+              </div>
+              <div>
+                <label for="e_mail" class="name"> 이메일 </label>
+                <input type="email" id="e-mail" name="e_mail" required /><br />
+              </div>
+              <div>
+                <label for="phone_number" class="name"> 휴대폰 </label>
+                <input
+                  type="tel"
+                  id="phone-number"
+                  name="phone_number"
+                  required
+                /><br />
+              </div>
+              <div>
+                <label for="account_num" class="name"> 계좌번호 </label>
+                <input
+                  type="number"
+                  id="account_num"
+                  name="account_num"
+                  required
+                /><br />
+              </div>
+
+              <hr class="form_hr" />
+
+              <div>
+                <label for="password_question" class="name">
+                  비밀번호 찾기 질문
+                </label>
+                <select name="password_question" id="password_question">
+                  <option value="1">처음으로 키운 애완동물의 이름은?</option>
+                  <option value="2">태어난 장소는?</option>
+                  <option value="3">좋아하는 과일은?</option>
+                  <option value="4">좋아하는 색깔은?</option>
+                </select>
+                <br />
+              </div>
+              <div>
+                <label for="password_answer" class="name"> 답변 </label>
+                <input
+                  type="text"
+                  id="password_answer"
+                  name="password_answer"
+                  required
+                /><br />
+              </div>
+
+              <div class="image-container">
+                <label id="product-label" class="name">대학생 인증</label>
+                <label id="ext_label2">ex) 학생증, 재학증명서 등</label>
+                <img
+                  id="preview-image"
+                  src="/img&font/img/학교인증.png"
+                  alt="대표이미지입니다."
+                />
+                <label class="input-file-button" for="input_image"
+                  >첨부하기</label
+                >
+                <input
+                  type="file"
+                  id="input_image"
+                  name="input_image"
+                  style="display: none"
+                />
+                <label id="ext_label"
+                  >jpg, png, gif, svg, tif 업로드 가능합니다.</label
+                >
+              </div>
+
+              <hr class="form_hr" />
+
+              <div class="submit_bt">
+                <input type="submit" value="신청하기" />
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="contain_mid">
-            <h1>사업자 회원가입</h1>
-            <hr>
-            <div class="contain_mid2">
-                <div class="signup_form">
-                    <form method="post" enctype="multipart/form-data">
-                        <div>
-                            <label for="business_name" class = "name"> 상호명 </label>
-                            <input type="text" id="business_name" name="business_name" required><br>
-                        </div>
-                        <div>
-                            <label for="business_num" class = "name"> 사업자번호 </label>
-                            <input type="number" id="business_num" name="business_num" required><br>
-                        </div>
-                        <div>
-                            <label for="field" class = "name"> 분야 </label>
-                            <input type="text" id="field" name="field" required><br>
-                        </div>
+      </div>
 
-                        <hr class="form_hr">
-
-                        <div>
-                            <label for="name" class = "name"> 이름(담당자) </label>
-                            <input type="text" id="name" name="name" required><br>
-                        </div>
-                        <div>
-                            <label for="id" class = "name"> 아이디 </label>
-                            <input type="text" id="id" name="id" required><br>
-                        </div>
-                        <div>
-                            <label for="password" class = "name"> 비밀번호 </label>
-                            <input type="password" id="password" name="password" required><br>
-                        </div>
-                        <div>
-                            <label for="address" class = "name"> 주소 </label>
-                            <input type="text" id="address" name="address" required><br>
-                        </div>
-                        <div>
-                            <label for="e_mail" class = "name"> 이메일 </label>
-                            <input type="email" id="e-mail" name="e_mail" required><br>
-                        </div>
-                        <div>
-                            <label for="phone_number" class = "name"> 휴대폰 </label>
-                            <input type="tel" id="phone-number" name="phone_number" required><br>
-                        </div>
-                        <div>
-                            <label for="account_num" class = "name"> 계좌번호 </label>
-                            <input type="number" id="account_num" name="account_num" required><br>
-                        </div>
-
-                        <hr class="form_hr">
-
-                        <div>
-                            <label for="password_question" class = "name"> 비밀번호 찾기 질문 </label>
-                            <select name="password_question" id="password_question">
-                                <option value="1"> 처음으로 키운 애완동물의 이름은? </option>
-                                <option value="2"> 태어난 장소는? </option>
-                                <option value="3"> 좋아하는 과일은? </option>
-                                <option value="4"> 좋아하는 색깔은? </option>
-                            </select> <br>
-                        </div>
-                        <div>
-                            <label for="password_answer" class = "name"> 답변 </label>
-                            <input type="text" id="password_answer" name="password_answer" required><br>
-                        </div>
-
-                        <div class="image-container">
-                            <label id="product-label" class = "name">대학생 인증</label>
-                            <label id="ext_label2">ex) 학생증, 재학증명서 등</label>
-                            <img id="preview-image" src="/img&font/img/학교인증.png" alt="대표이미지입니다." />
-                            <label class="input-file-button" for="input_image">첨부하기</label>
-                            <input type="file" id="input_image" name="input_image" style="display: none" />
-                            <label id="ext_label">jpg, png, gif, svg, tif 업로드 가능합니다.</label>
-                            
-                        </div>
-
-                            <hr class="form_hr">
-
-                            <div class="submit_bt">
-                                <input type="submit" value="신청하기">
-                            </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <footer class="footer">
-            <hr />
-            <div>
-                <h3>펀한누리</h3>
-                <p>주소 : 경기도 군포시 한세로 30</p>
-                <p>고객 문의 : 0509moon@naver.com</p>
-                <p>ver. Beta test</p>
-            </div>
-        </footer>
+      <hr />
+      <footer data-include="/Footer.html" class="footer"></footer>
     </div>
     <script type="text/javascript" src="/jquery-3.6.0.js"></script>
     <script src="/login/signup.js"></script>
-</body>
-
+    <script src="/H_F.js"></script>
+  </body>
 </html>
