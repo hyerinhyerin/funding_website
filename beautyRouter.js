@@ -7,6 +7,7 @@ router.get("/", (req, res) => {
     client.query("select * from product where start <= now() and category='beauty'",(err,rows) =>{
         res.render('Category_beauty', {
           rows : rows,
+          session : req.session.is_logined,
         });
     });
 });
