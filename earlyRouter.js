@@ -7,6 +7,7 @@ router.get('/', (req, res) => {
     client.query("select * from product where ealry = 'bird' and start <= now()", (err, rows) => {
         res.render("earlybird", {
             rows: rows,
+            session : req.session.is_logined,
         });
     });
 });

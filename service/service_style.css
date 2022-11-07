@@ -230,6 +230,9 @@ h4 {
     padding: 15px;
     padding-top: 30px;
     padding-bottom: 0px;
+    font-family: "nanum";
+    color: #606060;
+    line-height: 27px;
 }
 
 .last-constents {
@@ -362,7 +365,7 @@ h4 {
     font-family: "nanum";
     color: #606060;
     font-size: small;
-}   
+}
 
 .list_set_option_ll {
     position: relative;
@@ -663,7 +666,7 @@ h4 {
 table {
     width: 100%;
     position: static;
-    margin-left: -100px;
+    margin-left: -65px;
 }
 
 #bt {
@@ -673,18 +676,23 @@ table {
 th,
 td {
     height: 35px;
-    text-align: center;
+    text-align: right;
     font-family: "gongli";
     padding-top: 10px;
+    width: 160px;
     padding-bottom: 10px;
     font-size: 20px;
-    padding-left: 60px;
+    padding-left: 120px;
+}
+
+tbody {
+    position: relative;
+    left: 65px;
 }
 
 .label_name {
     text-align: left;
     width: 240px;
-    padding-left: 15px;
 }
 
 #bt {
@@ -717,7 +725,6 @@ td {
 
 #mypage_div_update input {
     border-radius: 5px;
-    height: 30px;
     font-size: 20px;
 }
 
@@ -726,7 +733,7 @@ td {
 }
 
 #bt_td {
-    padding-left: 0px;
+    padding-right: 377px;
 }
 
 #label_name_id {

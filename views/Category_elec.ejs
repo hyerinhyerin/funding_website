@@ -10,8 +10,13 @@
   </head>
   <body>
     <div class="container">
-      <header data-include="/Header.html">
-      </header>
+      <% if (session == true ){%>
+        <header data-include="/Header_login.html">
+        </header>
+        <%} else {%>
+          <header data-include="/Header.html">
+          </header>
+        <%} %>
       <div id="main_body">
         <!-- 이벤트 창 -->
         <div>

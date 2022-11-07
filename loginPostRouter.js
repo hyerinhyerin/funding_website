@@ -9,10 +9,10 @@ const app = express();
 // 세션 (미들웨어) 6
 app.use(
     session({
-      secret: "blackzat", // 데이터를 암호화 하기 위해 필요한 옵션
+      secret: "loginData", // 데이터를 암호화 하기 위해 필요한 옵션
       resave: false, // 요청이 왔을때 세션을 수정하지 않더라도 다시 저장소에 저장되도록
       saveUninitialized: true, // 세션이 필요하면 세션을 실행시칸다(서버에 부담을 줄이기 위해)
-      store: new FileStore(), // 세션이 데이터를 저장하는 곳
+      //store: new FileStore(), // 세션이 데이터를 저장하는 곳
     })
   );
 
@@ -36,10 +36,15 @@ exports.loginRouter = function (req, res) {
       req.session.is_logined = true;
       req.session.client_id = rows[0].id;
 
+      //localStorage.setItem('session_logined', true);
+
       console.log(req.session.is_logined);
       console.log(req.session.client_id);
+      console.log(req.session);
 
-      res.redirect("/mypage");
+      req.session.save(function(){
+        res.redirect("/mypage");
+      });
     } else {
       console.log(err);
       res.send(

@@ -21,7 +21,7 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage: storage }, { filesize: 313 * 200 });
+const upload = multer({ storage: storage }, { filesize: 150 * 200 });
 
 router.post("/business_login", upload.fields([{ name: "input_image" }]),(req, res) => {
   console.log("회원가입 하는중");

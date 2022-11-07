@@ -5,7 +5,8 @@ module.exports = (app) => {
 
     router.get("/", (req, res) => {
         console.log("마이페이지");
-        console.log(req.session.is_logined);
+        var session_logined = req.session.is_logined;
+        console.log(session_logined);
         if (req.session.is_logined == true) {
             client.query(
                 "select * from client where id = ?",
@@ -26,6 +27,7 @@ module.exports = (app) => {
                             e_mail: rows[0].e_mail,
                             phone_number: rows[0].phone_number,
                             account_num: rows[0].account_num,
+                            session : req.session.is_logined,
                         });
                     } else if (rows[0].division == "2") {
                         res.render("bussiness_main", {
@@ -38,6 +40,7 @@ module.exports = (app) => {
                             address: rows[0].address,
                             e_mail: rows[0].e_mail,
                             phone_number: rows[0].phone_number,
+                            session : req.session.is_logined,
                         });
                     }
                 }

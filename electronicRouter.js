@@ -7,6 +7,7 @@ router.get("/", (req, res) => {
     client.query("select * from product where start <= now() and category='electronic_devices'",(err,rows) =>{
         res.render('Category_elec', {
           rows : rows,
+          session : req.session.is_logined,
         });
     });
 })
