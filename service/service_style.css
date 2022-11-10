@@ -666,7 +666,7 @@ h4 {
 table {
     width: 100%;
     position: static;
-    margin-left: -120px;
+    margin-left: -65px;
 }
 
 #bt {
@@ -679,10 +679,10 @@ td {
     text-align: right;
     font-family: "gongli";
     padding-top: 10px;
-    width: 160px;
+    width: 120px;
     padding-bottom: 10px;
     font-size: 20px;
-    padding-left: 120px;
+    padding-left: 80px;
 }
 
 tbody {
@@ -725,7 +725,6 @@ tbody {
 
 #mypage_div_update input {
     border-radius: 5px;
-    height: 30px;
     font-size: 20px;
 }
 
@@ -734,7 +733,7 @@ tbody {
 }
 
 #bt_td {
-    padding-right: 260px;
+    padding-right: 310px;
 }
 
 #label_name_id {

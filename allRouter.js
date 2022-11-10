@@ -7,6 +7,7 @@ router.get("/", (req, res) => {
     client.query("select * from product where start <= now()",(err,rows) =>{
         res.render('All_menu', {
           rows : rows,
+          session : req.session.is_logined,
         });
     });
 });

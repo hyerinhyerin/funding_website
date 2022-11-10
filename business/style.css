@@ -14,6 +14,9 @@ label,
 input {
   display: inline-block;
 }
+body {
+  margin: 0;
+}
 
 /* font */
 @font-face {
@@ -810,14 +813,9 @@ a {
 
 /*footer*/
 
-.footer {
-  /* width: 100%;
-  bottom: 0;
-  left: 17px;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  padding-top: 20px;
-  height: 180px; */
+/*footer*/
+
+.realFooter {
   grid-row-start: 2;
   grid-row-end: 3;
   text-align: left;
@@ -827,24 +825,11 @@ a {
   position: absolute;
   height: 150px;
   position: relative;
-  /* top: 400px; */
+  top: 450px;
   padding-bottom: 50px;
 }
 
-.footer hr {
-  text-align: center;
-  width: 95%;
-  margin-top: 90px;
-  margin-left: 45px;
-  border-color: #f2f4f641;
-}
-
-#footer-hr {
-  position: relative;
-  top: 460px;
-}
-
-.footer h3 {
+.realFooter h3 {
   grid-row-start: 2;
   grid-row-end: 3;
   text-align: left;
@@ -853,7 +838,17 @@ a {
   font-weight: bold;
 }
 
-.footer p {
+.realFooter p {
   line-height: 10px;
   font-family: "nanum";
+}
+
+#footer-hr {
+  text-align: center;
+  width: 95%;
+  margin-top: 90px;
+  margin-left: 45px;
+  border-color: #f2f4f641;
+  position: relative;
+  top: 450px;
 }
