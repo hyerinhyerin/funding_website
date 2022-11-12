@@ -679,10 +679,10 @@ td {
     text-align: right;
     font-family: "gongli";
     padding-top: 10px;
-    width: 160px;
+    width: 120px;
     padding-bottom: 10px;
     font-size: 20px;
-    padding-left: 120px;
+    padding-left: 80px;
 }
 
 tbody {
@@ -733,7 +733,7 @@ tbody {
 }
 
 #bt_td {
-    padding-right: 377px;
+    padding-right: 310px;
 }
 
 #label_name_id {
