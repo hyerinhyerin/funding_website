@@ -39,8 +39,8 @@ router.post(
     const count = body.product_count;
     const price = body.product_price;
     const category = body.product_category;
-    const ealry = body.ealry;
-    const sale = body.general;
+    const ealry = body.ealry_general;
+    const sale = body.ealry_general;
     const detailImage = `/images/${req.files["detail_image"][0].filename}`;
     const id = req.session.client_id;
 
@@ -60,7 +60,7 @@ router.post(
       ealry,
       sale,
       detailImage,
-      id
+      id,
     ];
 
     client.query(sql, data, (err, row) => {
@@ -74,6 +74,7 @@ router.post(
     const sql2 = "SELECT * FROM product WHERE name = ? ";
 
     client.query(sql2, [name], (err, row) => {
+      console.log(name);
       if (name == row[0].name) {
         res.sendFile(__dirname + "/business/productCP.html");
       } else if (err) {

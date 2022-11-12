@@ -102,144 +102,6 @@ body {
 #search_submit:hover {
   opacity: 0.4;
 }
-/* .nav_main {
-  width: 100.97%;
-  height: 100px;
-  background-color: #008299;
-  margin: -10px;
-  margin-top: -26px;
-  display: flex;
-}
-
-.nav_menu {
-  width: 100.97%;
-  height: 100px;
-  background-color: #008299;
-  margin: -10px;
-  margin-top: -26px;
-  position: relative;
-}
-
-.nav_menu .category_menu:focus,
-.category_menu1:hover {
-  fill: black;
-}
-
-._menu {
-  font-family: "main";
-  font-size: 55px;
-  color: white;
-  text-decoration-line: none;
-  position: absolute;
-  top: 25%;
-  left: 5%;
-}
-.nav_menu li {
-  float: left;
-}
-.category_menu {
-  font-family: "gong";
-  font-size: 20px;
-  color: white;
-  text-decoration-line: none;
-  position: absolute;
-  top: 50%;
-  left: 25%;
-}
-
-.all_menu {
-  font-family: "gong";
-  font-size: 20px;
-  color: white;
-  text-decoration-line: none;
-  position: absolute;
-  top: 50%;
-  left: 32%;
-}
-
-.funding_menu {
-  font-family: "gong";
-  font-size: 20px;
-  color: white;
-  text-decoration-line: none;
-  position: absolute;
-  top: 50%;
-  left: 37%;
-}
-.earlybird_menu {
-  font-family: "gong";
-  font-size: 20px;
-  color: white;
-  text-decoration-line: none;
-  position: absolute;
-  top: 50%;
-  left: 44%;
-}
-.nav_menu .my_menubutton {
-  width: 80px;
-  height: 80px;
-  padding-left: 20px;
-  background-image: url("/점.png");
-  background-repeat: no-repeat;
-  background-size: 22px;
-  position: absolute;
-  left: 95%;
-  top: 35%;
-  transition: ease 0.2s;
-  opacity: 10;
-  border: none;
-  background-color: transparent;
-}
-
-.nav_menu .my_menu {
-  width: 80px;
-  height: 80px;
-  padding-left: 20px;
-  background-image: url("/점.png");
-  background-repeat: no-repeat;
-  background-size: 22px;
-  position: absolute;
-  left: 95%;
-  top: 35%;
-  transition: ease 0.2s;
-  opacity: 10;
-  border: none;
-  background-color: transparent;
-}
-
-.nav_menu .my_menu1 {
-  width: 30px;
-  height: 30px;
-  padding-left: 20px;
-  background-repeat: no-repeat;
-  background-size: 22px;
-  position: absolute;
-  right: 2%;
-  top: 17%;
-  transition: ease 0.2s;
-  opacity: 10;
-  border: none;
-  background-color: transparent;
-}
-
-.all_menu:hover,
-.earlybird_menu:hover {
-  color: black;
-  transition: color 0.2s;
-}
-.nav_menu .funding_menu:hover {
-  color: black;
-  transition: color 0.2s;
-}
-
-.nav_menu .my_menu1:focus,
-.my_menu1:hover {
-  fill: black;
-}
-
-.category_menu:hover {
-  color: black;
-}
 /*category*/
 ul li {
   list-style: none;
@@ -461,6 +323,31 @@ form input::file-selector-button {
   height: 23px;
   margin-left: 80px;
 }
+
+.name-container1 {
+  position: relative;
+  top: 280px;
+  margin-bottom: 288px;
+}
+
+.name-container2 {
+  position: relative;
+  top: 280px;
+  margin-bottom: 288px;
+}
+
+.name-container3 {
+  position: relative;
+  top: 280px;
+  margin-bottom: 288px;
+}
+
+.name-container4 {
+  position: relative;
+  top: 280px;
+  margin-bottom: 288px;
+}
+
 .product-price-container {
   position: relative;
   top: 366px;

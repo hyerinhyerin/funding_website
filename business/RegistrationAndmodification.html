@@ -82,55 +82,59 @@
           />
           <label style="margin-left: 10px">원</label>
         </div>
-        <div class="product-container">
-          <label style="font-size: 22px">상품정보</label>
-          <hr />
-          <label for="product_name">이름</label>
-          <input id="product-name" type="text" name="product_name" />
-          <button id="product-plus">+</button>
-          <button id="product-minus">-</button>
-        </div>
-        <div class="product-count-container">
-          <label for="product_count">수량</label>
-          <input id="product-count" type="text" name="product_count" />
-        </div>
-        <div class="product-price-container">
-          <label for="product_price" id="product-price-label">금액</label>
-          <input
-            id="product-price"
-            name="product_price"
-            type="text"
-            onkeyup="inputNumberFormat(this)"
-          />
-          <label style="margin-left: 10px">원</label>
-        </div>
-        <div class="product-category-container">
-          <label for="product_category">카테고리</label>
-          <select name="product_category" id="product_category">
-            <option value="furniture">가구</option>
-            <option value="electronic_devices">전자기기</option>
-            <option value="daily_supplies">생활용품</option>
-            <option value="hobby">취미</option>
-            <option value="beauty">뷰티</option>
-          </select>
-        </div>
-        <div class="product-checkbox-container">
-          <input
-            type="checkbox"
-            name="ealry"
-            value="bird"
-            id="ealry-bird-box"
-            onclick="checkOnlyOne(this)"
-          />
-          <label for="early-bird">얼리버드</label>
-          <input
-            type="checkbox"
-            name="general"
-            value="sale"
-            id="general-sale"
-            onclick="checkOnlyOne(this)"
-          />
-          <label for="general-sale">일반판매</label>
+        <div class="product-all-div">
+          <div class="product-container">
+            <label style="font-size: 22px">상품정보</label>
+            <hr />
+            <label for="product_name">이름</label>
+            <input id="product-name" type="text" name="product_name" />
+            <button type="button" id="product-plus" onclick="productPlus()">
+              +
+            </button>
+            <button id="product-minus">-</button>
+          </div>
+          <div class="product-count-container">
+            <label for="product_count">수량</label>
+            <input id="product-count" type="text" name="product_count" />
+          </div>
+          <div class="product-price-container">
+            <label for="product_price" id="product-price-label">금액</label>
+            <input
+              id="product-price"
+              name="product_price"
+              type="text"
+              onkeyup="inputNumberFormat(this)"
+            />
+            <label style="margin-left: 10px">원</label>
+          </div>
+          <div class="product-category-container">
+            <label for="product_category">카테고리</label>
+            <select name="product_category" id="product_category">
+              <option value="furniture">가구</option>
+              <option value="electronic_devices">전자기기</option>
+              <option value="daily_supplies">생활용품</option>
+              <option value="hobby">취미</option>
+              <option value="beauty">뷰티</option>
+            </select>
+          </div>
+          <div class="product-checkbox-container">
+            <input
+              type="checkbox"
+              name="ealry_general"
+              value="bird"
+              id="ealry-bird-box"
+              onclick="checkOnlyOne(this)"
+            />
+            <label for="early-bird">얼리버드</label>
+            <input
+              type="checkbox"
+              name="ealry_general"
+              value="sale"
+              id="general-sale"
+              onclick="checkOnlyOne(this)"
+            />
+            <label for="general-sale">일반판매</label>
+          </div>
         </div>
 
         <div class="detail-image-container">
